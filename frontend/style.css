@@ -27,3 +27,25 @@
 .row {
 	margin: 1em;
 }
+
+.pay_btn {
+	width: 100%;
+}
+
+.div_btn_pay {
+	display: flex;
+	justify-content: center;
+}
+
+@media (max-width: 400px) {
+    .pay_btn {
+        width: 100%;
+    }
+}
+
+@media (min-width: 401px) {
+    .pay_btn {
+        width: 400px;
+	}
+}
+
