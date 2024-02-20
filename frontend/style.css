@@ -66,6 +66,12 @@
 	margin-top: 0.8em;
 }
 
+.vertical_line {
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    height: 100%;
+}
+
+
 @media (max-width: 400px) {
     .pay_btn {
         width: 100%;
