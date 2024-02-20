@@ -49,9 +49,9 @@
 			</div>
 		  </nav>
 		  <!-- après la navbar jusqu a avant le boutton Pay apple -->
-		  <div>
-			<div><img src="" alt=""></div>
-			<div>
+		  <div class="product_page">
+			<div><img src="../assets/images/RSB_pile-magazine.png" alt="RSB_pile-magazine" class="custom_image"></div>
+			<div class="product_description">
 				<span>Pay Powdur</span>
 				<div>
 				  <div>
@@ -65,7 +65,7 @@
 				</div>
 				<div>
 				  <div>
-					<span>View details</span>
+					<button class="btn btn-secondary view_details_btn">View details</button>
 				  </div>
 				</div>
 			  </div>
@@ -81,10 +81,29 @@
 			</div>
 			<div class="col-md-4">
 			  <label for="validationCustom02" class="form-label">Card information</label>
-			  <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+			  <input type="text" class="form-control" id="validationCustom02" placeholder="1234 1234 1234 1234" required>
 			  <div class="valid-feedback">
 				Looks good!
 			  </div>
+			</div>
+			<!-- A modifier p e mettre classe row sur le parent -->
+			<div class="row">
+				<div class="col-md-6">
+					<div class="splitted_input">
+						<input type="text" class="form-control w-50" id="validationCustom10" placeholder="MM/YY" required>
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="splitted_input">
+						<input type="text" class="form-control w-50" id="validationCustom11" placeholder="CVC" required>
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="col-md-4">
 			  <label for="validationCustomUsername" class="form-label">Cardholder name</label>
