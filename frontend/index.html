@@ -72,14 +72,14 @@
 		  </div>
 		  <!-- a partir du boutton apple pay -->
 		  <form class="row g-3 needs-validation" novalidate>
-			<div class="col-md-4">
+			<div class="col-12">
 			  <label for="validationCustom01" class="form-label">Email</label>
 			  <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
 			  <div class="valid-feedback">
 				Looks good!
 			  </div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-12">
 			  <label for="validationCustom02" class="form-label">Card information</label>
 			  <input type="text" class="form-control" id="validationCustom02" placeholder="1234 1234 1234 1234" required>
 			  <div class="valid-feedback">
@@ -87,25 +87,24 @@
 			  </div>
 			</div>
 			<!-- A modifier p e mettre classe row sur le parent -->
-			<div class="row">
-				<div class="col-md-6">
-					<div class="splitted_input">
-						<input type="text" class="form-control w-50" id="validationCustom10" placeholder="MM/YY" required>
-						<div class="valid-feedback">
-							Looks good!
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="splitted_input">
-						<input type="text" class="form-control w-50" id="validationCustom11" placeholder="CVC" required>
-						<div class="valid-feedback">
-							Looks good!
-						</div>
+			<div class="col-6">
+				<div class="splitted_input">
+					<input type="text" class="form-control" id="validationCustom10" placeholder="MM/YY" required>
+					<div class="valid-feedback">
+						Looks good!
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-6">
+				<div class="splitted_input">
+					<input type="text" class="form-control" id="validationCustom11" placeholder="CVC" required>
+					<div class="valid-feedback">
+						Looks good!
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="col-12">
 			  <label for="validationCustomUsername" class="form-label">Cardholder name</label>
 			  <div class="input-group has-validation">
 				<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
@@ -114,14 +113,14 @@
 				</div>
 			  </div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-12">
 			  <label for="validationCustom03" class="form-label">City</label>
 			  <input type="text" class="form-control" id="validationCustom03" required>
 			  <div class="invalid-feedback">
 				Please provide a valid city.
 			  </div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-12">
 			  <label for="validationCustom04" class="form-label">Country</label>
 			  <select class="form-select" id="validationCustom04" required>
 				<option selected disabled value="">Choose...</option>
@@ -131,7 +130,7 @@
 				Please select a valid state.
 			  </div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-12">
 			  <label for="validationCustom05" class="form-label">Zip</label>
 			  <input type="text" class="form-control" id="validationCustom05" required>
 			  <div class="invalid-feedback">
