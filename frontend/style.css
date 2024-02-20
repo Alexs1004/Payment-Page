@@ -1,11 +1,15 @@
 .left_nav_items {
+	overflow: auto;
+}
+
+.arrow_left, .retour {
 	display: inline-block;
 }
 
-a {
-	color: white;
+.arrow_left {
+	margin: 1em;
 }
 
-.navbar-brand {
-	color: white;
+.info, .arrow_down {
+	display: inline-block;
 }
