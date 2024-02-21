@@ -121,7 +121,11 @@
 
 #validationCustom01, #validationCustom11 {
 	border-radius: 6px;
-  }
+}
+
+#validationCustom02, #validationCustom10, #validationCustom31 {
+	padding-left: 13px;
+}
 
 .form-control {
 	border-radius: 6px;
