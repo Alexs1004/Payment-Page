@@ -1,5 +1,6 @@
 .left_nav_items {
 	overflow: auto;
+	margin-left: 25px;
 }
 
 .arrow_left, .retour {
@@ -16,6 +17,7 @@
 
 .dropdown {
     position:static !important;
+	margin-right: 25px;
 }
 
 .dropdown-menu {
@@ -129,6 +131,12 @@
 
 .form-control {
 	border-radius: 6px;
+}
+
+.in_dd_button {
+	height: 35px;
+    font-size: 14px;
+	display: block;
 }
 /* .vertical-line {
     border-left: 1px solid #ccc;
