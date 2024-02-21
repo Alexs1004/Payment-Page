@@ -66,14 +66,10 @@
 	margin-top: 0.8em;
 }
 
-.vertical_line {
-    border-left: 1px solid rgba(0, 0, 0, .1);
-    height: 100%;
-}
-
 .reduc {
     position: absolute;
-    top: -15px;
+	top: -29px;
+	left: -17px;
     font-size: 1.5em;
     padding: 5px 10px;
     border-radius: 5px;
@@ -83,6 +79,39 @@
     margin: 0px;
     background-color: orange;
 }
+
+.horizontal_hr {
+	width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border-color: #ccc;
+}
+
+.btn-group {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.vertical-line {
+    border-left: 0.1px solid rgba(0, 0, 0, .1);
+    height: 100%;
+	box-shadow: -3px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* .vertical-line {
+    border-left: 1px solid #ccc;
+    height: 100%;
+    margin: 0 1rem;
+} */
+
+/* @media (min-width: 992px) {
+	.vertical-line {
+	  border-left: 1px solid #ccc;
+	  height: 100%;
+	  margin: 0 1rem;
+	}
+  } */
+
 
 @media (max-width: 400px) {
     .pay_btn {
