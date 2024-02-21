@@ -77,8 +77,18 @@
                 <form class="row g-3 needs-validation" novalidate>
                     <div class="col-12">
                         <label for="validationCustom01" class="form-label">Coordonnées</label>
-                        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-                        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa-regular fa-envelope"></i></span>
+							</div>
+							<input type="text" class="form-control" id="validationCustom01" placeholder="email@exemple.com" required>
+						</div>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+							</div>
+							<input type="text" class="form-control" id="validationCustom11" placeholder="06 12 34 56 78" required>
+						</div>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
