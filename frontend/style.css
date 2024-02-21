@@ -1,3 +1,23 @@
+
+:root {
+    --font-color: #272727;
+    --font-color-white: #ffffff;
+    --table-border-color: #d7d7d7;
+    --primary-color: #0C202A;
+    --secondary-color: #244D61;
+    --tertiary-color: #93C022;
+    --quaternary-color: #A9DB2B;
+    --quinary-color: #f7f7f7;
+    --senary-color: #f9f9f9;
+    --button-hover-color: #d9d9d9;
+    --loader-border-color: #f3f3f3;
+    --loader-bb-color: #555555;
+    --promotag-bg-color: #244D61;
+    --oldprice-color: #9c9c9c;
+    --choice-switch-bgcolor: #e7e7e7;
+    --selectedchoice-switch-bgcolor: #569662;
+}
+
 .left_nav_items {
 	overflow: auto;
 }
@@ -40,10 +60,6 @@
 .custom_image {
 	width: 300px;
 	height: auto;
-	/* border: 0px solid rgb(237, 237, 237, 0.2);
-    border-radius: 10px;
-	-webkit-box-shadow: 12px 5px 50px -10px rgba(0,0,0,0.8);
-	box-shadow: 12px 5px 50px -10px rgba(0,0,0,0.8); */
     filter: grayscale(50%);
 	margin-bottom: 1em;
 }
