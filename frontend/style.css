@@ -1,6 +1,5 @@
 :root {
-	--checkout-text-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue","Ubuntu",sans-serif;
-
+	--checkout-text-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "Ubuntu", sans-serif;
 }
 
 .left_nav_items {
@@ -9,25 +8,21 @@
 }
 
 .navbar {
-    /* border-bottom: 1px solid #ddd; */
-	transition: border-bottom 0.3s ease; /* Transition douce pour la bordure */
-    border-bottom: none; /* Par défaut, cache la bordure */
+	transition: border-bottom 0.3s ease;
+    border-bottom: none;
 }
 
 .navbar-scrolled {
 	background-color: white;
-    border-bottom: 1px solid #ddd; /* Affiche la bordure lorsque scrolled */
-}
-
-.arrow_left, .retour {
-	display: inline-block;
+    border-bottom: 1px solid #ddd;
 }
 
 .navbar-brand:hover, .dropdown:hover{
 	color: hsl(0, 0%, 80%);
 }
 
-.arrow_left {
+.arrow_left, .retour {
+	display: inline-block;
 	margin: 1em;
 }
 
@@ -38,8 +33,9 @@
 .info{
 	font-size: 20px;
 }
+
 .dropdown {
-    position:static !important;
+    position: static !important;
 	margin-right: 25px;
 }
 
@@ -50,8 +46,8 @@
 
 .dropdown-menu {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
-    margin-top:0px !important;
-    width:100% !important;
+    margin-top: 0px !important;
+    width: 100% !important;
 }
 
 .row {
@@ -137,17 +133,18 @@
 	left: 0;
 	top: 0;
 	bottom: 0;
-	width: 40px; /* Largeur de l'icône */
+	width: 40px;
 	z-index: 1;
-  }
+}
 
-  .input-group-text {
+.input-group-text {
 	background-color: transparent;
 	border: none;
-  }
+}
 
-  .form-control {
+.form-control {
 	padding-left: 40px;
+	border-radius: 6px;
 }
 
 #validationCustom01, #validationCustom11 {
@@ -156,9 +153,6 @@
 
 #validationCustom02, #validationCustom10, #validationCustom31, #validationCustomUsername {
 	padding-left: 13px;
-}
-
-.form-control {
 	border-radius: 6px;
 }
 
@@ -167,21 +161,6 @@
     font-size: 14px;
 	display: block;
 }
-
-/* .vertical-line {
-    border-left: 1px solid #ccc;
-    height: 100%;
-    margin: 0 1rem;
-} */
-
-/* @media (min-width: 992px) {
-	.vertical-line {
-	  border-left: 1px solid #ccc;
-	  height: 100%;
-	  margin: 0 1rem;
-	}
-  } */
-
 
 @media (max-width: 400px) {
     .pay_btn {
@@ -194,4 +173,3 @@
         width: 400px;
 	}
 }
-
