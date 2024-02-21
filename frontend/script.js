@@ -249,3 +249,14 @@ countries.forEach(country => {
     option.text = country;
     dropdown.add(option);
 });
+
+window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar');
+    var scrollPosition = window.scrollY;
+
+    if (scrollPosition > 0) {
+        navbar.classList.add('navbar-scrolled');
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+    }
+});

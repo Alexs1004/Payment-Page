@@ -1,10 +1,32 @@
+:root {
+	--checkout-text-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue","Ubuntu",sans-serif;
+
+}
+
+.
+
 .left_nav_items {
 	overflow: auto;
 	margin-left: 25px;
 }
 
+.navbar {
+    /* border-bottom: 1px solid #ddd; */
+	transition: border-bottom 0.3s ease; /* Transition douce pour la bordure */
+    border-bottom: none; /* Par défaut, cache la bordure */
+}
+
+.navbar-scrolled {
+	background-color: white;
+    border-bottom: 1px solid #ddd; /* Affiche la bordure lorsque scrolled */
+}
+
 .arrow_left, .retour {
 	display: inline-block;
+}
+
+.navbar-brand:hover, .dropdown:hover{
+	color: hsl(0, 0%, 80%);
 }
 
 .arrow_left {
@@ -18,6 +40,11 @@
 .dropdown {
     position:static !important;
 	margin-right: 25px;
+}
+
+.currency {
+	font-size: 37px;
+	font-weight: bold;
 }
 
 .dropdown-menu {
@@ -44,6 +71,7 @@
 	height: auto;
     filter: grayscale(50%);
 	margin-bottom: 1em;
+	margin-top: 70px;
 }
 
 .product_page {
@@ -125,7 +153,7 @@
 	border-radius: 6px;
 }
 
-#validationCustom02, #validationCustom10, #validationCustom31 {
+#validationCustom02, #validationCustom10, #validationCustom31, #validationCustomUsername {
 	padding-left: 13px;
 }
 
@@ -138,6 +166,7 @@
     font-size: 14px;
 	display: block;
 }
+
 /* .vertical-line {
     border-left: 1px solid #ccc;
     height: 100%;
