@@ -3,8 +3,6 @@
 
 }
 
-.
-
 .left_nav_items {
 	overflow: auto;
 	margin-left: 25px;
@@ -37,6 +35,9 @@
 	display: inline-block;
 }
 
+.info{
+	font-size: 20px;
+}
 .dropdown {
     position:static !important;
 	margin-right: 25px;
