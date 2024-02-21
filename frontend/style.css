@@ -40,10 +40,6 @@
 .custom_image {
 	width: 300px;
 	height: auto;
-	/* border: 0px solid rgb(237, 237, 237, 0.2);
-    border-radius: 10px;
-	-webkit-box-shadow: 12px 5px 50px -10px rgba(0,0,0,0.8);
-	box-shadow: 12px 5px 50px -10px rgba(0,0,0,0.8); */
     filter: grayscale(50%);
 	margin-bottom: 1em;
 }
@@ -95,6 +91,13 @@
     border-left: 0.1px solid rgba(0, 0, 0, .1);
     height: 100%;
 	box-shadow: -3px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav_dropdown_img {
+	width: 92px;
+	height: auto;
+    filter: grayscale(50%);
+	margin-bottom: 1em;
 }
 
 
