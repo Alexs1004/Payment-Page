@@ -94,7 +94,16 @@
                         </div>
                     </div> -->
                     <div class="col-12">
-                        <label for="validationCustomUsername" class="form-label">Nom du titulaire de la carte</label>
+                        <label for="validationCustomUsername" class="form-label">Adresse email *</label>
+                        <div class="input-group has-validation">
+                          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label for="validationCustomUsername" class="form-label">Confirmer l'adresse email *</label>
                         <div class="input-group has-validation">
                           <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                           <div class="invalid-feedback">
@@ -103,15 +112,11 @@
                         </div>
                       </div>
                     <div class="col-12">
-                        <label for="validationCustom02" class="form-label">Informations de la carte</label>
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="1234 1234 1234 1234" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
+                        <label for="validationCustom02" class="form-label">Nom *</label>
                     </div>
                     <div class="col-6">
                         <div class="splitted_input">
-                            <input type="text" class="form-control" id="validationCustom10" placeholder="MM/YY" required>
+                            <input type="text" class="form-control" id="validationCustom10" placeholder="Prénom" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -119,12 +124,21 @@
                     </div>
                     <div class="col-6">
                         <div class="splitted_input">
-                            <input type="text" class="form-control" id="validationCustom31" placeholder="CVC" required>
+                            <input type="text" class="form-control" id="validationCustom31" placeholder="Nom de famille" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                     </div>
+                    <div class="col-12">
+                        <label for="validationCustomUsername" class="form-label">Adresse *</label>
+                        <div class="input-group has-validation">
+                          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
 					<div class="col-12 div_btn_pay">
 					  <button class="btn btn-primary pay_btn" type="submit">PAY</button>
 					</div>
