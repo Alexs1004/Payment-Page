@@ -139,14 +139,14 @@
 	bottom: 0;
 	width: 40px; /* Largeur de l'icône */
 	z-index: 1;
-  }
+}
 
-  .input-group-text {
+.input-group-text {
 	background-color: transparent;
 	border: none;
-  }
+}
 
-  .form-control {
+.form-control {
 	padding-left: 40px;
 }
 
@@ -167,6 +167,8 @@
     font-size: 14px;
 	display: block;
 }
+
+
 
 /* .vertical-line {
     border-left: 1px solid #ccc;
