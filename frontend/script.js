@@ -260,3 +260,51 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('navbar-scrolled');
     }
 });
+
+
+// // Fonction pour générer dynamiquement la modal avec le contenu HTML
+// const generateModalContent = () => {
+//     const modalContent = `
+//         <div class="modal-dialog modal-dialog-centered">
+//             <div class="modal-content">
+//                 <div class="modal-header">
+//                     <h5 class="modal-title">Formulaire de paiement</h5>
+//                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+//                 </div>
+//                 <div class="modal-body">
+//                     <!-- Insérez ici le contenu HTML du formulaire -->
+//                     <div class="col-lg-6">
+//                         <!-- Votre code HTML ici -->
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     `;
+//     return modalContent;
+// };
+
+// //Vérifie si le client a un walletID et affiche ou non, une modal en conséquence
+// // Vérifie si le client a un walletId
+// const hasWalletId = (/* placez ici la logique pour vérifier si le client a un walletId */) => {
+//     // Remplacez cette ligne par la logique réelle pour vérifier si le client a un walletId
+//     return true; // Par exemple, retourne true si le client a un walletId, sinon false
+// };
+// // Fonction pour afficher la modal lorsque le client a un walletId
+// const displayModal = () => {
+
+
+//     if (hasWalletId) {
+//         const modalContent = generateModalContent();
+//         const modalContainer = document.createElement('div');
+//         modalContainer.innerHTML = modalContent;
+//         document.body.appendChild(modalContainer);
+
+//         const modal = new bootstrap.Modal(modalContainer.querySelector('.modal'));
+//         modal.show();
+//     }
+// };
+
+// // Ajoutez un événement pour déclencher l'affichage de la modal
+// window.addEventListener('DOMContentLoaded', () => {
+//     displayModal();
+// });
