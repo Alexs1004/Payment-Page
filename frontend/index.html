@@ -27,7 +27,7 @@
 					<div class="d-flex justify-content-around">
 						<div class="d-flex justify-content-center">
 							<img src="../assets/images/RSB_pile-magazine.png" alt="RSB_pile-magazine" class="nav_dropdown_img">
-							<div class="d-flex">
+							<div class="d-flex align-items-center flex-column">
 								<div><span>The premium</span></div>
 								<div>
 									<button type="button" class="btn btn-light in_dd_button">Light</button>
@@ -75,7 +75,7 @@
 				</div>
 				<hr class="horizontal_hr">
                 <form class="row g-3 needs-validation" novalidate>
-                    <div class="col-12">
+                    <!-- <div class="col-12">
                         <label for="validationCustom01" class="form-label">Coordonnées</label>
 						<div class="input-group">
 							<div class="input-group-prepend">
@@ -91,6 +91,15 @@
 						</div>
                         <div class="valid-feedback">
                             Looks good!
+                        </div>
+                    </div> -->
+                    <div class="col-12">
+                        <label for="validationCustomUsername" class="form-label">Nom du titulaire de la carte</label>
+                        <div class="input-group has-validation">
+                          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
                         </div>
                     </div>
                     <div class="col-12">
@@ -116,16 +125,7 @@
                             </div>
                         </div>
                     </div>
-					<div class="col-12">
-					  <label for="validationCustomUsername" class="form-label">Nom du titulaire de la carte</label>
-					  <div class="input-group has-validation">
-						<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-						<div class="invalid-feedback">
-						  Please choose a username.
-						</div>
-					  </div>
-					</div>
-					<div class="col-12">
+					<!-- <div class="col-12">
 					  <label for="validationCustom04" class="form-label">Pays ou région</label>
 					  <select class="form-select" id="paysDropdown" required>
 						<option selected value="">France métropolitaine</option>
@@ -144,7 +144,7 @@
 						  You must agree before submitting.
 						</div>
 					  </div>
-					</div>
+					</div> -->
 					<div class="col-12 div_btn_pay">
 					  <button class="btn btn-primary pay_btn" type="submit">PAY</button>
 					</div>
