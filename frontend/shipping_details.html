@@ -1,92 +1,79 @@
-<form class="row g-3 needs-validation delivery-form" novalidate>
-	<div class="shippingTitle">
+<div style="display: none;" class="col-12" id="delivery-form-container">
+	<form class="row g-3 needs-validation delivery-form" novalidate>
+	  <div class="shippingTitle">
 		<label for="shippingTitle">Vos coordonnées de livraison</label>
-	</div>
-	<div class="col-12">
+	  </div>
+	  <div class="col-12">
 		<label for="validationCustom02" class="form-label">Nom *</label>
-	</div>
-	<div class="col-4">
+	  </div>
+	  <div class="col-4">
 		<div class="input-group">
-			<select class="form-select" id="validationCustom10" aria-label="Civilité" required>
-				<option value="monsieur">M.</option>
-				<option value="madame">Mme.</option>
-			</select>
-			<div class="valid-feedback">
-				Looks good!
-			</div>
-		</div>
-	</div>
-	<div class="col-4">
-		<div class="splitted_input">
-			<input type="text" class="form-control" id="validationCustom10" placeholder="Prénom" required>
-			<div class="valid-feedback">
-				Looks good!
-			</div>
-		</div>
-	</div>
-	<div class="col-4">
-		<div class="splitted_input">
-			<input type="text" class="form-control" id="validationCustom31" placeholder="Nom" required>
-			<div class="valid-feedback">
-				Looks good!
-			</div>
-		</div>
-	</div>
-	<div class="col-12">
-		<label for="validationCustomUsername" class="form-label">Numéro de téléphone</label>
-		<div class="input-group has-validation">
-			<div class="input-group-prepend">
-				<span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
-			</div>
-			<input type="text" class="form-control" id="validationCustom55" required>
-		  <div class="invalid-feedback">
-			Please choose a username.
-		  </div>
+		  <select class="form-select" id="validationCustom10" aria-label="Civilité" required>
+			<option value="monsieur">M.</option>
+			<option value="madame">Mme.</option>
+		  </select>
+		  <div class="valid-feedback"> Looks good! </div>
 		</div>
 	  </div>
-	<div class="col-12">
+	  <div class="col-4">
+		<div class="splitted_input">
+		  <input type="text" class="form-control" id="validationCustom10" placeholder="Prénom" required>
+		  <div class="valid-feedback"> Looks good! </div>
+		</div>
+	  </div>
+	  <div class="col-4">
+		<div class="splitted_input">
+		  <input type="text" class="form-control" id="validationCustom31" placeholder="Nom" required>
+		  <div class="valid-feedback"> Looks good! </div>
+		</div>
+	  </div>
+	  <div class="col-12">
+		<label for="validationCustomUsername" class="form-label">Numéro de téléphone</label>
+		<div class="input-group has-validation">
+		  <div class="input-group-prepend">
+			<span class="input-group-text">
+			  <i class="fa-solid fa-phone"></i>
+			</span>
+		  </div>
+		  <input type="text" class="form-control" id="validationCustom55" required>
+		  <div class="invalid-feedback"> Please choose a username. </div>
+		</div>
+	  </div>
+	  <div class="col-12">
 		<label for="validationCustomUsername" class="form-label">Adresse *</label>
 		<div class="input-group has-validation">
-			<div class="input-group-prepend">
-				<span class="input-group-text"><i class="fa-solid fa-map-pin"></i></span>
-			</div>
-			<input type="text" class="form-control" id="validationCustom55" required>
-		  <div class="invalid-feedback">
-			Please choose a username.
+		  <div class="input-group-prepend">
+			<span class="input-group-text">
+			  <i class="fa-solid fa-map-pin"></i>
+			</span>
 		  </div>
+		  <input type="text" class="form-control" id="validationCustom55" required>
+		  <div class="invalid-feedback"> Please choose a username. </div>
 		</div>
 	  </div>
 	  <div>
-	  <label for="validationCustomUsername" class="form-label">Complément d'Informations</label>
-	  <div class="input-group has-validation">
+		<label for="validationCustomUsername" class="form-label">Complément d'Informations</label>
+		<div class="input-group has-validation">
 		  <input type="text" class="form-control" id="validationCustom55" placeholder="Code d'entrée / N° d'appartement / Etage" required>
-		<div class="invalid-feedback">
-		  Please choose a username.
+		  <div class="invalid-feedback"> Please choose a username. </div>
 		</div>
 	  </div>
-	</div>
-<div class="col-12">
-	<div class="form-check">
-	<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-	<label class="form-check-label checkbox-label" for="invalidCheck">
-		J'accepte les <a href="https://pure-sante.info/conditions-generales-de-vente/?_gl=1*vhzvkd*_ga*MTAzMjg4NDk1LjE3MDA2NjUxMTk.*_ga_L8LPKTXYD3*MTcwODYxMDA2MS4yMC4xLjE3MDg2MTAxNzAuNTguMC4w*_fplc*JTJCOEk0NHhRdm5tcm9YeWFpN1FlbEJSRUxrU2dSJTJCQWh1U2xEcndxT1NBUjNJRWY2SGRZRG90dTZZS21yWGZ6ODRRRkJ6ellYOGZtVDV3ZFpFTDJoY3NTZjRUNklqJTJGRSUyQiUyRiUyQk5QeENta0N0SyUyQmtNMUVUQVBXZjVqNHkzQkpIb2clM0QlM0Q">conditions générales de vente de Pure Santé</a> *</label>
-	<div class="invalid-feedback">
-		You must agree before submitting.
-	</div>
-	</div>
+	  <div class="col-12">
+		<div class="form-check">
+		  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+		  <label class="form-check-label checkbox-label" for="invalidCheck"> J'accepte les <a href="https://pure-sante.info/conditions-generales-de-vente/?_gl=1*vhzvkd*_ga*MTAzMjg4NDk1LjE3MDA2NjUxMTk.*_ga_L8LPKTXYD3*MTcwODYxMDA2MS4yMC4xLjE3MDg2MTAxNzAuNTguMC4w*_fplc*JTJCOEk0NHhRdm5tcm9YeWFpN1FlbEJSRUxrU2dSJTJCQWh1U2xEcndxT1NBUjNJRWY2SGRZRG90dTZZS21yWGZ6ODRRRkJ6ellYOGZtVDV3ZFpFTDJoY3NTZjRUNklqJTJGRSUyQiUyRiUyQk5QeENta0N0SyUyQmtNMUVUQVBXZjVqNHkzQkpIb2clM0QlM0Q">conditions générales de vente de Pure Santé</a> * </label>
+		  <div class="invalid-feedback"> You must agree before submitting. </div>
+		</div>
+	  </div>
+	  <div class="col-12">
+		<div class="form-check">
+		  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+		  <label class="form-check-label checkbox-label" for="invalidCheck"> J'accepte les <a href="https://palyance.com/cgs/">conditions générales de services de paiement Palyance</a> * </label>
+		  <div class="invalid-feedback"> You must agree before submitting. </div>
+		</div>
+	  </div>
+	  <div class="col-12 div_btn_pay">
+		<button class="btn btn-primary pay_btn" type="submit">Soumettre</button>
+	  </div>
+  </form>
 </div>
-<div class="col-12">
-	<div class="form-check">
-	<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-	<label class="form-check-label checkbox-label" for="invalidCheck">
-		J'accepte les <a href="https://palyance.com/cgs/">conditions générales de services de paiement Palyance</a>  *</label>
-	<div class="invalid-feedback">
-		You must agree before submitting.
-	</div>
-	</div>
-</div>
-<div class="col-12 div_btn_pay">
-<button class="btn btn-primary pay_btn" type="submit">Soumettre</button>
-</div>
-</div>
-</form>
