@@ -1,6 +1,6 @@
 :root {
-	--checkout-text-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue","Ubuntu",sans-serif;
-
+	/* --checkout-text-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue","Ubuntu",sans-serif;
+	--choices-hover-color: #98AAB3; */
 }
 
 
@@ -201,6 +201,16 @@
 	color: #fff;
 	border-color: #244D61;
 }
+
+#SEPA-radio:hover, #CC-radio:hover {
+	color: #244D61;
+	border-color: #244D61;
+}
+
+/* #SEPA-radio:hover:active, #CC-radio:hover:active {
+    color: white;
+} */
+
 
 .btn-outline-secondary, .btn-outline-primary {
 	border-color: #244D61;
