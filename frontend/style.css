@@ -63,7 +63,14 @@
 
 .pay_btn {
 	width: 100%;
+	background-color: #244D61;
 }
+
+.pay_btn:hover {
+	background-color: #244D61;
+	color: #98AAB3;
+}
+
 
 .div_btn_pay {
 	display: flex;
@@ -157,6 +164,8 @@
 
 .form-check-label a:hover {
 	text-decoration: underline;
+	cursor: pointer;
+	color: #98AAB3;
 }
 
 .btn-check:checked + .btn-outline-primary,
@@ -166,12 +175,21 @@
     border-color: #244D61;
 }
 
+.form-check-input {
+    cursor: pointer;
+}
+
 .form-check-input:checked[type="checkbox"] {
     background-color: #244D61;
 }
 
+.shippingTitle {
+	font-weight: bold;
+    font-size: 20px;
+}
+
 .btn-outline-primary:hover, .btn-outline-secondary:hover {
-	color: #244D61;
+	color: white;
 	border-color: #244D61;
 }
 
@@ -204,7 +222,7 @@
 	padding-left: 40px;
 }
 
-#validationCustom01, #validationCustom11 {
+#validationCustom01, #validationCustom11, #validationCustom10 {
 	border-radius: 6px;
 }
 
