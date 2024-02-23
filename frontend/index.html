@@ -133,12 +133,13 @@
                     <i class="fa-solid fa-map-pin"></i>
                   </span>
                 </div>
-                <input type="text" class="form-control validationCustom55" placeholder="Entrer un lieu" required>
+                <input type="text" class="form-control validationCustom55" id="autocomplete" placeholder="Entrer un lieu" required>
                 <div class="invalid-feedback">
-                  <!-- id="autocomplete" --> Please choose a username.
+                    Please choose a username.
                 </div>
               </div>
             </div>
+          </form>
             <div class="col-12">
               <div class="form-check">
                 <input class="form-check-input " type="checkbox" value="" id="invalidCheck_checked" checked>
@@ -146,7 +147,7 @@
                 <div class="invalid-feedback"> You must agree before submitting. </div>
               </div>
             </div>
-            <div style="display: none;" class="col-12" id="delivery-form-container">
+            <div style="display: none;" id="delivery-form-container">
               <form class="row g-3 needs-validation delivery-form" novalidate>
                 <div class="shippingTitle">
                   <label for="shippingTitle">Vos coordonnées de livraison</label>
