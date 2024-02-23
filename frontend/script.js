@@ -250,6 +250,76 @@
 //     dropdown.add(option);
 // });
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     const checkbox = document.getElementById('invalidCheck');
+//     const deliveryForm = document.getElementById('delivery-form');
+
+//     checkbox.addEventListener('change', function() {
+//         if (checkbox.checked) {
+//             deliveryForm.style.display = 'none';
+//         } else {
+//             deliveryForm.style.display = 'block';
+//         }
+//     });
+// });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const checkbox = document.getElementById('invalidCheck');
+//     const deliveryForm = document.getElementsByClassName("delivery-form");
+
+//     if (checkbox && deliveryForm) { // Vérifier si les éléments existent
+//         checkbox.addEventListener('change', function() {
+//             if (checkbox.checked) {
+//                 deliveryForm.style.display = 'none';
+//             } else {
+//                 deliveryForm.style.display = 'block';
+//             }
+//         });
+//     } else {
+//         console.error('L\'élément checkbox ou delivery-form est introuvable.');
+//     }
+// });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const checkbox = document.getElementById('invalidCheck_checked');
+//     const deliveryForms = document.getElementsByClassName('delivery-form');
+
+//     if (checkbox && deliveryForms.length > 0) { // Vérifier si les éléments existent
+//         checkbox.addEventListener('change', function() {
+//             const displayValue = checkbox.checked ? 'none' : 'block';
+//             for (let i = 0; i < deliveryForms.length; i++) {
+//                 const deliveryForm = deliveryForms[i];
+//                 if (deliveryForm) { // Vérifier si l'élément existe
+//                     deliveryForm.style.display = displayValue;
+//                 }
+//             }
+//         });
+//     } else {
+//         console.error('L\'élément checkbox ou delivery-form est introuvable.');
+//     }
+// });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const checkbox = document.getElementById('invalidCheck_checked');
+    const deliveryFormContainer = document.getElementById('delivery-form-container');
+
+    if (checkbox && deliveryFormContainer) { // Vérifier si les éléments existent
+        checkbox.addEventListener('change', function() {
+            if (checkbox.checked) {
+                deliveryFormContainer.style.display = 'none';
+            } else {
+                deliveryFormContainer.style.display = 'block';
+            }
+        });
+    } else {
+        console.error('L\'élément checkbox ou delivery-form-container est introuvable.');
+    }
+});
+
+
+
+
 window.addEventListener('scroll', function() {
     var navbar = document.querySelector('.navbar');
     var scrollPosition = window.scrollY;
@@ -260,6 +330,20 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('navbar-scrolled');
     }
 });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const form = document.querySelector('form.needs-validation');
+//     const submitButton = document.querySelector('.pay_btn');
+
+//     form.addEventListener('input', function() {
+//         if (form.checkValidity()) {
+//             submitButton.disabled = false;
+//         } else {
+//             submitButton.disabled = true;
+//         }
+//     });
+// });
+
 
 
 // // <!-- Ajoutez cet élément div pour contenir les deux blocs -->

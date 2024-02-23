@@ -219,7 +219,7 @@
 
 
 .form-check-input:checked[type="checkbox"] + .form-check-label {
-    color: #fff;
+    color: black;
 }
 
 
