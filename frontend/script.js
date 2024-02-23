@@ -250,56 +250,6 @@
 //     dropdown.add(option);
 // });
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const checkbox = document.getElementById('invalidCheck');
-//     const deliveryForm = document.getElementById('delivery-form');
-
-//     checkbox.addEventListener('change', function() {
-//         if (checkbox.checked) {
-//             deliveryForm.style.display = 'none';
-//         } else {
-//             deliveryForm.style.display = 'block';
-//         }
-//     });
-// });
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const checkbox = document.getElementById('invalidCheck');
-//     const deliveryForm = document.getElementsByClassName("delivery-form");
-
-//     if (checkbox && deliveryForm) { // Vérifier si les éléments existent
-//         checkbox.addEventListener('change', function() {
-//             if (checkbox.checked) {
-//                 deliveryForm.style.display = 'none';
-//             } else {
-//                 deliveryForm.style.display = 'block';
-//             }
-//         });
-//     } else {
-//         console.error('L\'élément checkbox ou delivery-form est introuvable.');
-//     }
-// });
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const checkbox = document.getElementById('invalidCheck_checked');
-//     const deliveryForms = document.getElementsByClassName('delivery-form');
-
-//     if (checkbox && deliveryForms.length > 0) { // Vérifier si les éléments existent
-//         checkbox.addEventListener('change', function() {
-//             const displayValue = checkbox.checked ? 'none' : 'block';
-//             for (let i = 0; i < deliveryForms.length; i++) {
-//                 const deliveryForm = deliveryForms[i];
-//                 if (deliveryForm) { // Vérifier si l'élément existe
-//                     deliveryForm.style.display = displayValue;
-//                 }
-//             }
-//         });
-//     } else {
-//         console.error('L\'élément checkbox ou delivery-form est introuvable.');
-//     }
-// });
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const checkbox = document.getElementById('invalidCheck_checked');
     const deliveryFormContainer = document.getElementById('delivery-form-container');
