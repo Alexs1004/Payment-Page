@@ -253,13 +253,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     const checkbox = document.getElementById('invalidCheck_checked');
     const deliveryFormContainer = document.getElementById('delivery-form-container');
+	const cgCheckbox = document.getElementById("cg_checkbox");
 
-    if (checkbox && deliveryFormContainer) { // Vérifier si les éléments existent
+    if (checkbox && deliveryFormContainer) {
         checkbox.addEventListener('change', function() {
             if (checkbox.checked) {
                 deliveryFormContainer.style.display = 'none';
             } else {
                 deliveryFormContainer.style.display = 'block';
+				cgCheckbox.style.display = 'none';
             }
         });
     } else {
