@@ -98,6 +98,7 @@
 
 .view_details_btn:hover {
 	background-color: #244D61;
+	color: white;
 }
 
 
@@ -145,11 +146,19 @@
 	left: 0;
 	top: 0;
 	bottom: 0;
-	width: 40px; /* Largeur de l'icône */
+	width: 40px;
 	z-index: 1;
 }
 
-/* Appliquer la couleur #244D61 aux boutons radio sélectionnés */
+.form-check-label a {
+	color: #244D61;
+	text-decoration: none;
+}
+
+.form-check-label a:hover {
+	text-decoration: underline;
+}
+
 .btn-check:checked + .btn-outline-primary,
 .btn-check:checked + .btn-outline-primary::before {
     color: #fff;
@@ -157,22 +166,15 @@
     border-color: #244D61;
 }
 
-/* Appliquer la couleur #244D61 aux cases à cocher sélectionnées */
 .form-check-input:checked[type="checkbox"] {
     background-color: #244D61;
 }
-
-/* .btn {
-	border-color: #244D61;
-	color: #244D61;
-} */
 
 .btn-outline-primary:hover, .btn-outline-secondary:hover {
 	color: #244D61;
 	border-color: #244D61;
 }
 
-/* Appliquer le texte blanc à l'intérieur des boutons radio et des cases à cocher sélectionnées */
 .btn-check:checked + .btn-outline-primary {
     color: #fff;
 }
