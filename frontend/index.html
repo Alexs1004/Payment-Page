@@ -110,32 +110,28 @@
                 <div class="invalid-feedback"> Please choose a username. </div>
               </div>
             </div>
-            <!-- <div class="col-12"> -->
-							<!-- <div class="group-input col-12 d-flex gx-3"> -->
-								<div class="col-4">
-									<label for="validationCustom02" class="form-label">Nom *</label>
-									<div class="input-group">
-										<select class="form-select" id="validationCustom10" aria-label="Civilité" required>
-											<option value="monsieur">M.</option>
-											<option value="madame">Mme.</option>
-										</select>
-										<div class="valid-feedback"> Looks good! </div>
-									</div>
-								</div>
-								<div class="col-4">
-									<div class="splitted_input">
-										<input type="text" class="form-control" id="validationCustom10" placeholder="Prénom" required>
-										<div class="valid-feedback"> Looks good! </div>
-									</div>
-								</div>
-								<div class="col-4">
-									<div class="splitted_input">
-										<input type="text" class="form-control" id="validationCustom31" placeholder="Nom" required>
-										<div class="valid-feedback"> Looks good! </div>
-									</div>
-								</div>
-							<!-- </div> -->
-						<!-- </div> -->
+            <div class="col-4">
+              <label for="validationCustom02" class="form-label">Nom *</label>
+              <div class="input-group">
+                <select class="form-select" id="validationCustom10" aria-label="Civilité" required>
+                  <option value="monsieur">M.</option>
+                  <option value="madame">Mme.</option>
+                </select>
+                <div class="valid-feedback"> Looks good! </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="splitted_input">
+                <input type="text" class="form-control" id="validationCustom10" placeholder="Prénom" required>
+                <div class="valid-feedback"> Looks good! </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="splitted_input">
+                <input type="text" class="form-control" id="validationCustom31" placeholder="Nom" required>
+                <div class="valid-feedback"> Looks good! </div>
+              </div>
+            </div>
             <div class="col-12">
               <label for="validationCustomUsername" class="form-label">Adresse *</label>
               <div class="input-group has-validation">
@@ -155,55 +151,35 @@
                 <div class="invalid-feedback"> You must agree before submitting. </div>
               </div>
             </div>
-            <div id="cg_checkbox" class="col-12">
-              <!-- <div class="col-12"> -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" required>
-                  <label class="form-check-label checkbox-label"> J'accepte les <a href="https://pure-sante.info/conditions-generales-de-vente/?_gl=1*vhzvkd*_ga*MTAzMjg4NDk1LjE3MDA2NjUxMTk.*_ga_L8LPKTXYD3*MTcwODYxMDA2MS4yMC4xLjE3MDg2MTAxNzAuNTguMC4w*_fplc*JTJCOEk0NHhRdm5tcm9YeWFpN1FlbEJSRUxrU2dSJTJCQWh1U2xEcndxT1NBUjNJRWY2SGRZRG90dTZZS21yWGZ6ODRRRkJ6ellYOGZtVDV3ZFpFTDJoY3NTZjRUNklqJTJGRSUyQiUyRiUyQk5QeENta0N0SyUyQmtNMUVUQVBXZjVqNHkzQkpIb2clM0QlM0Q">conditions générales de vente de Pure Santé</a> * </label>
-                  <div class="invalid-feedback"> You must agree before submitting. </div>
-                </div>
-              <!-- </div> -->
-              <div class="col-12">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" required>
-                  <label class="form-check-label checkbox-label"> J'accepte les <a href="https://palyance.com/cgs/">conditions générales de services de paiement Palyance</a> * </label>
-                  <div class="invalid-feedback"> You must agree before submitting. </div>
-                </div>
-              </div>
-              <div class="col-12 div_btn_pay">
-                <button class="btn btn-primary pay_btn my-3" type="submit">Soumettre</button>
-              </div>
-            </div>
             <div style="display: none;" id="delivery-form-container" class="row gy-3 p-0 m-0">
               <div class="shippingTitle">
                 <label for="shippingTitle">Vos coordonnées de livraison</label>
               </div>
-              <div class="col-12">
+						<div class="col-12 d-flex align-items-end">
+              <div class="col-4">
                 <label for="validationCustom02" class="form-label">Nom *</label>
-								<div class="group-input col-12 d-flex gx-3">
-									<div class="col-2">
-										<div class="input-group">
-											<select class="form-select" id="validationCustom10" aria-label="Civilité" required>
-												<option value="monsieur">M.</option>
-												<option value="madame">Mme.</option>
-											</select>
-											<div class="valid-feedback"> Looks good! </div>
-										</div>
-									</div>
-									<div class="col-5 mx-2">
-										<div class="splitted_input">
-											<input type="text" class="form-control" id="validationCustom10" placeholder="Prénom" required>
-											<div class="valid-feedback"> Looks good! </div>
-										</div>
-									</div>
-									<div class="col-5">
-										<div class="splitted_input">
-											<input type="text" class="form-control" id="validationCustom31" placeholder="Nom" required>
-											<div class="valid-feedback"> Looks good! </div>
-										</div>
-									</div>
-								</div>
+                <div class="input-group">
+                  <select class="form-select" id="validationCustom10" aria-label="Civilité" required>
+                    <option value="monsieur">M.</option>
+                    <option value="madame">Mme.</option>
+                  </select>
+                  <div class="valid-feedback"> Looks good! </div>
+                </div>
               </div>
+              <div class="col-4">
+                <div class="splitted_input">
+                  <input type="text" class="form-control" id="validationCustom10" placeholder="Prénom" required>
+                  <div class="valid-feedback"> Looks good! </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="splitted_input">
+                  <input type="text" class="form-control" id="validationCustom31" placeholder="Nom" required>
+                  <div class="valid-feedback"> Looks good! </div>
+                </div>
+              </div>
+
+						</div>
               <div class="col-12">
                 <label for="validationCustomUsername" class="form-label">Numéro de téléphone</label>
                 <div class="input-group has-validation">
@@ -235,13 +211,15 @@
                   <div class="invalid-feedback"> Please choose a username. </div>
                 </div>
               </div>
-              <div class="col-12">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" required>
-                  <label class="form-check-label checkbox-label"> J'accepte les <a href="https://pure-sante.info/conditions-generales-de-vente/?_gl=1*vhzvkd*_ga*MTAzMjg4NDk1LjE3MDA2NjUxMTk.*_ga_L8LPKTXYD3*MTcwODYxMDA2MS4yMC4xLjE3MDg2MTAxNzAuNTguMC4w*_fplc*JTJCOEk0NHhRdm5tcm9YeWFpN1FlbEJSRUxrU2dSJTJCQWh1U2xEcndxT1NBUjNJRWY2SGRZRG90dTZZS21yWGZ6ODRRRkJ6ellYOGZtVDV3ZFpFTDJoY3NTZjRUNklqJTJGRSUyQiUyRiUyQk5QeENta0N0SyUyQmtNMUVUQVBXZjVqNHkzQkpIb2clM0QlM0Q">conditions générales de vente de Pure Santé</a> * </label>
-                  <div class="invalid-feedback"> You must agree before submitting. </div>
-                </div>
+            </div>
+            <div id="cg_checkbox" class="col-12">
+              <!-- <div class="col-12"> -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" required>
+                <label class="form-check-label checkbox-label"> J'accepte les <a href="https://pure-sante.info/conditions-generales-de-vente/?_gl=1*vhzvkd*_ga*MTAzMjg4NDk1LjE3MDA2NjUxMTk.*_ga_L8LPKTXYD3*MTcwODYxMDA2MS4yMC4xLjE3MDg2MTAxNzAuNTguMC4w*_fplc*JTJCOEk0NHhRdm5tcm9YeWFpN1FlbEJSRUxrU2dSJTJCQWh1U2xEcndxT1NBUjNJRWY2SGRZRG90dTZZS21yWGZ6ODRRRkJ6ellYOGZtVDV3ZFpFTDJoY3NTZjRUNklqJTJGRSUyQiUyRiUyQk5QeENta0N0SyUyQmtNMUVUQVBXZjVqNHkzQkpIb2clM0QlM0Q">conditions générales de vente de Pure Santé</a> * </label>
+                <div class="invalid-feedback"> You must agree before submitting. </div>
               </div>
+              <!-- </div> -->
               <div class="col-12">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" required>
@@ -250,7 +228,7 @@
                 </div>
               </div>
               <div class="col-12 div_btn_pay">
-                <button class="btn btn-primary pay_btn" type="submit">Soumettre</button>
+                <button class="btn btn-primary pay_btn my-3" type="submit">Soumettre</button>
               </div>
             </div>
           </form>

@@ -278,10 +278,8 @@ document.addEventListener('DOMContentLoaded', function() {
         checkbox.addEventListener('change', function() {
             if (checkbox.checked) {
                 deliveryFormContainer.style.display = 'none';
-				cgCheckbox.style.display = 'block';
             } else {
                 deliveryFormContainer.style.display = 'block';
-				cgCheckbox.style.display = 'none';
             }
         });
     } else {
