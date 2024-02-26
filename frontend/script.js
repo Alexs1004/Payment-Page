@@ -250,6 +250,25 @@
 //     dropdown.add(option);
 // });
 
+// Récupérer tous les champs input
+const inputs = document.querySelectorAll('input');
+
+// Parcourir chaque champ input
+inputs.forEach(input => {
+  // Ajouter un écouteur d'événement pour détecter les changements de valeur
+  input.addEventListener('input', function() {
+    // Récupérer le nom de l'input
+    const inputName = input.getAttribute('id');
+    // Vérifier si un élément avec le même ID existe dans le formulaire de livraison
+    const deliveryInput = document.querySelector(`#delivery-form-container input[id="${inputName}"]`);
+    // Si un champ input correspondant est trouvé dans le formulaire de livraison, mettre à jour sa valeur
+    if (deliveryInput) {
+      deliveryInput.value = input.value;
+    }
+  });
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const checkbox = document.getElementById('invalidCheck_checked');
     const deliveryFormContainer = document.getElementById('delivery-form-container');
@@ -335,34 +354,34 @@ window.addEventListener('scroll', function() {
 //     </div>
 // </div>
 
-// // Fonction pour afficher le bloc SEPA et masquer le bloc Carte de crédit
-// function showSEPA() {
-//     document.getElementById('sepaBlock').style.display = 'block';
-//     document.getElementById('creditCardBlock').style.display = 'none';
-// }
+// Fonction pour afficher le bloc SEPA et masquer le bloc Carte de crédit
+function showSEPA() {
+    document.getElementById('sepaBlock').style.display = 'block';
+    document.getElementById('creditCardBlock').style.display = 'none';
+}
 
-// // Fonction pour afficher le bloc Carte de crédit et masquer le bloc SEPA
-// function showCreditCard() {
-//     document.getElementById('sepaBlock').style.display = 'none';
-//     document.getElementById('creditCardBlock').style.display = 'block';
-// }
+// Fonction pour afficher le bloc Carte de crédit et masquer le bloc SEPA
+function showCreditCard() {
+    document.getElementById('sepaBlock').style.display = 'none';
+    document.getElementById('creditCardBlock').style.display = 'block';
+}
 
-// // Ajout d'événements pour détecter les changements de sélection du bouton de bascule
-// document.getElementById('btnradio1').addEventListener('change', function() {
-//     if (this.checked) {
-//         showSEPA();
-//     }
-// });
+// Ajout d'événements pour détecter les changements de sélection du bouton de bascule
+document.getElementById('btnradio1').addEventListener('change', function() {
+    if (this.checked) {
+        showSEPA();
+    }
+});
 
-// document.getElementById('btnradio2').addEventListener('change', function() {
-//     if (this.checked) {
-//         showCreditCard();
-//     }
-// });
+document.getElementById('btnradio2').addEventListener('change', function() {
+    if (this.checked) {
+        showCreditCard();
+    }
+});
 
-// // Affichage initial en fonction de la sélection par défaut
-// if (document.getElementById('btnradio1').checked) {
-//     showSEPA();
-// } else {
-//     showCreditCard();
-// }
+// Affichage initial en fonction de la sélection par défaut
+if (document.getElementById('btnradio1').checked) {
+    showSEPA();
+} else {
+    showCreditCard();
+}
