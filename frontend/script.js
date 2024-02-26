@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (checkbox.checked) {
                 deliveryFormContainer.style.display = 'none';
             } else {
-                deliveryFormContainer.style.display = 'block';
+                deliveryFormContainer.style.display = 'inline-block';
 				cgCheckbox.style.display = 'none';
             }
         });
@@ -269,6 +269,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+
+
+document.addEventListener('DOMContentLoaded', function () {
+	const form = document.querySelector('form');
+	const modal = document.querySelector('.modal');
+
+	form.addEventListener('submit', function (event) {
+	  event.preventDefault(); // Prevent form submission
+
+	  // Display the modal
+	  modal.classList.add('show');
+	  modal.style.display = 'block';
+
+	  // Optional: You can also remove the modal after a certain time
+	  setTimeout(function () {
+		modal.classList.remove('show');
+		modal.style.display = 'none';
+	  }, 5000); // Adjust the time as needed
+	});
+  });
 
 
 
