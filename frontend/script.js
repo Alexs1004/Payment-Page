@@ -383,3 +383,44 @@ if (document.getElementById('btnradio1').checked) {
 } else {
     showCreditCard();
 }
+
+// document.getElementById('submitBtn').addEventListener('click', function() {
+//     // Affichez la modal de paiement lorsque le bouton est cliqué
+//     var myModal = new bootstrap.Modal(document.getElementById('paymentModal'), {
+//         keyboard: false, // Désactive la fermeture de la modal avec la touche Escape (Esc)
+//         backdrop: 'static' // Empêche la fermeture de la modal lorsque l'utilisateur clique en dehors de celle-ci
+//     });
+//     myModal.show();
+// });
+
+
+document.getElementById('submitBtn').addEventListener('click', function() {
+    // Affichez la modal de paiement lorsque le bouton est cliqué
+    var myModal = new bootstrap.Modal(document.getElementById('paymentModal'), {
+        keyboard: false, // Désactive la fermeture de la modal avec la touche Escape (Esc)
+        backdrop: 'static' // Empêche la fermeture de la modal lorsque l'utilisateur clique en dehors de celle-ci
+    });
+    myModal.show();
+
+    // Empêche la modal de se fermer automatiquement après un délai
+    myModal._backdrop._config.keyboard = false;
+    myModal._backdrop._config.backdrop = 'static';
+});
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     var myModal = new bootstrap.Modal(document.getElementById('paymentModal'));
+
+//     // Ajoute un gestionnaire d'événements pour le bouton "Soumettre"
+//     var submitBtn = document.querySelector('.pay_btn');
+//     submitBtn.addEventListener('click', function(event) {
+//         // Empêche le comportement par défaut du bouton (qui serait de fermer la modal)
+//         event.preventDefault();
+//         // Vous pouvez ajouter ici du code pour valider le formulaire ou effectuer d'autres actions nécessaires
+//         // Puis, fermez la modal manuellement lorsque vous le souhaitez
+//         // myModal.hide(); // Par exemple, vous pouvez la fermer une fois que les actions sont terminées
+//     });
+
+//     // Affiche la modal lorsque la page est complètement chargée
+//     myModal.show();
+// });

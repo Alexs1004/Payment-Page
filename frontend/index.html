@@ -214,6 +214,90 @@
         </div>
       </div>
     </div>
+		<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+			<div class=" modal-fullscreen">
+				<div class="modal-content">
+					<!-- <div class="modal-header">
+						<h5 class="modal-title" id="paymentModalLabel">Modal de Paiement</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div> -->
+					<div class="modal-body">
+						<!-- Votre code HTML pour le formulaire de paiement -->
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<!-- Bloc SEPA -->
+									<div class="btn-group d-flex my-5" role="group" aria-label="Basic radio toggle button group">
+										<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+										<label class="btn btn-outline-primary" for="btnradio1">SEPA <div class="reduc">-5€</div></label>
+										<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+										<label class="btn btn-outline-primary" for="btnradio2">Carte de crédit</label>
+									</div>
+									<hr class="horizontal_hr">
+									<div id="sepaBlock">
+										<form class="row g-3 needs-validation" novalidate>
+											<div class="col-12">
+												<label for="validationCustomUsername" class="form-label">Titulaire du compte</label>
+												<div class="input-group has-validation">
+													<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+													<div class="invalid-feedback"> Please choose a username. </div>
+												</div>
+											</div>
+											<div class="col-12">
+												<label for="validationCustomUsername" class="form-label">IBAN</label>
+												<div class="input-group has-validation">
+													<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+													<div class="invalid-feedback"> Please choose a username. </div>
+												</div>
+											</div>
+											<div class="col-12 div_btn_pay">
+												<button class="btn btn-primary pay_btn mt-04" type="submit">PAY</button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="col-12" id="creditCardBlock" style="display: none;">
+									<!-- Bloc Carte de crédit -->
+									<form class="row g-3 needs-validation" novalidate>
+										<div class="col-12">
+											<label for="validationCustomUsername" class="form-label">Nom du titulaire de la carte</label>
+											<div class="input-group has-validation">
+												<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+												<div class="invalid-feedback"> Please choose a username. </div>
+											</div>
+										</div>
+										<div class="col-12">
+											<label for="validationCustom02" class="form-label">Informations de la carte</label>
+											<input type="text" class="form-control" id="validationCustom02" placeholder="1234 1234 1234 1234" required>
+											<div class="valid-feedback"> Looks good! </div>
+										</div>
+										<div class="col-6">
+											<div class="splitted_input">
+												<input type="text" class="form-control" id="validationCustom10" placeholder="MM/YY" required>
+												<div class="valid-feedback"> Looks good! </div>
+											</div>
+										</div>
+										<div class="col-6">
+											<div class="splitted_input">
+												<input type="text" class="form-control" id="validationCustom31" placeholder="CVC" required>
+												<div class="valid-feedback"> Looks good! </div>
+											</div>
+										</div>
+										<div class="col-12 div_btn_pay">
+											<button class="btn btn-primary pay_btn mt-04" type="submit">PAY</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+						<button type="button" class="btn btn-primary">Sauvegarder</button>
+					</div> -->
+				</div>
+			</div>
+		</div>
     <script src="https://kit.fontawesome.com/42f54fa55a.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
