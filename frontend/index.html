@@ -148,7 +148,7 @@
               <div class="shippingTitle">
                 <label for="shippingTitle">Vos coordonnées de livraison</label>
               </div>
-						<div class="col-12 d-flex align-items-end">
+              <!-- <div class="col-12 d-flex align-items-end"> -->
               <div class="col-4">
                 <label for="validationCustom02" class="form-label">Nom *</label>
                 <div class="input-group">
@@ -171,38 +171,30 @@
                   <div class="valid-feedback"> Looks good! </div>
                 </div>
               </div>
-
-						</div>
-              <div class="col-12">
-                <label for="validationCustomUsername" class="form-label">Adresse *</label>
-                <div class="input-group has-validation">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="fa-solid fa-map-pin"></i>
-                    </span>
-                  </div>
-                  <input type="text" class="form-control" id="validationCustom35" required>
-                  <div class="invalid-feedback"> Please choose a username. </div>
+            </div>
+            <div class="col-12">
+              <label for="validationCustomUsername" class="form-label">Adresse *</label>
+              <div class="input-group has-validation">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-map-pin"></i>
+                  </span>
                 </div>
-              </div>
-              <div>
-                <label for="validationCustomUsername" class="form-label">Complément d'Informations</label>
-                <div class="input-group has-validation">
-                  <input type="text" class="form-control" id="validationCustom36" placeholder="Code d'entrée / N° d'appartement / Etage" required>
-                  <div class="invalid-feedback"> Please choose a username. </div>
-                </div>
+                <input type="text" class="form-control" id="validationCustom35" required>
+                <div class="invalid-feedback"> Please choose a username. </div>
               </div>
             </div>
+            <!-- </div> -->
             <div id="cg_checkbox" class="col-12">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" required>
-                <label class="form-check-label checkbox-label"> J'accepte les <a href="https://pure-sante.info/conditions-generales-de-vente/?_gl=1*vhzvkd*_ga*MTAzMjg4NDk1LjE3MDA2NjUxMTk.*_ga_L8LPKTXYD3*MTcwODYxMDA2MS4yMC4xLjE3MDg2MTAxNzAuNTguMC4w*_fplc*JTJCOEk0NHhRdm5tcm9YeWFpN1FlbEJSRUxrU2dSJTJCQWh1U2xEcndxT1NBUjNJRWY2SGRZRG90dTZZS21yWGZ6ODRRRkJ6ellYOGZtVDV3ZFpFTDJoY3NTZjRUNklqJTJGRSUyQiUyRiUyQk5QeENta0N0SyUyQmtNMUVUQVBXZjVqNHkzQkpIb2clM0QlM0Q">conditions générales de vente de Pure Santé</a> * </label>
+                <label class="form-check-label checkbox-label"> J'accepte les <a target="_blank" href="https://pure-sante.info/conditions-generales-de-vente/?_gl=1*vhzvkd*_ga*MTAzMjg4NDk1LjE3MDA2NjUxMTk.*_ga_L8LPKTXYD3*MTcwODYxMDA2MS4yMC4xLjE3MDg2MTAxNzAuNTguMC4w*_fplc*JTJCOEk0NHhRdm5tcm9YeWFpN1FlbEJSRUxrU2dSJTJCQWh1U2xEcndxT1NBUjNJRWY2SGRZRG90dTZZS21yWGZ6ODRRRkJ6ellYOGZtVDV3ZFpFTDJoY3NTZjRUNklqJTJGRSUyQiUyRiUyQk5QeENta0N0SyUyQmtNMUVUQVBXZjVqNHkzQkpIb2clM0QlM0Q">conditions générales de vente de Pure Santé</a> * </label>
                 <div class="invalid-feedback"> You must agree before submitting. </div>
               </div>
               <div class="col-12">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" required>
-                  <label class="form-check-label checkbox-label"> J'accepte les <a href="https://palyance.com/cgs/">conditions générales de services de paiement Palyance</a> * </label>
+                  <label class="form-check-label checkbox-label"> J'accepte les <a target="_blank" href="https://palyance.com/cgs/">conditions générales de services de paiement Palyance</a> * </label>
                   <div class="invalid-feedback"> You must agree before submitting. </div>
                 </div>
               </div>
@@ -214,90 +206,85 @@
         </div>
       </div>
     </div>
-		<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
-			<div class=" modal-fullscreen">
-				<div class="modal-content">
-					<!-- <div class="modal-header">
-						<h5 class="modal-title" id="paymentModalLabel">Modal de Paiement</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div> -->
-					<div class="modal-body">
-						<!-- Votre code HTML pour le formulaire de paiement -->
-						<div class="container">
-							<div class="row">
-								<div class="col-12">
-									<!-- Bloc SEPA -->
-									<div class="btn-group d-flex my-5" role="group" aria-label="Basic radio toggle button group">
-										<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-										<label class="btn btn-outline-primary" for="btnradio1">SEPA <div class="reduc">-5€</div></label>
-										<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-										<label class="btn btn-outline-primary" for="btnradio2">Carte de crédit</label>
-									</div>
-									<hr class="horizontal_hr">
-									<div id="sepaBlock">
-										<form class="row g-3 needs-validation" novalidate>
-											<div class="col-12">
-												<label for="validationCustomUsername" class="form-label">Titulaire du compte</label>
-												<div class="input-group has-validation">
-													<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-													<div class="invalid-feedback"> Please choose a username. </div>
-												</div>
-											</div>
-											<div class="col-12">
-												<label for="validationCustomUsername" class="form-label">IBAN</label>
-												<div class="input-group has-validation">
-													<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-													<div class="invalid-feedback"> Please choose a username. </div>
-												</div>
-											</div>
-											<div class="col-12 div_btn_pay">
-												<button class="btn btn-primary pay_btn mt-04" type="submit">PAY</button>
-											</div>
-										</form>
-									</div>
-								</div>
-								<div class="col-12" id="creditCardBlock" style="display: none;">
-									<!-- Bloc Carte de crédit -->
-									<form class="row g-3 needs-validation" novalidate>
-										<div class="col-12">
-											<label for="validationCustomUsername" class="form-label">Nom du titulaire de la carte</label>
-											<div class="input-group has-validation">
-												<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-												<div class="invalid-feedback"> Please choose a username. </div>
-											</div>
-										</div>
-										<div class="col-12">
-											<label for="validationCustom02" class="form-label">Informations de la carte</label>
-											<input type="text" class="form-control" id="validationCustom02" placeholder="1234 1234 1234 1234" required>
-											<div class="valid-feedback"> Looks good! </div>
-										</div>
-										<div class="col-6">
-											<div class="splitted_input">
-												<input type="text" class="form-control" id="validationCustom10" placeholder="MM/YY" required>
-												<div class="valid-feedback"> Looks good! </div>
-											</div>
-										</div>
-										<div class="col-6">
-											<div class="splitted_input">
-												<input type="text" class="form-control" id="validationCustom31" placeholder="CVC" required>
-												<div class="valid-feedback"> Looks good! </div>
-											</div>
-										</div>
-										<div class="col-12 div_btn_pay">
-											<button class="btn btn-primary pay_btn mt-04" type="submit">PAY</button>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- <div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-						<button type="button" class="btn btn-primary">Sauvegarder</button>
-					</div> -->
-				</div>
-			</div>
-		</div>
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+      <div class=" modal-fullscreen">
+        <div class="modal-content">
+          <!-- <div class="modal-header"><h5 class="modal-title" id="paymentModalLabel">Modal de Paiement</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div> -->
+          <div class="modal-body">
+            <!-- Votre code HTML pour le formulaire de paiement -->
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <!-- Bloc SEPA -->
+                  <div class="btn-group d-flex my-5" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="btnradio1">SEPA <div class="reduc">-5€</div>
+                    </label>
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio2">Carte de crédit</label>
+                  </div>
+                  <hr class="horizontal_hr">
+                  <div id="sepaBlock">
+                    <form class="row g-3 needs-validation" novalidate>
+                      <div class="col-12">
+                        <label for="validationCustomUsername" class="form-label">Titulaire du compte</label>
+                        <div class="input-group has-validation">
+                          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                          <div class="invalid-feedback"> Please choose a username. </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label for="validationCustomUsername" class="form-label">IBAN</label>
+                        <div class="input-group has-validation">
+                          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                          <div class="invalid-feedback"> Please choose a username. </div>
+                        </div>
+                      </div>
+                      <div class="col-12 div_btn_pay">
+                        <button class="btn btn-primary pay_btn mt-04" type="submit">PAY</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-12" id="creditCardBlock" style="display: none;">
+                  <!-- Bloc Carte de crédit -->
+                  <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-12">
+                      <label for="validationCustomUsername" class="form-label">Nom du titulaire de la carte</label>
+                      <div class="input-group has-validation">
+                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback"> Please choose a username. </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="validationCustom02" class="form-label">Informations de la carte</label>
+                      <input type="text" class="form-control" id="validationCustom02" placeholder="1234 1234 1234 1234" required>
+                      <div class="valid-feedback"> Looks good! </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="splitted_input">
+                        <input type="text" class="form-control" id="validationCustom10" placeholder="MM/YY" required>
+                        <div class="valid-feedback"> Looks good! </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="splitted_input">
+                        <input type="text" class="form-control" id="validationCustom31" placeholder="CVC" required>
+                        <div class="valid-feedback"> Looks good! </div>
+                      </div>
+                    </div>
+                    <div class="col-12 div_btn_pay">
+                      <button class="btn btn-primary pay_btn mt-04" type="submit">PAY</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button><button type="button" class="btn btn-primary">Sauvegarder</button></div> -->
+        </div>
+      </div>
+    </div>
     <script src="https://kit.fontawesome.com/42f54fa55a.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
