@@ -1,121 +1,125 @@
 :root {
-	/* --checkout-text-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue","Ubuntu",sans-serif;
-	--choices-hover-color: #98AAB3; */
+    /* --checkout-text-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue","Ubuntu",sans-serif;
+    --choices-hover-color: #98AAB3; */
 }
 
 i {
-	color: #244D61;
+    color: #244D61;
 }
 
 .left_nav_items {
-	overflow: auto;
-	margin-left: 25px;
+    overflow: auto;
+    margin-left: 25px;
 }
 
 .navbar {
-    /* border-bottom: 1px solid #ddd; */
-	transition: border-bottom 0.3s ease; /* Transition douce pour la bordure */
+    transition: border-bottom 0.3s ease; /* Transition douce pour la bordure */
     border-bottom: none; /* Par défaut, cache la bordure */
 }
 
-
-
 .navbar-scrolled {
-	background-color: white;
+    background-color: white;
     border-bottom: 1px solid #ddd; /* Affiche la bordure lorsque scrolled */
 }
 
-.arrow_left, .retour {
-	display: inline-block;
+.arrow_left,
+.retour {
+    display: inline-block;
 }
 
-.navbar-brand:hover, .dropdown:hover{
-	color: hsl(0, 0%, 80%);
+.navbar-brand:hover,
+.dropdown:hover .navbar-brand {
+    color: hsl(0, 0%, 80%);
+}
+
+.arrow_left:hover,
+.retour:hover {
+    color: hsl(0, 0%, 80%);
 }
 
 .arrow_left {
-	margin: 1em;
+    margin: 1em;
 }
 
-.info, .arrow_down {
-	display: inline-block;
+.info,
+.arrow_down {
+    display: inline-block;
 }
 
-.info{
-	font-size: 20px;
+.info {
+    font-size: 20px;
 }
+
 .dropdown {
-    position:static !important;
-	margin-right: 25px;
+    position: static !important;
+    margin-right: 25px;
 }
 
 .currency {
-	font-size: 37px;
-	font-weight: bold;
+    font-size: 37px;
+    font-weight: bold;
 }
 
 .dropdown-menu {
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
-    margin-top:0px !important;
-    width:100% !important;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    margin-top: 0px !important;
+    width: 100% !important;
 }
 
 .row {
-	margin: 1em;
+    margin: 1em;
 }
 
 .pay_btn {
-	width: 100%;
-	background-color: #244D61;
+    width: 100%;
+    background-color: #244D61;
 }
 
 .pay_btn:hover {
-	background-color: #244D61;
-	color: #98AAB3;
+    background-color: #244D61;
+    color: #98AAB3;
 }
 
-
 .div_btn_pay {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .custom_image {
-	width: 300px;
-	height: auto;
+    width: 300px;
+    height: auto;
     filter: grayscale(50%);
-	margin-bottom: 1em;
-	margin-top: 70px;
+    margin-bottom: 1em;
+    margin-top: 70px;
 }
 
 .product_page {
-	display: flex;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-	margin: 1em;
+    margin: 1em;
 }
 
 .product_description {
-	display: flex;
+    display: flex;
     align-items: center;
     flex-direction: column;
 }
 
 .view_details_btn {
-	margin-top: 0.8em;
+    margin-top: 0.8em;
 }
 
 .view_details_btn:hover {
-	background-color: #244D61;
-	color: white;
+    background-color: #244D61;
+    color: white;
 }
-
 
 .reduc {
     position: absolute;
-	top: -29px;
-	left: -17px;
+    top: -29px;
+    left: -17px;
     font-size: 1.5em;
     padding: 5px 10px;
     border-radius: 5px;
@@ -127,10 +131,10 @@ i {
 }
 
 .horizontal_hr {
-	width: 100%;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	border-color: #ccc;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-color: #ccc;
 }
 
 .btn-group {
@@ -140,35 +144,35 @@ i {
 .vertical-line {
     border-left: 0.1px solid rgba(0, 0, 0, .1);
     height: 100%;
-	box-shadow: -3px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav_dropdown_img {
-	width: 92px;
-	height: auto;
+    width: 92px;
+    height: auto;
     filter: grayscale(50%);
-	margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .input-group-prepend {
-	display: flex;
-	position: absolute;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	width: 40px;
-	z-index: 1;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    z-index: 1;
 }
 
 .form-check-label a {
-	color: #244D61;
-	text-decoration: none;
+    color: #244D61;
+    text-decoration: none;
 }
 
 .form-check-label a:hover {
-	text-decoration: underline;
-	cursor: pointer;
-	color: #98AAB3;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #98AAB3;
 }
 
 .btn-check:checked + .btn-outline-primary,
@@ -187,104 +191,82 @@ i {
 }
 
 .shippingTitle {
-	font-weight: bold;
+    font-weight: bold;
     font-size: 20px;
 }
 
-.btn-outline-primary:hover, .btn-outline-secondary:hover {
-	color: white;
-	border-color: #244D61;
+.btn-outline-primary:hover,
+.btn-outline-secondary:hover {
+    color: white;
+    border-color: #244D61;
 }
 
 .btn-check:checked + .btn-outline-primary {
     color: #fff;
 }
 
-.btn-outline-secondary:focus, .btn-outline-primary:focus {
-	color: #fff;
-	border-color: #244D61;
+.btn-outline-secondary:focus,
+.btn-outline-primary:focus {
+    color: #fff;
+    border-color: #244D61;
 }
 
-#SEPA-radio:hover, #CC-radio:hover {
-	color: #244D61;
-	border-color: #244D61;
+#SEPA-radio:hover,
+#CC-radio:hover {
+    color: #244D61;
+    border-color: #244D61;
 }
 
-/* #SEPA-radio:hover:active, #CC-radio:hover:active {
-    color: white;
-} */
-
-
-.btn-outline-secondary, .btn-outline-primary {
-	border-color: #244D61;
-	color: #244D61;
+.btn-outline-secondary,
+.btn-outline-primary {
+    border-color: #244D61;
+    color: #244D61;
 }
-
 
 .form-check-input:checked[type="checkbox"] + .form-check-label {
     color: black;
 }
 
-
-/* .input-group-text {
-	background-color: transparent;
-	border: none;
-} */
-
-
-/* Style pour l'icône dans le champ de saisie */
 .input-icon {
     position: absolute;
-    left: 15px; /* Ajustez la position horizontale selon vos besoins */
+    left: 15px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 100;
 }
 
-/* Style pour le champ de saisie avec icône */
 .form-control-icon {
-    padding-left: 35px; /* Ajustez la marge à gauche pour permettre de l'espace pour l'icône */
-}
-
-
-
-.form-control {
-	padding-left: 40px;
-}
-
-#validationCustom01, #validationCustom11, #validationCustom10 {
-	border-radius: 6px;
-}
-
-#validationCustom02, #validationCustom10, #validationCustom31, #validationCustomUsername {
-	padding-left: 13px;
+    padding-left: 35px;
 }
 
 .form-control {
-	border-radius: 6px !important;
+    padding-left: 40px;
+}
+
+#validationCustom01,
+#validationCustom11,
+#validationCustom10 {
+    border-radius: 6px;
+}
+
+#validationCustom02,
+#validationCustom10,
+#validationCustom31,
+#validationCustomUsername {
+    padding-left: 13px;
+}
+
+.form-control {
+    border-radius: 6px !important;
 }
 
 .in_dd_button {
-	height: 35px;
+    height: 35px;
     font-size: 14px;
-	display: block;
+    display: block;
 }
 
-
-/* .vertical-line {
-    border-left: 1px solid #ccc;
-    height: 100%;
-    margin: 0 1rem;
-} */
-
-/* @media (min-width: 992px) {
-	.vertical-line {
-	  border-left: 1px solid #ccc;
-	  height: 100%;
-	  margin: 0 1rem;
-	}
-  } */
-
+/* Media Queries */
 
 @media (max-width: 400px) {
     .pay_btn {
@@ -295,6 +277,5 @@ i {
 @media (min-width: 401px) {
     .pay_btn {
         width: 400px;
-	}
+    }
 }
-
