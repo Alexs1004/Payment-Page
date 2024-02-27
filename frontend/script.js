@@ -301,9 +301,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	  setTimeout(function () {
 		modal.classList.remove('show');
 		modal.style.display = 'none';
-	  }, 5000); // Adjust the time as needed
+	  }, 500000000); // Adjust the time as needed
 	});
   });
+
 
 
 
