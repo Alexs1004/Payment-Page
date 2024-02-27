@@ -1,9 +1,11 @@
 :root {
-    /* --checkout-text-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue","Ubuntu",sans-serif;
-    --choices-hover-color: #98AAB3; */
+	--main-color: #244D61;
+	--hover-color1: #98AAB3;
+	--hover-color2: hsl(0, 0%, 80%);
+
 }
 
-i {
+.input-group i {
     color: #244D61;
 }
 
@@ -20,6 +22,11 @@ i {
 .navbar-scrolled {
     background-color: white;
     border-bottom: 1px solid #ddd; /* Affiche la bordure lorsque scrolled */
+}
+
+.dropdown:hover {
+	border: none;
+	color: var(--hover-color1);
 }
 
 .arrow_left,
