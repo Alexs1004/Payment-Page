@@ -3,6 +3,9 @@
 	--choices-hover-color: #98AAB3; */
 }
 
+i {
+	color: #244D61;
+}
 
 .left_nav_items {
 	overflow: auto;
@@ -223,10 +226,27 @@
 }
 
 
-.input-group-text {
+/* .input-group-text {
 	background-color: transparent;
 	border: none;
+} */
+
+
+/* Style pour l'icône dans le champ de saisie */
+.input-icon {
+    position: absolute;
+    left: 15px; /* Ajustez la position horizontale selon vos besoins */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
 }
+
+/* Style pour le champ de saisie avec icône */
+.form-control-icon {
+    padding-left: 35px; /* Ajustez la marge à gauche pour permettre de l'espace pour l'icône */
+}
+
+
 
 .form-control {
 	padding-left: 40px;

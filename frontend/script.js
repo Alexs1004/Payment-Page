@@ -268,26 +268,23 @@ inputs.forEach(input => {
   });
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
     const checkbox = document.getElementById('invalidCheck_checked');
     const deliveryFormContainer = document.getElementById('delivery-form-container');
-	const cgCheckbox = document.getElementById("cg_checkbox");
+    const cgCheckbox = document.getElementById("cg_checkbox");
 
     if (checkbox && deliveryFormContainer) {
         checkbox.addEventListener('change', function() {
             if (checkbox.checked) {
-                deliveryFormContainer.style.display = 'none';
+                deliveryFormContainer.classList.add('d-none');
             } else {
-                deliveryFormContainer.style.display = 'block';
+                deliveryFormContainer.classList.remove('d-none');
             }
         });
     } else {
         console.error('L\'élément checkbox ou delivery-form-container est introuvable.');
     }
 });
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
 	const form = document.querySelector('form');
