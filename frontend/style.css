@@ -30,23 +30,49 @@
 }
 
 .arrow_left,
-.retour {
+.retour,
+.logo_prst {
     display: inline-block;
+    color: var(--hover-color2);
+    vertical-align: middle; /* Alignement vertical au centre */
 }
 
-.navbar-brand:hover,
-.dropdown:hover .navbar-brand {
-    color: hsl(0, 0%, 80%);
+.logo_prst img {
+    display: block;
 }
 
-.arrow_left:hover,
-.retour:hover {
-    color: hsl(0, 0%, 80%);
+.retour {
+    display: none;
+    margin-left: 10px;
 }
+
+.left_nav_items {
+	padding: 10px;
+}
+
+.left_nav_items:hover .retour {
+    display: block;
+    opacity: 1;
+}
+
+.left_nav_items:hover img {
+    display: none;
+}
+
+.left_nav_items:hover .arrow_left,
+.left_nav_items:hover .retour {
+    color: black;
+}
+
+
+/* .navbar-brand {
+    color: black;
+} */
 
 .arrow_left {
     margin: 1em;
 }
+
 
 .info,
 .arrow_down {
