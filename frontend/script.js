@@ -333,23 +333,6 @@ window.addEventListener('scroll', function() {
 // });
 
 
-
-// // <!-- Ajoutez cet élément div pour contenir les deux blocs -->
-// <div class="container">
-//     <div class="row">
-//         <!-- Bloc SEPA -->
-//         <div id="sepaBlock" class="col-lg-6">
-// //             <!-- Contenu du bloc SEPA -->
-// //             <!-- Copiez et collez le contenu du bloc SEPA ici -->
-// //         </div>
-//         <!-- Bloc Carte de crédit -->
-//         <div id="creditCardBlock" class="col-lg-6" style="display:none;">
-//             <!-- Contenu du bloc Carte de crédit -->
-//             <!-- Copiez et collez le contenu du bloc Carte de crédit ici -->
-//         </div>
-//     </div>
-// </div>
-
 // Fonction pour afficher le bloc SEPA et masquer le bloc Carte de crédit
 function showSEPA() {
     document.getElementById('sepaBlock').style.display = 'block';
