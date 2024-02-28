@@ -101,19 +101,94 @@
                 <div class="invalid-feedback"> Please choose a username. </div>
               </div>
             </div> -->
+
+
 			<div class="col-12">
-				<label for="validationCustomUsername" class="form-label">Adresse email *</label>
+				<label for="validationCustomUsername" class="form-label">E-mail</label>
 				<div class="input-group has-validation position-relative">
 					<input type="text" class="form-control form-control-icon" id="validationCustom01" placeholder="email@exemple.com" required>
 					<i class="fas fa-envelope input-icon"></i>
 					<div class="invalid-feedback"> Please choose a username. </div>
 				</div>
 			</div>
-
+					<div class="col-12">
+						<!-- Bloc SEPA -->
+						<div class="btn-group d-flex my-5" role="group" aria-label="Basic radio toggle button group">
+							<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+							<label class="btn btn-outline-primary" for="btnradio1">SEPA <div class="reduc">-5€</div>
+							</label>
+							<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+							<label class="btn btn-outline-primary" for="btnradio2">Carte de crédit</label>
+						</div>
+						<hr class="horizontal_hr">
+						<div id="sepaBlock">
+							<form class="row g-3 needs-validation" novalidate>
+								<div class="col-12">
+									<label for="validationCustomUsername" class="form-label">Titulaire du compte</label>
+									<div class="input-group has-validation">
+										<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+										<div class="invalid-feedback"> Please choose a username. </div>
+									</div>
+								</div>
+								<div class="col-12">
+									<label for="validationCustomUsername" class="form-label">IBAN</label>
+									<div class="input-group has-validation">
+										<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+										<div class="invalid-feedback"> Please choose a username. </div>
+									</div>
+								</div>
+								<div class="col-12 div_btn_pay">
+									<button class="btn btn-primary pay_btn mt-04" type="submit">PAY</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-12" id="creditCardBlock" style="display: none;">
+						<!-- Bloc Carte de crédit -->
+						<form class="row g-3 needs-validation" novalidate>
+							<div class="col-12">
+								<label for="validationCustomUsername" class="form-label">Nom du titulaire de la carte</label>
+								<div class="input-group has-validation">
+									<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+									<div class="invalid-feedback"> Please choose a username. </div>
+								</div>
+							</div>
+							<div class="col-12">
+								<label for="validationCustom02" class="form-label">Informations de la carte</label>
+								<input type="text" class="form-control" id="validationCustom02" placeholder="1234 1234 1234 1234" required>
+								<div class="valid-feedback"> Looks good! </div>
+							</div>
+							<div class="col-6">
+								<div class="splitted_input">
+									<input type="text" class="form-control" id="validationCustom10" placeholder="MM/YY" required>
+									<div class="valid-feedback"> Looks good! </div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="splitted_input">
+									<input type="text" class="form-control" id="validationCustom31" placeholder="CVC" required>
+									<div class="valid-feedback"> Looks good! </div>
+								</div>
+							</div>
+							<div class="col-12">
+								<label for="validationCustom04" class="form-label">Pays ou région</label>
+								<select class="form-select" id="paysDropdown" required>
+									<option selected value="">France métropolitaine</option>
+								</select>
+								<div class="invalid-feedback">
+									Please select a valid state.
+								</div>
+								</div>
+							<div class="col-12 div_btn_pay">
+								<button class="btn btn-primary pay_btn mt-04" type="submit">PAY</button>
+							</div>
+						</form>
+					</div>
+					<!-- ************************************Formulaire de contact***********************-->
 			<div class="col-12">
-				<label for="validationCustomUsername" class="form-label">Confirmer l'adresse email *</label>
+				<label for="validationCustomUsername" class="form-label">E-mail</label>
 				<div class="input-group has-validation position-relative">
-					<input type="text" class="form-control form-control-icon" id="validationCustom03" placeholder="email@exemple.com" required>
+					<input type="text" class="form-control form-control-icon" id="validationCustom01" placeholder="email@exemple.com" required>
 					<i class="fas fa-envelope input-icon"></i>
 					<div class="invalid-feedback"> Please choose a username. </div>
 				</div>
