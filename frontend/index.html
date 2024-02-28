@@ -23,9 +23,10 @@
 				</a>
         </div>
         <div class="dropdown">
-          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn dd-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <div class="info">
               <span>Détails</span>
+							<i class="fa-solid fa-angle-down nav-arrow"></i>
             </div>
           </button>
           <ul class="dropdown-menu">
@@ -50,6 +51,7 @@
         </div>
       </div>
     </nav>
+		<div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
@@ -58,18 +60,25 @@
               <img src="../assets/images/RSB_pile-magazine.png" alt="RSB_pile-magazine" class="custom_image">
             </div>
             <div class="product_description">
-              <span>Révélations Santé & Bien-être</span>
+              <span class="subscribe_text">S'abonner à Togethere Professional</span>
               <div>
-                <div>
+                <div class="d-flex align-items-center">
                   <div>
                     <span class="currency">105,00 €</span>
                   </div>
-                  <span></span>
+									<div class="text_currency mx-2">
+											<span> par mois</span>
+									</div>
                 </div>
               </div>
               <div>
                 <div>
-                  <button type="button" class="btn btn-outline-secondary view_details_btn">View details</button>
+									<button type="button" class="btn btn-light qte-btn mt-3">
+										<div class="btn-qte-content">
+											<span>Qté 1</span>
+											<i class="fa-solid fa-angle-down nav-arrow"></i>
+										</div>
+									</button>
                 </div>
               </div>
             </div>

@@ -405,6 +405,15 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     myModal._backdrop._config.backdrop = 'static';
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.dropdown-toggle').forEach(dropToggle => {
+      dropToggle.addEventListener('click', function() {
+        const dropdownMenu = this.nextElementSibling;
+        dropdownMenu.classList.toggle('open');
+      });
+    });
+  });
+
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     var myModal = new bootstrap.Modal(document.getElementById('paymentModal'));

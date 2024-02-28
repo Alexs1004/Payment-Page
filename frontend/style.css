@@ -1,9 +1,14 @@
 :root {
 	--main-color: #244D61;
 	--hover-color1: #98AAB3;
-	--hover-color2: hsl(0, 0%, 80%);
-
+	--hover-color2: hsl(0, 0%, 55%);
+	/* --font-family:  */
 }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "Ubuntu", sans-serif;
+}
+
 
 .input-group i {
     color: #244D61;
@@ -11,7 +16,6 @@
 
 .left_nav_items {
     overflow: auto;
-    margin-left: 25px;
 }
 
 .navbar {
@@ -26,7 +30,7 @@
 
 .dropdown:hover {
 	border: none;
-	color: var(--hover-color1);
+	color: black;
 }
 
 .arrow_left,
@@ -44,6 +48,7 @@
 .retour {
     display: none;
     margin-left: 10px;
+	padding: 16px;
 }
 
 .left_nav_items {
@@ -73,6 +78,21 @@
     margin: 1em;
 }
 
+.info {
+	text-decoration: underline dotted;
+}
+
+.subscribe_text {
+	font-weight: 500;
+	font-size: 18px;
+	color: var(--hover-color2);
+}
+
+.text_currency {
+	font-weight: 500;
+	font-size: 16px;
+	color: var(--hover-color2);
+}
 
 .info,
 .arrow_down {
@@ -83,20 +103,25 @@
     font-size: 20px;
 }
 
+.nav-arrow {
+	margin-left: 8px;
+}
+
 .dropdown {
     position: static !important;
     margin-right: 25px;
 }
 
 .currency {
-    font-size: 37px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .dropdown-menu {
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    /* box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important; */
     margin-top: 0px !important;
     width: 100% !important;
+	border: none;
 }
 
 .row {
@@ -170,6 +195,10 @@
     border-color: #ccc;
 }
 
+.qte-btn {
+	padding: 14px;
+}
+
 .btn-group {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
@@ -178,6 +207,10 @@
     border-left: 0.1px solid rgba(0, 0, 0, .1);
     height: 100%;
     box-shadow: -3px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.dd-toggle {
+	color: var(--hover-color2);
 }
 
 .nav_dropdown_img {
@@ -298,6 +331,22 @@
     font-size: 14px;
     display: block;
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Opacité de l'overlay */
+    z-index: 1000; /* Assure que l'overlay est au-dessus de tout le reste */
+    display: none; /* Par défaut, l'overlay est caché */
+}
+
+.dropdown.open + .overlay {
+    display: block; /* Affiche l'overlay lorsque la dropdown est ouverte */
+}
+
 
 /* Media Queries */
 
