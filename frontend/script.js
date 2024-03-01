@@ -397,6 +397,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  document.addEventListener('DOMContentLoaded', function () {
+    const dropdownToggle = document.querySelector('.dd-toggle');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const overlay = document.querySelector('.overlay');
+
+    dropdownToggle.addEventListener('click', function () {
+        dropdownMenu.classList.toggle('open');
+        overlay.style.display = dropdownMenu.classList.contains('open') ? 'block' : 'none';
+    });
+});
+
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     var myModal = new bootstrap.Modal(document.getElementById('paymentModal'));
