@@ -388,25 +388,49 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     myModal._backdrop._config.backdrop = 'static';
 });
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     document.querySelectorAll('.dropdown-toggle').forEach(dropToggle => {
+//       dropToggle.addEventListener('click', function() {
+//         const dropdownMenu = this.nextElementSibling;
+//         dropdownMenu.classList.toggle('open');
+//       });
+//     });
+//   });
+
+//   document.addEventListener('DOMContentLoaded', function () {
+//     const dropdownToggle = document.querySelector('.dd-toggle');
+//     const dropdownMenu = document.querySelector('.dropdown-menu');
+//     const overlay = document.querySelector('.overlay');
+
+//     dropdownToggle.addEventListener('click', function () {
+//         dropdownMenu.classList.toggle('open');
+//         overlay.style.display = dropdownMenu.classList.contains('open') ? 'block' : 'none';
+//     });
+// });
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+// 	var dropdownButton = document.querySelector('.dd-toggle');
+// 	var overlay = document.querySelector('.overlay');
+// 	var mainContent = document.querySelector('.main-content');
+
+// 	dropdownButton.addEventListener('click', function() {
+// 	  overlay.classList.toggle('active');
+// 	  mainContent.classList.toggle('gris-out');
+// 	});
+//   });
+
+
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.dropdown-toggle').forEach(dropToggle => {
-      dropToggle.addEventListener('click', function() {
-        const dropdownMenu = this.nextElementSibling;
-        dropdownMenu.classList.toggle('open');
-      });
-    });
+	var dropdownButton = document.querySelector('.dd-toggle');
+	var overlay = document.getElementById('overlay');
+	var mainContent = document.getElementById('main-content');
+
+	dropdownButton.addEventListener('click', function() {
+	  overlay.classList.add('active'); // Ajouter la classe pour afficher l'overlay
+	  mainContent.classList.add('gris-out'); // Appliquer le filtre de gris
+	});
   });
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const dropdownToggle = document.querySelector('.dd-toggle');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-    const overlay = document.querySelector('.overlay');
-
-    dropdownToggle.addEventListener('click', function () {
-        dropdownMenu.classList.toggle('open');
-        overlay.style.display = dropdownMenu.classList.contains('open') ? 'block' : 'none';
-    });
-});
 
 
 // document.addEventListener('DOMContentLoaded', function() {

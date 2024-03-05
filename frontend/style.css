@@ -359,20 +359,26 @@ body {
     padding: 12px var(--space-4);
 }
 
+
+
 .overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Opacité de l'overlay */
-    z-index: 1000000; /* Assure que l'overlay est au-dessus de tout le reste */
-    display: none; /* Par défaut, l'overlay est caché */
-}
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
+    z-index: 9999; /* Pour s'assurer que l'overlay soit au-dessus du reste du contenu */
+  }
 
-.dropdown.open + .overlay {
-    display: block; /* Affiche l'overlay lorsque la dropdown est ouverte */
-}
+  .overlay.active {
+    display: block;
+  }
+
+  .main-content.gris-out {
+    filter: grayscale(100%);
+  }
 
 
 /* Media Queries */
