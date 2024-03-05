@@ -394,12 +394,13 @@ body {
     }
 }
 
-@media (max-width: 575px)
+@media (max-width: 992px)
 {
-    .modal.bottom .modal-dialog {
+    .modal-dialog {
         position: absolute;
         bottom: 0px;
-        margin: auto auto;
+        margin: 0px 0px;
         width: 100%;
+        max-width: 992px;
     }
 }
