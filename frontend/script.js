@@ -269,6 +269,21 @@ inputs.forEach(input => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    var qteBtn = document.querySelector('.qte-btn');
+    qteBtn.addEventListener('click', function() {
+        var qteModal = new bootstrap.Modal(document.getElementById('qteModal'), {
+            backdrop: 'static',
+            keyboard: false
+        });
+        qteModal.show();
+
+        // Défiler jusqu'en bas de la page
+        window.scrollTo(0, document.body.scrollHeight);
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
     const checkbox = document.getElementById('invalidCheck_checked');
     const deliveryFormContainer = document.getElementById('delivery-form-container');
     const cgCheckbox = document.getElementById("cg_checkbox");
@@ -431,6 +446,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	  mainContent.classList.add('gris-out'); // Appliquer le filtre de gris
 	});
   });
+
+
+
 
 
 // document.addEventListener('DOMContentLoaded', function() {

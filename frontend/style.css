@@ -360,7 +360,6 @@ body {
 }
 
 
-
 .overlay {
     display: none;
     position: fixed;
@@ -392,5 +391,15 @@ body {
 @media (min-width: 401px) {
     .pay_btn {
         width: 400px;
+    }
+}
+
+@media (max-width: 575px)
+{
+    .modal.bottom .modal-dialog {
+        position: absolute;
+        bottom: 0px;
+        margin: auto auto;
+        width: 100%;
     }
 }
