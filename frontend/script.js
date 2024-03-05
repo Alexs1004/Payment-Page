@@ -448,6 +448,53 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
+//   document.addEventListener('DOMContentLoaded', function() {
+//     // Sélection de l'input et des boutons
+//     var inputQuantity = document.getElementById('inputQuantitySelector');
+//     var buttonUp = document.querySelector('[data-bs-step="up"]');
+//     var buttonDown = document.querySelector('[data-bs-step="down"]');
+
+//     // Ajout d'un événement de clic pour le bouton "Up"
+//     buttonUp.addEventListener('click', function() {
+//         var currentValue = parseInt(inputQuantity.value);
+//         var max = parseInt(inputQuantity.getAttribute('max'));
+//         if (currentValue < max) {
+//             inputQuantity.value = currentValue + 1;
+//         }
+//     });
+
+//     // Ajout d'un événement de clic pour le bouton "Down"
+//     buttonDown.addEventListener('click', function() {
+//         var currentValue = parseInt(inputQuantity.value);
+//         var min = parseInt(inputQuantity.getAttribute('min'));
+//         if (currentValue > min) {
+//             inputQuantity.value = currentValue - 1;
+//         }
+//     });
+// });
+document.addEventListener('DOMContentLoaded', function() {
+    var incrementButtons = document.querySelectorAll('.input-number-increment');
+    var decrementButtons = document.querySelectorAll('.input-number-decrement');
+
+    incrementButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var input = this.closest('.input-number-group').querySelector('.input-number');
+            var val = parseInt(input.value, 10);
+            input.value = val + 1;
+        });
+    });
+
+    decrementButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var input = this.closest('.input-number-group').querySelector('.input-number');
+            var val = parseInt(input.value, 10);
+            input.value = val - 1;
+        });
+    });
+});
+
+
+
 
 
 

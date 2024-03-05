@@ -4,6 +4,7 @@
 	--hover-color2: hsl(0, 0%, 55%);
 	/* --font-family:  */
     --dd_textcolor: #A4A4A4;
+    --button-plus-minus: rgba(0,0,0,0.03);
 }
 
 body {
@@ -18,6 +19,14 @@ body {
 .left_nav_items {
     overflow: auto;
 }
+
+/* .minus-btn {
+    border-radius: 20px;
+    border-color: rgba(0,0,0,0.03);
+    background-color: rgba(0,0,0,0.03);
+    padding: 8px;
+    position: relative;
+} */
 
 .navbar {
     transition: border-bottom 0.3s ease; /* Transition douce pour la bordure */
@@ -399,6 +408,69 @@ body {
     height: auto;
     margin-right: 16px;
 }
+
+
+.input-number-group {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .input-number-group input[type=number]::-webkit-inner-spin-button,
+  .input-number-group input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+            appearance: none;
+  }
+
+  .input-number-group .input-group-button {
+    line-height: calc(80px/2 - 5px);
+  }
+
+  .input-number-group .input-number {
+    width: 80px;
+    padding: 0 12px;
+    vertical-align: top;
+    text-align: center;
+    outline: none;
+    display: block;
+    margin: 0;
+  }
+
+  .input-number-group .input-number,
+  .input-number-group .input-number-decrement,
+  .input-number-group .input-number-increment {
+    border: 1px solid #cacaca;
+    height: 40px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    border-radius: 0;
+  }
+
+  .input-number-group .input-number-decrement,
+  .input-number-group .input-number-increment {
+    display: inline-block;
+    width: 40px;
+    background: #e6e6e6;
+    color: #0a0a0a;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .input-number-group .input-number-decrement {
+    margin-right: 0.3rem;
+  }
+
+  .input-number-group .input-number-increment {
+    margin-left: 0.3rem;
+  }
 
 
 /* Media Queries */
