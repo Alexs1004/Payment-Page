@@ -371,6 +371,18 @@ if (document.getElementById('btnradio1').checked) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+    var inputs = document.querySelectorAll('.input-number');
+
+    inputs.forEach(function(input) {
+        input.addEventListener('input', function() {
+            if (this.value == 1) {
+                this.classList.add('value-one');
+            } else {
+                this.classList.remove('value-one');
+            }
+        });
+    });
+
     var incrementButtons = document.querySelectorAll('.input-number-increment');
     var decrementButtons = document.querySelectorAll('.input-number-decrement');
 
@@ -378,7 +390,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             var input = this.closest('.input-number-group').querySelector('.input-number');
             var val = parseInt(input.value, 10);
-            if (val < 20) {
+            if (val < 99) {
                 input.value = val + 1;
             }
         });
@@ -394,4 +406,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-

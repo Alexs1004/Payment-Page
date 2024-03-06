@@ -14,12 +14,16 @@ body {
 
 .input-group i {
     color: black;
-    /* color: hsla(0,0%,10%,0.6); */
 }
 
-.input-group input[type="number"][value="1"] + .input-group-button .input-number-decrement i {
+/* .input-group input[type="number"][value="1"] + .input-group-button .input-number-decrement i {
+    color: hsla(0, 0%, 10%, 0.6);
+} */
+
+.value-one #input-nb-decrement i {
     color: hsla(0, 0%, 10%, 0.6);
 }
+
 
 
 .left_nav_items {
