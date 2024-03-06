@@ -334,18 +334,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const form = document.querySelector('form.needs-validation');
-//     const submitButton = document.querySelector('.pay_btn');
-
-//     form.addEventListener('input', function() {
-//         if (form.checkValidity()) {
-//             submitButton.disabled = false;
-//         } else {
-//             submitButton.disabled = true;
-//         }
-//     });
-// });
 
 
 // Fonction pour afficher le bloc SEPA et masquer le bloc Carte de crédit
@@ -380,160 +368,29 @@ if (document.getElementById('btnradio1').checked) {
     showCreditCard();
 }
 
-// document.getElementById('submitBtn').addEventListener('click', function() {
-//     // Affichez la modal de paiement lorsque le bouton est cliqué
-//     var myModal = new bootstrap.Modal(document.getElementById('paymentModal'), {
-//         keyboard: false, // Désactive la fermeture de la modal avec la touche Escape (Esc)
-//         backdrop: 'static' // Empêche la fermeture de la modal lorsque l'utilisateur clique en dehors de celle-ci
-//     });
-//     myModal.show();
-// });
-
-
-document.getElementById('submitBtn').addEventListener('click', function() {
-    // Affichez la modal de paiement lorsque le bouton est cliqué
-    var myModal = new bootstrap.Modal(document.getElementById('paymentModal'), {
-        keyboard: false, // Désactive la fermeture de la modal avec la touche Escape (Esc)
-        backdrop: 'static' // Empêche la fermeture de la modal lorsque l'utilisateur clique en dehors de celle-ci
-    });
-    myModal.show();
-
-    // Empêche la modal de se fermer automatiquement après un délai
-    myModal._backdrop._config.keyboard = false;
-    myModal._backdrop._config.backdrop = 'static';
-});
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     document.querySelectorAll('.dropdown-toggle').forEach(dropToggle => {
-//       dropToggle.addEventListener('click', function() {
-//         const dropdownMenu = this.nextElementSibling;
-//         dropdownMenu.classList.toggle('open');
-//       });
-//     });
-//   });
-
-//   document.addEventListener('DOMContentLoaded', function () {
-//     const dropdownToggle = document.querySelector('.dd-toggle');
-//     const dropdownMenu = document.querySelector('.dropdown-menu');
-//     const overlay = document.querySelector('.overlay');
-
-//     dropdownToggle.addEventListener('click', function () {
-//         dropdownMenu.classList.toggle('open');
-//         overlay.style.display = dropdownMenu.classList.contains('open') ? 'block' : 'none';
-//     });
-// });
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-// 	var dropdownButton = document.querySelector('.dd-toggle');
-// 	var overlay = document.querySelector('.overlay');
-// 	var mainContent = document.querySelector('.main-content');
-
-// 	dropdownButton.addEventListener('click', function() {
-// 	  overlay.classList.toggle('active');
-// 	  mainContent.classList.toggle('gris-out');
-// 	});
-//   });
 
 
 document.addEventListener('DOMContentLoaded', function() {
-	var dropdownButton = document.querySelector('.dd-toggle');
-	var overlay = document.getElementById('overlay');
-	var mainContent = document.getElementById('main-content');
-
-	dropdownButton.addEventListener('click', function() {
-	  overlay.classList.add('active'); // Ajouter la classe pour afficher l'overlay
-	  mainContent.classList.add('gris-out'); // Appliquer le filtre de gris
-	});
-  });
-
-
-//   document.addEventListener('DOMContentLoaded', function() {
-//     // Sélection de l'input et des boutons
-//     var inputQuantity = document.getElementById('inputQuantitySelector');
-//     var buttonUp = document.querySelector('[data-bs-step="up"]');
-//     var buttonDown = document.querySelector('[data-bs-step="down"]');
-
-//     // Ajout d'un événement de clic pour le bouton "Up"
-//     buttonUp.addEventListener('click', function() {
-//         var currentValue = parseInt(inputQuantity.value);
-//         var max = parseInt(inputQuantity.getAttribute('max'));
-//         if (currentValue < max) {
-//             inputQuantity.value = currentValue + 1;
-//         }
-//     });
-
-//     // Ajout d'un événement de clic pour le bouton "Down"
-//     buttonDown.addEventListener('click', function() {
-//         var currentValue = parseInt(inputQuantity.value);
-//         var min = parseInt(inputQuantity.getAttribute('min'));
-//         if (currentValue > min) {
-//             inputQuantity.value = currentValue - 1;
-//         }
-//     });
-// });
-
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     var incrementButtons = document.querySelectorAll('.input-number-increment');
-//     var decrementButtons = document.querySelectorAll('.input-number-decrement');
-
-//     incrementButtons.forEach(function(button) {
-//         button.addEventListener('click', function() {
-//             var input = this.closest('.input-number-group').querySelector('.input-number');
-//             var val = parseInt(input.value, 10);
-//             input.value = val + 1;
-//         });
-//     });
-
-//     decrementButtons.forEach(function(button) {
-//         button.addEventListener('click', function() {
-//             var input = this.closest('.input-number-group').querySelector('.input-number');
-//             var val = parseInt(input.value, 10);
-//             input.value = val - 1;
-//         });
-//     });
-// });
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    var incrementButtons = document.querySelectorAll('.input-number-increment i');
-    var decrementButtons = document.querySelectorAll('.input-number-decrement i');
+    var incrementButtons = document.querySelectorAll('.input-number-increment');
+    var decrementButtons = document.querySelectorAll('.input-number-decrement');
 
     incrementButtons.forEach(function(button) {
         button.addEventListener('click', function() {
-            var input = this.closest('.input-group').querySelector('.input-number');
+            var input = this.closest('.input-number-group').querySelector('.input-number');
             var val = parseInt(input.value, 10);
-            input.value = val + 1;
+            if (val < 99) { // Limite supérieure à 99
+                input.value = val + 1;
+            }
         });
     });
 
     decrementButtons.forEach(function(button) {
         button.addEventListener('click', function() {
-            var input = this.closest('.input-group').querySelector('.input-number');
+            var input = this.closest('.input-number-group').querySelector('.input-number');
             var val = parseInt(input.value, 10);
-            input.value = val - 1;
+            if (val > 1) { // Limite inférieure à 1
+                input.value = val - 1;
+            }
         });
     });
 });
-
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     var myModal = new bootstrap.Modal(document.getElementById('paymentModal'));
-
-//     // Ajoute un gestionnaire d'événements pour le bouton "Soumettre"
-//     var submitBtn = document.querySelector('.pay_btn');
-//     submitBtn.addEventListener('click', function(event) {
-//         // Empêche le comportement par défaut du bouton (qui serait de fermer la modal)
-//         event.preventDefault();
-//         // Vous pouvez ajouter ici du code pour valider le formulaire ou effectuer d'autres actions nécessaires
-//         // Puis, fermez la modal manuellement lorsque vous le souhaitez
-//         // myModal.hide(); // Par exemple, vous pouvez la fermer une fois que les actions sont terminées
-//     });
-
-//     // Affiche la modal lorsque la page est complètement chargée
-//     myModal.show();
-// });
