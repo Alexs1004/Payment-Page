@@ -13,8 +13,14 @@ body {
 
 
 .input-group i {
-    color: #244D61;
+    color: black;
+    /* color: hsla(0,0%,10%,0.6); */
 }
+
+.input-group input[type="number"][value="1"] + .input-group-button .input-number-decrement i {
+    color: hsla(0, 0%, 10%, 0.6);
+}
+
 
 .left_nav_items {
     overflow: auto;
@@ -321,6 +327,7 @@ body {
     padding-left: 35px;
 }
 
+
 .form-control {
     padding-left: 40px;
 }
@@ -432,45 +439,70 @@ body {
   .input-number-group .input-number {
     width: 80px;
     padding: 0 12px;
-    vertical-align: top;
+    /* vertical-align: top; */
     text-align: center;
     outline: none;
     display: block;
     margin: 0;
   }
 
+  #input-modal {
+    border: 1px solid #cacaca;
+    border-radius: 6px;
+    width: 92px;
+    box-shadow: 0 0 0 1px #e0e0e0,0 2px 4px 0 rgba(0,0,0,0.07),0 1px 1.5px 0 rgba(0,0,0,0.05);
+}
+
   .input-number-group .input-number,
   .input-number-group .input-number-decrement,
   .input-number-group .input-number-increment {
-    border: 1px solid #cacaca;
-    height: 40px;
+    border: 1px transparent #cacaca;
+    height: 44px;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    border-radius: 0;
+    border-radius: 20px;
+
   }
 
   .input-number-group .input-number-decrement,
   .input-number-group .input-number-increment {
     display: inline-block;
     width: 40px;
-    background: #e6e6e6;
+    background-color: #cacaca;
     color: #0a0a0a;
     text-align: center;
     font-weight: bold;
     cursor: pointer;
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 1.3rem;
+    font-weight: 300;
   }
 
   .input-number-group .input-number-decrement {
-    margin-right: 0.3rem;
+    margin-right: 16px;
+    background-color: rgba(0,0,0,0.03);
   }
 
   .input-number-group .input-number-increment {
-    margin-left: 0.3rem;
+    margin-left: 16px;
+    background-color: rgba(0,0,0,0.03);
   }
+
+    #input-nb-decrement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    #input-nb-increment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .fa-plus {
+        color: (0,0%,10%,0.6);
+    }
 
 
 /* Media Queries */

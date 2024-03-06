@@ -472,13 +472,39 @@ document.addEventListener('DOMContentLoaded', function() {
 //         }
 //     });
 // });
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     var incrementButtons = document.querySelectorAll('.input-number-increment');
+//     var decrementButtons = document.querySelectorAll('.input-number-decrement');
+
+//     incrementButtons.forEach(function(button) {
+//         button.addEventListener('click', function() {
+//             var input = this.closest('.input-number-group').querySelector('.input-number');
+//             var val = parseInt(input.value, 10);
+//             input.value = val + 1;
+//         });
+//     });
+
+//     decrementButtons.forEach(function(button) {
+//         button.addEventListener('click', function() {
+//             var input = this.closest('.input-number-group').querySelector('.input-number');
+//             var val = parseInt(input.value, 10);
+//             input.value = val - 1;
+//         });
+//     });
+// });
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
-    var incrementButtons = document.querySelectorAll('.input-number-increment');
-    var decrementButtons = document.querySelectorAll('.input-number-decrement');
+    var incrementButtons = document.querySelectorAll('.input-number-increment i');
+    var decrementButtons = document.querySelectorAll('.input-number-decrement i');
 
     incrementButtons.forEach(function(button) {
         button.addEventListener('click', function() {
-            var input = this.closest('.input-number-group').querySelector('.input-number');
+            var input = this.closest('.input-group').querySelector('.input-number');
             var val = parseInt(input.value, 10);
             input.value = val + 1;
         });
@@ -486,15 +512,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     decrementButtons.forEach(function(button) {
         button.addEventListener('click', function() {
-            var input = this.closest('.input-number-group').querySelector('.input-number');
+            var input = this.closest('.input-group').querySelector('.input-number');
             var val = parseInt(input.value, 10);
             input.value = val - 1;
         });
     });
 });
-
-
-
 
 
 
