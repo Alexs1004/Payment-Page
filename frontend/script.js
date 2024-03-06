@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             var input = this.closest('.input-number-group').querySelector('.input-number');
             var val = parseInt(input.value, 10);
-            if (val < 99) { // Limite supérieure à 99
+            if (val < 20) {
                 input.value = val + 1;
             }
         });
@@ -388,9 +388,10 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             var input = this.closest('.input-number-group').querySelector('.input-number');
             var val = parseInt(input.value, 10);
-            if (val > 1) { // Limite inférieure à 1
+            if (val > 1) {
                 input.value = val - 1;
             }
         });
     });
 });
+
