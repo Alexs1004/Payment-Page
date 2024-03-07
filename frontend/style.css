@@ -188,7 +188,7 @@ body form label{
 }
 
 .custom_image {
-    width: 300px;
+    width: 120px;
     height: auto;
     margin-bottom: 1em;
     margin-top: 70px;
@@ -376,6 +376,7 @@ body form label{
 #validationCustom31,
 #validationCustom32,
 #validationCustom12,
+#paysDropdown,
 #validationCustomUsername {
     padding-left: 13px;
 }
@@ -444,7 +445,7 @@ body form label{
 }
 
 .modal-qte-img {
-    width: 92px;
+    width: 45px;
     max-height: 100%;
     max-width: 100%;
     height: auto;
