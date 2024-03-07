@@ -250,17 +250,55 @@ countries.forEach(country => {
     dropdown.add(option);
 });
 
-const inputs = document.querySelectorAll('input');
 
-inputs.forEach(input => {
-  input.addEventListener('input', function() {
-    const inputName = input.getAttribute('id');
-    const deliveryInput = document.querySelector(`#delivery-form-container input[id="${inputName}"]`);
-    if (deliveryInput) {
-      deliveryInput.value = input.value;
-    }
-  });
+// document.addEventListener("DOMContentLoaded", function() {
+//     const fieldsToCopy = [
+//         { sourceId: "autocomplete", targetId: "autocomplete2" },
+//         { sourceId: "validationCustom31", targetId: "validationCustom06" },
+//         { sourceId: "validationCustom12", targetId: "validationCustom07" },
+//         { sourceId: "validationCustom10", targetId: "validationCustom08" }
+//     ];
+
+//     fieldsToCopy.forEach(field => {
+//         const sourceInput = document.getElementById(field.sourceId);
+//         const targetInput = document.getElementById(field.targetId);
+
+//         sourceInput.addEventListener("input", function() {
+//             targetInput.value = sourceInput.value;
+//         });
+//     });
+// });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const checkbox = document.getElementById("invalidCheck_checked");
+
+    const fieldsToCopy = [
+        { sourceId: "autocomplete", targetId: "autocomplete2" },
+        { sourceId: "validationCustom31", targetId: "validationCustom06" },
+        { sourceId: "validationCustom12", targetId: "validationCustom07" },
+        { sourceId: "validationCustom10", targetId: "validationCustom08" }
+    ];
+
+    checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+            fieldsToCopy.forEach(field => {
+                const sourceInput = document.getElementById(field.sourceId);
+                const targetInput = document.getElementById(field.targetId);
+
+                sourceInput.addEventListener("input", function() {
+                    targetInput.value = sourceInput.value;
+                });
+            });
+        } else {
+            fieldsToCopy.forEach(field => {
+                const sourceInput = document.getElementById(field.sourceId);
+                sourceInput.value = ""; // Efface la valeur du champ source si la case n'est pas cochée
+            });
+        }
+    });
 });
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     var qteBtn = document.querySelector('.qte-btn');
@@ -304,22 +342,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-	const form = document.querySelector('form');
-	const modal = document.querySelector('.modal');
 
-	form.addEventListener('submit', function (event) {
-	  event.preventDefault(); // Prevent form submission
+/*Modal for payment*/
+// document.addEventListener('DOMContentLoaded', function () {
+// 	const form = document.querySelector('form');
+// 	const modal = document.querySelector('.modal');
 
-	  modal.classList.add('show');
-	  modal.style.display = 'block';
+// 	form.addEventListener('submit', function (event) {
+// 	  event.preventDefault(); // Prevent form submission
 
-	  setTimeout(function () {
-		modal.classList.remove('show');
-		modal.style.display = 'none';
-	  }, 500000000); // Adjust the time as needed
-	});
-  });
+// 	  modal.classList.add('show');
+// 	  modal.style.display = 'block';
+
+// 	  setTimeout(function () {
+// 		modal.classList.remove('show');
+// 		modal.style.display = 'none';
+// 	  }, 500000000); // Adjust the time as needed
+// 	});
+//   });
 
 
 
@@ -457,3 +497,64 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const firstNameInput = document.getElementById("validationCustom12");
+    const lastNameInput = document.getElementById("validationCustom31");
+    const civilityInput = document.getElementById("validationCustom10");
+
+    function validateNameInput(inputElement) {
+        const name = inputElement.value.trim();
+        const nameRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
+
+        if (!nameRegex.test(name)) {
+            inputElement.classList.add("is-invalid");
+        } else {
+            inputElement.classList.remove("is-invalid");
+            inputElement.classList.add("is-valid");
+        }
+    }
+
+    civilityInput.addEventListener("blur", function() {
+        validateNameInput(civilityInput);
+    });
+
+    lastNameInput.addEventListener("blur", function() {
+        validateNameInput(lastNameInput);
+    });
+
+	firstNameInput.addEventListener("blur", function() {
+        validateNameInput(firstNameInput);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const firstNameInput2 = document.getElementById("validationCustom06");
+    const lastNameInput2 = document.getElementById("validationCustom07");
+    const civilityInput2 = document.getElementById("validationCustom08");
+
+    function validateNameInput(inputElement) {
+        const name = inputElement.value.trim();
+        const nameRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
+
+        if (!nameRegex.test(name)) {
+            inputElement.classList.add("is-invalid");
+        } else {
+            inputElement.classList.remove("is-invalid");
+            inputElement.classList.add("is-valid");
+        }
+    }
+
+    civilityInput2.addEventListener("blur", function() {
+        validateNameInput(civilityInput2);
+    });
+
+    lastNameInput2.addEventListener("blur", function() {
+        validateNameInput(lastNameInput2);
+    });
+
+	firstNameInput2.addEventListener("blur", function() {
+        validateNameInput(firstNameInput2);
+    });
+});
+

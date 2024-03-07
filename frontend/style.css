@@ -343,8 +343,14 @@ body {
 }
 
 #validationCustom02,
+#validationCustom06,
+#validationCustom07,
+#validationCustom08,
 #validationCustom10,
+#validationCustom11,
 #validationCustom31,
+#validationCustom32,
+#validationCustom12,
 #validationCustomUsername {
     padding-left: 13px;
 }
