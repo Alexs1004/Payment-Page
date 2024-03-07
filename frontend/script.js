@@ -250,18 +250,12 @@ countries.forEach(country => {
     dropdown.add(option);
 });
 
-// Récupérer tous les champs input
 const inputs = document.querySelectorAll('input');
 
-// Parcourir chaque champ input
 inputs.forEach(input => {
-  // Ajouter un écouteur d'événement pour détecter les changements de valeur
   input.addEventListener('input', function() {
-    // Récupérer le nom de l'input
     const inputName = input.getAttribute('id');
-    // Vérifier si un élément avec le même ID existe dans le formulaire de livraison
     const deliveryInput = document.querySelector(`#delivery-form-container input[id="${inputName}"]`);
-    // Si un champ input correspondant est trouvé dans le formulaire de livraison, mettre à jour sa valeur
     if (deliveryInput) {
       deliveryInput.value = input.value;
     }
@@ -317,11 +311,9 @@ document.addEventListener('DOMContentLoaded', function () {
 	form.addEventListener('submit', function (event) {
 	  event.preventDefault(); // Prevent form submission
 
-	  // Display the modal
 	  modal.classList.add('show');
 	  modal.style.display = 'block';
 
-	  // Optional: You can also remove the modal after a certain time
 	  setTimeout(function () {
 		modal.classList.remove('show');
 		modal.style.display = 'none';
@@ -345,19 +337,16 @@ window.addEventListener('scroll', function() {
 
 
 
-// Fonction pour afficher le bloc SEPA et masquer le bloc Carte de crédit
 function showSEPA() {
     document.getElementById('sepaBlock').style.display = 'block';
     document.getElementById('creditCardBlock').style.display = 'none';
 }
 
-// Fonction pour afficher le bloc Carte de crédit et masquer le bloc SEPA
 function showCreditCard() {
     document.getElementById('sepaBlock').style.display = 'none';
     document.getElementById('creditCardBlock').style.display = 'block';
 }
 
-// Ajout d'événements pour détecter les changements de sélection du bouton de bascule
 document.getElementById('btnradio1').addEventListener('change', function() {
     if (this.checked) {
         showSEPA();
@@ -370,7 +359,6 @@ document.getElementById('btnradio2').addEventListener('change', function() {
     }
 });
 
-// Affichage initial en fonction de la sélection par défaut
 if (document.getElementById('btnradio1').checked) {
     showSEPA();
 } else {
@@ -418,42 +406,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Récupérer le bouton "Modifier"
     const modifyButton = document.querySelector(".modal-modify-btn");
 
-    // Ajouter un gestionnaire d'événements au clic sur le bouton "Modifier"
     modifyButton.addEventListener("click", function() {
-        // Récupérer la valeur de l'input modal
         const inputValue = parseFloat(document.getElementById("input-modal").value);
 
-        // Récupérer le chiffre dans la span avec la classe currency
         const currencyElement = document.querySelector(".currency");
         let currencyValue = parseFloat(currencyElement.textContent);
 
-        // Multiplier le chiffre dans la span avec la classe currency par celui de l'input
         currencyValue *= inputValue;
 
-        // Mettre à jour le contenu de la span avec la classe currency
         currencyElement.textContent = currencyValue.toFixed(2) + " €";
 
-        // Récupérer le chiffre dans la span avec la classe dropdown-currency
         const dropdownCurrencyElement = document.querySelector(".dropdown-currency");
         let dropdownCurrencyValue = parseFloat(dropdownCurrencyElement.textContent);
 
-        // Multiplier le chiffre dans la span avec la classe dropdown-currency par celui de l'input
         dropdownCurrencyValue *= inputValue;
 
-        // Mettre à jour le contenu de la span avec la classe dropdown-currency
         dropdownCurrencyElement.textContent = dropdownCurrencyValue.toFixed(2) + " €";
 
-        // Mettre à jour également le texte à l'intérieur du bouton avec la classe qte-btn-page
         const btnPageElement = document.querySelector(".qte-btn-page");
         btnPageElement.textContent = "Qté " + inputValue;
 
 		const qteBtnTextElement = document.querySelector(".qte-btn_text");
         qteBtnTextElement.textContent = "Qté " + inputValue;
 
-        // Fermer la modal
         const modal = document.getElementById("qteModal");
         const modalInstance = bootstrap.Modal.getInstance(modal);
         modalInstance.hide();
