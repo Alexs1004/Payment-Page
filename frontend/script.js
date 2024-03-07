@@ -501,8 +501,6 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     const firstNameInput = document.getElementById("validationCustom12");
     const lastNameInput = document.getElementById("validationCustom31");
-    const civilityInput = document.getElementById("validationCustom10");
-
     function validateNameInput(inputElement) {
         const name = inputElement.value.trim();
         const nameRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
@@ -514,10 +512,6 @@ document.addEventListener("DOMContentLoaded", function() {
             inputElement.classList.add("is-valid");
         }
     }
-
-    civilityInput.addEventListener("blur", function() {
-        validateNameInput(civilityInput);
-    });
 
     lastNameInput.addEventListener("blur", function() {
         validateNameInput(lastNameInput);
@@ -531,8 +525,6 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     const firstNameInput2 = document.getElementById("validationCustom06");
     const lastNameInput2 = document.getElementById("validationCustom07");
-    const civilityInput2 = document.getElementById("validationCustom08");
-
     function validateNameInput(inputElement) {
         const name = inputElement.value.trim();
         const nameRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
@@ -545,9 +537,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    civilityInput2.addEventListener("blur", function() {
-        validateNameInput(civilityInput2);
-    });
+
 
     lastNameInput2.addEventListener("blur", function() {
         validateNameInput(lastNameInput2);

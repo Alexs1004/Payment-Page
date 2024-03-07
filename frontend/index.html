@@ -10,52 +10,73 @@
   <body>
     <div class="root"></div>
     <nav class="navbar navbar-expand-lg d-lg-none fixed-top">
-      <div class="container-fluid">
+      <div class="container-fluid flex-nowrap">
         <div class="left_nav_items">
           <a class="navbar-brand" href="#">
             <div class="arrow_left">
               <i class="fa-solid fa-arrow-left"></i>
             </div>
             <div class="logo_prst">
-              <img src="https://cdn.puresante.fr/uploads/PURST/Logo_PST.png" alt="BDC v3" width="150">
+              <img src="https://cdn.puresante.fr/uploads/PURST/Logo_PST.png" alt="BDC v3" id="prst-logo">
               <div class="retour">Retour</div>
             </div>
           </a>
         </div>
-        <div class="dropdown">
+        <div class="dropdown flex-nowrap">
           <button class="btn dd-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <div class="info">
-              <span>Détails</span>
+              <span class="details">Détails</span>
               <i class="fa-solid fa-angle-down nav-arrow"></i>
             </div>
           </button>
           <ul class="dropdown-menu open">
-            <div class="d-flex justify-content-around">
-              <div class="d-flex justify-content-center">
-                <img src="../assets/images/RSB_pile-magazine.png" alt="RSB_pile-magazine" class="modal-qte-img">
-                <div class="d-flex flex-column">
+            <li>
+              <div class="d-flex justify-content-around">
+                <div class="d-flex justify-content-center dd-content">
                   <div>
-                    <span class="modal-text-500">Togethere Professional</span>
+                    <img src="../assets/images/RSB_pile-magazine.png" alt="RSB_pile-magazine" class="modal-qte-img">
                   </div>
-                  <div>
-                    <span class="dd_small_text">Togethere's premium plan to work better togethere</span>
-                    <div class="d-flex">
-                      <button type="button" class="btn btn-light in_dd_button">
-                        <span class="qte-btn_text">Qté 1</span>
-                        <i class="fa-solid fa-angle-down nav-arrow"></i>
-                      </button>
-                      <span class="dd_small_text">Facturé tous les mois</span>
+                  <div class="d-flex flex-column">
+                    <div class="title-price d-flex justify-content-between">
+                      <div>
+                        <span class="modal-text-500">Togethere Professional</span>
+                      </div>
+                      <div>
+                        <span class="dropdown-currency2">15,00 €</span>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <span class="dd_small_text">Togethere's premium plan to work better togethere</span>
+                      <div class="d-flex">
+                        <button type="button" class="btn btn-light in_dd_button">
+                          <span class="qte-btn_text">Qté 1</span>
+                          <i class="fa-solid fa-angle-down nav-arrow"></i>
+                        </button>
+                        <span class="dd_small_text">Facturé tous les mois</span>
+                      </div>
+                    </div>
+                    <!-- <div class="sub-total py-2">
+                      <span>Sous-total</span>
+                    </div> -->
+                    <div class="sub-total d-flex justify-content-between py-3">
+                      <div class="sub-total-text">
+                        <span>Sous-total</span>
+                      </div>
+                      <div>
+                        <span class="dropdown-currency">15,00 €</span>
+                      </div>
+                    </div>
+                    <div class="total d-flex justify-content-between py-3 mb-3">
+                      <div class="sub-total-text">
+                        <span>Total dû aujourd'hui</span>
+                      </div>
+                      <div>
+                        <span class="dropdown-currency">15,00 €</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="sub-total">
-                    <span>Sous-total</span>
-                  </div>
                 </div>
-              </div>
-              <div>
-                <span class="dropdown-currency">15 €</span>
-              </div>
-            </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -93,7 +114,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 px-0">
           <hr class="horizontal_hr">
           <form class="row g-3 needs-validation align-items-end" novalidate>
             <div class="col-12">
@@ -104,23 +125,24 @@
                 <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
               </div>
             </div>
-            <div class="col-4">
+            <!-- <div class="col-4">
               <label for="validationCustom02" class="form-label">Nom</label>
               <div class="input-group">
                 <select class="form-select" id="validationCustom10" aria-label="Civilité" required>
                   <option value="monsieur">M.</option>
                   <option value="madame">Mme.</option>
                 </select>
-                <!-- <div class="valid-feedback"> Looks good! </div> -->
+                <div class="valid-feedback"> Looks good! </div>
               </div>
-            </div>
-            <div class="col-4">
+            </div> -->
+            <div class="col-6">
+              <label for="validationCustom02" class="form-label">Nom</label>
               <div class="splitted_input">
                 <input type="text" class="form-control" id="validationCustom12" placeholder="Prénom" required>
                 <!-- <div class="valid-feedback"> Looks good! </div> -->
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-6">
               <div class="splitted_input">
                 <input type="text" class="form-control" id="validationCustom31" placeholder="Nom" required>
                 <!-- <div class="valid-feedback"> Looks good! </div> -->
@@ -146,23 +168,24 @@
                 <label for="shippingTitle">Vos coordonnées de livraison</label>
               </div>
               <!-- <div class="col-12 d-flex align-items-end"> -->
-              <div class="col-4">
+              <!-- <div class="col-4">
                 <label for="validationCustom02" class="form-label">Nom</label>
                 <div class="input-group">
                   <select class="form-select" id="validationCustom08" aria-label="Civilité" required>
                     <option value="monsieur">M.</option>
                     <option value="madame">Mme.</option>
                   </select>
-                  <!-- <div class="valid-feedback"> Looks good! </div> -->
-                </div>
+                  <div class="valid-feedback"> Looks good! </div>
+                </div> -->
               </div>
-              <div class="col-4">
+              <div class="col-6">
+                <label for="validationCustom02" class="form-label">Nom</label>
                 <div class="splitted_input">
                   <input type="text" class="form-control" id="validationCustom07" placeholder="Prénom" required>
                   <!-- <div class="valid-feedback"> Looks good! </div> -->
                 </div>
               </div>
-              <div class="col-4">
+              <div class="col-6">
                 <div class="splitted_input">
                   <input type="text" class="form-control" id="validationCustom06" placeholder="Nom" required>
                   <!-- <div class="valid-feedback"> Looks good! </div> -->
