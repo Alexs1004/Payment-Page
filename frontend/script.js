@@ -276,11 +276,20 @@ document.addEventListener('DOMContentLoaded', function() {
             keyboard: false
         });
         qteModal.show();
-
-        // Défiler jusqu'en bas de la page
-        window.scrollTo(0, document.body.scrollHeight);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const inDdButton = document.querySelector('.in_dd_button');
+    inDdButton.addEventListener('click', function() {
+        const qteModal = new bootstrap.Modal(document.getElementById('qteModal'), {
+            backdrop: 'static',
+            keyboard: false
+        });
+        qteModal.show();
+    });
+});
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -440,6 +449,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // Mettre à jour également le texte à l'intérieur du bouton avec la classe qte-btn-page
         const btnPageElement = document.querySelector(".qte-btn-page");
         btnPageElement.textContent = "Qté " + inputValue;
+
+		const qteBtnTextElement = document.querySelector(".qte-btn_text");
+        qteBtnTextElement.textContent = "Qté " + inputValue;
 
         // Fermer la modal
         const modal = document.getElementById("qteModal");
