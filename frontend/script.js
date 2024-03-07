@@ -436,3 +436,24 @@ document.addEventListener("DOMContentLoaded", function() {
         modalInstance.hide();
     });
 });
+
+
+// **********************CUSTOM VALIDATION***************************
+
+document.addEventListener("DOMContentLoaded", function() {
+    const emailInput = document.getElementById("validationCustom01");
+
+    emailInput.addEventListener("blur", function() {
+        const email = emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(email)) {
+            // Si l'email n'est pas valide, afficher un message d'erreur
+            emailInput.classList.add("is-invalid");
+        } else {
+            // Si l'email est valide, retirer la classe d'invalidité
+            emailInput.classList.remove("is-invalid");
+            emailInput.classList.add("is-valid");
+        }
+    });
+});
