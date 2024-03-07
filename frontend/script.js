@@ -446,36 +446,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const modifyButton = document.querySelector(".modal-modify-btn");
+	    const modifyButton = document.querySelector(".modal-modify-btn");
 
     modifyButton.addEventListener("click", function() {
-        const inputValue = parseFloat(document.getElementById("input-modal").value);
+	        const inputValue = parseFloat(document.getElementById("input-modal").value);
 
-        const currencyElement = document.querySelector(".currency");
-        let currencyValue = parseFloat(currencyElement.textContent);
+        // Mise à jour des prix pour toutes les occurrences de .currency et .dropdown-currency
+        document.querySelectorAll(".currency, .dropdown-currency").forEach(currencyElement => {
+            let currencyValue = parseFloat(currencyElement.textContent);
+            currencyValue *= inputValue;
+            currencyElement.textContent = currencyValue.toFixed(2) + " €";
+        });
 
-        currencyValue *= inputValue;
-
-        currencyElement.textContent = currencyValue.toFixed(2) + " €";
-
-        const dropdownCurrencyElement = document.querySelector(".dropdown-currency");
-        let dropdownCurrencyValue = parseFloat(dropdownCurrencyElement.textContent);
-
-        dropdownCurrencyValue *= inputValue;
-
-        dropdownCurrencyElement.textContent = dropdownCurrencyValue.toFixed(2) + " €";
-
-        const btnPageElement = document.querySelector(".qte-btn-page");
-        btnPageElement.textContent = "Qté " + inputValue;
-
-		const qteBtnTextElement = document.querySelector(".qte-btn_text");
-        qteBtnTextElement.textContent = "Qté " + inputValue;
+        // Mise à jour du texte pour toutes les occurrences de .qte-btn-page et .qte-btn_text
+        document.querySelectorAll(".qte-btn-page, .qte-btn_text").forEach(btnElement => {
+            btnElement.textContent = "Qté " + inputValue;
+        });
 
         const modal = document.getElementById("qteModal");
         const modalInstance = bootstrap.Modal.getInstance(modal);
         modalInstance.hide();
     });
+
+    // Réinitialiser les prix lorsque la quantité est réinitialisée à 1
+    document.getElementById("input-modal").addEventListener("input", function() {
+        const inputValue = parseFloat(this.value);
+        if (inputValue === 1) {
+            document.querySelectorAll(".currency, .dropdown-currency").forEach(currencyElement => {
+                let originalValue = parseFloat(currencyElement.getAttribute("data-original-value"));
+                currencyElement.textContent = originalValue.toFixed(2) + " €";
+            });
+        }
+    });
 });
+
+
+
 
 
 // **********************CUSTOM VALIDATION***************************
