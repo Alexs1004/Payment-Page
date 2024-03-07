@@ -251,27 +251,7 @@ countries.forEach(country => {
 });
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const fieldsToCopy = [
-//         { sourceId: "autocomplete", targetId: "autocomplete2" },
-//         { sourceId: "validationCustom31", targetId: "validationCustom06" },
-//         { sourceId: "validationCustom12", targetId: "validationCustom07" },
-//         { sourceId: "validationCustom10", targetId: "validationCustom08" }
-//     ];
-
-//     fieldsToCopy.forEach(field => {
-//         const sourceInput = document.getElementById(field.sourceId);
-//         const targetInput = document.getElementById(field.targetId);
-
-//         sourceInput.addEventListener("input", function() {
-//             targetInput.value = sourceInput.value;
-//         });
-//     });
-// });
-
 document.addEventListener("DOMContentLoaded", function() {
-    const checkbox = document.getElementById("invalidCheck_checked");
-
     const fieldsToCopy = [
         { sourceId: "autocomplete", targetId: "autocomplete2" },
         { sourceId: "validationCustom31", targetId: "validationCustom06" },
@@ -279,24 +259,44 @@ document.addEventListener("DOMContentLoaded", function() {
         { sourceId: "validationCustom10", targetId: "validationCustom08" }
     ];
 
-    checkbox.addEventListener("change", function() {
-        if (checkbox.checked) {
-            fieldsToCopy.forEach(field => {
-                const sourceInput = document.getElementById(field.sourceId);
-                const targetInput = document.getElementById(field.targetId);
+    fieldsToCopy.forEach(field => {
+        const sourceInput = document.getElementById(field.sourceId);
+        const targetInput = document.getElementById(field.targetId);
 
-                sourceInput.addEventListener("input", function() {
-                    targetInput.value = sourceInput.value;
-                });
-            });
-        } else {
-            fieldsToCopy.forEach(field => {
-                const sourceInput = document.getElementById(field.sourceId);
-                sourceInput.value = ""; // Efface la valeur du champ source si la case n'est pas cochée
-            });
-        }
+        sourceInput.addEventListener("input", function() {
+            targetInput.value = sourceInput.value;
+        });
     });
 });
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const checkbox = document.getElementById("invalidCheck_checked");
+
+//     const fieldsToCopy = [
+//         { sourceId: "autocomplete", targetId: "autocomplete2" },
+//         { sourceId: "validationCustom31", targetId: "validationCustom06" },
+//         { sourceId: "validationCustom12", targetId: "validationCustom07" },
+//         { sourceId: "validationCustom10", targetId: "validationCustom08" }
+//     ];
+
+//     checkbox.addEventListener("change", function() {
+//         if (checkbox.checked) {
+//             fieldsToCopy.forEach(field => {
+//                 const sourceInput = document.getElementById(field.sourceId);
+//                 const targetInput = document.getElementById(field.targetId);
+
+//                 sourceInput.addEventListener("input", function() {
+//                     targetInput.value = sourceInput.value;
+//                 });
+//             });
+//         } else {
+//             fieldsToCopy.forEach(field => {
+//                 const sourceInput = document.getElementById(field.sourceId);
+//                 sourceInput.value = ""; // Efface la valeur du champ source si la case n'est pas cochée
+//             });
+//         }
+//     });
+// });
 
 
 
