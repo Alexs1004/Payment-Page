@@ -493,6 +493,12 @@ body {
     background-color: rgba(0,0,0,0.03);
   }
 
+  .input-number-group .input-number-decrement:hover,
+  .input-number-group .input-number-increment:hover {
+      background-color: rgba(0,0,0,0.1);
+  }
+
+
     #input-nb-decrement {
     display: flex;
     justify-content: center;
@@ -508,6 +514,25 @@ body {
         color: (0,0%,10%,0.6);
     }
 
+    .modal-header {
+        padding-bottom: 0px;
+    }
+
+    .modal_footer {
+        display: flex;
+        justify-content: center;
+        margin: 18px 20px;
+    }
+
+    .modal-modify-btn {
+        padding: 5px 7rem;
+        background-color: var(--main-color);
+    }
+
+    .modal-modify-btn:hover {
+        color: var(--hover-color1);
+        background-color: var(--main-color);
+    }
 
 /* Media Queries */
 

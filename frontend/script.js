@@ -406,3 +406,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Récupérer le bouton "Modifier"
+    const modifyButton = document.querySelector(".modal-modify-btn");
+
+    // Ajouter un gestionnaire d'événements au clic sur le bouton "Modifier"
+    modifyButton.addEventListener("click", function() {
+        // Récupérer la valeur de l'input modal
+        const inputValue = parseFloat(document.getElementById("input-modal").value);
+
+        // Récupérer le chiffre dans la span avec la classe currency
+        const currencyElement = document.querySelector(".currency");
+        let currencyValue = parseFloat(currencyElement.textContent);
+
+        // Multiplier le chiffre dans la span avec la classe currency par celui de l'input
+        currencyValue *= inputValue;
+
+        // Mettre à jour le contenu de la span avec la classe currency
+        currencyElement.textContent = currencyValue.toFixed(2) + " €";
+
+        // Récupérer le chiffre dans la span avec la classe dropdown-currency
+        const dropdownCurrencyElement = document.querySelector(".dropdown-currency");
+        let dropdownCurrencyValue = parseFloat(dropdownCurrencyElement.textContent);
+
+        // Multiplier le chiffre dans la span avec la classe dropdown-currency par celui de l'input
+        dropdownCurrencyValue *= inputValue;
+
+        // Mettre à jour le contenu de la span avec la classe dropdown-currency
+        dropdownCurrencyElement.textContent = dropdownCurrencyValue.toFixed(2) + " €";
+
+        // Mettre à jour également le texte à l'intérieur du bouton avec la classe qte-btn-page
+        const btnPageElement = document.querySelector(".qte-btn-page");
+        btnPageElement.textContent = "Qté " + inputValue;
+
+        // Fermer la modal
+        const modal = document.getElementById("qteModal");
+        const modalInstance = bootstrap.Modal.getInstance(modal);
+        modalInstance.hide();
+    });
+});
