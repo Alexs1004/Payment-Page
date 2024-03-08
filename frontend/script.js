@@ -480,6 +480,57 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Fonction pour fermer la dropdown lorsque l'utilisateur clique en dehors
+function closeDropdownOnClickOutside(event) {
+    var dropdown = document.querySelector(".dropdown");
+    var detailsButton = document.getElementById("detailsButton");
+    var detailsIcon = document.getElementById("detailsIcon");
+
+    // Vérifier si l'événement de clic a eu lieu en dehors de la dropdown
+    if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove("open"); // Fermer la dropdown
+        detailsButton.textContent = "Détails"; // Changer le texte du bouton en "Détails"
+        detailsIcon.classList.remove('fa-angle-up'); // Changer l'icône en flèche vers le bas
+        detailsIcon.classList.add('fa-angle-down');
+        // Supprimer l'écouteur d'événement de clic en dehors de la dropdown
+        document.removeEventListener("click", closeDropdownOnClickOutside);
+    }
+}
+
+// Fonction pour basculer l'état de la dropdown
+function toggleDetails() {
+    var detailsButton = document.getElementById("detailsButton");
+    var detailsIcon = document.getElementById("detailsIcon");
+    var dropdown = document.querySelector(".dropdown");
+
+    if (dropdown.classList.contains("open")) {
+        detailsButton.textContent = "Détails";
+        detailsIcon.classList.remove('fa-angle-up');
+        detailsIcon.classList.add('fa-angle-down');
+        dropdown.classList.remove("open");
+    } else {
+        detailsButton.textContent = "Fermer";
+        detailsIcon.classList.remove('fa-angle-down');
+        detailsIcon.classList.add('fa-angle-up');
+        dropdown.classList.add("open");
+        // Ajouter un écouteur d'événement de clic pour fermer la dropdown lorsque l'utilisateur clique en dehors
+        document.addEventListener("click", closeDropdownOnClickOutside);
+    }
+}
+
+// Fonction pour vérifier si la dropdown est ouverte
+function isDropdownOpen() {
+    var dropdown = document.querySelector(".dropdown");
+    return dropdown.classList.contains("show");
+}
+
+// Exemple d'utilisation
+if (isDropdownOpen()) {
+    console.log("La dropdown est ouverte");
+} else {
+    console.log("La dropdown est fermée");
+}
+
 
 
 
@@ -612,44 +663,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const expiryInput = document.getElementById("validationCustom11");
+    const expirationInput = document.getElementById("validationCustom11");
 
-    expiryInput.addEventListener("input", function() {
-        const value = expiryInput.value.trim();
-
-        // Vérifie si la longueur de la valeur est égale à 2 et si le dernier caractère est un chiffre
-        if (value.length === 2 && !isNaN(parseInt(value.charAt(value.length - 1)))) {
-            // Ajoute automatiquement "/"
-            expiryInput.value = value + "/";
-        }
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const expiryInput = document.getElementById("validationCustom11");
-
-    expiryInput.addEventListener("blur", function() {
-        validateExpiry(expiryInput);
-    });
-
-    function validateExpiry(inputElement) {
-        const value = inputElement.value.trim();
-        const regexExpiry = /^(0[1-9]|1[0-2])\/\d{2}$/;
-
-        if (!regexExpiry.test(value)) {
-            inputElement.classList.add("is-invalid");
-        } else {
-            inputElement.classList.remove("is-invalid");
-            inputElement.classList.add("is-valid");
-        }
-    }
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const expiryInput = document.getElementById("validationCustom11");
-
-    expiryInput.addEventListener("input", function(event) {
-        let value = expiryInput.value.trim();
+    expirationInput.addEventListener("input", function(event) {
+        let value = expirationInput.value.trim();
 
         // Supprimer tous les caractères non numériques
         value = value.replace(/\D/g, '');
@@ -659,28 +676,26 @@ document.addEventListener("DOMContentLoaded", function() {
             value = value.slice(0, 4);
         }
 
-        // Formater la valeur pour ajouter le slash
+        // Insérer le slash automatiquement après les deux premiers caractères
         if (value.length > 2) {
             value = value.slice(0, 2) + '/' + value.slice(2);
         }
 
-        expiryInput.value = value;
+        expirationInput.value = value;
 
-        // Valider la date d'expiration si la longueur de la valeur est égale à 5
-        if (value.length === 5) {
-            validateExpiry(expiryInput);
-        }
+        // Valider la date d'expiration
+        validateExpiration(expirationInput);
     });
 
     // Fonction de validation de la date d'expiration
-    function validateExpiry(inputElement) {
+    function validateExpiration(inputElement) {
         const value = inputElement.value.trim();
-        const regexExpiry = /^(0[1-9]|1[0-2])\/\d{2}$/;
+        const regexExpiration = /^(0[1-9]|1[0-2])\/\d{2}$/;
         const today = new Date();
         const currentYear = today.getFullYear() % 100;
         const currentMonth = today.getMonth() + 1;
 
-        if (!regexExpiry.test(value)) {
+        if (!regexExpiration.test(value)) {
             inputElement.classList.add("is-invalid");
         } else {
             const [expMonth, expYear] = value.split('/');
@@ -696,73 +711,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Valider la date d'expiration lorsque le champ perd le focus
-    expiryInput.addEventListener("blur", function() {
-        if (expiryInput.value.trim().length === 5) {
-            validateExpiry(expiryInput);
-        }
+    expirationInput.addEventListener("blur", function() {
+        const value = expirationInput.value.trim();
+        validateExpiration(expirationInput);
     });
 });
 
 
-
-
-
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const ibanInput = document.getElementById("validationCustomIban");
-
-//     ibanInput.addEventListener("blur", function() {
-//         const iban = ibanInput.value.trim();
-//         const ibanRegex = /^[A-Z]{2}\d{2}\s*(\d{4}\s*){4}(\d{4}\s*)?$/;
-
-//         if (!ibanRegex.test(iban)) {
-//             ibanInput.classList.add("is-invalid");
-//         } else {
-//             ibanInput.classList.remove("is-invalid");
-//             ibanInput.classList.add("is-valid");
-//         }
-//     });
-// });
-
-
-// Fonction pour fermer la dropdown lorsque l'utilisateur clique en dehors
-function closeDropdownOnClickOutside(event) {
-    var dropdown = document.querySelector(".dropdown");
-    var detailsButton = document.getElementById("detailsButton");
-    var detailsIcon = document.getElementById("detailsIcon");
-
-    // Vérifier si l'événement de clic a eu lieu en dehors de la dropdown
-    if (!dropdown.contains(event.target)) {
-        dropdown.classList.remove("open"); // Fermer la dropdown
-        detailsButton.textContent = "Détails"; // Changer le texte du bouton en "Détails"
-        detailsIcon.classList.remove('fa-angle-up'); // Changer l'icône en flèche vers le bas
-        detailsIcon.classList.add('fa-angle-down');
-        // Supprimer l'écouteur d'événement de clic en dehors de la dropdown
-        document.removeEventListener("click", closeDropdownOnClickOutside);
-    }
-}
-
-// Fonction pour basculer l'état de la dropdown
-function toggleDetails() {
-    var detailsButton = document.getElementById("detailsButton");
-    var detailsIcon = document.getElementById("detailsIcon");
-    var dropdown = document.querySelector(".dropdown");
-
-    if (dropdown.classList.contains("open")) {
-        detailsButton.textContent = "Détails";
-        detailsIcon.classList.remove('fa-angle-up');
-        detailsIcon.classList.add('fa-angle-down');
-        dropdown.classList.remove("open");
-    } else {
-        detailsButton.textContent = "Fermer";
-        detailsIcon.classList.remove('fa-angle-down');
-        detailsIcon.classList.add('fa-angle-up');
-        dropdown.classList.add("open");
-        // Ajouter un écouteur d'événement de clic pour fermer la dropdown lorsque l'utilisateur clique en dehors
-        document.addEventListener("click", closeDropdownOnClickOutside);
-    }
-}
 
 document.addEventListener("DOMContentLoaded", function() {
     const cvcInput = document.getElementById("validationCustom32");
@@ -805,15 +760,23 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// Fonction pour vérifier si la dropdown est ouverte
-function isDropdownOpen() {
-    var dropdown = document.querySelector(".dropdown");
-    return dropdown.classList.contains("show");
-}
 
-// Exemple d'utilisation
-if (isDropdownOpen()) {
-    console.log("La dropdown est ouverte");
-} else {
-    console.log("La dropdown est fermée");
-}
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const ibanInput = document.getElementById("validationCustomIban");
+
+//     ibanInput.addEventListener("blur", function() {
+//         const iban = ibanInput.value.trim();
+//         const ibanRegex = /^[A-Z]{2}\d{2}\s*(\d{4}\s*){4}(\d{4}\s*)?$/;
+
+//         if (!ibanRegex.test(iban)) {
+//             ibanInput.classList.add("is-invalid");
+//         } else {
+//             ibanInput.classList.remove("is-invalid");
+//             ibanInput.classList.add("is-valid");
+//         }
+//     });
+// });
+
+
