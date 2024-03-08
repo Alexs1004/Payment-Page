@@ -269,6 +269,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+/*Ce script check si la case est cochée et si c'est le cas copie les eléments dans le shipping form */
+
 // document.addEventListener("DOMContentLoaded", function() {
 //     const checkbox = document.getElementById("invalidCheck_checked");
 
