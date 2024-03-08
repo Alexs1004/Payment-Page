@@ -263,11 +263,11 @@ body form label{
     padding-right: 0px;
 }
 
-.nav_dropdown_img {
-    width: 92px;
+.modal_img {
+    width: 32px;
     height: auto;
-    margin-bottom: 1em;
-    margin-right: 16px;
+    margin-right: 20px;
+
 }
 
 .input-group-prepend {
@@ -483,7 +483,7 @@ body form label{
   }
 
   #input-modal {
-    border: 1px solid #cacaca;
+    border: 1px solid rgba(0,0,0,0.03);
     border-radius: 6px;
     width: 92px;
     box-shadow: 0 0 0 1px #e0e0e0,0 2px 4px 0 rgba(0,0,0,0.07),0 1px 1.5px 0 rgba(0,0,0,0.05);
@@ -492,13 +492,13 @@ body form label{
   .input-number-group .input-number,
   .input-number-group .input-number-decrement,
   .input-number-group .input-number-increment {
-    border: 1px transparent #cacaca;
+    border: 1px transparent rgba(0,0,0,0.03);
     height: 44px;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    border-radius: 20px;
+    border-radius: 100%;
 
   }
 
@@ -506,7 +506,7 @@ body form label{
   .input-number-group .input-number-increment {
     display: inline-block;
     width: 40px;
-    background-color: #cacaca;
+    background-color: rgba(0,0,0,0.03);
     color: #0a0a0a;
     text-align: center;
     font-weight: bold;
@@ -516,12 +516,14 @@ body form label{
   }
 
   .input-number-group .input-number-decrement {
-    margin-right: 16px;
+    margin: 0px 16px;
+    padding: 8px;
     background-color: rgba(0,0,0,0.03);
   }
 
   .input-number-group .input-number-increment {
-    margin-left: 16px;
+    margin: 0px 16px;
+    padding: 8px;
     background-color: rgba(0,0,0,0.03);
   }
 
@@ -532,22 +534,30 @@ body form label{
 
 
     #input-nb-decrement {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #input-nb-increment {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    .fa-plus {
-        color: (0,0%,10%,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
+    #input-nb-increment i{
+        font-size: 20px;
+        color: hsla(0,0%,10%,0.6);
+    }
+
+    #input-nb-decrement i{
+        font-size: 20px;
+        color: hsla(0,0%,10%,0.6);
+    }
+
+
     .modal-header {
-        padding-bottom: 0px;
+        padding: 16px 20px;
     }
 
     .modal_footer {
@@ -557,7 +567,7 @@ body form label{
     }
 
     .modal-modify-btn {
-        padding: 5px 7rem;
+        padding: 3px 7rem;
         background-color: var(--main-color);
     }
 
