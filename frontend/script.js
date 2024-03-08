@@ -554,3 +554,41 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Fonction pour fermer la dropdown lorsque l'utilisateur clique en dehors
+function closeDropdownOnClickOutside(event) {
+    var dropdown = document.querySelector(".dropdown");
+    var detailsButton = document.getElementById("detailsButton");
+    var detailsIcon = document.getElementById("detailsIcon");
+
+    // Vérifier si l'événement de clic a eu lieu en dehors de la dropdown
+    if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove("open"); // Fermer la dropdown
+        detailsButton.textContent = "Détails"; // Changer le texte du bouton en "Détails"
+        detailsIcon.classList.remove('fa-angle-up'); // Changer l'icône en flèche vers le bas
+        detailsIcon.classList.add('fa-angle-down');
+        // Supprimer l'écouteur d'événement de clic en dehors de la dropdown
+        document.removeEventListener("click", closeDropdownOnClickOutside);
+    }
+}
+
+// Fonction pour basculer l'état de la dropdown
+function toggleDetails() {
+    var detailsButton = document.getElementById("detailsButton");
+    var detailsIcon = document.getElementById("detailsIcon");
+    var dropdown = document.querySelector(".dropdown");
+
+    if (dropdown.classList.contains("open")) {
+        detailsButton.textContent = "Détails";
+        detailsIcon.classList.remove('fa-angle-up');
+        detailsIcon.classList.add('fa-angle-down');
+        dropdown.classList.remove("open");
+    } else {
+        detailsButton.textContent = "Fermer";
+        detailsIcon.classList.remove('fa-angle-down');
+        detailsIcon.classList.add('fa-angle-up');
+        dropdown.classList.add("open");
+        // Ajouter un écouteur d'événement de clic pour fermer la dropdown lorsque l'utilisateur clique en dehors
+        document.addEventListener("click", closeDropdownOnClickOutside);
+    }
+}
+

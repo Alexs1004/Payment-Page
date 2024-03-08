@@ -25,8 +25,10 @@
         <div class="dropdown flex-nowrap">
           <button class="btn dd-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <div class="info">
-              <span class="details">Détails</span>
-              <i class="fa-solid fa-angle-down nav-arrow"></i>
+              <!-- <span class="details">Détails</span>
+              <i class="fa-solid fa-angle-down nav-arrow"></i> -->
+              <span class="details" id="detailsButton" onclick="toggleDetails()">Détails</span>
+              <i class="fa-solid fa-angle-down nav-arrow" id="detailsIcon"></i>
             </div>
           </button>
           <ul class="dropdown-menu open">
