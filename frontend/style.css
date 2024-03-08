@@ -261,6 +261,7 @@ body form label{
 .dd-toggle {
 	color: var(--hover-color2);
     padding-right: 0px;
+    border: none;
 }
 
 .modal_img {
@@ -376,6 +377,8 @@ body form label{
 #validationCustom31,
 #validationCustom32,
 #validationCustom12,
+#validationCustomIban,
+#validationCustomCardHolder,
 #paysDropdown,
 #validationCustomUsername {
     padding-left: 13px;
@@ -584,6 +587,7 @@ body form label{
         padding: 16px;
         padding-top: 0px;
     }
+
 
 /* Media Queries */
 

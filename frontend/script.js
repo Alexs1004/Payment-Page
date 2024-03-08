@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { sourceId: "autocomplete", targetId: "autocomplete2" },
         { sourceId: "validationCustom31", targetId: "validationCustom06" },
         { sourceId: "validationCustom12", targetId: "validationCustom07" },
-        { sourceId: "validationCustom10", targetId: "validationCustom08" }
+        // { sourceId: "validationCustom10", targetId: "validationCustom08" }
     ];
 
     fieldsToCopy.forEach(field => {
@@ -554,6 +554,54 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+const titulaireDuCompteInput = document.getElementById("validationCustomUsername");
+
+titulaireDuCompteInput.addEventListener("blur", function() {
+    const titulaireDuCompte = titulaireDuCompteInput.value.trim();
+    const titulaireDuCompteRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
+
+    if (!titulaireDuCompteRegex.test(titulaireDuCompte)) {
+        titulaireDuCompteInput.classList.add("is-invalid");
+    } else {
+        titulaireDuCompteInput.classList.remove("is-invalid");
+        titulaireDuCompteInput.classList.add("is-valid");
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cardHolderInput = document.getElementById("validationCustomCardHolder");
+
+    cardHolderInput.addEventListener("blur", function() {
+        const cardHolder = cardHolderInput.value.trim();
+        const cardHolderRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
+
+        if (!cardHolderRegex.test(cardHolder)) {
+            cardHolderInput.classList.add("is-invalid");
+        } else {
+            cardHolderInput.classList.remove("is-invalid");
+            cardHolderInput.classList.add("is-valid");
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const ibanInput = document.getElementById("validationCustomIban");
+
+    ibanInput.addEventListener("blur", function() {
+        const iban = ibanInput.value.trim();
+        const ibanRegex = /^[A-Z]{2}\d{2}\s*(\d{4}\s*){4}(\d{4}\s*)?$/;
+
+        if (!ibanRegex.test(iban)) {
+            ibanInput.classList.add("is-invalid");
+        } else {
+            ibanInput.classList.remove("is-invalid");
+            ibanInput.classList.add("is-valid");
+        }
+    });
+});
+
+
 // Fonction pour fermer la dropdown lorsque l'utilisateur clique en dehors
 function closeDropdownOnClickOutside(event) {
     var dropdown = document.querySelector(".dropdown");
@@ -592,3 +640,15 @@ function toggleDetails() {
     }
 }
 
+// Fonction pour vérifier si la dropdown est ouverte
+function isDropdownOpen() {
+    var dropdown = document.querySelector(".dropdown");
+    return dropdown.classList.contains("show");
+}
+
+// Exemple d'utilisation
+if (isDropdownOpen()) {
+    console.log("La dropdown est ouverte");
+} else {
+    console.log("La dropdown est fermée");
+}
