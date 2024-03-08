@@ -645,83 +645,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const expiryInput = document.getElementById("validationCustom11");
-
-//     expiryInput.addEventListener("input", function() {
-//         const value = expiryInput.value.trim();
-
-//         // Si la longueur de la valeur est égale à 5 (incluant le "/") et que les 4 premiers caractères sont des chiffres
-//         if (value.length === 5 && !isNaN(parseInt(value.substring(0, 2))) && !isNaN(parseInt(value.substring(3)))) {
-//             // Valide le champ automatiquement
-//             validateExpiry(expiryInput);
-//         } else {
-//             expiryInput.classList.remove("is-invalid");
-//             expiryInput.classList.remove("is-valid");
-//         }
-//     });
-
-//     expiryInput.addEventListener("blur", function() {
-//         // Valide le champ lorsqu'il perd le focus si la longueur de la valeur est égale à 5
-//         if (expiryInput.value.trim().length === 5) {
-//             validateExpiry(expiryInput);
-//         }
-//     });
-
-//     function validateExpiry(inputElement) {
-//         const value = inputElement.value.trim();
-//         const regexExpiry = /^(0[1-9]|1[0-2])\/\d{2}$/;
-
-//         if (!regexExpiry.test(value)) {
-//             inputElement.classList.add("is-invalid");
-//         } else {
-//             inputElement.classList.remove("is-invalid");
-//             inputElement.classList.add("is-valid");
-//         }
-//     }
-// });
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const expiryInput = document.getElementById("validationCustom11");
-
-//     expiryInput.addEventListener("input", function(event) {
-//         const value = expiryInput.value.trim();
-
-//         // Si la longueur de la valeur est égale à 5 (incluant le "/") et que les 4 premiers caractères sont des chiffres
-//         if (value.length === 5 && value.charAt(2) === "/" && !isNaN(parseInt(value.substring(0, 2))) && !isNaN(parseInt(value.substring(3)))) {
-//             // Valide le champ automatiquement
-//             validateExpiry(expiryInput);
-//         } else {
-//             expiryInput.classList.remove("is-invalid");
-//             expiryInput.classList.remove("is-valid");
-//         }
-
-//         // Empêche l'entrée de nouveaux caractères si la longueur de la valeur est déjà de 5 caractères
-//         if (value.length >= 5) {
-//             event.preventDefault();
-//         }
-//     });
-
-//     expiryInput.addEventListener("blur", function() {
-//         // Valide le champ lorsqu'il perd le focus si la longueur de la valeur est égale à 5
-//         if (expiryInput.value.trim().length === 5) {
-//             validateExpiry(expiryInput);
-//         }
-//     });
-
-//     function validateExpiry(inputElement) {
-//         const value = inputElement.value.trim();
-//         const regexExpiry = /^(0[1-9]|1[0-2])\/\d{2}$/;
-
-//         if (!regexExpiry.test(value)) {
-//             inputElement.classList.add("is-invalid");
-//         } else {
-//             inputElement.classList.remove("is-invalid");
-//             inputElement.classList.add("is-valid");
-//         }
-//     }
-// });
-
 document.addEventListener("DOMContentLoaded", function() {
     const expiryInput = document.getElementById("validationCustom11");
 
@@ -840,6 +763,47 @@ function toggleDetails() {
         document.addEventListener("click", closeDropdownOnClickOutside);
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cvcInput = document.getElementById("validationCustom32");
+
+    cvcInput.addEventListener("input", function(event) {
+        let value = cvcInput.value.trim();
+
+        // Supprimer tous les caractères non numériques
+        value = value.replace(/\D/g, '');
+
+        // Limiter la longueur de la valeur à 4 caractères
+        if (value.length > 4) {
+            value = value.slice(0, 4);
+        }
+
+        cvcInput.value = value;
+
+        // Valider le CVC si la longueur de la valeur est égale à 3 ou 4
+        validateCVC(cvcInput);
+    });
+
+    // Fonction de validation du CVC
+    function validateCVC(inputElement) {
+        const value = inputElement.value.trim();
+        const regexCVC = /^\d{3,4}$/;
+
+        if (!regexCVC.test(value)) {
+            inputElement.classList.add("is-invalid");
+        } else {
+            inputElement.classList.remove("is-invalid");
+            inputElement.classList.add("is-valid");
+        }
+    }
+
+    // Valider le CVC lorsque le champ perd le focus
+    cvcInput.addEventListener("blur", function() {
+        const value = cvcInput.value.trim();
+        validateCVC(cvcInput);
+    });
+});
+
 
 // Fonction pour vérifier si la dropdown est ouverte
 function isDropdownOpen() {
