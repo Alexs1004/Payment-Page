@@ -586,20 +586,221 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
+    const additionalInput = document.getElementById("validationCustom02");
     const ibanInput = document.getElementById("validationCustomIban");
 
-    ibanInput.addEventListener("blur", function() {
-        const iban = ibanInput.value.trim();
-        const ibanRegex = /^[A-Z]{2}\d{2}\s*(\d{4}\s*){4}(\d{4}\s*)?$/;
+    additionalInput.addEventListener("blur", function() {
+        validateInput(additionalInput);
+    });
 
-        if (!ibanRegex.test(iban)) {
-            ibanInput.classList.add("is-invalid");
+    ibanInput.addEventListener("blur", function() {
+        validateInput(ibanInput);
+    });
+
+    function validateInput(inputElement) {
+        const value = inputElement.value.trim();
+        const regex = /^[A-Z]{2}\d{2}\s*(\d{4}\s*){4}(\d{4}\s*)?$/;
+
+        if (!regex.test(value)) {
+            inputElement.classList.add("is-invalid");
         } else {
-            ibanInput.classList.remove("is-invalid");
-            ibanInput.classList.add("is-valid");
+            inputElement.classList.remove("is-invalid");
+            inputElement.classList.add("is-valid");
+        }
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const expiryInput = document.getElementById("validationCustom11");
+
+    expiryInput.addEventListener("input", function() {
+        const value = expiryInput.value.trim();
+
+        // Vérifie si la longueur de la valeur est égale à 2 et si le dernier caractère est un chiffre
+        if (value.length === 2 && !isNaN(parseInt(value.charAt(value.length - 1)))) {
+            // Ajoute automatiquement "/"
+            expiryInput.value = value + "/";
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const expiryInput = document.getElementById("validationCustom11");
+
+    expiryInput.addEventListener("blur", function() {
+        validateExpiry(expiryInput);
+    });
+
+    function validateExpiry(inputElement) {
+        const value = inputElement.value.trim();
+        const regexExpiry = /^(0[1-9]|1[0-2])\/\d{2}$/;
+
+        if (!regexExpiry.test(value)) {
+            inputElement.classList.add("is-invalid");
+        } else {
+            inputElement.classList.remove("is-invalid");
+            inputElement.classList.add("is-valid");
+        }
+    }
+});
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const expiryInput = document.getElementById("validationCustom11");
+
+//     expiryInput.addEventListener("input", function() {
+//         const value = expiryInput.value.trim();
+
+//         // Si la longueur de la valeur est égale à 5 (incluant le "/") et que les 4 premiers caractères sont des chiffres
+//         if (value.length === 5 && !isNaN(parseInt(value.substring(0, 2))) && !isNaN(parseInt(value.substring(3)))) {
+//             // Valide le champ automatiquement
+//             validateExpiry(expiryInput);
+//         } else {
+//             expiryInput.classList.remove("is-invalid");
+//             expiryInput.classList.remove("is-valid");
+//         }
+//     });
+
+//     expiryInput.addEventListener("blur", function() {
+//         // Valide le champ lorsqu'il perd le focus si la longueur de la valeur est égale à 5
+//         if (expiryInput.value.trim().length === 5) {
+//             validateExpiry(expiryInput);
+//         }
+//     });
+
+//     function validateExpiry(inputElement) {
+//         const value = inputElement.value.trim();
+//         const regexExpiry = /^(0[1-9]|1[0-2])\/\d{2}$/;
+
+//         if (!regexExpiry.test(value)) {
+//             inputElement.classList.add("is-invalid");
+//         } else {
+//             inputElement.classList.remove("is-invalid");
+//             inputElement.classList.add("is-valid");
+//         }
+//     }
+// });
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const expiryInput = document.getElementById("validationCustom11");
+
+//     expiryInput.addEventListener("input", function(event) {
+//         const value = expiryInput.value.trim();
+
+//         // Si la longueur de la valeur est égale à 5 (incluant le "/") et que les 4 premiers caractères sont des chiffres
+//         if (value.length === 5 && value.charAt(2) === "/" && !isNaN(parseInt(value.substring(0, 2))) && !isNaN(parseInt(value.substring(3)))) {
+//             // Valide le champ automatiquement
+//             validateExpiry(expiryInput);
+//         } else {
+//             expiryInput.classList.remove("is-invalid");
+//             expiryInput.classList.remove("is-valid");
+//         }
+
+//         // Empêche l'entrée de nouveaux caractères si la longueur de la valeur est déjà de 5 caractères
+//         if (value.length >= 5) {
+//             event.preventDefault();
+//         }
+//     });
+
+//     expiryInput.addEventListener("blur", function() {
+//         // Valide le champ lorsqu'il perd le focus si la longueur de la valeur est égale à 5
+//         if (expiryInput.value.trim().length === 5) {
+//             validateExpiry(expiryInput);
+//         }
+//     });
+
+//     function validateExpiry(inputElement) {
+//         const value = inputElement.value.trim();
+//         const regexExpiry = /^(0[1-9]|1[0-2])\/\d{2}$/;
+
+//         if (!regexExpiry.test(value)) {
+//             inputElement.classList.add("is-invalid");
+//         } else {
+//             inputElement.classList.remove("is-invalid");
+//             inputElement.classList.add("is-valid");
+//         }
+//     }
+// });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const expiryInput = document.getElementById("validationCustom11");
+
+    expiryInput.addEventListener("input", function(event) {
+        let value = expiryInput.value.trim();
+
+        // Supprimer tous les caractères non numériques
+        value = value.replace(/\D/g, '');
+
+        // Limiter la longueur de la valeur à 4 caractères
+        if (value.length > 4) {
+            value = value.slice(0, 4);
+        }
+
+        // Formater la valeur pour ajouter le slash
+        if (value.length > 2) {
+            value = value.slice(0, 2) + '/' + value.slice(2);
+        }
+
+        expiryInput.value = value;
+
+        // Valider la date d'expiration si la longueur de la valeur est égale à 5
+        if (value.length === 5) {
+            validateExpiry(expiryInput);
+        }
+    });
+
+    // Fonction de validation de la date d'expiration
+    function validateExpiry(inputElement) {
+        const value = inputElement.value.trim();
+        const regexExpiry = /^(0[1-9]|1[0-2])\/\d{2}$/;
+        const today = new Date();
+        const currentYear = today.getFullYear() % 100;
+        const currentMonth = today.getMonth() + 1;
+
+        if (!regexExpiry.test(value)) {
+            inputElement.classList.add("is-invalid");
+        } else {
+            const [expMonth, expYear] = value.split('/');
+            const expiryDate = new Date(2000 + parseInt(expYear), parseInt(expMonth) - 1);
+
+            if (expiryDate < today || (parseInt(expYear) === currentYear && parseInt(expMonth) < currentMonth)) {
+                inputElement.classList.add("is-invalid");
+            } else {
+                inputElement.classList.remove("is-invalid");
+                inputElement.classList.add("is-valid");
+            }
+        }
+    }
+
+    // Valider la date d'expiration lorsque le champ perd le focus
+    expiryInput.addEventListener("blur", function() {
+        if (expiryInput.value.trim().length === 5) {
+            validateExpiry(expiryInput);
+        }
+    });
+});
+
+
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const ibanInput = document.getElementById("validationCustomIban");
+
+//     ibanInput.addEventListener("blur", function() {
+//         const iban = ibanInput.value.trim();
+//         const ibanRegex = /^[A-Z]{2}\d{2}\s*(\d{4}\s*){4}(\d{4}\s*)?$/;
+
+//         if (!ibanRegex.test(iban)) {
+//             ibanInput.classList.add("is-invalid");
+//         } else {
+//             ibanInput.classList.remove("is-invalid");
+//             ibanInput.classList.add("is-valid");
+//         }
+//     });
+// });
 
 
 // Fonction pour fermer la dropdown lorsque l'utilisateur clique en dehors
