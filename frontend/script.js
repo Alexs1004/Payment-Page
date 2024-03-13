@@ -312,6 +312,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
     var qteBtn = document.querySelector('.qte-btn');
     qteBtn.addEventListener('click', function() {

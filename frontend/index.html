@@ -22,68 +22,66 @@
             </div>
           </a>
         </div>
-        <div class="dropdown flex-nowrap">
+        <div class="dropdown flex-nowrap dropdown-masked" id="dropdownParent" onclick="toggleDetails()">
           <button class="btn dd-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <div class="info">
-              <!-- <span class="details">Détails</span>
-              <i class="fa-solid fa-angle-down nav-arrow"></i> -->
-              <span class="details" id="detailsButton" onclick="toggleDetails()">Détails</span>
-              <i class="fa-solid fa-angle-down nav-arrow" id="detailsIcon"></i>
-            </div>
+              <div class="info">
+                  <span class="details" id="detailsButton">Détails</span>
+                  <i class="fa-solid fa-angle-down nav-arrow" id="detailsIcon"></i>
+              </div>
           </button>
-          <ul class="dropdown-menu open">
-            <li>
-              <div class="d-flex justify-content-around">
-                <div class="d-flex justify-content-center dd-content">
-                  <div>
-                    <img src="../assets/images/payment-icon.png" alt="RSB_pile-magazine" class="modal-qte-img">
-                  </div>
-                  <div class="d-flex flex-column">
-                    <div class="title-price d-flex justify-content-between">
-                      <div>
-                        <span class="modal-text-500">Togethere Professional</span>
+          <ul class="dropdown-menu dropdown-masked open">
+              <li>
+                  <div class="d-flex justify-content-around">
+                      <div class="d-flex justify-content-center dd-content">
+                          <div>
+                              <img src="../assets/images/payment-icon.png" alt="RSB_pile-magazine" class="modal-qte-img">
+                          </div>
+                          <div class="d-flex flex-column">
+                              <div class="title-price d-flex justify-content-between">
+                                  <div>
+                                      <span class="modal-text-500">Togethere Professional</span>
+                                  </div>
+                                  <div>
+                                      <span class="dropdown-currency">15,55 €</span>
+                                  </div>
+                              </div>
+                              <div class="mb-3">
+                                  <span class="dd_small_text">Togethere's premium plan to work better togethere</span>
+                                  <div class="d-flex">
+                                      <button class="btn dd-toggle dropdown-masked" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <div class="info" id="dropdownToggle">
+                                              <span class="details" id="detailsButton">Détails</span>
+                                              <i class="fa-solid fa-angle-down nav-arrow" id="detailsIcon"></i>
+                                          </div>
+                                      </button>
+                                      <span class="dd_small_text">Facturé tous les mois</span>
+                                  </div>
+                              </div>
+                              <div class="sub-total d-flex justify-content-between py-3">
+                                  <div class="sub-total-text">
+                                      <span>Sous-total</span>
+                                  </div>
+                                  <div>
+                                      <span class="dropdown-currency">15,55 €</span>
+                                  </div>
+                              </div>
+                              <div class="total d-flex justify-content-between py-3 mb-3">
+                                  <div class="sub-total-text">
+                                      <span>Total dû aujourd'hui</span>
+                                  </div>
+                                  <div>
+                                      <span class="dropdown-currency">15,55 €</span>
+                                  </div>
+                              </div>
+                          </div>
                       </div>
-                      <div>
-                        <span class="dropdown-currency">15,55 €</span>
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <span class="dd_small_text">Togethere's premium plan to work better togethere</span>
-                      <div class="d-flex">
-                        <button type="button" class="btn btn-light in_dd_button">
-                          <span class="qte-btn_text">Qté 1</span>
-                          <i class="fa-solid fa-angle-down nav-arrow"></i>
-                        </button>
-                        <span class="dd_small_text">Facturé tous les mois</span>
-                      </div>
-                    </div>
-                    <!-- <div class="sub-total py-2">
-                      <span>Sous-total</span>
-                    </div> -->
-                    <div class="sub-total d-flex justify-content-between py-3">
-                      <div class="sub-total-text">
-                        <span>Sous-total</span>
-                      </div>
-                      <div>
-                        <span class="dropdown-currency">15,55 €</span>
-                      </div>
-                    </div>
-                    <div class="total d-flex justify-content-between py-3 mb-3">
-                      <div class="sub-total-text">
-                        <span>Total dû aujourd'hui</span>
-                      </div>
-                      <div>
-                        <span class="dropdown-currency">15,55 €</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </li>
+              </li>
           </ul>
-        </div>
+      </div>
+
       </div>
     </nav>
-    <div class="overlay"></div>
+    <!-- <div class="overlay"></div> -->
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
