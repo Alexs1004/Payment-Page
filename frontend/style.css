@@ -10,6 +10,7 @@
 body form label{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "Ubuntu", sans-serif;
     font-size: 13px;
+    font-weight: 500;
     color: hsla(0,0%,10%,0.7);
 }
 
@@ -182,9 +183,13 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     display: inline-block;
 }
 
-.qte-btn-page {
+.qte-btn-page, .promocode-text {
     font-size: 14px;
+    font-weight: 500;
 }
+/*
+.Text--truncate {
+} */
 
 .info {
     font-size: 20px;
@@ -284,8 +289,19 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     border-color: #ccc;
 }
 
-.qte-btn {
+.qte-btn, .promo-btn {
 	padding: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ProductSummary-buttonsContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
 
 .btn-group {
@@ -408,11 +424,11 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 
 
 .form-control {
-    padding: 12px 8px;
-    padding-left: 40px;
+    padding: 12px 18px;
+    /* padding-left: 40px; */
 }
 
-#validationCustom01,
+/* #validationCustom01,
 #validationCustom11,
 #validationCustom10 {
     border-radius: 6px;
@@ -432,7 +448,7 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 #paysDropdown,
 #validationCustomUsername {
     padding-left: 13px;
-}
+} */
 
 .form-control {
     border-radius: 6px !important;
