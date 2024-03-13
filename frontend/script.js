@@ -1,3 +1,13 @@
+
+// const prices = {
+// 	productName : "Togethere Professional",
+// 	productPrice : "15,00 €",
+// 	productDescription : "Togethere's premium plan to work better together",
+// 	subTotal : "15,00 €",
+// 	totalDue : "15,00 €"
+// }
+
+
 const countries = [
 	"Afrique du Sud",
 	"Algérie",
@@ -446,23 +456,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 document.addEventListener("DOMContentLoaded", function() {
-	    const modifyButton = document.querySelector(".modal-modify-btn");
+    const modifyButton = document.querySelector(".modal-modify-btn");
 
     modifyButton.addEventListener("click", function() {
-	        const inputValue = parseFloat(document.getElementById("input-modal").value);
+        const inputValue = parseDecimal(document.getElementById("input-modal").value);
 
         // Mise à jour des prix pour toutes les occurrences de .currency et .dropdown-currency
         document.querySelectorAll(".currency, .dropdown-currency").forEach(currencyElement => {
-            let currencyValue = parseFloat(currencyElement.textContent);
-            currencyValue *= inputValue;
-            currencyElement.textContent = currencyValue.toFixed(2) + " €";
+            let originalValue = parseDecimal(currencyElement.getAttribute("data-original-value"));
+            currencyElement.textContent = (originalValue * inputValue).toFixed(2).replace('.', ',') + " €";
         });
 
         // Mise à jour du texte pour toutes les occurrences de .qte-btn-page et .qte-btn_text
         document.querySelectorAll(".qte-btn-page, .qte-btn_text").forEach(btnElement => {
-            btnElement.textContent = "Qté " + inputValue;
+            btnElement.textContent = "Qté " + inputValue.toString().replace('.', ',');
         });
 
         const modal = document.getElementById("qteModal");
@@ -472,14 +480,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Réinitialiser les prix lorsque la quantité est réinitialisée à 1
     document.getElementById("input-modal").addEventListener("input", function() {
-        const inputValue = parseFloat(this.value);
+        const inputValue = parseDecimal(this.value);
         if (inputValue === 1) {
             document.querySelectorAll(".currency, .dropdown-currency").forEach(currencyElement => {
-                let originalValue = parseFloat(currencyElement.getAttribute("data-original-value"));
-                currencyElement.textContent = originalValue.toFixed(2) + " €";
+                let originalValue = parseDecimal(currencyElement.getAttribute("data-original-value"));
+                currencyElement.textContent = originalValue.toFixed(2).replace('.', ',') + " €";
             });
         }
     });
+
+    // Stocker les valeurs de prix initiales dans les attributs data-original-value
+    document.querySelectorAll(".currency, .dropdown-currency").forEach(currencyElement => {
+        let originalValue = parseDecimal(currencyElement.textContent.replace(' €', ''));
+        currencyElement.setAttribute("data-original-value", originalValue);
+    });
+
+    // Fonction pour convertir une chaîne en décimal tout en conservant la virgule comme séparateur décimal
+    function parseDecimal(value) {
+        return parseFloat(value.replace(',', '.'));
+    }
 });
 
 // Fonction pour fermer la dropdown lorsque l'utilisateur clique en dehors
