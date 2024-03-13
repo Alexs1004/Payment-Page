@@ -460,23 +460,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const modifyButton = document.querySelector(".modal-modify-btn");
 
     modifyButton.addEventListener("click", function() {
-        const inputValue = parseDecimal(document.getElementById("input-modal").value);
+		const inputValue = parseDecimal(document.getElementById("input-modal").value);
 
-        // Mise à jour des prix pour toutes les occurrences de .currency et .dropdown-currency
-        document.querySelectorAll(".currency, .dropdown-currency").forEach(currencyElement => {
-            let originalValue = parseDecimal(currencyElement.getAttribute("data-original-value"));
-            currencyElement.textContent = (originalValue * inputValue).toFixed(2).replace('.', ',') + " €";
-        });
+		// Mise à jour des prix pour toutes les occurrences de .currency et .dropdown-currency
+		document.querySelectorAll(".currency, .dropdown-currency").forEach(currencyElement => {
+			let originalValue = parseDecimal(currencyElement.getAttribute("data-original-value"));
+			let updatedValue = (originalValue * inputValue).toFixed(2); // Formater avec deux décimales
+			currencyElement.textContent = updatedValue.replace('.', ',') + " €"; // Remplacer le point par une virgule
+		});
 
-        // Mise à jour du texte pour toutes les occurrences de .qte-btn-page et .qte-btn_text
-        document.querySelectorAll(".qte-btn-page, .qte-btn_text").forEach(btnElement => {
-            btnElement.textContent = "Qté " + inputValue.toString().replace('.', ',');
-        });
+		// Mise à jour du texte pour toutes les occurrences de .qte-btn-page et .qte-btn_text
+		document.querySelectorAll(".qte-btn-page, .qte-btn_text").forEach(btnElement => {
+			btnElement.textContent = "Qté " + inputValue.toString().replace('.', ',');
+		});
 
-        const modal = document.getElementById("qteModal");
-        const modalInstance = bootstrap.Modal.getInstance(modal);
-        modalInstance.hide();
-    });
+		const modal = document.getElementById("qteModal");
+		const modalInstance = bootstrap.Modal.getInstance(modal);
+		modalInstance.hide();
+	});
+
 
     // Réinitialiser les prix lorsque la quantité est réinitialisée à 1
     document.getElementById("input-modal").addEventListener("input", function() {
@@ -496,9 +498,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Fonction pour convertir une chaîne en décimal tout en conservant la virgule comme séparateur décimal
-    function parseDecimal(value) {
-        return parseFloat(value.replace(',', '.'));
-    }
+	function parseDecimal(value) {
+		// Remplacer les virgules par des points pour que parseFloat puisse fonctionner correctement
+		return parseFloat(value.replace(',', '.'));
+
+	}
 });
 
 // Fonction pour fermer la dropdown lorsque l'utilisateur clique en dehors
