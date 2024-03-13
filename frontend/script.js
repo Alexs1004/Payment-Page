@@ -558,6 +558,23 @@ if (isDropdownOpen()) {
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+	// Sélectionne l'icône et le message d'erreur
+	var emailIcon = document.getElementById('emailIcon');
+	var errorFeedback = document.querySelector('.is-invalid~.invalid-feedback');
+
+	// Vérifie si le message d'erreur est visible et ajuste la classe de l'icône en conséquence
+	function adjustIconPosition() {
+	  if (window.getComputedStyle(errorFeedback).display === 'block') {
+		emailIcon.classList.add('email-icon-shifted');
+	  } else {
+		emailIcon.classList.remove('email-icon-shifted');
+	  }
+	}
+
+	// Appel initial pour ajuster la position de l'icône au chargement de la page
+	adjustIconPosition();
+  });
 
 
 // **********************CUSTOM VALIDATION***************************

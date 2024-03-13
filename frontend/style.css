@@ -376,6 +376,11 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     z-index: 100;
 }
 
+.email-icon-shifted {
+    top: 25px; /* Ajustez cette valeur selon votre besoin */
+}
+
+
 .form-control-icon {
     padding-left: 35px;
 }
