@@ -129,11 +129,17 @@
                 <span class="price-upsell-text">150,00 €/an</span>
               </div>
             </div>
+            <div class="palyance-divbtn">
+              <button class="btn btn-primary palyance_btn" type="submit">Palyance</button>
+            </div>
           </div>
         </div>
         <div class="col-lg-6 px-0">
-          <hr class="horizontal_hr">
-          <form class="row g-3 needs-validation align-items-end mx-0" novalidate>
+          <div class="hr-container">
+            <hr class="horizontal_hr">
+            <div class="message">Ou saisir les données de paiement</div>
+          </div>
+            <form class="row g-3 needs-validation align-items-end mx-0" novalidate>
             <div class="col-12">
               <label for="validationCustomUsername" class="form-label">Coordonnées</label>
               <div class="col-md-6">
@@ -243,8 +249,11 @@
                 <div class="invalid-feedback"> Please choose a username. </div>
               </div>
             </div> -->
-            <hr class="horizontal_hr">
-            <div class="col-12 payment-mode mt-0">
+            <div class="hr-container">
+              <hr class="horizontal_hr">
+              <div class="message">Ou saisir les données de paiement</div>
+            </div>
+              <div class="col-12 payment-mode mt-0">
               <!-- Bloc SEPA -->
               <div class="btn-group d-flex my-5" role="group" aria-label="Basic radio toggle button group">
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>

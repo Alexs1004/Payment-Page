@@ -19,6 +19,7 @@ body form label{
     font-size: 16px;
 }
 
+
 .container {
     padding: 0px;
 }
@@ -422,12 +423,40 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     padding-left: 35px;
 }
 
+.palyance_btn {
+    width: 300px;
+    height: 44px;
+    background-color: black;
+}
 
+.palyance-divbtn {
+    padding: 16px 24px;
+    padding-bottom: 0px;
+    margin-top: 20px;
+}
 
 .form-control {
     padding: 10px 18px;
     padding-left: 40px;
 }
+
+.hr-container {
+    position: relative;
+}
+
+.message {
+    color: hsla(0,0%,10%,2);
+    font-weight: 400;
+    font-size: 14px;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 5px 10px;
+}
+
 
 /* #validationCustom01,
 #validationCustom11,
