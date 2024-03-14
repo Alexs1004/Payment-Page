@@ -823,3 +823,33 @@ document.addEventListener("DOMContentLoaded", function() {
 // });
 
 
+// ------------NEW SCRIPT-------------------
+
+// // Récupérer les éléments
+// const emailInput = document.getElementById('validationCustom01');
+// const nameInput = document.getElementById('validationCustom21');
+// const emailError = document.getElementById('emailError');
+// const nameError = document.getElementById('nameError');
+
+// // Ajouter des écouteurs d'événements pour le focus et le blur
+// emailInput.addEventListener('blur', checkEmailValidity);
+// nameInput.addEventListener('blur', checkNameValidity);
+
+// // Fonction pour vérifier la validité de l'e-mail
+// function checkEmailValidity() {
+//     if (!emailInput.validity.valid) {
+//         emailError.style.display = 'block';
+//     } else {
+//         emailError.style.display = 'none';
+//     }
+// }
+
+// // Fonction pour vérifier la validité du nom
+// function checkNameValidity() {
+//     if (!nameInput.validity.valid) {
+//         nameError.style.display = 'block';
+//     } else {
+//         nameError.style.display = 'none';
+//     }
+// }
+

@@ -14,11 +14,11 @@ body form label{
     color: hsla(0,0%,10%,0.7);
 }
 
+
 ::placeholder {
-    color: hsla(0,0%,10%,2);
+    color: hsla(0,0%,10%,0.35);
     font-size: 16px;
 }
-
 
 .container {
     padding: 0px;
@@ -438,14 +438,15 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 .form-control {
     padding: 10px 18px;
     padding-left: 40px;
+    max-width: 300px;
 }
 
 .hr-container {
     position: relative;
 }
 
-.message {
-    color: hsla(0,0%,10%,2);
+.hr-message {
+    color: hsla(0,0%,10%,0.35);
     font-weight: 400;
     font-size: 14px;
     white-space: nowrap;
@@ -485,7 +486,7 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 }
 
 
-#validationCustom02 {
+#validationCustom21 {
     border-radius: 0px 0px 6px 6px;
     border-top: none;
 }
