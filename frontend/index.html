@@ -152,20 +152,37 @@
           <form class="row g-3 needs-validation align-items-end mx-0" novalidate>
             <div class="col-12">
               <label for="validationCustomUsername" class="form-label">Coordonnées</label>
-              <div class="input-group has-validation position-relative contact-details-block">
+              <div class="input-group has-validation position-relative">
                   <input type="text" class="form-control form-control-icon" id="validationCustom01" placeholder="email@exemple.com" required>
                   <i class="fas fa-envelope input-icon" id="emailIcon"></i>
                 </div>
-                <div class="input-group has-validation position-relative contact-details-block">
+                <div class="input-group has-validation position-relative">
                   <input type="text" class="form-control" id="validationCustom21" placeholder="06 12 34 56 78" required>
                   <div class="invalid-feedback" id="nameError">Votre nom est requis.</div>
                   <div class="invalid-feedback" id="emailError">Votre adresse e-mail est incomplète.</div>
               </div>
           </div>
+          <div class="col-12">
+            <label for="validationCustom02" class="form-label">Informations de la carte</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="1234 1234 1234 1234" required>
+            <!-- <div class="valid-feedback"> Looks good! </div> -->
+          </div>
+          <div class="col-6 date-card">
+            <div class="splitted_input">
+              <input type="text" class="form-control" id="validationCustom11" placeholder="MM/YY" required>
+              <!-- <div class="valid-feedback"> Looks good! </div> -->
+            </div>
+          </div>
+          <div class="col-6 cvc-card">
+            <div class="splitted_input">
+              <input type="text" class="form-control" id="validationCustom32" placeholder="CVC" required>
+              <!-- <div class="valid-feedback"> Looks good! </div> -->
+            </div>
+          </div>
         </div>
         <!-- <div class="col-4"><label for="validationCustom02" class="form-label">Nom</label><div class="input-group"><select class="form-select" id="validationCustom10" aria-label="Civilité" required><option value="monsieur">M.</option><option value="madame">Mme.</option></select><div class="valid-feedback"> Looks good! </div></div></div> -->
         <div class="col-6">
-          <label for="validationCustom02" class="form-label">Nom</label>
+          <label for="validationCustom022" class="form-label">Nom</label>
           <div class="splitted_input">
             <input type="text" class="form-control" id="validationCustom12" placeholder="Prénom" required>
             <!-- <div class="valid-feedback"> Looks good! </div> -->
@@ -198,7 +215,7 @@
           <!-- <div class="col-12 d-flex align-items-end"> -->
           <!-- <div class="col-4"><label for="validationCustom02" class="form-label">Nom</label><div class="input-group"><select class="form-select" id="validationCustom08" aria-label="Civilité" required><option value="monsieur">M.</option><option value="madame">Mme.</option></select><div class="valid-feedback"> Looks good! </div></div></div> -->
           <div class="col-6">
-            <label for="validationCustom02" class="form-label">Nom</label>
+            <label for="validationCustom022" class="form-label">Nom</label>
             <div class="splitted_input">
               <input type="text" class="form-control" id="validationCustom07" placeholder="Prénom" required>
               <!-- <div class="valid-feedback"> Looks good! </div> -->
@@ -266,23 +283,7 @@
                 <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
               </div>
             </div>
-            <div class="col-12">
-              <label for="validationCustom02" class="form-label">Informations de la carte</label>
-              <input type="text" class="form-control" id="validationCustom02" placeholder="1234 1234 1234 1234" required>
-              <!-- <div class="valid-feedback"> Looks good! </div> -->
-            </div>
-            <div class="col-6">
-              <div class="splitted_input">
-                <input type="text" class="form-control" id="validationCustom11" placeholder="MM/YY" required>
-                <!-- <div class="valid-feedback"> Looks good! </div> -->
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="splitted_input">
-                <input type="text" class="form-control" id="validationCustom32" placeholder="CVC" required>
-                <!-- <div class="valid-feedback"> Looks good! </div> -->
-              </div>
-            </div>
+
             <div class="col-12">
               <label for="validationCustom04" class="form-label">Pays ou région</label>
               <select class="form-select form-control" id="paysDropdown" required>

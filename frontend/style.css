@@ -437,7 +437,6 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 
 .form-control {
     padding: 10px 18px;
-    padding-left: 40px;
     max-width: 300px;
 }
 
@@ -459,11 +458,23 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 }
 
 
+#validationCustom01,
+#validationCustom21
+{
+    padding-left: 40px;
+}
+
+#validationCustom32 {
+    border-radius: 0px 0px 6px 0px;
+}
+
 /* #validationCustom01,
 #validationCustom11,
 #validationCustom10 {
     border-radius: 6px;
 }
+
+
 
 #validationCustom02,
 #validationCustom06,
@@ -493,6 +504,12 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 
 .form-control {
     border-radius: 6px;
+}
+
+#cg_checkbox {
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .in_dd_button {
@@ -550,11 +567,6 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     /* text-align: end; */
 }
 
-
-.contact-details-block {
-    /* display: inline-block; */
-}
-
 /* .form-switch .form-check-input {
     background-position: right center;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
@@ -564,6 +576,23 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     background-color: #24b47e;
 }
 
+#validationCustom02 {
+    border-bottom: none;
+    border-radius: 6px 6px 0px 0px;
+}
+
+/* Supprimer le margin-top des colonnes .col-6 */
+.col-6 {
+    margin-top: 0 !important;
+}
+
+.date-card {
+    padding-right: 0px;
+}
+
+.cvc-card {
+    padding-left: 0px;
+}
 
 #flexSwitchCheckDefault {
     width: 26px;
