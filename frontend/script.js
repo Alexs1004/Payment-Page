@@ -802,7 +802,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
+document.getElementById("toggleAdresseManuelle").addEventListener("click", function() {
+    var adresseManuelleDiv = document.getElementById("adresseManuelle");
+    if (adresseManuelleDiv.style.display === "none") {
+        adresseManuelleDiv.style.display = "block";
+    } else {
+        adresseManuelleDiv.style.display = "none";
+    }
+});
 
 
 

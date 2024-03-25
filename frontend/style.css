@@ -468,6 +468,11 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     border-radius: 0px 0px 6px 0px;
 }
 
+#validationCustom11 {
+    border-radius: 0px 0px 0px 6px;
+}
+
+
 /* #validationCustom01,
 #validationCustom11,
 #validationCustom10 {
@@ -496,14 +501,34 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     border-radius: 6px 6px 0px 0px;
 }
 
+#paysDropdown {
+    border-radius: 6px 6px 0px 0px;
+    border-bottom: none;
+}
+
+#autocomplete2 {
+    border-radius: 0px 0px 6px 6px;
+}
 
 #validationCustom21 {
     border-radius: 0px 0px 6px 6px;
     border-top: none;
 }
 
+.text-adress-btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: hsla(0,0%, 10%, 0.7);
+    font-size: 12px;
+    font-weight: 400px;
+    text-decoration: underline dotted hsla(0,0%, 10%, 0.7);
+}
+
+
 .form-control {
     border-radius: 6px;
+    max-width: none;
 }
 
 #cg_checkbox {
