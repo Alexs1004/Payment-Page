@@ -812,6 +812,130 @@ document.getElementById("toggleAdresseManuelle").addEventListener("click", funct
 });
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const sepaBtn = document.querySelector('.sepa-btn');
+    const cardBtn = document.querySelector('.card-btn');
+    const creditCardBlock = document.getElementById('creditCardBlock');
+
+    // Afficher le bloc creditCardBlock par défaut
+    creditCardBlock.style.display = 'block';
+
+    cardBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Empêche le comportement par défaut du bouton
+        if (!cardBtn.classList.contains('active')) {
+            cardBtn.classList.add('active');
+            sepaBtn.classList.remove('active');
+            creditCardBlock.style.display = 'block'; // Afficher le bloc creditCardBlock
+        }
+    });
+
+    sepaBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Empêche le comportement par défaut du bouton
+        if (!sepaBtn.classList.contains('active')) {
+            sepaBtn.classList.add('active');
+            cardBtn.classList.remove('active');
+            creditCardBlock.style.display = 'none'; // Masquer le bloc creditCardBlock
+        }
+    });
+});
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const sepaBtn = document.querySelector('.sepa-btn');
+//     const cardBtn = document.querySelector('.card-btn');
+
+//     sepaBtn.addEventListener('click', function(event) {
+//       event.preventDefault(); // Empêche le comportement par défaut du bouton
+//       if (!sepaBtn.classList.contains('active')) {
+//         sepaBtn.classList.add('active');
+//         cardBtn.classList.remove('active');
+//       }
+//     });
+
+//     cardBtn.addEventListener('click', function(event) {
+//       event.preventDefault(); // Empêche le comportement par défaut du bouton
+//       if (!cardBtn.classList.contains('active')) {
+//         cardBtn.classList.add('active');
+//         sepaBtn.classList.remove('active');
+//       }
+//     });
+//   });
+
+
+
+//   document.addEventListener("DOMContentLoaded", function() {
+//     // Sélectionner le bouton card-btn
+//     var cardBtn = document.querySelector(".card-btn");
+
+//     // Sélectionner le bloc creditCardBlock
+//     var creditCardBlock = document.getElementById("creditCardBlock");
+
+//     // Fonction pour afficher ou masquer le bloc creditCardBlock
+//     function toggleCreditCardBlock() {
+//         // Vérifier si le bouton card-btn a la classe active
+//         var isActive = cardBtn.classList.contains("active");
+
+//         // Afficher ou masquer le bloc creditCardBlock en fonction de l'état du bouton
+//         if (isActive) {
+//             creditCardBlock.style.display = "block";
+//         } else {
+//             creditCardBlock.style.display = "none";
+//         }
+//     }
+
+//     // Ajouter un écouteur d'événements pour les clics sur le document
+//     document.addEventListener("click", function(event) {
+//         // Vérifier si le clic a été effectué sur le bouton card-btn
+//         if (event.target.closest(".card-btn")) {
+//             // Ajouter ou supprimer la classe active
+//             cardBtn.classList.toggle("active");
+
+//             // Appeler la fonction pour afficher ou masquer le bloc creditCardBlock
+//             toggleCreditCardBlock();
+//         }
+//     });
+
+//     // Appeler la fonction une fois au chargement de la page pour vérifier l'état initial
+//     toggleCreditCardBlock();
+// });
+
+
+//   // Sélection du bouton card-btn
+// var cardBtn = document.querySelector(".card-btn");
+
+// // Vérification de la présence de la classe active
+// if (cardBtn.classList.contains("active")) {
+//     // Si active, afficher le bloc creditCardBlock
+//     document.getElementById("creditCardBlock").style.display = "block";
+// } else {
+//     // Sinon, masquer le bloc creditCardBlock
+//     document.getElementById("creditCardBlock").style.display = "none";
+// }
+
+
+
+
+
+
+//   // Sélection du bouton card-btn
+//   const cardBtn = document.querySelector('.card-btn');
+
+//   // Sélection du bloc à afficher
+//   const cardBlock = document.getElementById('creditCardBlock');
+
+//   // Écouteur d'événement pour le clic sur le bouton
+//   cardBtn.addEventListener('click', function() {
+//     // Vérifier si le bouton est activé (classe active)
+//     if (cardBtn.classList.contains('active')) {
+//       // Afficher le bloc
+//       cardBlock.style.display = 'block';
+//     } else {
+//       // Masquer le bloc
+//       cardBlock.style.display = 'none';
+//     }
+//   });
+
+
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     const ibanInput = document.getElementById("validationCustomIban");

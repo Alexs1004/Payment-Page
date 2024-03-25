@@ -103,7 +103,7 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 
 .card-btn, .sepa-btn {
     background-color: white;
-    border: 0px solid #ced4da;
+    border: 1px solid #ced4da;
     border-radius: 6px;
     box-shadow: 0 0 0 1px #e0e0e0;
     color: hsla(0, 0%, 10%, 0.7);
@@ -116,6 +116,11 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     font-weight: 500;
     text-align: left;
     width: 100%;
+}
+
+.card-btn.active, .sepa-btn.active {
+    color: black;
+    border-color: black;
 }
 
 .card-btn:hover, .sepa-btn:hover {
