@@ -218,14 +218,19 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 .subscribe_text {
 	font-weight: 500;
 	font-size: 16px;
-	color: var(--hover-color2);
+    color: hsla(0, 0%, 10%, 0.6);
     white-space: nowrap;
 }
 
 .text_currency {
 	font-weight: 500;
 	font-size: 14px;
-	color: var(--hover-color2);
+    color: hsla(0, 0%, 10%, 0.6);
+}
+
+.freeDays-text{
+    font-size: 28px;
+    font-weight: 600;
 }
 
 .info,
@@ -255,10 +260,7 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     margin-right: 25px;
 }
 
-.currency {
-    font-size: 28px;
-    font-weight: 600;
-}
+
 
 .dropdown-menu {
     /* box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important; */
