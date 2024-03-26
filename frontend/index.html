@@ -204,6 +204,27 @@
               </div>
 
             </div>
+            <div id="sepaBlock" style="display: none;">
+              <!-- <form class="row g-3 needs-validation" novalidate> -->
+                <div class="col-12">
+                  <label for="validationCustomUsername" class="form-label">Titulaire du compte</label>
+                  <div class="input-group has-validation">
+                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                    <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="validationCustomUsername" class="form-label">IBAN</label>
+                  <div class="input-group has-validation">
+                    <input type="text" class="form-control" id="validationCustomIban" aria-describedby="inputGroupPrepend" required>
+                    <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
+                  </div>
+                </div>
+                <div class="col-12 div_btn_pay">
+                  <button class="btn btn-primary pay_btn mt-2" type="submit">Payer et s'abonner</button>
+                </div>
+              <!-- </form> -->
+            </div>
             <div class="col-12 mb-3">
               <div>
                 <label for="validationCustom04" class="form-label">Adresse de facturation</label>
@@ -240,6 +261,31 @@
               <div class="shippingTitle">
                 <label for="shippingTitle">Vos coordonnées de livraison</label>
               </div>
+              <div class="col-12 mb-3">
+                <div>
+                  <label for="validationCustom04" class="form-label">Adresse de facturation</label>
+                  <select class="form-select form-control" id="paysDropdown" required="">
+                    <option selected="" value="">France métropolitaine</option>
+                  <option>Afrique du Sud</option><option>Algérie</option><option>Allemagne</option><option>Andorre</option><option>Anguilla</option><option>Antarctique</option><option>Antigua-et-Barbuda</option><option>Arabie Saoudite</option><option>Argentine</option><option>Arménie</option><option>Aruba</option><option>Australie</option><option>Autriche</option><option>Azerbaïdjan</option><option>Bahamas</option><option>Bahreïn</option><option>Bangladesh</option><option>Barbade</option><option>Bélarus</option><option>Belgique</option><option>Belize</option><option>Bénin</option><option>Bermudes</option><option>Bhoutan</option><option>Bolivie</option><option>Bosnie-Herzégovine</option><option>Botswana</option><option>Brésil</option><option>Brunéi Darussalam</option><option>Bulgarie</option><option>Burkina Faso</option><option>Burundi</option><option>Cambodge</option><option>Cameroun</option><option>Canada</option><option>Cap-vert</option><option>Chili</option><option>Chine</option><option>Chypre</option><option>Colombie</option><option>Comores</option><option>Costa Rica</option><option>Côte d'Ivoire</option><option>Croatie</option><option>Cuba</option><option>Curaçao</option><option>Danemark</option><option>Djibouti</option><option>Dominique</option><option>Égypte</option><option>El Salvador</option><option>Émirats Arabes Unis</option><option>Équateur</option><option>Érythrée</option><option>Espagne</option><option>Estonie</option><option>États Fédérés de Micronésie</option><option>Éthiopie</option><option>Fédération de Russie</option><option>Fidji</option><option>Finlande</option><option>France métropolitaine</option><option>Gabon</option><option>Gambie</option><option>Géorgie</option><option>Géorgie du Sud et les Îles Sandwich du Sud</option><option>Ghana</option><option>Gibraltar</option><option>Grèce</option><option>Grenade</option><option>Groenland</option><option>Guadeloupe</option><option>Guam</option><option>Guatemala</option><option>Guernsey</option><option>Guinée</option><option>Guinée Équatoriale</option><option>Guinée-Bissau</option><option>Guyana</option><option>Guyane Française</option><option>Haïti</option><option>Honduras</option><option>Hong-Kong</option><option>Hongrie</option><option>Île Bouvet</option><option>Île Christmas</option><option>Île de Man</option><option>Île Norfolk</option><option>Îles (malvinas) Falkland</option><option>Îles Åland</option><option>Îles Caïmanes</option><option>Îles Canaries</option><option>Îles Cocos (Keeling)</option><option>Îles Cook</option><option>Îles Féroé</option><option>Îles Heard et Mcdonald</option><option>Îles Mariannes du Nord</option><option>Îles Marshall</option><option>Îles Mineures Éloignées des États-Unis</option><option>Îles Salomon</option><option>Îles Turks et Caïques</option><option>Îles Vierges Britanniques</option><option>Îles Vierges des États-Unis</option><option>Inde</option><option>Indonésie</option><option>Irlande</option><option>Islande</option><option>Italie</option><option>Jamahiriya Arabe Libyenne</option><option>Jamaïque</option><option>Japon</option><option>Jersey</option><option>Jordanie</option><option>Kazakhstan</option><option>Kenya</option><option>Kirghizistan</option><option>Kiribati</option><option>Koweït</option><option>L'ex-République Yougoslave de Macédoine</option><option>Lesotho</option><option>Lettonie</option><option>Liban</option><option>Libéria</option><option>Liechtenstein</option><option>Lituanie</option><option>Luxembourg</option><option>Macao</option><option>Madagascar</option><option>Malaisie</option><option>Malawi</option><option>Maldives</option><option>Mali</option><option>Malte</option><option>Maroc</option><option>Martinique</option><option>Maurice</option><option>Mauritanie</option><option>Mayotte</option><option>Mexique</option><option>Monaco</option><option>Mongolie</option><option>Monténégro</option><option>Montserrat</option><option>Mozambique</option><option>Myanmar</option><option>Namibie</option><option>Nauru</option><option>Népal</option><option>Nicaragua</option><option>Niger</option><option>Nigéria</option><option>Niué</option><option>Norvège</option><option>Nouvelle-Calédonie</option><option>Nouvelle-Zélande</option><option>Oman</option><option>Ouganda</option><option>Ouzbékistan</option><option>Pakistan</option><option>Palaos</option><option>Panama</option><option>Papouasie-Nouvelle-Guinée</option><option>Paraguay</option><option>Pays-Bas</option><option>Pays-Bas caribéens</option><option>Pérou</option><option>Philippines</option><option>Pitcairn</option><option>Pologne</option><option>Polynésie Française</option><option>Porto Rico</option><option>Portugal</option><option>Qatar</option><option>République Centrafricaine</option><option>République de Corée</option><option>République de Moldova</option><option>République de Serbie</option><option>République Démocratique du Congo</option><option>République Démocratique Populaire Lao</option><option>République Dominicaine</option><option>République du Congo</option><option>République Islamique d'Iran</option><option>République Tchèque</option><option>République-Unie de Tanzanie</option><option>Réunion</option><option>Roumanie</option><option>Royaume-Uni</option><option>Rwanda</option><option>Sahara Occidental</option><option>Saint-Barthélemy</option><option>Saint-Kitts-et-Nevis</option><option>Saint-Marin</option><option>Saint-Martin</option><option>Saint-Pierre-et-Miquelon</option><option>Saint-Siège (état de la Cité du Vatican)</option><option>Saint-Vincent-et-les Grenadines</option><option>Sainte-Hélène</option><option>Sainte-Lucie</option><option>Samoa</option><option>Samoa Américaines</option><option>Sao Tomé-et-Principe</option><option>Sénégal</option><option>Seychelles</option><option>Sierra Leone</option><option>Singapour</option><option>Sint Maarten</option><option>Slovaquie</option><option>Slovénie</option><option>Somalie</option><option>Soudan</option><option>Soudan du Sud</option><option>Sri Lanka</option><option>Suède</option><option>Suriname</option><option>Svalbard et Île Jan Mayen</option><option>Swaziland</option><option>Tadjikistan</option><option>Taïwan</option><option>Tchad</option><option>Terres Australes Françaises</option><option>Territoire Britannique de l'Océan Indien</option><option>Territoire Palestinien Occupé</option><option>Thaïlande</option><option>Timor-Leste</option><option>Togo</option><option>Tokelau</option><option>Tonga</option><option>Trinité-et-Tobago</option><option>Tunisie</option><option>Turkménistan</option><option>Turquie</option><option>Tuvalu</option><option>Ukraine</option><option>Uruguay</option><option>Vanuatu</option><option>Venezuela</option><option>Viet Nam</option><option>Wallis et Futuna</option><option>Yémen</option><option>Zambie</option><option>Zimbabwe</option></select>
+                  <div class="invalid-feedback"> Please select a valid state. </div>
+                </div>
+                <div>
+                  <div class="input-group has-validation position-relative">
+                    <input type="text" class="form-control form-control-icon mb-3" id="autocomplete2" placeholder="Adresse" required="">
+                    <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
+                  </div>
+                </div>
+                <div id="adresseManuelle" style="display: none;">
+                  <!-- Ajoutez ici d'autres champs pour l'adresse manuelle -->
+                  <div class="input-group has-validation position-relative">
+                      <input type="text" class="form-control form-control-icon" id="adresseManuelleInput" placeholder="Adresse manuelle" required="">
+                      <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
+                  </div>
+                </div>
+                <div class="adress-btn">
+                  <button class="text-adress-btn" id="toggleAdresseManuelle">Saisir l'adresse manuellement</button>
+                </div>
+              </div>
               <!-- <div class="col-12 d-flex align-items-end"> -->
               <!-- <div class="col-4"><label for="validationCustom02" class="form-label">Nom</label><div class="input-group"><select class="form-select" id="validationCustom08" aria-label="Civilité" required><option value="monsieur">M.</option><option value="madame">Mme.</option></select><div class="valid-feedback"> Looks good! </div></div></div> -->
               <div class="col-12">
@@ -270,27 +316,6 @@
                 </label>
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
                 <label class="btn btn-outline-primary d-flex align-items-center justify-content-center cc-radio-btn" for="btnradio2">Carte de crédit</label>
-              </div>
-              <div id="sepaBlock">
-                <form class="row g-3 needs-validation" novalidate>
-                  <div class="col-12">
-                    <label for="validationCustomUsername" class="form-label">Titulaire du compte</label>
-                    <div class="input-group has-validation">
-                      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                      <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <label for="validationCustomUsername" class="form-label">IBAN</label>
-                    <div class="input-group has-validation">
-                      <input type="text" class="form-control" id="validationCustomIban" aria-describedby="inputGroupPrepend" required>
-                      <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
-                    </div>
-                  </div>
-                  <div class="col-12 div_btn_pay">
-                    <button class="btn btn-primary pay_btn mt-2" type="submit">Payer et s'abonner</button>
-                  </div>
-                </form>
               </div>
             </div>
             <div class="col-12" id="creditCardBlock" style="display: block;">

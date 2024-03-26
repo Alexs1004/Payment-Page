@@ -812,32 +812,119 @@ document.getElementById("toggleAdresseManuelle").addEventListener("click", funct
 });
 
 
+// document.addEventListener("DOMContentLoaded", function() {
+//     const sepaBtn = document.querySelector('.sepa-btn');
+//     const cardBtn = document.querySelector('.card-btn');
+//     const creditCardBlock = document.getElementById('creditCardBlock');
+
+//     // Afficher le bloc creditCardBlock par défaut
+//     creditCardBlock.style.display = 'block';
+
+//     cardBtn.addEventListener('click', function(event) {
+//         event.preventDefault(); // Empêche le comportement par défaut du bouton
+//         if (!cardBtn.classList.contains('active')) {
+//             cardBtn.classList.add('active');
+//             sepaBtn.classList.remove('active');
+//             creditCardBlock.style.display = 'block'; // Afficher le bloc creditCardBlock
+//         }
+//     });
+
+//     sepaBtn.addEventListener('click', function(event) {
+//         event.preventDefault(); // Empêche le comportement par défaut du bouton
+//         if (!sepaBtn.classList.contains('active')) {
+//             sepaBtn.classList.add('active');
+//             cardBtn.classList.remove('active');
+//             creditCardBlock.style.display = 'none'; // Masquer le bloc creditCardBlock
+//         }
+//     });
+// });
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const sepaBtn = document.querySelector('.sepa-btn');
     const cardBtn = document.querySelector('.card-btn');
     const creditCardBlock = document.getElementById('creditCardBlock');
-
-    // Afficher le bloc creditCardBlock par défaut
-    creditCardBlock.style.display = 'block';
+    const sepaBlock = document.getElementById('sepaBlock');
 
     cardBtn.addEventListener('click', function(event) {
-        event.preventDefault(); // Empêche le comportement par défaut du bouton
+        event.preventDefault();
         if (!cardBtn.classList.contains('active')) {
             cardBtn.classList.add('active');
             sepaBtn.classList.remove('active');
-            creditCardBlock.style.display = 'block'; // Afficher le bloc creditCardBlock
+            creditCardBlock.style.display = 'block';
+            sepaBlock.style.display = 'none'; // Cacher le bloc SEPA lorsque le bouton de la carte est activé
         }
     });
 
     sepaBtn.addEventListener('click', function(event) {
-        event.preventDefault(); // Empêche le comportement par défaut du bouton
+        event.preventDefault();
         if (!sepaBtn.classList.contains('active')) {
             sepaBtn.classList.add('active');
             cardBtn.classList.remove('active');
-            creditCardBlock.style.display = 'none'; // Masquer le bloc creditCardBlock
+            creditCardBlock.style.display = 'none';
+            sepaBlock.style.display = 'block'; // Afficher le bloc SEPA lorsque le bouton SEPA est activé
         }
     });
 });
+
+
+    //   document.addEventListener("DOMContentLoaded", function() {
+    //         const sepaBtn = document.querySelector('.sepa-btn');
+    //         const cardBtn = document.querySelector('.card-btn');
+    //         const creditCardBlock = document.getElementById('creditCardBlock');
+
+    //         // Cacher le bloc au démarrage
+    //         // creditCardBlock.classList.add('hidden'); // On ne cache pas le bloc par défaut
+
+    //         cardBtn.addEventListener('click', function(event) {
+    //             event.preventDefault(); // Empêche le comportement par défaut du bouton
+    //             if (!cardBtn.classList.contains('active')) {
+    //                 cardBtn.classList.add('active');
+    //                 sepaBtn.classList.remove('active');
+    //                 creditCardBlock.classList.remove('hidden'); // Afficher le bloc lors du clic sur le bouton de la carte
+    //             }
+    //         });
+
+    //         sepaBtn.addEventListener('click', function(event) {
+    //             event.preventDefault(); // Empêche le comportement par défaut du bouton
+    //             if (!sepaBtn.classList.contains('active')) {
+    //                 sepaBtn.classList.add('active');
+    //                 cardBtn.classList.remove('active');
+    //                 creditCardBlock.classList.add('hidden'); // Cacher le bloc lors du clic sur le bouton de SEPA
+    //             }
+    //         });
+    //     });
+
+//    document.addEventListener("DOMContentLoaded", function() {
+//     const sepaBtn = document.querySelector('.sepa-btn');
+//     const cardBtn = document.querySelector('.card-btn');
+//     const creditCardBlock = document.getElementById('creditCardBlock');
+//     const sepaBlock = document.getElementById('sepaBlock');
+
+//     cardBtn.addEventListener('click', function(event) {
+//         event.preventDefault();
+//         if (!cardBtn.classList.contains('active')) {
+//             cardBtn.classList.add('active');
+//             sepaBtn.classList.remove('active');
+//             creditCardBlock.style.display = 'block';
+//             sepaBlock.style.display = 'none'; // Cacher le bloc SEPA lorsque le bouton de la carte est activé
+//         }
+//     });
+
+//     sepaBtn.addEventListener('click', function(event) {
+//         event.preventDefault();
+//         if (!sepaBtn.classList.contains('active')) {
+//             sepaBtn.classList.add('active');
+//             cardBtn.classList.remove('active');
+//             creditCardBlock.style.display = 'none';
+//             sepaBlock.style.display = 'block'; // Afficher le bloc SEPA lorsque le bouton SEPA est activé
+//         }
+//     });
+// });
+
+
+
+
 
 
 // document.addEventListener("DOMContentLoaded", function() {
