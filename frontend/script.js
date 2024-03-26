@@ -261,23 +261,23 @@ countries.forEach(country => {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const fieldsToCopy = [
-        { sourceId: "autocomplete", targetId: "autocomplete2" },
-        { sourceId: "validationCustom31", targetId: "validationCustom06" },
-        { sourceId: "validationCustom12", targetId: "validationCustom07" },
-        // { sourceId: "validationCustom10", targetId: "validationCustom08" }
-    ];
+// document.addEventListener("DOMContentLoaded", function() {
+//     const fieldsToCopy = [
+//         { sourceId: "autocomplete", targetId: "autocomplete2" },
+//         { sourceId: "validationCustom31", targetId: "validationCustom06" },
+//         { sourceId: "validationCustom12", targetId: "validationCustom07" },
+//         // { sourceId: "validationCustom10", targetId: "validationCustom08" }
+//     ];
 
-    fieldsToCopy.forEach(field => {
-        const sourceInput = document.getElementById(field.sourceId);
-        const targetInput = document.getElementById(field.targetId);
+//     fieldsToCopy.forEach(field => {
+//         const sourceInput = document.getElementById(field.sourceId);
+//         const targetInput = document.getElementById(field.targetId);
 
-        sourceInput.addEventListener("input", function() {
-            targetInput.value = sourceInput.value;
-        });
-    });
-});
+//         sourceInput.addEventListener("input", function() {
+//             targetInput.value = sourceInput.value;
+//         });
+//     });
+// });
 
 /*Ce script check si la case est cochée et si c'est le cas copie les eléments dans le shipping form */
 
@@ -781,4 +781,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     sepaBtn.addEventListener('click', afficherSEPA);
     cardBtn.addEventListener('click', afficherCarte);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const radioUpsellInput = document.querySelector(".radio-upsell input[type='radio']");
+    const textCurrencyElements = document.querySelectorAll(".text_currency");
+    const prixParAn = "Puis 150,00 € par an";
+
+    radioUpsellInput.addEventListener("change", function() {
+        if (radioUpsellInput.checked) {
+            textCurrencyElements.forEach(function(element) {
+                element.textContent = prixParAn;
+            });
+        } else {
+            // Remettre le texte d'origine si le radio input n'est pas activé
+            textCurrencyElements.forEach(function(element) {
+                element.textContent = "Puis 15,55 € par mois";
+            });
+        }
+    });
 });
