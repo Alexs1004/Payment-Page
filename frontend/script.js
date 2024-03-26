@@ -261,6 +261,44 @@ countries.forEach(country => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const radioBtn = document.getElementById("flexSwitchCheckDefault");
+
+    radioBtn.addEventListener("change", function() {
+        if (radioBtn.checked) {
+            console.log("Le bouton radio est coché !");
+        } else {
+            console.log("Le bouton radio n'est pas coché !");
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const radioBtn = document.getElementById("flexSwitchCheckDefault");
+    const currencyElement = document.querySelector(".currency");
+    const textElement = document.querySelector(".byMonth-text");
+
+    // Stockez les valeurs par défaut
+    const defaultCurrencyValue = currencyElement.textContent;
+    const defaultTextValue = textElement.textContent;
+
+    radioBtn.addEventListener("change", function() {
+        if (radioBtn.checked) {
+            console.log("Le bouton radio est coché !");
+            currencyElement.textContent = "150,00 €";
+            textElement.textContent = " par an";
+        } else {
+            console.log("Le bouton radio n'est pas coché !");
+            // Restaurez les valeurs par défaut
+            currencyElement.textContent = defaultCurrencyValue;
+            textElement.textContent = defaultTextValue;
+        }
+    });
+});
+
+
+
+
 // document.addEventListener("DOMContentLoaded", function() {
 //     const fieldsToCopy = [
 //         { sourceId: "autocomplete", targetId: "autocomplete2" },
@@ -757,35 +795,6 @@ document.getElementById("toggleAdresseManuelle").addEventListener("click", funct
     }
 });
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const sepaBtn = document.querySelector('.sepa-btn');
-//     const cardBtn = document.querySelector('.card-btn');
-//     const creditCardBlock = document.querySelectorAll('.creditCardBlock');
-//     const sepaBlock = document.querySelectorAll('.sepaBlock');
-
-//     function afficherSEPA(event) {
-//         event.preventDefault(); // Empêcher le comportement par défaut du bouton
-//         sepaBtn.classList.add('active');
-//         cardBtn.classList.remove('active');
-//         creditCardBlock.style.display = 'none';
-//         sepaBlock.style.display = 'block';
-//     }
-
-//     function afficherCarte(event) {
-//         event.preventDefault(); // Empêcher le comportement par défaut du bouton
-//         cardBtn.classList.add('active');
-//         sepaBtn.classList.remove('active');
-//         creditCardBlock.style.display = 'block';
-//         sepaBlock.style.display = 'none';
-//     }
-
-//     sepaBtn.addEventListener('click', afficherSEPA);
-//     cardBtn.addEventListener('click', afficherCarte);
-// });
-
-
-// -----------------------TEST
-
 document.addEventListener("DOMContentLoaded", function() {
     const sepaBtn = document.querySelector('.sepa-btn');
     const cardBtn = document.querySelector('.card-btn');
@@ -832,17 +841,6 @@ document.addEventListener("DOMContentLoaded", function() {
 //     });
 // });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const radioBtn = document.getElementById("flexSwitchCheckDefault");
-
-    radioBtn.addEventListener("change", function() {
-        if (radioBtn.checked) {
-            console.log("Le bouton radio est coché !");
-        } else {
-            console.log("Le bouton radio n'est pas coché !");
-        }
-    });
-});
 
 
 // function transformToInput() {

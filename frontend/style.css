@@ -512,7 +512,19 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     width: 308px;
     height: 44px;
     background-color: black;
+    color: white;
 }
+
+.palyance_btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.palyance-btn:focus,
+.palyance-btn:active {
+    background-color: black !important;
+}
+
 
 .palyance-divbtn {
     padding: 16px 24px;
