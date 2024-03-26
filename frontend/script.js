@@ -757,31 +757,61 @@ document.getElementById("toggleAdresseManuelle").addEventListener("click", funct
     }
 });
 
+// document.addEventListener("DOMContentLoaded", function() {
+//     const sepaBtn = document.querySelector('.sepa-btn');
+//     const cardBtn = document.querySelector('.card-btn');
+//     const creditCardBlock = document.querySelectorAll('.creditCardBlock');
+//     const sepaBlock = document.querySelectorAll('.sepaBlock');
+
+//     function afficherSEPA(event) {
+//         event.preventDefault(); // Empêcher le comportement par défaut du bouton
+//         sepaBtn.classList.add('active');
+//         cardBtn.classList.remove('active');
+//         creditCardBlock.style.display = 'none';
+//         sepaBlock.style.display = 'block';
+//     }
+
+//     function afficherCarte(event) {
+//         event.preventDefault(); // Empêcher le comportement par défaut du bouton
+//         cardBtn.classList.add('active');
+//         sepaBtn.classList.remove('active');
+//         creditCardBlock.style.display = 'block';
+//         sepaBlock.style.display = 'none';
+//     }
+
+//     sepaBtn.addEventListener('click', afficherSEPA);
+//     cardBtn.addEventListener('click', afficherCarte);
+// });
+
+
+// -----------------------TEST
+
 document.addEventListener("DOMContentLoaded", function() {
     const sepaBtn = document.querySelector('.sepa-btn');
     const cardBtn = document.querySelector('.card-btn');
-    const creditCardBlock = document.getElementById('creditCardBlock');
-    const sepaBlock = document.getElementById('sepaBlock');
+    const creditCardBlocks = document.querySelectorAll('.creditCardBlock');
+    const sepaBlocks = document.querySelectorAll('.sepaBlock');
 
     function afficherSEPA(event) {
         event.preventDefault(); // Empêcher le comportement par défaut du bouton
         sepaBtn.classList.add('active');
         cardBtn.classList.remove('active');
-        creditCardBlock.style.display = 'none';
-        sepaBlock.style.display = 'block';
+        creditCardBlocks.forEach(block => block.style.display = 'none');
+        sepaBlocks.forEach(block => block.style.display = 'block');
     }
 
     function afficherCarte(event) {
         event.preventDefault(); // Empêcher le comportement par défaut du bouton
         cardBtn.classList.add('active');
         sepaBtn.classList.remove('active');
-        creditCardBlock.style.display = 'block';
-        sepaBlock.style.display = 'none';
+        creditCardBlocks.forEach(block => block.style.display = 'block');
+        sepaBlocks.forEach(block => block.style.display = 'none');
     }
 
     sepaBtn.addEventListener('click', afficherSEPA);
     cardBtn.addEventListener('click', afficherCarte);
 });
+
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     const radioUpsellInput = document.querySelector(".radio-upsell input[type='radio']");
