@@ -79,9 +79,26 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     margin-bottom: -50px;
 }
 
+.title-price {
+    color: hsla(0, 0%, 10%, 0.9);
+}
+
 .payment-method {
     font-size: 16px;
     color: hsla(0, 0%, 10%, 0.7);
+}
+
+.sub-total {
+    color: hsla(0, 0%, 10%, 0.9);
+}
+
+.total {
+    color: hsla(0, 0%, 10%, 0.9);
+}
+
+.sub-total-text {
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .fa-building-columns, .fa-credit-card {
@@ -104,6 +121,16 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 .dd-free-days {
     font-size: 14px;
     font-weight: 500;
+}
+
+#dd-price {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.dropdown-currency, .dropdown-currency-total {
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .card-btn, .sepa-btn {
@@ -373,6 +400,7 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 }
 
 .dd_small_text {
+    padding-right: 5px;
     font-size: 12px;
     color: var(--dd_textcolor);
 }
@@ -770,9 +798,18 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     max-height: 100%;
     max-width: 100%;
     height: auto;
-    margin-right: 22px;
+    margin-right: 24px;
 }
 
+#after-free-trial {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.total-free-trial {
+    display: flex;
+    justify-content: space-between;
+}
 
 .input-number-group {
     display: -webkit-flex;
@@ -901,15 +938,58 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
         border-top: 1px solid hsla(0,0%, 10%, 0.1);
     }
 
+    .input-group #button-addon2{
+        position: relative;
+      }
+
+      .input-group #button-addon2{
+        position: absolute;
+        border: none;
+        color: rgb(25, 37, 82);
+        font-size: 14px;
+        font-weight: 500;
+        left: 227px;
+        top: 23px;
+        white-space: nowrap;
+        z-index: 100;
+      }
+
+      .input-group #button-addon2:hover {
+        /* Définissez ici les propriétés que vous souhaitez supprimer lors du survol */
+        background-color: transparent; /* Par exemple, rend le fond transparent */
+        color: rgb(25, 37, 82); /* Garde la couleur du texte par défaut */
+        border: none;
+      }
+
     .dd-content {
         padding: 16px;
         padding-top: 0px;
+        font-size: 14px;
+        color: hsla(0, 0%, 10%, 0.5);
+        padding: 10px 0px 10px 0px;
+    }
+
+    .dd-tva {
+        display: flex;
+        justify-content: space-between;
     }
 
     .under-btn-text {
         font-size: 13px;
         color: hsla(0, 0%, 10%, 0.7);
     }
+
+    #promo-container {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        padding: 10px 0px 0px 0px;
+    }
+
+      #promo-text {
+        color: #227CD7;
+      }
+
 
 /*
     .dropdown.dropdown-masked {

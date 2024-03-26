@@ -32,7 +32,7 @@
           <ul class="dropdown-menu dropdown-masked open">
             <li>
               <div class="d-flex justify-content-around">
-                <div class="d-flex justify-content-center dd-content">
+                <div class="d-flex justify-content-center dd-content px-3">
                   <div>
                     <img src="../assets/images/payment-icon.png" alt="RSB_pile-magazine" class="modal-qte-img">
                   </div>
@@ -41,19 +41,20 @@
                       <div>
                         <span class="modal-text-500">Togethere Professional</span>
                       </div>
-                      <div>
+                      <div class="text-nowrap">
                         <span class="dd-free-days">30 jours gratuits</span>
                         <!-- <span class="dropdown-currency">15,55 €</span> -->
                       </div>
                     </div>
                     <div class="mb-3">
                       <span class="dd_small_text">Togethere's premium plan to work better togethere</span>
-                      <div class="d-flex">
+                      <div class="d-flex justify-content-between">
                         <button type="button" class="btn btn-light in_dd_button">
                           <span class="qte-btn_text">Qté 1</span>
                           <i class="fa-solid fa-angle-down nav-arrow"></i>
                         </button>
-                        <span class="dd_small_text">Facturé tous les mois</span>
+                        <span class="dd_small_text"><span class="dropdown-currency" id="dd-price">15,55 €</span>/mois ensuite
+                        </span>
                       </div>
                     </div>
                     <div class="sub-total d-flex justify-content-between py-3">
@@ -64,12 +65,26 @@
                         <span class="dropdown-currency">15,55 €</span>
                       </div>
                     </div>
-                    <div class="total d-flex justify-content-between py-3 mb-3">
-                      <div class="sub-total-text">
-                        <span>Total dû aujourd'hui</span>
+                    <div id="promo-container">
+                      <div id="promo-text" onclick="transformToInput()">Ajouter un code promotionnel</div>
+                    </div>
+                    <div class="dd-tva py-3">
+                      <span>TVA (20 % inclus)</span>
+                      <span>2,50 €</span>
+                    </div>
+                    <div class="total">
+                    <!-- d-flex justify-content-between py-3 mb-3"> -->
+                      <div class="total-free-trial pt-3">
+                        <span class="total-free-trial">Total après la période d'essai</span>
+                        <span class="dropdown-currency text-nowrap" id="after-free-trial">15,55 €</span>
                       </div>
-                      <div>
-                        <span class="dropdown-currency">15,55 €</span>
+                      <div class="total-today d-flex justify-content-between">
+                        <div class="sub-total-text">
+                          <span>Total dû aujourd'hui</span>
+                        </div>
+                        <div>
+                          <span class="dropdown-currency-total">0 €</span>
+                        </div>
                       </div>
                     </div>
                   </div>

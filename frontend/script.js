@@ -813,3 +813,122 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+// function transformToInput() {
+//     // Créer un input
+//     var inputElement = document.createElement("input");
+//     inputElement.setAttribute("type", "text");
+//     inputElement.setAttribute("placeholder", "Ajouter un code promotionnel");
+
+//     // Remplacer le texte par l'input
+//     var promoContainer = document.getElementById("promo-container");
+//     promoContainer.innerHTML = '';
+//     promoContainer.appendChild(inputElement);
+
+//     // Ajouter un événement de saisie à l'input
+//     inputElement.addEventListener("input", showApplyButton);
+//   }
+
+//   function showApplyButton() {
+//     var inputElement = document.querySelector("#promo-container input");
+
+//     // Créer le bouton Appliquer
+//     var applyButton = document.createElement("button");
+//     applyButton.textContent = "Appliquer";
+//     applyButton.setAttribute("type", "button");
+//     applyButton.classList.add("btn", "btn-primary");
+
+//     // Ajouter le bouton après l'input
+//     inputElement.parentNode.insertBefore(applyButton, inputElement.nextSibling);
+
+//     // Retirer l'événement de saisie de l'input pour éviter de créer plusieurs boutons
+//     inputElement.removeEventListener("input", showApplyButton);
+//   }
+
+// function transformToInput() {
+//     // Créer un div avec les classes Bootstrap nécessaires
+//     var inputGroup = document.createElement("div");
+//     inputGroup.classList.add("input-group", "mb-3");
+
+//     // Créer l'input avec les attributs nécessaires
+//     var inputElement = document.createElement("input");
+//     inputElement.setAttribute("type", "text");
+//     inputElement.classList.add("form-control");
+//     inputElement.setAttribute("placeholder", "Ajouter un code promotionnel");
+//     inputElement.setAttribute("aria-label", "Recipient's username");
+//     inputElement.setAttribute("aria-describedby", "button-addon2");
+
+//     // Créer le bouton avec les classes Bootstrap nécessaires
+//     var applyButton = document.createElement("button");
+//     applyButton.textContent = "Appliquer";
+//     applyButton.setAttribute("type", "button");
+//     applyButton.classList.add("btn", "btn-outline-secondary");
+//     applyButton.setAttribute("id", "button-addon2");
+
+//     // Ajouter l'input et le bouton au div de groupe d'entrée
+//     inputGroup.appendChild(inputElement);
+//     inputGroup.appendChild(applyButton);
+
+//     // Remplacer le texte par le div de groupe d'entrée
+//     var promoContainer = document.getElementById("promo-container");
+//     promoContainer.innerHTML = '';
+//     promoContainer.appendChild(inputGroup);
+
+//     // Ajouter un événement de saisie à l'input
+//     inputElement.addEventListener("input", showApplyButton);
+//   }
+
+//   function showApplyButton() {
+//     var inputElement = document.querySelector("#promo-container input");
+
+//     // Retirer l'événement de saisie de l'input pour éviter de créer plusieurs boutons
+//     inputElement.removeEventListener("input", showApplyButton);
+//   }
+
+function transformToInput() {
+    // Créer un div avec les classes Bootstrap nécessaires
+    var inputGroup = document.createElement("div");
+    inputGroup.classList.add("input-group", "mb-3");
+
+    // Créer l'input avec les attributs nécessaires
+    var inputElement = document.createElement("input");
+    inputElement.setAttribute("type", "text");
+    inputElement.classList.add("form-control");
+    inputElement.setAttribute("placeholder", "Ajouter un code promotionnel");
+    inputElement.setAttribute("aria-label", "Recipient's username");
+    inputElement.setAttribute("aria-describedby", "button-addon2");
+
+    // Ajouter un événement de saisie à l'input pour afficher le bouton "Appliquer"
+    inputElement.addEventListener("input", showApplyButton);
+
+    // Ajouter l'input au div de groupe d'entrée
+    inputGroup.appendChild(inputElement);
+
+    // Remplacer le texte par le div de groupe d'entrée
+    var promoContainer = document.getElementById("promo-container");
+    promoContainer.innerHTML = '';
+    promoContainer.appendChild(inputGroup);
+  }
+
+  function showApplyButton() {
+    var inputElement = document.querySelector("#promo-container input");
+
+    // Créer le bouton "Appliquer"
+    var applyButton = document.createElement("button");
+    applyButton.textContent = "Appliquer";
+    applyButton.setAttribute("type", "button");
+    applyButton.classList.add("btn", "btn-outline-secondary", "position-absolute", "end-0", "translate-middle", "y-50", "z-1");
+    applyButton.setAttribute("id", "button-addon2");
+
+    // Ajouter un événement de clic au bouton "Appliquer" pour le retirer
+    applyButton.addEventListener("click", function() {
+      applyButton.remove();
+    });
+
+    // Ajouter le bouton "Appliquer" à l'input
+    inputElement.parentNode.appendChild(applyButton);
+
+    // Retirer l'événement de saisie de l'input pour éviter de créer plusieurs boutons
+    inputElement.removeEventListener("input", showApplyButton);
+  }
