@@ -355,28 +355,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
-/*Modal for payment*/
-// document.addEventListener('DOMContentLoaded', function () {
-// 	const form = document.querySelector('form');
-// 	const modal = document.querySelector('.modal');
-
-// 	form.addEventListener('submit', function (event) {
-// 	  event.preventDefault(); // Prevent form submission
-
-// 	  modal.classList.add('show');
-// 	  modal.style.display = 'block';
-
-// 	  setTimeout(function () {
-// 		modal.classList.remove('show');
-// 		modal.style.display = 'none';
-// 	  }, 500000000); // Adjust the time as needed
-// 	});
-//   });
-
-
-
-
 window.addEventListener('scroll', function() {
     var navbar = document.querySelector('.navbar');
     var scrollPosition = window.scrollY;
@@ -387,38 +365,6 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('navbar-scrolled');
     }
 });
-
-
-
-function showSEPA() {
-    document.getElementById('sepaBlock').style.display = 'block';
-    document.getElementById('creditCardBlock').style.display = 'none';
-}
-
-function showCreditCard() {
-    document.getElementById('sepaBlock').style.display = 'none';
-    document.getElementById('creditCardBlock').style.display = 'block';
-}
-
-document.getElementById('btnradio1').addEventListener('change', function() {
-    if (this.checked) {
-        showSEPA();
-    }
-});
-
-document.getElementById('btnradio2').addEventListener('change', function() {
-    if (this.checked) {
-        showCreditCard();
-    }
-});
-
-if (document.getElementById('btnradio1').checked) {
-    showSEPA();
-} else {
-    showCreditCard();
-}
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
     var inputs = document.querySelectorAll('.input-number');
@@ -811,263 +757,28 @@ document.getElementById("toggleAdresseManuelle").addEventListener("click", funct
     }
 });
 
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const sepaBtn = document.querySelector('.sepa-btn');
-//     const cardBtn = document.querySelector('.card-btn');
-//     const creditCardBlock = document.getElementById('creditCardBlock');
-
-//     // Afficher le bloc creditCardBlock par défaut
-//     creditCardBlock.style.display = 'block';
-
-//     cardBtn.addEventListener('click', function(event) {
-//         event.preventDefault(); // Empêche le comportement par défaut du bouton
-//         if (!cardBtn.classList.contains('active')) {
-//             cardBtn.classList.add('active');
-//             sepaBtn.classList.remove('active');
-//             creditCardBlock.style.display = 'block'; // Afficher le bloc creditCardBlock
-//         }
-//     });
-
-//     sepaBtn.addEventListener('click', function(event) {
-//         event.preventDefault(); // Empêche le comportement par défaut du bouton
-//         if (!sepaBtn.classList.contains('active')) {
-//             sepaBtn.classList.add('active');
-//             cardBtn.classList.remove('active');
-//             creditCardBlock.style.display = 'none'; // Masquer le bloc creditCardBlock
-//         }
-//     });
-// });
-
-
 document.addEventListener("DOMContentLoaded", function() {
     const sepaBtn = document.querySelector('.sepa-btn');
     const cardBtn = document.querySelector('.card-btn');
     const creditCardBlock = document.getElementById('creditCardBlock');
     const sepaBlock = document.getElementById('sepaBlock');
 
-    cardBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-        if (!cardBtn.classList.contains('active')) {
-            cardBtn.classList.add('active');
-            sepaBtn.classList.remove('active');
-            creditCardBlock.style.display = 'block';
-            sepaBlock.style.display = 'none'; // Cacher le bloc SEPA lorsque le bouton de la carte est activé
-        }
-    });
+    function afficherSEPA(event) {
+        event.preventDefault(); // Empêcher le comportement par défaut du bouton
+        sepaBtn.classList.add('active');
+        cardBtn.classList.remove('active');
+        creditCardBlock.style.display = 'none';
+        sepaBlock.style.display = 'block';
+    }
 
-    sepaBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-        if (!sepaBtn.classList.contains('active')) {
-            sepaBtn.classList.add('active');
-            cardBtn.classList.remove('active');
-            creditCardBlock.style.display = 'none';
-            sepaBlock.style.display = 'block'; // Afficher le bloc SEPA lorsque le bouton SEPA est activé
-        }
-    });
+    function afficherCarte(event) {
+        event.preventDefault(); // Empêcher le comportement par défaut du bouton
+        cardBtn.classList.add('active');
+        sepaBtn.classList.remove('active');
+        creditCardBlock.style.display = 'block';
+        sepaBlock.style.display = 'none';
+    }
+
+    sepaBtn.addEventListener('click', afficherSEPA);
+    cardBtn.addEventListener('click', afficherCarte);
 });
-
-
-    //   document.addEventListener("DOMContentLoaded", function() {
-    //         const sepaBtn = document.querySelector('.sepa-btn');
-    //         const cardBtn = document.querySelector('.card-btn');
-    //         const creditCardBlock = document.getElementById('creditCardBlock');
-
-    //         // Cacher le bloc au démarrage
-    //         // creditCardBlock.classList.add('hidden'); // On ne cache pas le bloc par défaut
-
-    //         cardBtn.addEventListener('click', function(event) {
-    //             event.preventDefault(); // Empêche le comportement par défaut du bouton
-    //             if (!cardBtn.classList.contains('active')) {
-    //                 cardBtn.classList.add('active');
-    //                 sepaBtn.classList.remove('active');
-    //                 creditCardBlock.classList.remove('hidden'); // Afficher le bloc lors du clic sur le bouton de la carte
-    //             }
-    //         });
-
-    //         sepaBtn.addEventListener('click', function(event) {
-    //             event.preventDefault(); // Empêche le comportement par défaut du bouton
-    //             if (!sepaBtn.classList.contains('active')) {
-    //                 sepaBtn.classList.add('active');
-    //                 cardBtn.classList.remove('active');
-    //                 creditCardBlock.classList.add('hidden'); // Cacher le bloc lors du clic sur le bouton de SEPA
-    //             }
-    //         });
-    //     });
-
-//    document.addEventListener("DOMContentLoaded", function() {
-//     const sepaBtn = document.querySelector('.sepa-btn');
-//     const cardBtn = document.querySelector('.card-btn');
-//     const creditCardBlock = document.getElementById('creditCardBlock');
-//     const sepaBlock = document.getElementById('sepaBlock');
-
-//     cardBtn.addEventListener('click', function(event) {
-//         event.preventDefault();
-//         if (!cardBtn.classList.contains('active')) {
-//             cardBtn.classList.add('active');
-//             sepaBtn.classList.remove('active');
-//             creditCardBlock.style.display = 'block';
-//             sepaBlock.style.display = 'none'; // Cacher le bloc SEPA lorsque le bouton de la carte est activé
-//         }
-//     });
-
-//     sepaBtn.addEventListener('click', function(event) {
-//         event.preventDefault();
-//         if (!sepaBtn.classList.contains('active')) {
-//             sepaBtn.classList.add('active');
-//             cardBtn.classList.remove('active');
-//             creditCardBlock.style.display = 'none';
-//             sepaBlock.style.display = 'block'; // Afficher le bloc SEPA lorsque le bouton SEPA est activé
-//         }
-//     });
-// });
-
-
-
-
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const sepaBtn = document.querySelector('.sepa-btn');
-//     const cardBtn = document.querySelector('.card-btn');
-
-//     sepaBtn.addEventListener('click', function(event) {
-//       event.preventDefault(); // Empêche le comportement par défaut du bouton
-//       if (!sepaBtn.classList.contains('active')) {
-//         sepaBtn.classList.add('active');
-//         cardBtn.classList.remove('active');
-//       }
-//     });
-
-//     cardBtn.addEventListener('click', function(event) {
-//       event.preventDefault(); // Empêche le comportement par défaut du bouton
-//       if (!cardBtn.classList.contains('active')) {
-//         cardBtn.classList.add('active');
-//         sepaBtn.classList.remove('active');
-//       }
-//     });
-//   });
-
-
-
-//   document.addEventListener("DOMContentLoaded", function() {
-//     // Sélectionner le bouton card-btn
-//     var cardBtn = document.querySelector(".card-btn");
-
-//     // Sélectionner le bloc creditCardBlock
-//     var creditCardBlock = document.getElementById("creditCardBlock");
-
-//     // Fonction pour afficher ou masquer le bloc creditCardBlock
-//     function toggleCreditCardBlock() {
-//         // Vérifier si le bouton card-btn a la classe active
-//         var isActive = cardBtn.classList.contains("active");
-
-//         // Afficher ou masquer le bloc creditCardBlock en fonction de l'état du bouton
-//         if (isActive) {
-//             creditCardBlock.style.display = "block";
-//         } else {
-//             creditCardBlock.style.display = "none";
-//         }
-//     }
-
-//     // Ajouter un écouteur d'événements pour les clics sur le document
-//     document.addEventListener("click", function(event) {
-//         // Vérifier si le clic a été effectué sur le bouton card-btn
-//         if (event.target.closest(".card-btn")) {
-//             // Ajouter ou supprimer la classe active
-//             cardBtn.classList.toggle("active");
-
-//             // Appeler la fonction pour afficher ou masquer le bloc creditCardBlock
-//             toggleCreditCardBlock();
-//         }
-//     });
-
-//     // Appeler la fonction une fois au chargement de la page pour vérifier l'état initial
-//     toggleCreditCardBlock();
-// });
-
-
-//   // Sélection du bouton card-btn
-// var cardBtn = document.querySelector(".card-btn");
-
-// // Vérification de la présence de la classe active
-// if (cardBtn.classList.contains("active")) {
-//     // Si active, afficher le bloc creditCardBlock
-//     document.getElementById("creditCardBlock").style.display = "block";
-// } else {
-//     // Sinon, masquer le bloc creditCardBlock
-//     document.getElementById("creditCardBlock").style.display = "none";
-// }
-
-
-
-
-
-
-//   // Sélection du bouton card-btn
-//   const cardBtn = document.querySelector('.card-btn');
-
-//   // Sélection du bloc à afficher
-//   const cardBlock = document.getElementById('creditCardBlock');
-
-//   // Écouteur d'événement pour le clic sur le bouton
-//   cardBtn.addEventListener('click', function() {
-//     // Vérifier si le bouton est activé (classe active)
-//     if (cardBtn.classList.contains('active')) {
-//       // Afficher le bloc
-//       cardBlock.style.display = 'block';
-//     } else {
-//       // Masquer le bloc
-//       cardBlock.style.display = 'none';
-//     }
-//   });
-
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const ibanInput = document.getElementById("validationCustomIban");
-
-//     ibanInput.addEventListener("blur", function() {
-//         const iban = ibanInput.value.trim();
-//         const ibanRegex = /^[A-Z]{2}\d{2}\s*(\d{4}\s*){4}(\d{4}\s*)?$/;
-
-//         if (!ibanRegex.test(iban)) {
-//             ibanInput.classList.add("is-invalid");
-//         } else {
-//             ibanInput.classList.remove("is-invalid");
-//             ibanInput.classList.add("is-valid");
-//         }
-//     });
-// });
-
-
-// ------------NEW SCRIPT-------------------
-
-// // Récupérer les éléments
-// const emailInput = document.getElementById('validationCustom01');
-// const nameInput = document.getElementById('validationCustom21');
-// const emailError = document.getElementById('emailError');
-// const nameError = document.getElementById('nameError');
-
-// // Ajouter des écouteurs d'événements pour le focus et le blur
-// emailInput.addEventListener('blur', checkEmailValidity);
-// nameInput.addEventListener('blur', checkNameValidity);
-
-// // Fonction pour vérifier la validité de l'e-mail
-// function checkEmailValidity() {
-//     if (!emailInput.validity.valid) {
-//         emailError.style.display = 'block';
-//     } else {
-//         emailError.style.display = 'none';
-//     }
-// }
-
-// // Fonction pour vérifier la validité du nom
-// function checkNameValidity() {
-//     if (!nameInput.validity.valid) {
-//         nameError.style.display = 'block';
-//     } else {
-//         nameError.style.display = 'none';
-//     }
-// }
-
