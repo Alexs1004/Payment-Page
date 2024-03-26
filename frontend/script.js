@@ -783,21 +783,33 @@ document.addEventListener("DOMContentLoaded", function() {
     cardBtn.addEventListener('click', afficherCarte);
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const radioUpsellInput = document.querySelector(".radio-upsell input[type='radio']");
-    const textCurrencyElements = document.querySelectorAll(".text_currency");
-    const prixParAn = "Puis 150,00 € par an";
+// document.addEventListener("DOMContentLoaded", function() {
+//     const radioUpsellInput = document.querySelector(".radio-upsell input[type='radio']");
+//     const textCurrencyElements = document.querySelectorAll(".text_currency");
+//     const prixParAn = "Puis 150,00 € par an";
 
-    radioUpsellInput.addEventListener("change", function() {
-        if (radioUpsellInput.checked) {
-            textCurrencyElements.forEach(function(element) {
-                element.textContent = prixParAn;
-            });
+//     radioUpsellInput.addEventListener("change", function() {
+//         if (radioUpsellInput.checked) {
+//             textCurrencyElements.forEach(function(element) {
+//                 element.textContent = prixParAn;
+//             });
+//         } else {
+//             // Remettre le texte d'origine si le radio input n'est pas activé
+//             textCurrencyElements.forEach(function(element) {
+//                 element.textContent = "Puis 15,55 € par mois";
+//             });
+//         }
+//     });
+// });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const radioBtn = document.getElementById("flexSwitchCheckDefault");
+
+    radioBtn.addEventListener("change", function() {
+        if (radioBtn.checked) {
+            console.log("Le bouton radio est coché !");
         } else {
-            // Remettre le texte d'origine si le radio input n'est pas activé
-            textCurrencyElements.forEach(function(element) {
-                element.textContent = "Puis 15,55 € par mois";
-            });
+            console.log("Le bouton radio n'est pas coché !");
         }
     });
 });

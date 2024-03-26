@@ -95,7 +95,7 @@
                     <span class="freeDays-text">30 jours gratuits</span>
                   </div>
                   <div class="text_currency mx-2">
-                    <span>Puis <span class="currency">15,55 €</span> par mois</span>
+                    <span>Puis <span class="currency">15,55 €</span> par mois </span>
                   </div>
                 </div>
               </div>
@@ -159,20 +159,22 @@
                 <!-- <i class="fa-regular fa-envelope input-icon" id="emailIcon"></i> -->
               </div>
               <div class="input-group has-validation position-relative">
-                  <input type="text" class="form-control" id="validationCustom21" placeholder="06 12 34 56 78" required>
-                  <!-- <i class="fa-solid fa-phone" id="phoneIcon"></i> -->
+                <input type="text" class="form-control" id="validationCustom21" placeholder="06 12 34 56 78" required>
+                <!-- <i class="fa-solid fa-phone" id="phoneIcon"></i> -->
               </div>
               <div class="invalid-feedback" id="nameError">Votre nom est requis.</div>
               <div class="invalid-feedback" id="emailError">Votre adresse e-mail est incomplète.</div>
             </div>
             <h2 class="payment-method mb-3">Méthode de paiement</h2>
             <div class="col-6 cc-div">
-              <button id="cc-btn" class="card-btn active" data-target="creditCardBlock" data-type="card"><span class="cc-text">Carte de crédit</span>
+              <button id="cc-btn" class="card-btn active" data-target="creditCardBlock" data-type="card">
+                <span class="cc-text">Carte de crédit</span>
                 <i class="fa-solid fa-credit-card"></i>
               </button>
             </div>
             <div class="col-6 sepa-div">
-              <button class="sepa-btn"><span class="sepa-text" data-type="sepa">SEPA</span>
+              <button class="sepa-btn">
+                <span class="sepa-text" data-type="sepa">SEPA</span>
                 <i class="fa-solid fa-building-columns"></i>
               </button>
             </div>
@@ -202,24 +204,23 @@
                   <!-- <div class="valid-feedback"> Looks good! </div> -->
                 </div>
               </div>
-
             </div>
             <div id="sepaBlock" style="display: none;">
               <!-- <form class="row g-3 needs-validation" novalidate> -->
-                <div class="col-12">
-                  <label for="validationCustomUsername" class="form-label">Titulaire du compte</label>
-                  <div class="input-group has-validation">
-                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                    <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
-                  </div>
+              <div class="col-12">
+                <label for="validationCustomUsername" class="form-label">Titulaire du compte</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                  <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
                 </div>
-                <div class="col-12">
-                  <label for="validationCustomUsername" class="form-label">IBAN</label>
-                  <div class="input-group has-validation">
-                    <input type="text" class="form-control" id="validationCustomIban" aria-describedby="inputGroupPrepend" required>
-                    <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
-                  </div>
+              </div>
+              <div class="col-12">
+                <label for="validationCustomUsername" class="form-label">IBAN</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="validationCustomIban" aria-describedby="inputGroupPrepend" required>
+                  <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
                 </div>
+              </div>
               <!-- </form> -->
             </div>
             <div class="col-12 mb-3">
@@ -239,8 +240,8 @@
               <div id="adresseManuelle" style="display: none;">
                 <!-- Ajoutez ici d'autres champs pour l'adresse manuelle -->
                 <div class="input-group has-validation position-relative">
-                    <input type="text" class="form-control form-control-icon" id="adresseManuelleInput" placeholder="Adresse manuelle" required>
-                    <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
+                  <input type="text" class="form-control form-control-icon" id="adresseManuelleInput" placeholder="Adresse manuelle" required>
+                  <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
                 </div>
               </div>
               <div class="adress-btn">
@@ -275,38 +276,20 @@
                 <div id="adresseManuelle" style="display: none;">
                   <!-- Ajoutez ici d'autres champs pour l'adresse manuelle -->
                   <div class="input-group has-validation position-relative">
-                      <input type="text" class="form-control form-control-icon" id="adresseManuelleInput" placeholder="Adresse manuelle" required>
-                      <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
+                    <input type="text" class="form-control form-control-icon" id="adresseManuelleInput" placeholder="Adresse manuelle" required>
+                    <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
                   </div>
                 </div>
                 <div class="adress-btn">
                   <button class="text-adress-btn" id="toggleAdresseManuelle">Saisir l'adresse manuellement</button>
                 </div>
               </div>
-              <!-- <div class="col-12 d-flex align-items-end"> -->
-              <!-- <div class="col-4"><label for="validationCustom02" class="form-label">Nom</label><div class="input-group"><select class="form-select" id="validationCustom08" aria-label="Civilité" required><option value="monsieur">M.</option><option value="madame">Mme.</option></select><div class="valid-feedback"> Looks good! </div></div></div> -->
-              <!-- <div class="col-12">
-                <label for="validationCustom022" class="form-label">Nom du titulaire de la carte</label>
-                <div class="splitted_input">
-                  <input type="text" class="form-control" id="validationCustom07" placeholder="Nom complet" required>
-                  <div class="valid-feedback"> Looks good! </div>
-                </div>
-              </div>
-              <div class="col-12 mb-3">
-                <label for="validationCustomUsername" class="form-label">Adresse de facturation</label>
-                <div class="input-group has-validation position-relative">
-                  <input type="text" class="form-control form-control-icon" id="autocomplete2" placeholder="Entrer un lieu" required>
-                  <div class="invalid-feedback"> Please choose a username. </div>
-                </div>
-              </div> -->
-              <!-- </div> -->
             </div>
-            <!-- <div class="col-12"><label for="validationCustomUsername" class="form-label">E-mail</label><div class="input-group has-validation position-relative"><input type="text" class="form-control form-control-icon" id="validationCustom01" placeholder="email@exemple.com" required><i class="fas fa-envelope input-icon"></i><div class="invalid-feedback"> Please choose a username. </div></div></div> -->
             <div class="col-12 div_btn_pay">
               <button class="btn btn-primary pay_btn mt-2" type="submit">Démarrer la période d'essai</button>
             </div>
             <div class="under-btn-text mt-3">
-              <span>Si vous n'annulez pas votre essai, un montant de <span>15,00 €</span> vous sera facturé par mois à compter du 25 avril 2024.</span>
+              <span>Si vous n'annulez pas votre essai, un montant de <span>15,00 €</span> vous sera facturé par mois à compter du 25 avril 2024. </span>
             </div>
             <div class="cash-back-btn mt-2 mb-5">
               <button class="text-cash-back-btn">
@@ -315,49 +298,14 @@
               </button>
             </div>
             <div class="footer mt-3">
-              <span class="palyance-sponsor">Propulsé par <span class="palyance-text">Palyance</span></span>
+              <span class="palyance-sponsor">Propulsé par <span class="palyance-text">Palyance</span>
+              </span>
               <div class="footer-conditions">
                 <button class="mentions-légales">Mentions légales</button>
                 <button class="remboursement">Remboursements</button>
                 <button class="contact">Contact</button>
               </div>
             </div>
-            <div class="hr-container">
-              <hr class="horizontal_hr">
-            </div>
-            <!-- <div class="col-12 payment-mode mt-0">
-              Bloc SEPA
-              <div class="btn-group d-flex my-5" role="group" aria-label="Basic radio toggle button group">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                <label class="btn btn-outline-primary p-2 sepa-radio-btn" for="btnradio1">SEPA <div class="reduc">-5€</div>
-                </label>
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-primary d-flex align-items-center justify-content-center cc-radio-btn" for="btnradio2">Carte de crédit</label>
-              </div>
-            </div> -->
-            <!--<div class="col-12" id="creditCardBlock" style="display: block;">
-              Bloc Carte de crédit
-              <form class="row g-3 needs-validation mt-0" novalidate>
-                <div class="col-12">
-                  <label for="validationCustomUsername" class="form-label">Nom du titulaire de la carte</label>
-                  <div class="input-group has-validation">
-                    <input type="text" class="form-control" id="validationCustomCardHolder" placeholder="Nom complet" aria-describedby="inputGroupPrepend" required>
-                    <div class="invalid-feedback"> Please choose a username. </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <label for="validationCustom04" class="form-label">Pays ou région</label>
-                  <select class="form-select form-control" id="paysDropdown" required>
-                    <option selected value="">France métropolitaine</option>
-                  </select>
-                  <div class="invalid-feedback"> Please select a valid state. </div>
-                </div>
-                <div class="col-12 div_btn_pay">
-                  <button class="btn btn-primary pay_btn mt-2" type="submit">Payer et s'abonner</button>
-                </div>
-              </form>
-            </div> -->
-            <!-- ************************************Formulaire de contact***********************-->
           </form>
         </div>
       </div>
