@@ -795,125 +795,6 @@ document.getElementById("toggleAdresseManuelle").addEventListener("click", funct
     }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const sepaBtn = document.querySelector('.sepa-btn');
-    const cardBtn = document.querySelector('.card-btn');
-    const creditCardBlocks = document.querySelectorAll('.creditCardBlock');
-    const sepaBlocks = document.querySelectorAll('.sepaBlock');
-
-    function afficherSEPA(event) {
-        event.preventDefault(); // Empêcher le comportement par défaut du bouton
-        sepaBtn.classList.add('active');
-        cardBtn.classList.remove('active');
-        creditCardBlocks.forEach(block => block.style.display = 'none');
-        sepaBlocks.forEach(block => block.style.display = 'block');
-    }
-
-    function afficherCarte(event) {
-        event.preventDefault(); // Empêcher le comportement par défaut du bouton
-        cardBtn.classList.add('active');
-        sepaBtn.classList.remove('active');
-        creditCardBlocks.forEach(block => block.style.display = 'block');
-        sepaBlocks.forEach(block => block.style.display = 'none');
-    }
-
-    sepaBtn.addEventListener('click', afficherSEPA);
-    cardBtn.addEventListener('click', afficherCarte);
-});
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const radioUpsellInput = document.querySelector(".radio-upsell input[type='radio']");
-//     const textCurrencyElements = document.querySelectorAll(".text_currency");
-//     const prixParAn = "Puis 150,00 € par an";
-
-//     radioUpsellInput.addEventListener("change", function() {
-//         if (radioUpsellInput.checked) {
-//             textCurrencyElements.forEach(function(element) {
-//                 element.textContent = prixParAn;
-//             });
-//         } else {
-//             // Remettre le texte d'origine si le radio input n'est pas activé
-//             textCurrencyElements.forEach(function(element) {
-//                 element.textContent = "Puis 15,55 € par mois";
-//             });
-//         }
-//     });
-// });
-
-
-
-// function transformToInput() {
-//     // Créer un input
-//     var inputElement = document.createElement("input");
-//     inputElement.setAttribute("type", "text");
-//     inputElement.setAttribute("placeholder", "Ajouter un code promotionnel");
-
-//     // Remplacer le texte par l'input
-//     var promoContainer = document.getElementById("promo-container");
-//     promoContainer.innerHTML = '';
-//     promoContainer.appendChild(inputElement);
-
-//     // Ajouter un événement de saisie à l'input
-//     inputElement.addEventListener("input", showApplyButton);
-//   }
-
-//   function showApplyButton() {
-//     var inputElement = document.querySelector("#promo-container input");
-
-//     // Créer le bouton Appliquer
-//     var applyButton = document.createElement("button");
-//     applyButton.textContent = "Appliquer";
-//     applyButton.setAttribute("type", "button");
-//     applyButton.classList.add("btn", "btn-primary");
-
-//     // Ajouter le bouton après l'input
-//     inputElement.parentNode.insertBefore(applyButton, inputElement.nextSibling);
-
-//     // Retirer l'événement de saisie de l'input pour éviter de créer plusieurs boutons
-//     inputElement.removeEventListener("input", showApplyButton);
-//   }
-
-// function transformToInput() {
-//     // Créer un div avec les classes Bootstrap nécessaires
-//     var inputGroup = document.createElement("div");
-//     inputGroup.classList.add("input-group", "mb-3");
-
-//     // Créer l'input avec les attributs nécessaires
-//     var inputElement = document.createElement("input");
-//     inputElement.setAttribute("type", "text");
-//     inputElement.classList.add("form-control");
-//     inputElement.setAttribute("placeholder", "Ajouter un code promotionnel");
-//     inputElement.setAttribute("aria-label", "Recipient's username");
-//     inputElement.setAttribute("aria-describedby", "button-addon2");
-
-//     // Créer le bouton avec les classes Bootstrap nécessaires
-//     var applyButton = document.createElement("button");
-//     applyButton.textContent = "Appliquer";
-//     applyButton.setAttribute("type", "button");
-//     applyButton.classList.add("btn", "btn-outline-secondary");
-//     applyButton.setAttribute("id", "button-addon2");
-
-//     // Ajouter l'input et le bouton au div de groupe d'entrée
-//     inputGroup.appendChild(inputElement);
-//     inputGroup.appendChild(applyButton);
-
-//     // Remplacer le texte par le div de groupe d'entrée
-//     var promoContainer = document.getElementById("promo-container");
-//     promoContainer.innerHTML = '';
-//     promoContainer.appendChild(inputGroup);
-
-//     // Ajouter un événement de saisie à l'input
-//     inputElement.addEventListener("input", showApplyButton);
-//   }
-
-//   function showApplyButton() {
-//     var inputElement = document.querySelector("#promo-container input");
-
-//     // Retirer l'événement de saisie de l'input pour éviter de créer plusieurs boutons
-//     inputElement.removeEventListener("input", showApplyButton);
-//   }
-
 function transformToInput() {
     // Créer un div avec les classes Bootstrap nécessaires
     var inputGroup = document.createElement("div");
@@ -950,7 +831,8 @@ function transformToInput() {
     applyButton.setAttribute("id", "button-addon2");
 
     // Ajouter un événement de clic au bouton "Appliquer" pour le retirer
-    applyButton.addEventListener("click", function() {
+    applyButton.addEventListener("click", function(event) {
+      event.preventDefault(); // Empêcher le rechargement de la page
       applyButton.remove();
     });
 
@@ -959,4 +841,47 @@ function transformToInput() {
 
     // Retirer l'événement de saisie de l'input pour éviter de créer plusieurs boutons
     inputElement.removeEventListener("input", showApplyButton);
-  }
+}
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const promoBtn = document.querySelector('.promo-btn');
+    const dropdown = document.querySelector('.dropdown');
+
+    promoBtn.addEventListener('click', function(event) {
+        // Empêcher le rechargement de la page
+        event.preventDefault();
+
+        // Ouvrir la dropdown
+        dropdown.classList.add('open');
+
+        // Afficher le champ de saisie du code promotionnel
+        transformToInput();
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sepaBtn = document.querySelector('.sepa-btn');
+    const cardBtn = document.querySelector('.card-btn');
+    const creditCardBlocks = document.querySelectorAll('.creditCardBlock');
+    const sepaBlocks = document.querySelectorAll('.sepaBlock');
+
+    function afficherSEPA(event) {
+        event.preventDefault(); // Empêcher le comportement par défaut du bouton
+        sepaBtn.classList.add('active');
+        cardBtn.classList.remove('active');
+        creditCardBlocks.forEach(block => block.style.display = 'none');
+        sepaBlocks.forEach(block => block.style.display = 'block');
+    }
+
+    function afficherCarte(event) {
+        event.preventDefault(); // Empêcher le comportement par défaut du bouton
+        cardBtn.classList.add('active');
+        sepaBtn.classList.remove('active');
+        creditCardBlocks.forEach(block => block.style.display = 'block');
+        sepaBlocks.forEach(block => block.style.display = 'none');
+    }
+
+    sepaBtn.addEventListener('click', afficherSEPA);
+    cardBtn.addEventListener('click', afficherCarte);
+    });
