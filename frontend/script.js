@@ -942,11 +942,17 @@ boutonToggle.addEventListener('click', toggleAdresseManuelle2);
 document.addEventListener('DOMContentLoaded', function() {
     // Sélection du bouton et du conteneur des champs
     var boutonToggle = document.getElementById('toggleAdresseManuelle');
+    var boutonToggle2 = document.getElementById('toggleAdresseManuelle2');
     var conteneurChamps = document.getElementById('conteneurChamps');
     var conteneurChamps2 = document.getElementById('conteneurChamps2');
+    var conteneurChamps3 = document.getElementById('conteneurChamps3');
+    var conteneurChamps4 = document.getElementById('conteneurChamps4');
     var adressField = document.querySelector('.adress-form');
+    var adressField2 = document.querySelector('.adress-form2');
     var codePostale = document.getElementById('code-postal');
+    var codePostale2 = document.getElementById('code-postal2');
     var ville = document.getElementById('ville');
+    var ville2 = document.getElementById('ville2');
 
     // Fonction pour afficher les champs d'adresse et masquer le bouton
     function toggleAdresseManuelle(event) {
@@ -964,8 +970,24 @@ document.addEventListener('DOMContentLoaded', function() {
         boutonToggle.style.display = 'none';
     }
 
+    function toggleAdresseManuelle2(event) {
+        // Empêcher le comportement par défaut du clic sur le bouton
+        event.preventDefault();
+
+        // Afficher les conteneurs des champs d'adresse
+        adressField2.classList.add('d-none');
+        codePostale2.style.display = 'block';
+        ville2.style.display = 'block';
+        conteneurChamps3.style.display = 'block';
+        conteneurChamps4.style.display = 'block';
+
+        // Masquer le bouton
+        boutonToggle2.style.display = 'none';
+    }
+
     // Écouteur d'événement sur le clic du bouton
     boutonToggle.addEventListener('click', toggleAdresseManuelle);
+    boutonToggle2.addEventListener('click', toggleAdresseManuelle2);
 });
 
 // document.addEventListener('DOMContentLoaded', function() {
