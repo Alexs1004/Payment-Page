@@ -341,7 +341,7 @@
               <span>Si vous n'annulez pas votre essai, un montant de <span>15,00 €</span> vous sera facturé par mois à compter du 25 avril 2024. </span>
             </div>
             <div class="cash-back-btn mt-2 mb-5">
-              <button class="text-cash-back-btn">
+              <button class="text-cash-back-btn" id="politiqueBtn">
                 <i class="fa-solid fa-rotate-left"></i>
                 <span>Admissible à un remboursement</span>
               </button>
@@ -361,6 +361,43 @@
     </div>
     <!-- Modal -->
     <div class="modal fade" id="qteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="header-components">
+              <img src="../assets/images/payment-icon.png" alt="RSB_pile-magazine" class="modal_img">
+              <div class="text-modal-header">
+                <span class="modal-text-500">Modifier la quantité</span>
+                <span class="dd_small_text">Togethere Professional</span>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group input-number-group flex-nowrap">
+              <div class="input-group-button">
+                <span class="input-number-decrement" id="input-nb-decrement">
+                  <i class="fa-solid fa-minus" focusable="false"></i>
+                </span>
+              </div>
+              <input class="input-number" id="input-modal" type="number" value="1" min="0" max="1000">
+              <div class="input-group-button">
+                <span class="input-number-increment" id="input-nb-increment">
+                  <i class="fa-solid fa-plus" focusable="false"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="modal_footer">
+            <button type="button" class="btn btn-primary btn-lg modal-modify-btn">
+              <span class="fs-6">Modifier</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal2 -->
+    <div class="modal fade" id="politiqueModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-header">

@@ -372,6 +372,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    var politiqueBtn = document.getElementById('politiqueBtn');
+    politiqueBtn.addEventListener('click', function() {
+        var politiqueModal = new bootstrap.Modal(document.getElementById('politiqueModal'), {
+            backdrop: 'static',
+            keyboard: false
+        });
+        politiqueModal.show();
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const inDdButton = document.querySelector('.in_dd_button');
     inDdButton.addEventListener('click', function() {
