@@ -886,24 +886,54 @@ document.addEventListener("DOMContentLoaded", function() {
     cardBtn.addEventListener('click', afficherCarte);
     });
 
+// document.addEventListener('DOMContentLoaded', function() {
+// // Sélection du bouton et du conteneur des champs
+// var boutonToggle = document.getElementById('toggleAdresseManuelle');
+// var boutonToggle2 = document.getElementById('toggleAdresseManuelle2');
+// var conteneurChamps = document.getElementById('conteneurChamps');
+// var conteneurChamps2 = document.getElementById('conteneurChamps2');
+
+// // Fonction pour ajouter des champs d'adresse
+// function toggleAdresseManuelle(event) {
+//     // Empêcher le comportement par défaut du clic sur le bouton
+//     event.preventDefault();
+
+//     // Afficher ou masquer le conteneur des champs d'adresse
+//     conteneurChamps.style.display = conteneurChamps.style.display === 'none' ? 'block' : 'none';
+//     conteneurChamps2.style.display = conteneurChamps2.style.display === 'none' ? 'block' : 'none';
+// }
+
+// // Écouteur d'événement sur le clic du bouton
+// boutonToggle.addEventListener('click', toggleAdresseManuelle);
+// boutonToggle.addEventListener('click', toggleAdresseManuelle2);
+// });
+
 document.addEventListener('DOMContentLoaded', function() {
-// Sélection du bouton et du conteneur des champs
-var boutonToggle = document.getElementById('toggleAdresseManuelle');
-var boutonToggle2 = document.getElementById('toggleAdresseManuelle2');
-var conteneurChamps = document.getElementById('conteneurChamps');
-var conteneurChamps2 = document.getElementById('conteneurChamps2');
+    // Sélection du bouton et du conteneur des champs
+    var boutonToggle = document.getElementById('toggleAdresseManuelle');
+    var conteneurChamps = document.getElementById('conteneurChamps');
+    var conteneurChamps2 = document.getElementById('conteneurChamps2');
+    var adressField = document.querySelector('.adress-form');
+    var codePostale = document.getElementById('code-postal');
+    var ville = document.getElementById('ville');
 
-// Fonction pour ajouter des champs d'adresse
-function toggleAdresseManuelle(event) {
-    // Empêcher le comportement par défaut du clic sur le bouton
-    event.preventDefault();
+    // Fonction pour afficher les champs d'adresse et masquer le bouton
+    function toggleAdresseManuelle(event) {
+        // Empêcher le comportement par défaut du clic sur le bouton
+        event.preventDefault();
 
-    // Afficher ou masquer le conteneur des champs d'adresse
-    conteneurChamps.style.display = conteneurChamps.style.display === 'none' ? 'block' : 'none';
-    conteneurChamps2.style.display = conteneurChamps2.style.display === 'none' ? 'block' : 'none';
-}
+        // Afficher les conteneurs des champs d'adresse
+        adressField.classList.add('d-none');
+        codePostale.classList.remove('d-none');
+        ville.classList.remove('d-none');
+        conteneurChamps.style.display = 'block';
+        conteneurChamps2.style.display = 'block';
 
-// Écouteur d'événement sur le clic du bouton
-boutonToggle.addEventListener('click', toggleAdresseManuelle);
-boutonToggle.addEventListener('click', toggleAdresseManuelle2);
+        // Masquer le bouton
+        boutonToggle.style.display = 'none';
+    }
+
+    // Écouteur d'événement sur le clic du bouton
+    boutonToggle.addEventListener('click', toggleAdresseManuelle);
 });
+

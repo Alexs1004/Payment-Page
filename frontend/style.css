@@ -566,12 +566,12 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     padding-left: 40px;
 }
 
-#validationCustom32 {
+#validationCustom32, #validationCustom67{
     border-radius: 0px 0px 6px 0px;
     border-left: none;
 }
 
-#validationCustom11 {
+#validationCustom11, #validationCustom66 {
     border-radius: 0px 0px 0px 6px;
 }
 
