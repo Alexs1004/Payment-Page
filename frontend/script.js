@@ -252,12 +252,22 @@ const countries = [
 	"Zimbabwe"
 ];
 
-const dropdown = document.getElementById("paysDropdown");
-
-countries.forEach(country => {
+function addOption(selectElement, optionText) {
     const option = document.createElement("option");
-    option.text = country;
-    dropdown.add(option);
+    option.text = optionText;
+    selectElement.add(option);
+}
+
+// Ajouter les options au premier dropdown
+const dropdown = document.getElementById("paysDropdown");
+countries.forEach(country => {
+    addOption(dropdown, country);
+});
+
+// Dupliquer les options pour le deuxième dropdown
+const dropdown2 = document.getElementById("paysDropdown2");
+countries.forEach(country => {
+    addOption(dropdown2, country);
 });
 
 
@@ -886,27 +896,27 @@ document.addEventListener("DOMContentLoaded", function() {
     cardBtn.addEventListener('click', afficherCarte);
     });
 
-// document.addEventListener('DOMContentLoaded', function() {
-// // Sélection du bouton et du conteneur des champs
-// var boutonToggle = document.getElementById('toggleAdresseManuelle');
-// var boutonToggle2 = document.getElementById('toggleAdresseManuelle2');
-// var conteneurChamps = document.getElementById('conteneurChamps');
-// var conteneurChamps2 = document.getElementById('conteneurChamps2');
+document.addEventListener('DOMContentLoaded', function() {
+// Sélection du bouton et du conteneur des champs
+var boutonToggle = document.getElementById('toggleAdresseManuelle');
+var boutonToggle2 = document.getElementById('toggleAdresseManuelle2');
+var conteneurChamps = document.getElementById('conteneurChamps');
+var conteneurChamps2 = document.getElementById('conteneurChamps2');
 
-// // Fonction pour ajouter des champs d'adresse
-// function toggleAdresseManuelle(event) {
-//     // Empêcher le comportement par défaut du clic sur le bouton
-//     event.preventDefault();
+// Fonction pour ajouter des champs d'adresse
+function toggleAdresseManuelle(event) {
+    // Empêcher le comportement par défaut du clic sur le bouton
+    event.preventDefault();
 
-//     // Afficher ou masquer le conteneur des champs d'adresse
-//     conteneurChamps.style.display = conteneurChamps.style.display === 'none' ? 'block' : 'none';
-//     conteneurChamps2.style.display = conteneurChamps2.style.display === 'none' ? 'block' : 'none';
-// }
+    // Afficher ou masquer le conteneur des champs d'adresse
+    conteneurChamps.style.display = conteneurChamps.style.display === 'none' ? 'block' : 'none';
+    conteneurChamps2.style.display = conteneurChamps2.style.display === 'none' ? 'block' : 'none';
+}
 
-// // Écouteur d'événement sur le clic du bouton
-// boutonToggle.addEventListener('click', toggleAdresseManuelle);
-// boutonToggle.addEventListener('click', toggleAdresseManuelle2);
-// });
+// Écouteur d'événement sur le clic du bouton
+boutonToggle.addEventListener('click', toggleAdresseManuelle);
+boutonToggle.addEventListener('click', toggleAdresseManuelle2);
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     // Sélection du bouton et du conteneur des champs
@@ -937,3 +947,58 @@ document.addEventListener('DOMContentLoaded', function() {
     boutonToggle.addEventListener('click', toggleAdresseManuelle);
 });
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Sélection du bouton et du conteneur des champs pour l'adresse principale
+//     var boutonToggleAdressePrincipale = document.getElementById('toggleAdresseManuelle');
+//     var conteneurChampsAdressePrincipale = document.getElementById('conteneurChamps');
+//     var conteneurChamps2AdressePrincipale = document.getElementById('conteneurChamps2');
+//     var adressField = document.querySelector('.adress-form');
+//     var codePostal = document.getElementById('code-postal');
+//     var ville = document.getElementById('ville');
+
+//     // Sélection du bouton et du conteneur des champs pour l'adresse de livraison
+//     var boutonToggleAdresseLivraison = document.getElementById('toggleAdresseLivraisonManuelle');
+//     var conteneurChampsAdresseLivraison = document.getElementById('conteneurChampsAdresseLivraison');
+//     var conteneurChamps2AdresseLivraison = document.getElementById('conteneurChamps2AdresseLivraison');
+//     var adressFieldLivraison = document.querySelector('.adress-form-livraison');
+//     var codePostalLivraison = document.getElementById('code-postal-livraison');
+//     var villeLivraison = document.getElementById('ville-livraison');
+
+//     // Fonction pour afficher les champs d'adresse et masquer le bouton pour l'adresse principale
+//     function toggleAdressePrincipaleManuelle(event) {
+//         // Empêcher le comportement par défaut du clic sur le bouton
+//         event.preventDefault();
+
+//         // Afficher les conteneurs des champs d'adresse principale
+//         adressField.classList.add('d-none');
+//         codePostal.classList.remove('d-none');
+//         ville.classList.remove('d-none');
+//         conteneurChampsAdressePrincipale.style.display = 'block';
+//         conteneurChamps2AdressePrincipale.style.display = 'block';
+
+//         // Masquer le bouton pour l'adresse principale
+//         boutonToggleAdressePrincipale.style.display = 'none';
+//     }
+
+//     // Fonction pour afficher les champs d'adresse et masquer le bouton pour l'adresse de livraison
+//     function toggleAdresseLivraisonManuelle(event) {
+//         // Empêcher le comportement par défaut du clic sur le bouton
+//         event.preventDefault();
+
+//         // Afficher les conteneurs des champs d'adresse de livraison
+//         adressFieldLivraison.classList.add('d-none');
+//         codePostalLivraison.classList.remove('d-none');
+//         villeLivraison.classList.remove('d-none');
+//         conteneurChampsAdresseLivraison.style.display = 'block';
+//         conteneurChamps2AdresseLivraison.style.display = 'block';
+
+//         // Masquer le bouton pour l'adresse de livraison
+//         boutonToggleAdresseLivraison.style.display = 'none';
+//     }
+
+//     // Écouteur d'événement sur le clic du bouton pour l'adresse principale
+//     boutonToggleAdressePrincipale.addEventListener('click', toggleAdressePrincipaleManuelle);
+
+//     // Écouteur d'événement sur le clic du bouton pour l'adresse de livraison
+//     boutonToggleAdresseLivraison.addEventListener('click', toggleAdresseLivraisonManuelle);
+// });

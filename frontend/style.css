@@ -604,7 +604,7 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     border-radius: 6px 6px 0px 0px;
 }
 
-#paysDropdown {
+#paysDropdown, #paysDropdown2 {
     border-radius: 6px 6px 0px 0px;
     border-bottom: none;
 }

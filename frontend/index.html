@@ -295,47 +295,39 @@
               <!-- <div class="col-12 mb-3"> -->
                 <div class="col-12">
                   <label for="validationCustom04" class="form-label">Adresse de livraison</label>
-                  <select class="form-select form-control" id="paysDropdown" required>
+                  <select class="form-select form-control" id="paysDropdown2" required>
                     <option selected value="">France métropolitaine</option>
                   </select>
                   <div class="invalid-feedback"> Please select a valid state. </div>
                 </div>
-                <div class="col-12 mt-0" id="conteneurChamps" style="display: none;">
-                  <!-- Ajoutez ici d'autres champs pour l'adresse manuelle -->
-                  <div class="input-group has-validation position-relative">
-                    <input type="text" class="form-control form-control-icon" id="adresseManuelleInput" placeholder="Ligne d'adresse n°1" required>
-                    <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
-                  </div>
-                </div>
-                <div class="col-12 mt-0" id="conteneurChamps2" style="display: none;">
-                  <!-- Ajoutez ici d'autres champs pour l'adresse manuelle -->
-                  <div class="input-group has-validation position-relative">
-                    <input type="text" class="form-control form-control-icon" id="adresseManuelleInput2" placeholder="Ligne d'adresse n°2" required>
-                    <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
-                  </div>
-                </div>
-                <!-- *************************************** A Ajouter ***************************************************** -->
-                <div class="col-6 date-card creditCardBlock d-none" id="code-postal">
-                  <div class="splitted_input">
-                    <input type="text" class="form-control" id="validationCustom66" placeholder="Code postal" required="">
-                    <!-- <div class="valid-feedback"> Looks good! </div> -->
-                  </div>
-                </div>
-                <div class="col-6 cvc-card creditCardBlock d-none" id="ville">
-                  <div class="splitted_input">
-                    <input type="text" class="form-control" id="validationCustom67" placeholder="Ville" required="">
-                    <!-- <div class="valid-feedback"> Looks good! </div> -->
-                  </div>
-                </div>
-                <div class="col-12 adress-form mt-0">
-                  <div class="input-group has-validation position-relative">
-                    <input type="text" class="form-control form-control-icon mb-3" id="autocomplete2" placeholder="Adresse" required>
-                    <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
-                  </div>
-                </div>
-                <div class="col-12 adress-btn mt-0">
-                  <button class="text-adress-btn" id="toggleAdresseManuelle">Saisir l'adresse manuellement</button>
-                </div>
+                <div class="col-12 mt-0">
+            <div class="input-group has-validation position-relative">
+                <input type="text" class="form-control form-control-icon" id="adresseLivraisonInput" placeholder="Ligne d'adresse n°1" required>
+            </div>
+        </div>
+        <div class="col-12 mt-0">
+            <div class="input-group has-validation position-relative">
+                <input type="text" class="form-control form-control-icon" id="adresseLivraisonInput2" placeholder="Ligne d'adresse n°2" required>
+            </div>
+        </div>
+        <div class="col-6 date-card creditCardBlock d-none" id="code-postal-livraison">
+            <div class="splitted_input">
+                <input type="text" class="form-control" id="validationCustom68" placeholder="Code postal" required="">
+            </div>
+        </div>
+        <div class="col-6 cvc-card creditCardBlock d-none" id="ville-livraison">
+            <div class="splitted_input">
+                <input type="text" class="form-control" id="validationCustom69" placeholder="Ville" required="">
+            </div>
+        </div>
+        <div class="col-12 adress-form mt-0">
+            <div class="input-group has-validation position-relative">
+                <input type="text" class="form-control form-control-icon mb-3" id="autocompleteLivraison" placeholder="Adresse" required>
+            </div>
+        </div>
+        <div class="col-12 adress-btn mt-0">
+            <button class="text-adress-btn" id="toggleAdresseLivraisonManuelle">Saisir l'adresse de livraison manuellement</button>
+        </div>
               <!-- </div> -->
             </div>
             <div class="col-12 div_btn_pay">
