@@ -526,7 +526,10 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     background-color: black !important;
 }
 
-#adresseManuelleInput, #adresseManuelleInput2 {
+#adresseManuelleInput,
+#adresseManuelleInput2,
+#adresseManuelleInput3,
+#adresseManuelleInput4 {
     border-bottom: none;
     border-radius: 0px;
 }
@@ -566,12 +569,12 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     padding-left: 40px;
 }
 
-#validationCustom32, #validationCustom67{
+#validationCustom32, #validationCustom67, #validationCustom69{
     border-radius: 0px 0px 6px 0px;
     border-left: none;
 }
 
-#validationCustom11, #validationCustom66 {
+#validationCustom11, #validationCustom66, #validationCustom68 {
     border-radius: 0px 0px 0px 6px;
 }
 
@@ -609,7 +612,7 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     border-bottom: none;
 }
 
-#autocomplete2 {
+#autocomplete2, #autocomplete3 {
     border-radius: 0px 0px 6px 6px;
 }
 
