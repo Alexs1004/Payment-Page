@@ -16,7 +16,7 @@ body form label{
 
 
 ::placeholder {
-    color: hsla(0,0%,10%,0.35);
+    color: (0,0%, 100%, 0.4);
     font-size: 16px;
 }
 
@@ -526,6 +526,10 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     background-color: black !important;
 }
 
+#adresseManuelleInput, #adresseManuelleInput2 {
+    border-bottom: none;
+    border-radius: 0px;
+}
 
 .palyance-divbtn {
     padding: 16px 24px;

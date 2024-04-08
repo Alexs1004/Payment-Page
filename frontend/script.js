@@ -885,3 +885,25 @@ document.addEventListener("DOMContentLoaded", function() {
     sepaBtn.addEventListener('click', afficherSEPA);
     cardBtn.addEventListener('click', afficherCarte);
     });
+
+document.addEventListener('DOMContentLoaded', function() {
+// Sélection du bouton et du conteneur des champs
+var boutonToggle = document.getElementById('toggleAdresseManuelle');
+var boutonToggle2 = document.getElementById('toggleAdresseManuelle2');
+var conteneurChamps = document.getElementById('conteneurChamps');
+var conteneurChamps2 = document.getElementById('conteneurChamps2');
+
+// Fonction pour ajouter des champs d'adresse
+function toggleAdresseManuelle(event) {
+    // Empêcher le comportement par défaut du clic sur le bouton
+    event.preventDefault();
+
+    // Afficher ou masquer le conteneur des champs d'adresse
+    conteneurChamps.style.display = conteneurChamps.style.display === 'none' ? 'block' : 'none';
+    conteneurChamps2.style.display = conteneurChamps2.style.display === 'none' ? 'block' : 'none';
+}
+
+// Écouteur d'événement sur le clic du bouton
+boutonToggle.addEventListener('click', toggleAdresseManuelle);
+boutonToggle.addEventListener('click', toggleAdresseManuelle2);
+});

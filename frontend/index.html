@@ -247,16 +247,23 @@
                 </select>
                 <div class="invalid-feedback"> Please select a valid state. </div>
               </div>
-              <div>
+              <div id="conteneurChamps" style="display: none;">
+                <!-- Ajoutez ici d'autres champs pour l'adresse manuelle -->
                 <div class="input-group has-validation position-relative">
-                  <input type="text" class="form-control form-control-icon mb-3" id="autocomplete2" placeholder="Adresse" required>
+                  <input type="text" class="form-control form-control-icon" id="adresseManuelleInput" placeholder="Ligne d'adresse n°1" required>
                   <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
                 </div>
               </div>
-              <div id="adresseManuelle" style="display: none;">
+              <div id="conteneurChamps2" style="display: none;">
                 <!-- Ajoutez ici d'autres champs pour l'adresse manuelle -->
                 <div class="input-group has-validation position-relative">
-                  <input type="text" class="form-control form-control-icon" id="adresseManuelleInput" placeholder="Adresse manuelle" required>
+                  <input type="text" class="form-control form-control-icon" id="adresseManuelleInput2" placeholder="Ligne d'adresse n°2" required>
+                  <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
+                </div>
+              </div>
+              <div>
+                <div class="input-group has-validation position-relative">
+                  <input type="text" class="form-control form-control-icon mb-3" id="autocomplete2" placeholder="Adresse" required>
                   <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
                 </div>
               </div>
