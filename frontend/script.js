@@ -383,25 +383,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const checkbox = document.getElementById('invalidCheck_checked');
-    const deliveryFormContainer = document.getElementById('delivery-form-container');
+    const deliveryFormContainers = document.querySelectorAll('.delivery-form-container');
     const cgCheckbox = document.getElementById("cg_checkbox");
 
-    if (checkbox && deliveryFormContainer) {
+    if (checkbox && deliveryFormContainers) {
         checkbox.addEventListener('change', function() {
             if (checkbox.checked) {
-                deliveryFormContainer.classList.add('d-none');
+                deliveryFormContainers.forEach(function(container) {
+                    container.classList.add('d-none');
+                });
             } else {
-                deliveryFormContainer.classList.remove('d-none');
+                deliveryFormContainers.forEach(function(container) {
+                    container.classList.remove('d-none');
+                });
             }
         });
     } else {
         console.error('L\'élément checkbox ou delivery-form-container est introuvable.');
     }
 });
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const checkbox = document.getElementById('invalidCheck_checked');
+//     const deliveryFormContainer = document.querySelectorAll('.delivery-form-container');
+//     const cgCheckbox = document.getElementById("cg_checkbox");
+
+//     if (checkbox && deliveryFormContainer) {
+//         checkbox.addEventListener('change', function() {
+//             if (checkbox.checked) {
+//                 deliveryFormContainer.classList.add('d-none');
+//             } else {
+//                 deliveryFormContainer.classList.remove('d-none');
+//             }
+//         });
+//     } else {
+//         console.error('L\'élément checkbox ou delivery-form-container est introuvable.');
+//     }
+// });
 
 window.addEventListener('scroll', function() {
     var navbar = document.querySelector('.navbar');
