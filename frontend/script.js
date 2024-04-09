@@ -1014,6 +1014,7 @@ document.addEventListener('DOMContentLoaded', function() {
     boutonToggle2.addEventListener('click', toggleAdresseManuelle2);
 });
 
+//BON CODE POUR MODAL
 document.addEventListener("DOMContentLoaded", function() {
     // Récupérer les boutons et les blocs
     var modalMentionsLegalesBtn = document.querySelector(".modal-mentions-légales");
@@ -1081,30 +1082,74 @@ document.addEventListener("DOMContentLoaded", function() {
 //     });
 //   });
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Sélection du bouton text-cash-back-btn
-    var cashBackBtn = document.getElementById('text-cash-back-btn');
+//Code pour essayer de mettre le focus par defaut sur remboursement
 
-    // Fonction pour ouvrir la modal et mettre le focus sur modal-remboursement
-    function openModalWithFocus(event) {
-      // Empêcher le comportement par défaut du clic sur le bouton
-      event.preventDefault();
 
-      // Afficher la modal
-      var modalRemboursementBtn = document.querySelector(".modal-remboursement");
-      var remboursementsModalBlock = document.querySelector(".remboursements-modal");
-      remboursementsModalBlock.classList.remove("d-none");
-      // Cacher les autres blocs
-      var modalMentionsBlock = document.querySelector(".modal-body-mentions");
-      var contactModalBlock = document.querySelector(".contact-modal");
-      modalMentionsBlock.classList.add("d-none");
-      contactModalBlock.classList.add("d-none");
+// document.addEventListener("DOMContentLoaded", function() {
+//     // Sélection du bouton text-cash-back-btn
+//     var cashBackBtn = document.getElementById('text-cash-back-btn');
 
-      // Mettre le focus sur modal-remboursement
-      modalRemboursementBtn.focus();
-    }
+//     // Fonction pour ouvrir la modal et mettre le focus sur modal-remboursement
+//     function openModalWithFocus(event) {
+//       // Empêcher le comportement par défaut du clic sur le bouton
+//       event.preventDefault();
 
-    // Ajouter un écouteur d'événement sur le clic du bouton text-cash-back-btn
-    cashBackBtn.addEventListener('click', openModalWithFocus);
-  });
+//       // Afficher la modal
+//       var modalRemboursementBtn = document.querySelector(".modal-remboursement");
+//       var remboursementsModalBlock = document.querySelector(".remboursements-modal");
+//       remboursementsModalBlock.classList.remove("d-none");
+//       // Cacher les autres blocs
+//       var modalMentionsBlock = document.querySelector(".modal-body-mentions");
+//       var contactModalBlock = document.querySelector(".contact-modal");
+//       modalMentionsBlock.classList.add("d-none");
+//       contactModalBlock.classList.add("d-none");
 
+//       // Mettre le focus sur modal-remboursement
+//       modalRemboursementBtn.focus();
+//     }
+
+//     // Ajouter un écouteur d'événement sur le clic du bouton text-cash-back-btn
+//     cashBackBtn.addEventListener('click', openModalWithFocus);
+//   });
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     // Récupérer les boutons et les blocs
+//     var modalMentionsLegalesBtn = document.querySelector(".modal-mentions-légales");
+//     var modalRemboursementBtn = document.querySelector(".modal-remboursement");
+//     var modalContactBtn = document.querySelector(".modal-contact");
+
+//     var modalMentionsBlock = document.querySelector(".modal-body-mentions");
+//     var remboursementsModalBlock = document.querySelector(".remboursements-modal");
+//     var contactModalBlock = document.querySelector(".contact-modal");
+
+//     // Ajouter des écouteurs d'événements pour les clics sur les boutons
+//     modalMentionsLegalesBtn.addEventListener("click", function() {
+//         // Afficher le bloc modal-body-mentions
+//         modalMentionsBlock.classList.remove("d-none");
+//         // Cacher les autres blocs
+//         remboursementsModalBlock.classList.add("d-none");
+//         contactModalBlock.classList.add("d-none");
+//     });
+
+//     modalRemboursementBtn.addEventListener("click", function() {
+//         // Afficher le bloc remboursements-modal
+//         remboursementsModalBlock.classList.remove("d-none");
+//         // Cacher les autres blocs
+//         modalMentionsBlock.classList.add("d-none");
+//         contactModalBlock.classList.add("d-none");
+
+//         // Mettre le focus sur modal-remboursement
+//         remboursementsModalBlock.focus();
+//     });
+
+//     modalContactBtn.addEventListener("click", function() {
+//         // Afficher le bloc contact-modal
+//         contactModalBlock.classList.remove("d-none");
+//         // Cacher les autres blocs
+//         modalMentionsBlock.classList.add("d-none");
+//         remboursementsModalBlock.classList.add("d-none");
+
+//         // Mettre le focus sur modal-contact
+//         contactModalBlock.focus();
+//     });
+// });
