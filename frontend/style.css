@@ -1040,8 +1040,12 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     }
 
 
-    .modal-header {
+    #header-qte-modal {
         padding: 16px 20px;
+    }
+
+    #politic-modal-header {
+        padding: 24px;
     }
 
     .modal_footer {

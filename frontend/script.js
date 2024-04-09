@@ -1014,3 +1014,69 @@ document.addEventListener('DOMContentLoaded', function() {
     boutonToggle2.addEventListener('click', toggleAdresseManuelle2);
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Récupérer les boutons et les blocs
+    var modalMentionsLegalesBtn = document.querySelector(".modal-mentions-légales");
+    var modalRemboursementBtn = document.querySelector(".modal-remboursement");
+    var modalContactBtn = document.querySelector(".modal-contact");
+
+    var modalMentionsBlock = document.querySelector(".modal-body-mentions");
+    var remboursementsModalBlock = document.querySelector(".remboursements-modal");
+    var contactModalBlock = document.querySelector(".contact-modal");
+
+    // Ajouter des écouteurs d'événements pour les clics sur les boutons
+    modalMentionsLegalesBtn.addEventListener("click", function() {
+      // Afficher le bloc modal-body-mentions
+      modalMentionsBlock.classList.remove("d-none");
+      // Cacher les autres blocs
+      remboursementsModalBlock.classList.add("d-none");
+      contactModalBlock.classList.add("d-none");
+    });
+
+    modalRemboursementBtn.addEventListener("click", function() {
+      // Afficher le bloc remboursements-modal
+      remboursementsModalBlock.classList.remove("d-none");
+      // Cacher les autres blocs
+      modalMentionsBlock.classList.add("d-none");
+      contactModalBlock.classList.add("d-none");
+    });
+
+    modalContactBtn.addEventListener("click", function() {
+      // Afficher le bloc contact-modal
+      contactModalBlock.classList.remove("d-none");
+      // Cacher les autres blocs
+      modalMentionsBlock.classList.add("d-none");
+      remboursementsModalBlock.classList.add("d-none");
+    });
+  });
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     // Récupérer le bouton modal-mentions-légales
+//     var modalMentionsLegalesBtn = document.querySelector(".modal-mentions-légales");
+
+//     // Récupérer le bloc modal-body-mentions
+//     var modalMentionsBlock = document.querySelector(".modal-body-mentions");
+
+//     // Récupérer le bouton modal-remboursement
+//     var modalRemboursementBtn = document.querySelector(".modal-remboursement");
+
+//     // Récupérer le bloc remboursements-modal
+//     var remboursementsModalBlock = document.querySelector(".remboursements-modal");
+
+//     // Ajouter un écouteur d'événements au clic sur le bouton modal-mentions-légales
+//     modalMentionsLegalesBtn.addEventListener("click", function() {
+//       // Afficher le bloc modal-body-mentions
+//       modalMentionsBlock.classList.remove("d-none");
+//       // Cacher le bloc remboursements-modal
+//       remboursementsModalBlock.classList.add("d-none");
+//     });
+
+//     // Ajouter un écouteur d'événements au clic sur le bouton modal-remboursement
+//     modalRemboursementBtn.addEventListener("click", function() {
+//       // Afficher le bloc remboursements-modal
+//       remboursementsModalBlock.classList.remove("d-none");
+//       // Cacher le bloc modal-body-mentions
+//       modalMentionsBlock.classList.add("d-none");
+//     });
+//   });
