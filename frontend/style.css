@@ -803,9 +803,81 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     font-size: 14px;
 }
 
+.modal-title {
+    font-size: 16px;
+}
+
+.modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+.modal-body button {
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: hsla(0, 0%, 10%, 0.5);
+    font-weight: 400px;
+}
+
+.modal-body button:hover {
+    color: hsla(0, 0%, 10%, 0.7)
+}
+
+.modal-body button:focus {
+    color: black;
+}
+
+
+.footer-text-modal {
+    color: hsla(0,0%, 10%, 0.5);
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+}
+
+.fa-fiile {
+    font-size: 16px;
+}
+
+.politic-text {
+    color: hsla(0,0%, 10%, 0.5);
+    margin-top: 4px;
+    font-size: 14px;
+
+}
+
+.politic-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.text-mentions {
+    margin-left: 12px;
+}
+
+.modal-body-mentions {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.politques-mention {
+    display: flex;
+}
+
 .header-components {
     display: flex;
     align-items: center;
+}
+
+.btn-close {
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
 }
 
 .text-modal-header {
