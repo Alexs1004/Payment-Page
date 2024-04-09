@@ -83,7 +83,7 @@
                           <span>Total dû aujourd'hui</span>
                         </div>
                         <div>
-                          <span class="dropdown-currency-total">0 €</span>
+                          <span class="dropdown-currency-total">0,00 €</span>
                         </div>
                       </div>
                     </div>
@@ -445,17 +445,33 @@
             <button class="modal-remboursement">Remboursements</button>
             <button class="modal-contact">Contact</button>
           </div>
-          <hr>
-          <div class="modal-body-mentions">
+          <hr class="mt-0" style="color: hsla(0, 0%, 10%, 0.5);">
+          <div class="remboursements-modal">
+            <i class="fa-solid fa-rotate-left"></i>
+            <div class="remboursement-title">
+              <span class="remboursement-text-title">Remboursements autorisés</span>
+              <ul class="remboursement-list">
+                <li>Admissible pour un remboursement intégral</li>
+                <li>Remboursements acceptés dans un délai de 90 jours à compter de la date d'achat</li>
+                <li><a href="https://pure-sante.info/conditions-generales-de-vente/">Afficher la politique dans son intégralité</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-body-mentions d-none">
             <div class="politques-mention">
               <i class="fa-solid fa-file"></i>
               <div class="text-mentions">
                 <span class="politic-title">Politiques juridiques de Togethere</span>
-                <p class="politic-text">Consultez les Conditions d'utilisation du service et la Politique de confidentialité de Togethere.</p>
+                <p class="politic-text">Consultez les <a href="https://pure-sante.info/cgu/">Conditions d'utilisation du service</a> et la <a href="https://pure-sante.info/notre-politique-de-confidentialite/">Politique de confidentialité</a> de Togethere.</p>
               </div>
             </div>
             <div class="payment-conditions">
-
+              <i class="fa-solid fa-credit-card"></i>
+              <div class="payment-condition-text">
+                <span class="payment-condition-title">Conditions de paiement</span>
+                <!-- *************************************A MODIFIER **************************************************** -->
+                <p class="text-payment-condition">Tous les paiements sont traités en toute sécurité par Palyance. Consultez les <a href="/">conditions de service</a> et la <a href="/">politique de confidentialité</a> de Palyance.</p>
+              </div>
             </div>
           </div>
           <div class="modal-footer">

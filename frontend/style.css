@@ -5,6 +5,7 @@
 	/* --font-family:  */
     --dd_textcolor: #A4A4A4;
     --button-plus-minus: rgba(0,0,0,0.03);
+    --black-text-color: color: hsla(0, 0%, 10%, 0.9);
 }
 
 body form label{
@@ -129,8 +130,31 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 }
 
 .dropdown-currency, .dropdown-currency-total {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
+}
+
+.remboursement-list {
+    color: hsla(0, 0%, 10%, 0.5);
+    font-size: 14px;
+}
+
+.remboursements-modal {
+    display: flex;
+    align-items: baseline
+}
+
+.remboursement-title {
+    margin-left: 12px;
+}
+
+.remboursement-title .fa-rotate-left {
+    font-size: 18px;
+}
+
+.remboursement-text-title {
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .card-btn, .sepa-btn {
@@ -326,6 +350,7 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     height: auto;
     margin-bottom: 1em;
     margin-top: 70px;
+    border-radius: 10px;
 }
 
 .product_page {
@@ -810,7 +835,7 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 .modal-body {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     white-space: nowrap;
 }
 
@@ -838,35 +863,44 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     text-align: center;
 }
 
-.fa-fiile {
+.fa-fiile, .fa-credit-card {
     font-size: 16px;
 }
 
-.politic-text {
+.politic-text, .text-payment-condition {
     color: hsla(0,0%, 10%, 0.5);
     margin-top: 4px;
     font-size: 14px;
 
 }
 
-.politic-title {
+.politic-text a, .text-payment-condition a, .remboursement-list a{
+    text-decoration: underline dotted hsla(0,0%, 10%, 0.7);
+    color: hsla(0, 0%, 10%, 0.7);
+}
+
+.politic-title, .payment-condition-title {
     font-size: 14px;
     font-weight: 500;
 }
 
-.text-mentions {
+.text-mentions, .payment-condition-text {
     margin-left: 12px;
 }
 
-.modal-body-mentions {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.remboursement-list {
+    margin-top: 4px;
+    line-height: 24px;
 }
 
-.politques-mention {
+.modal-body-mentions, .remboursements-modal {
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.politques-mention,  .payment-conditions {
     display: flex;
+    align-items: baseline;
 }
 
 .header-components {
@@ -875,7 +909,7 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 }
 
 .btn-close {
-    font-size: 16px;
+    font-size: 12px;
     padding: 0px;
     margin: 0px;
 }
