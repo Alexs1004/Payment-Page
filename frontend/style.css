@@ -139,7 +139,7 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     font-size: 14px;
 }
 
-.remboursements-modal {
+.remboursements-modal, .contact-modal {
     display: flex;
     align-items: baseline
 }
@@ -863,28 +863,28 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     text-align: center;
 }
 
-.fa-fiile, .fa-credit-card {
+.fa-fiile, .payment-conditions .fa-credit-card, .contact-modal .fa-phone {
     font-size: 16px;
 }
 
-.politic-text, .text-payment-condition {
+.politic-text, .text-payment-condition, .contact-modal-text {
     color: hsla(0,0%, 10%, 0.5);
     margin-top: 4px;
     font-size: 14px;
 
 }
 
-.politic-text a, .text-payment-condition a, .remboursement-list a{
+.politic-text a, .text-payment-condition a, .remboursement-list a, .contact-modal-text a{
     text-decoration: underline dotted hsla(0,0%, 10%, 0.7);
     color: hsla(0, 0%, 10%, 0.7);
 }
 
-.politic-title, .payment-condition-title {
+.politic-title, .payment-condition-title, .contact-title {
     font-size: 14px;
     font-weight: 500;
 }
 
-.text-mentions, .payment-condition-text {
+.text-mentions, .payment-condition-text, .contact-text {
     margin-left: 12px;
 }
 
@@ -893,12 +893,12 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     line-height: 24px;
 }
 
-.modal-body-mentions, .remboursements-modal {
+.modal-body-mentions, .remboursements-modal, .contact-modal {
     padding: 20px;
     margin-bottom: 50px;
 }
 
-.politques-mention,  .payment-conditions {
+.politques-mention,  .payment-conditions, .contact-modal {
     display: flex;
     align-items: baseline;
 }
