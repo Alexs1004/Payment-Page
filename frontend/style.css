@@ -316,6 +316,13 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     margin-right: 25px;
 }
 
+.dropdown.open {
+    display: block;
+}
+
+body.dropdown-open {
+    overflow: hidden;
+}
 
 
 .dropdown-menu {

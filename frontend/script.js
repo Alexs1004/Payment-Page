@@ -362,7 +362,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener('DOMContentLoaded', function() {
     var politiqueModal = new bootstrap.Modal(document.getElementById('politiqueModal'), {
         backdrop: 'static',
-        keyboard: false
+        keyboard: true
     });
 
     var politiqueBtn = document.getElementById('politiqueBtn');
@@ -397,45 +397,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     var politiqueModal = new bootstrap.Modal(document.getElementById('politiqueModal'), {
-//         backdrop: 'static',
-//         keyboard: false
-//     });
-
-//     var politiqueBtn = document.getElementById('politiqueBtn');
-//     var mentionsLegalesBtn = document.getElementById('mentionsLegalesBtn');
-//     var remboursementBtn = document.getElementById('remboursementBtn');
-//     var contactBtn = document.getElementById('contactBtn');
-
-//     // Ajout de la classe modal-dialog-scrollable à la boîte de dialogue de la modal
-//     var modalDialog = document.querySelector('#politiqueModal .modal-dialog');
-//     modalDialog.classList.add('modal-dialog-scrollable');
-
-//     politiqueBtn.addEventListener('click', function(event) {
-//         event.preventDefault();
-//         politiqueModal.show();
-//         document.querySelector('#politiqueModal .modal-remboursement').focus();
-//     });
-
-//     mentionsLegalesBtn.addEventListener('click', function(event) {
-//         event.preventDefault();
-//         politiqueModal.show();
-//         document.querySelector('#politiqueModal .modal-mentions-légales').focus();
-//     });
-
-//     remboursementBtn.addEventListener('click', function(event) {
-//         event.preventDefault();
-//         politiqueModal.show();
-//         document.querySelector('#politiqueModal .modal-remboursement').focus();
-//     });
-
-//     contactBtn.addEventListener('click', function(event) {
-//         event.preventDefault();
-//         politiqueModal.show();
-//         document.querySelector('#politiqueModal .modal-contact').focus();
-//     });
-// });
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -448,19 +409,6 @@ document.addEventListener('DOMContentLoaded', function() {
         qteModal.show();
     });
 });
-
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     var politiqueBtn = document.getElementById('politiqueBtn');
-//     politiqueBtn.addEventListener('click', function() {
-//         var politiqueModal = new bootstrap.Modal(document.getElementById('politiqueModal'), {
-//             backdrop: 'static',
-//             keyboard: false
-//         });
-//         politiqueModal.show();
-//     });
-// });
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -496,24 +444,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const checkbox = document.getElementById('invalidCheck_checked');
-//     const deliveryFormContainer = document.querySelectorAll('.delivery-form-container');
-//     const cgCheckbox = document.getElementById("cg_checkbox");
-
-//     if (checkbox && deliveryFormContainer) {
-//         checkbox.addEventListener('change', function() {
-//             if (checkbox.checked) {
-//                 deliveryFormContainer.classList.add('d-none');
-//             } else {
-//                 deliveryFormContainer.classList.remove('d-none');
-//             }
-//         });
-//     } else {
-//         console.error('L\'élément checkbox ou delivery-form-container est introuvable.');
-//     }
-// });
 
 window.addEventListener('scroll', function() {
     var navbar = document.querySelector('.navbar');
@@ -917,6 +847,39 @@ document.getElementById("toggleAdresseManuelle").addEventListener("click", funct
     }
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const promoBtn = document.querySelector('.promo-btn');
+    const dropdown = document.querySelector('.dropdown');
+
+    promoBtn.addEventListener('click', function(event) {
+        // Empêcher le rechargement de la page
+        event.preventDefault();
+
+        // Ouvrir la dropdown
+        dropdown.classList.toggle('open');
+    });
+    console.log(promoBtn);
+    console.log(dropdown);
+});
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const promoBtn = document.querySelector('.promo-btn');
+//     const dropdown = document.querySelector('.dropdown');
+
+//     promoBtn.addEventListener('click', function(event) {
+//         // Empêcher le rechargement de la page
+//         event.preventDefault();
+
+//         // Ouvrir la dropdown
+//         dropdown.classList.add('open');
+
+//         // Afficher le champ de saisie du code promotionnel
+//         transformToInput();
+//     });
+// });
+
 function transformToInput() {
     // Créer un div avec les classes Bootstrap nécessaires
     var inputGroup = document.createElement("div");
@@ -966,21 +929,6 @@ function transformToInput() {
 }
 
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const promoBtn = document.querySelector('.promo-btn');
-    const dropdown = document.querySelector('.dropdown');
-
-    promoBtn.addEventListener('click', function(event) {
-        // Empêcher le rechargement de la page
-        event.preventDefault();
-
-        // Ouvrir la dropdown
-        dropdown.classList.add('open');
-
-        // Afficher le champ de saisie du code promotionnel
-        transformToInput();
-    });
-});
 
 document.addEventListener("DOMContentLoaded", function() {
     const sepaBtn = document.querySelector('.sepa-btn');
