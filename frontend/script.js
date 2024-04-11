@@ -1,12 +1,11 @@
-
-// const prices = {
-// 	productName : "Togethere Professional",
-// 	productPrice : "15,00 €",
-// 	productDescription : "Togethere's premium plan to work better together",
-// 	subTotal : "15,00 €",
-// 	totalDue : "15,00 €"
-// }
-
+const newPrices = {
+  productName: "La revue de l'herboriste",
+  productPrice: "14,90",
+  productAnnualPrice: "39,90",
+  productDescription: "Abonnement trimestriel à La revue de l'Herboriste au format électronique",
+  subTotal: "14,90",
+  totalDue: "14,90"
+};
 
 const countries = [
 	"Afrique du Sud",
@@ -295,7 +294,7 @@ document.addEventListener("DOMContentLoaded", function() {
     radioBtn.addEventListener("change", function() {
         if (radioBtn.checked) {
             console.log("Le bouton radio est coché !");
-            currencyElement.textContent = "150,00 €";
+            currencyElement.textContent = "39,00 €";
             textElement.textContent = " par an";
         } else {
             console.log("Le bouton radio n'est pas coché !");

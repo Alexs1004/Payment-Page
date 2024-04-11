@@ -305,6 +305,11 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 .info {
     font-size: 20px;
 }
+/*
+#palyance-logo {
+    width: 50px;
+    height: auto;
+} */
 
 .nav-arrow {
 	margin-left: 8px;
@@ -352,13 +357,22 @@ body.dropdown-open {
     justify-content: center;
 }
 
-.custom_image {
+/* .custom_image {
     width: 120px;
     height: auto;
     margin-bottom: 1em;
     margin-top: 70px;
     border-radius: 10px;
+} */
+
+.custom_image {
+    width: 240px;
+    height: auto;
+    margin-bottom: 1em;
+    margin-top: 70px;
+    border-radius: 10px;
 }
+
 
 .product_page {
     display: flex;
@@ -546,6 +560,15 @@ body.dropdown-open {
     background-color: black;
     color: white;
 }
+
+/* .palyance_btn {
+    width: 308px;
+    height: 44px;
+    background-color: white;
+    color: black;
+    border: 1px solid hsla(0, 0%, 0%, 0.5) ;
+} */
+
 
 .palyance_btn:hover {
     background-color: black;
@@ -927,7 +950,7 @@ body.dropdown-open {
 }
 
 .modal-qte-img {
-    width: 45px;
+    width: 90px;
     max-height: 100%;
     max-width: 100%;
     height: auto;
