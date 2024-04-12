@@ -53,8 +53,8 @@
                           <span class="qte-btn_text">Qté 1</span>
                           <i class="fa-solid fa-angle-down nav-arrow"></i>
                         </button>
-                        <span class="dd_small_text"><span class="dropdown-currency" id="dd-price">14,90 €</span>/trimestre ensuite
-                        </span>
+                        <span class="dd_small_text">
+                          <span class="dropdown-currency" id="dd-price">14,90 €</span>/trimestre ensuite </span>
                       </div>
                     </div>
                     <div class="sub-total d-flex justify-content-between py-3">
@@ -73,7 +73,7 @@
                       <span>2,50 €</span>
                     </div>
                     <div class="total">
-                    <!-- d-flex justify-content-between py-3 mb-3"> -->
+                      <!-- d-flex justify-content-between py-3 mb-3"> -->
                       <div class="total-free-trial pt-3">
                         <span class="total-free-trial">Total après la période d'essai</span>
                         <span class="dropdown-currency text-nowrap" id="after-free-trial">14,90 €</span>
@@ -98,70 +98,174 @@
     <!-- <div class="overlay"></div> -->
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
-          <div class="product_page">
+        <div class="col-lg-6 left-part-fs">
+          <div class="left_nav_items">
+            <a class="navbar-brand" href="#">
+              <div class="arrow_left">
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+              </div>
+              <div class="logo_prst">
+                <img src="https://cdn.puresante.fr/uploads/PURST/Logo_PST.png" alt="BDC v3" id="prst-logo">
+                <div class="retour">Retour</div>
+              </div>
+            </a>
+          </div>
+          <div class="product_description_fs">
+            <span class="subscribe_text">Essayez la revue de l'Herboriste</span>
             <div>
-              <img src="../assets/images/hrb-revue.png" alt="RSB_pile-magazine" class="custom_image">
-            </div>
-            <div class="product_description">
-              <span class="subscribe_text">Essayez la revue de l'Herboriste</span>
               <div>
-                <div class="d-flex align-items-center flex-column">
-                  <div>
-                    <span class="freeDays-text">30 jours gratuits</span>
-                  </div>
-                  <div class="text_currency mx-2">
-                    <span>Puis <span class="currency">14,90 €</span><span class="byMonth-text"> tous les 3 mois</span></span>
-                  </div>
+                <div>
+                  <span class="freeDays-text">30 jours gratuits</span>
+                </div>
+                <div class="text_currency">
+                  <span>Puis <span class="currency">14,90 €</span>
+                    <span class="byMonth-text"> tous les 3 mois</span>
+                  </span>
                 </div>
               </div>
-              <div class="ProductSummary-buttonsContainer">
-                <button type="button" class="btn btn-light promo-btn mt-3">
-                  <div class="btn-promo-content">
-                    <span class="promocode-text">Ajouter un code promotionnel</span>
+            </div>
+          </div>
+          <div class="order-recap-fs">
+            <div>
+              <img src="../assets/images/hrb-revue.png" alt="RSB_pile-magazine" class="modal-qte-img">
+            </div>
+            <div>
+              <div class="title-price d-flex justify-content-between">
+                <div>
+                  <span class="modal-text-500">la revue de l'Herboriste</span>
+                </div>
+                <div class="text-nowrap">
+                  <span class="dd-free-days">30 jours gratuits</span>
+                  <!-- <span class="dropdown-currency">14,90 €</span> -->
+                </div>
+              </div>
+              <div class="mb-3">
+                <span class="dd_small_text">Togethere's premium plan to work better togethere</span>
+                <div class="d-flex justify-content-between">
+                  <button type="button" class="btn btn-light in_dd_button">
+                    <span class="qte-btn_text">Qté 1</span>
                     <i class="fa-solid fa-angle-down nav-arrow"></i>
-                  </div>
-                </button>
-                <button type="button" class="btn btn-light qte-btn mt-3">
-                  <div class="btn-qte-content">
-                    <span class="qte-btn-page">Qté 1</span>
-                    <i class="fa-solid fa-angle-down nav-arrow"></i>
-                  </div>
-                </button>
-              </div>
-            </div>
-            <div class="upsell-box d-flex align-items-center">
-              <div class="radio-btn-text d-flex align-items-center">
-                <div class="form-check form-switch radio-upsell">
-                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                  <!-- <label class="form-check-label" for="flexSwitchCheckDefault"></label> -->
-                  <!-- mettre radio -->
-                </div>
-                <div class="text-upsell">
-                  <span>
-                    <span class="green-text">Économisez 30 €</span> avec une facturation annuelle </span>
+                  </button>
+                  <span class="dd_small_text">
+                    <span class="dropdown-currency" id="dd-price">14,90 €</span>/trimestre ensuite </span>
                 </div>
               </div>
-              <div class="price-upsell">
-                <span class="price-upsell-text">49,00 €/an</span>
+            </div>
+          </div>
+          <div class="upsell-box d-flex align-items-center">
+            <div class="radio-btn-text d-flex align-items-center">
+              <div class="form-check form-switch radio-upsell">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <!-- <label class="form-check-label" for="flexSwitchCheckDefault"></label> -->
+                <!-- mettre radio -->
+              </div>
+              <div class="text-upsell">
+                <span>
+                  <span class="green-text">Économisez 30 €</span> avec une facturation annuelle </span>
               </div>
             </div>
-            <div class="palyance-divbtn">
-              <button class="btn palyance_btn" type="submit"><img id="palyance-logo" class="d-none" src="../assets/images/logo-palyance.png" alt="palyance-logo"> Payer avec Palyance</button>
+            <div class="price-upsell">
+              <span class="price-upsell-text">49,00 €/an</span>
             </div>
-            <div id="cg_checkbox">
-              <div class="form-check mb-2 mt-3">
-                <input class="form-check-input" type="checkbox" value="" id="conditions_pure_sante" required>
-                <label class="form-check-label checkbox-label" for="conditions_pure_sante"> J'accepte les <a target="_blank" href="https://pure-sante.info/conditions-generales-de-vente/?_gl=1*vhzvkd*_ga*MTAzMjg4NDk1LjE3MDA2NjUxMTk.*_ga_L8LPKTXYD3*MTcwODYxMDA2MS4yMC4xLjE3MDg2MTAxNzAuNTguMC4w*_fplc*JTJCOEk0NHhRdm5tcm9YeWFpN1FlbEJSRUxrU2dSJTJCQWh1U2xEcndxT1NBUjNJRWY2SGRZRG90dTZZS21yWGZ6ODRRRkJ6ellYOGZtVDV3ZFpFTDJoY3NTZjRUNklqJTJGRSUyQiUyRiUyQk5QeENta0N0SyUyQmtNMUVUQVBXZjVqNHkzQkpIb2clM0QlM0Q">conditions générales de vente de Pure Santé</a> * </label>
+          </div>
+          <div class="sub-total d-flex justify-content-between py-3">
+            <div class="sub-total-text">
+              <span>Sous-total</span>
+            </div>
+            <div>
+              <span class="dropdown-currency">14,90 €</span>
+            </div>
+          </div>
+          <div id="promo-container">
+            <div id="promo-text" onclick="transformToInput()">Ajouter un code promotionnel</div>
+          </div>
+          <div class="dd-tva py-3">
+            <span>TVA (20 % inclus)</span>
+            <span>2,50 €</span>
+          </div>
+          <div class="total">
+            <!-- d-flex justify-content-between py-3 mb-3"> -->
+            <div class="total-free-trial pt-3">
+              <span class="total-free-trial">Total après la période d'essai</span>
+              <span class="dropdown-currency text-nowrap" id="after-free-trial">14,90 €</span>
+            </div>
+            <div class="total-today d-flex justify-content-between">
+              <div class="sub-total-text">
+                <span>Total dû aujourd'hui</span>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="conditions_palyance" required>
-                <label class="form-check-label checkbox-label mb-3" for="conditions_palyance"> J'accepte les <a target="_blank" href="https://palyance.com/cgs/">conditions générales de services de paiement Palyance</a> * </label>
+              <div>
+                <span class="dropdown-currency-total">0,00 €</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-6 px-0">
+          <div id="product-page">
+            <div class="product_page">
+              <div>
+                <img src="../assets/images/hrb-revue.png" alt="RSB_pile-magazine" class="custom_image">
+              </div>
+              <div class="product_description">
+                <span class="subscribe_text">Essayez la revue de l'Herboriste</span>
+                <div>
+                  <div class="d-flex align-items-center flex-column">
+                    <div>
+                      <span class="freeDays-text">30 jours gratuits</span>
+                    </div>
+                    <div class="text_currency mx-2">
+                      <span>Puis <span class="currency">14,90 €</span>
+                        <span class="byMonth-text"> tous les 3 mois</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="ProductSummary-buttonsContainer">
+                  <button type="button" class="btn btn-light promo-btn mt-3">
+                    <div class="btn-promo-content">
+                      <span class="promocode-text">Ajouter un code promotionnel</span>
+                      <i class="fa-solid fa-angle-down nav-arrow"></i>
+                    </div>
+                  </button>
+                  <button type="button" class="btn btn-light qte-btn mt-3">
+                    <div class="btn-qte-content">
+                      <span class="qte-btn-page">Qté 1</span>
+                      <i class="fa-solid fa-angle-down nav-arrow"></i>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="upsell-box d-flex align-items-center">
+                <div class="radio-btn-text d-flex align-items-center">
+                  <div class="form-check form-switch radio-upsell">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <!-- <label class="form-check-label" for="flexSwitchCheckDefault"></label> -->
+                    <!-- mettre radio -->
+                  </div>
+                  <div class="text-upsell">
+                    <span>
+                      <span class="green-text">Économisez 30 €</span> avec une facturation annuelle </span>
+                  </div>
+                </div>
+                <div class="price-upsell">
+                  <span class="price-upsell-text">49,00 €/an</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="palyance-divbtn">
+            <button class="btn palyance_btn" type="submit">
+              <img id="palyance-logo" class="d-none" src="../assets/images/logo-palyance.png" alt="palyance-logo"> Payer avec Palyance </button>
+          </div>
+          <div id="cg_checkbox">
+            <div class="form-check mb-2 mt-3">
+              <input class="form-check-input" type="checkbox" value="" id="conditions_pure_sante" required>
+              <label class="form-check-label checkbox-label" for="conditions_pure_sante"> J'accepte les <a target="_blank" href="https://pure-sante.info/conditions-generales-de-vente/?_gl=1*vhzvkd*_ga*MTAzMjg4NDk1LjE3MDA2NjUxMTk.*_ga_L8LPKTXYD3*MTcwODYxMDA2MS4yMC4xLjE3MDg2MTAxNzAuNTguMC4w*_fplc*JTJCOEk0NHhRdm5tcm9YeWFpN1FlbEJSRUxrU2dSJTJCQWh1U2xEcndxT1NBUjNJRWY2SGRZRG90dTZZS21yWGZ6ODRRRkJ6ellYOGZtVDV3ZFpFTDJoY3NTZjRUNklqJTJGRSUyQiUyRiUyQk5QeENta0N0SyUyQmtNMUVUQVBXZjVqNHkzQkpIb2clM0QlM0Q">conditions générales de vente de Pure Santé</a> * </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="conditions_palyance" required>
+              <label class="form-check-label checkbox-label mb-3" for="conditions_palyance"> J'accepte les <a target="_blank" href="https://palyance.com/cgs/">conditions générales de services de paiement Palyance</a> * </label>
+            </div>
+          </div>
           <div class="hr-container">
             <hr class="horizontal_hr">
             <div class="hr-message">Ou saisir les données de paiement</div>
@@ -195,94 +299,94 @@
               </button>
             </div>
             <!-- <div id="creditCardBlock" class="card-block"> -->
-              <div class="col-12 creditCardBlock">
-                <label for="validationCustom02" class="form-label">Informations de la carte</label>
-                <input type="text" class="form-control" id="validationCustom02" placeholder="1234 1234 1234 1234" required>
+            <div class="col-12 creditCardBlock">
+              <label for="validationCustom02" class="form-label">Informations de la carte</label>
+              <input type="text" class="form-control" id="validationCustom02" placeholder="1234 1234 1234 1234" required>
+              <!-- <div class="valid-feedback"> Looks good! </div> -->
+            </div>
+            <div class="col-6 date-card creditCardBlock">
+              <div class="splitted_input">
+                <input type="text" class="form-control" id="validationCustom11" placeholder="MM/YY" required>
                 <!-- <div class="valid-feedback"> Looks good! </div> -->
               </div>
-              <div class="col-6 date-card creditCardBlock">
-                <div class="splitted_input">
-                  <input type="text" class="form-control" id="validationCustom11" placeholder="MM/YY" required>
-                  <!-- <div class="valid-feedback"> Looks good! </div> -->
-                </div>
+            </div>
+            <div class="col-6 cvc-card creditCardBlock">
+              <div class="splitted_input">
+                <input type="text" class="form-control" id="validationCustom32" placeholder="CVC" required>
+                <!-- <div class="valid-feedback"> Looks good! </div> -->
               </div>
-              <div class="col-6 cvc-card creditCardBlock">
-                <div class="splitted_input">
-                  <input type="text" class="form-control" id="validationCustom32" placeholder="CVC" required>
-                  <!-- <div class="valid-feedback"> Looks good! </div> -->
-                </div>
+            </div>
+            <!-- <div class="col-4"><label for="validationCustom02" class="form-label">Nom</label><div class="input-group"><select class="form-select" id="validationCustom10" aria-label="Civilité" required><option value="monsieur">M.</option><option value="madame">Mme.</option></select><div class="valid-feedback"> Looks good! </div></div></div> -->
+            <div class="col-12 creditCardBlock">
+              <label for="validationCustom022" class="form-label">Nom du titulaire de la carte</label>
+              <div class="splitted_input">
+                <input type="text" class="form-control" id="validationCustom12" placeholder="Nom complet" required>
+                <!-- <div class="valid-feedback"> Looks good! </div> -->
               </div>
-              <!-- <div class="col-4"><label for="validationCustom02" class="form-label">Nom</label><div class="input-group"><select class="form-select" id="validationCustom10" aria-label="Civilité" required><option value="monsieur">M.</option><option value="madame">Mme.</option></select><div class="valid-feedback"> Looks good! </div></div></div> -->
-              <div class="col-12 creditCardBlock">
-                <label for="validationCustom022" class="form-label">Nom du titulaire de la carte</label>
-                <div class="splitted_input">
-                  <input type="text" class="form-control" id="validationCustom12" placeholder="Nom complet" required>
-                  <!-- <div class="valid-feedback"> Looks good! </div> -->
-                </div>
-              </div>
+            </div>
             <!-- </div> -->
             <!-- <div id="sepaBlock" style="display: none;"> -->
-              <!-- <form class="row g-3 needs-validation" novalidate> -->
-              <div class="col-12 sepaBlock" style="display: none;">
-                <label for="validationCustomUsername" class="form-label">Titulaire du compte</label>
-                <div class="input-group has-validation">
-                  <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                  <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
-                </div>
+            <!-- <form class="row g-3 needs-validation" novalidate> -->
+            <div class="col-12 sepaBlock" style="display: none;">
+              <label for="validationCustomUsername" class="form-label">Titulaire du compte</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
               </div>
-              <div class="col-12 sepaBlock" style="display: none;">
-                <label for="validationCustomUsername" class="form-label">IBAN</label>
-                <div class="input-group has-validation">
-                  <input type="text" class="form-control" id="validationCustomIban" aria-describedby="inputGroupPrepend" required>
-                  <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
-                </div>
+            </div>
+            <div class="col-12 sepaBlock" style="display: none;">
+              <label for="validationCustomUsername" class="form-label">IBAN</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="validationCustomIban" aria-describedby="inputGroupPrepend" required>
+                <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
               </div>
-              <!-- </form> -->
+            </div>
+            <!-- </form> -->
             <!-- </div> -->
             <!-- <div class="col-12 mb-3"> -->
-              <div class="col-12">
-                <label for="validationCustom04" class="form-label">Adresse de facturation</label>
-                <select class="form-select form-control" id="paysDropdown" required>
-                  <option selected value="">France métropolitaine</option>
-                </select>
-                <div class="invalid-feedback"> Please select a valid state. </div>
+            <div class="col-12">
+              <label for="validationCustom04" class="form-label">Adresse de facturation</label>
+              <select class="form-select form-control" id="paysDropdown" required>
+                <option selected value="">France métropolitaine</option>
+              </select>
+              <div class="invalid-feedback"> Please select a valid state. </div>
+            </div>
+            <div class="col-12 mt-0" id="conteneurChamps" style="display: none;">
+              <!-- Ajoutez ici d'autres champs pour l'adresse manuelle -->
+              <div class="input-group has-validation position-relative">
+                <input type="text" class="form-control form-control-icon" id="adresseManuelleInput" placeholder="Ligne d'adresse n°1" required>
+                <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
               </div>
-              <div class="col-12 mt-0" id="conteneurChamps" style="display: none;">
-                <!-- Ajoutez ici d'autres champs pour l'adresse manuelle -->
-                <div class="input-group has-validation position-relative">
-                  <input type="text" class="form-control form-control-icon" id="adresseManuelleInput" placeholder="Ligne d'adresse n°1" required>
-                  <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
-                </div>
+            </div>
+            <div class="col-12 mt-0" id="conteneurChamps2" style="display: none;">
+              <!-- Ajoutez ici d'autres champs pour l'adresse manuelle -->
+              <div class="input-group has-validation position-relative">
+                <input type="text" class="form-control form-control-icon" id="adresseManuelleInput2" placeholder="Ligne d'adresse n°2" required>
+                <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
               </div>
-              <div class="col-12 mt-0" id="conteneurChamps2" style="display: none;">
-                <!-- Ajoutez ici d'autres champs pour l'adresse manuelle -->
-                <div class="input-group has-validation position-relative">
-                  <input type="text" class="form-control form-control-icon" id="adresseManuelleInput2" placeholder="Ligne d'adresse n°2" required>
-                  <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
-                </div>
+            </div>
+            <!-- *************************************** A Ajouter ***************************************************** -->
+            <div class="col-6 date-card creditCardBlock d-none" id="code-postal">
+              <div class="splitted_input">
+                <input type="text" class="form-control" id="validationCustom66" placeholder="Code postal" required="">
+                <!-- <div class="valid-feedback"> Looks good! </div> -->
               </div>
-              <!-- *************************************** A Ajouter ***************************************************** -->
-              <div class="col-6 date-card creditCardBlock d-none" id="code-postal">
-                <div class="splitted_input">
-                  <input type="text" class="form-control" id="validationCustom66" placeholder="Code postal" required="">
-                  <!-- <div class="valid-feedback"> Looks good! </div> -->
-                </div>
+            </div>
+            <div class="col-6 cvc-card creditCardBlock d-none" id="ville">
+              <div class="splitted_input">
+                <input type="text" class="form-control" id="validationCustom67" placeholder="Ville" required="">
+                <!-- <div class="valid-feedback"> Looks good! </div> -->
               </div>
-              <div class="col-6 cvc-card creditCardBlock d-none" id="ville">
-                <div class="splitted_input">
-                  <input type="text" class="form-control" id="validationCustom67" placeholder="Ville" required="">
-                  <!-- <div class="valid-feedback"> Looks good! </div> -->
-                </div>
+            </div>
+            <div class="col-12 adress-form mt-0">
+              <div class="input-group has-validation position-relative">
+                <input type="text" class="form-control form-control-icon mb-3" id="autocomplete2" placeholder="Adresse" required>
+                <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
               </div>
-              <div class="col-12 adress-form mt-0">
-                <div class="input-group has-validation position-relative">
-                  <input type="text" class="form-control form-control-icon mb-3" id="autocomplete2" placeholder="Adresse" required>
-                  <!-- <div class="invalid-feedback"> Please choose a username. </div> -->
-                </div>
-              </div>
-              <div class="col-12 adress-btn mt-0">
-                <button class="text-adress-btn" id="toggleAdresseManuelle">Saisir l'adresse manuellement</button>
-              </div>
+            </div>
+            <div class="col-12 adress-btn mt-0">
+              <button class="text-adress-btn" id="toggleAdresseManuelle">Saisir l'adresse manuellement</button>
+            </div>
             <!-- </div> -->
             <div class="col-12">
               <div class="form-check">
@@ -397,42 +501,7 @@
       </div>
     </div>
     <!-- Modal2 -->
-    <!-- <div class="modal fade" id="politiqueModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div class="header-components">
-              <img src="../assets/images/payment-icon.png" alt="RSB_pile-magazine" class="modal_img">
-              <div class="text-modal-header">
-                <span class="modal-text-500">Modifier la quantité</span>
-                <span class="dd_small_text">Togethere Professional</span>
-              </div>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="input-group input-number-group flex-nowrap">
-              <div class="input-group-button">
-                <span class="input-number-decrement" id="input-nb-decrement">
-                  <i class="fa-solid fa-minus" focusable="false"></i>
-                </span>
-              </div>
-              <input class="input-number" id="input-modal" type="number" value="1" min="0" max="1000">
-              <div class="input-group-button">
-                <span class="input-number-increment" id="input-nb-increment">
-                  <i class="fa-solid fa-plus" focusable="false"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="modal_footer">
-            <button type="button" class="btn btn-primary btn-lg modal-modify-btn">
-              <span class="fs-6">Modifier</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div> -->
+    <!-- <div class="modal fade" id="politiqueModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog modal-xl"><div class="modal-content"><div class="modal-header"><div class="header-components"><img src="../assets/images/payment-icon.png" alt="RSB_pile-magazine" class="modal_img"><div class="text-modal-header"><span class="modal-text-500">Modifier la quantité</span><span class="dd_small_text">Togethere Professional</span></div></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div class="input-group input-number-group flex-nowrap"><div class="input-group-button"><span class="input-number-decrement" id="input-nb-decrement"><i class="fa-solid fa-minus" focusable="false"></i></span></div><input class="input-number" id="input-modal" type="number" value="1" min="0" max="1000"><div class="input-group-button"><span class="input-number-increment" id="input-nb-increment"><i class="fa-solid fa-plus" focusable="false"></i></span></div></div></div><div class="modal_footer"><button type="button" class="btn btn-primary btn-lg modal-modify-btn"><span class="fs-6">Modifier</span></button></div></div></div></div> -->
     <div class="modal" tabindex="-1" id="politiqueModal">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -453,7 +522,9 @@
               <ul class="remboursement-list">
                 <li>Admissible pour un remboursement intégral</li>
                 <li>Remboursements acceptés dans un délai de 90 jours à compter de la date d'achat</li>
-                <li><a href="https://pure-sante.info/conditions-generales-de-vente/">Afficher la politique dans son intégralité</a></li>
+                <li>
+                  <a href="https://pure-sante.info/conditions-generales-de-vente/">Afficher la politique dans son intégralité</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -461,7 +532,7 @@
             <i class="fa-solid fa-phone"></i>
             <div class="contact-text">
               <span class="contact-title">Contacter le service d'assistance</span>
-              <p class="contact-modal-text">Si vous avez des questions, visitez notre <a href="https://pure-sante.info/">notre site Web</a>. Vous pouvez également nous écrire à l'adresse <a href="mailto:">support@togethere.work</a> ou nous appeler au <a href="tel:+19712798854">+1 971 279 8854</a>.</p>
+              <p class="contact-modal-text">Si vous avez des questions, visitez notre  <a href="https://pure-sante.info/">notre site Web</a>. Vous pouvez également nous écrire à l'adresse  <a href="mailto:">support@togethere.work</a> ou nous appeler au  <a href="tel:+19712798854">+1 971 279 8854</a>. </p>
             </div>
           </div>
           <div class="modal-body-mentions d-none">
@@ -469,7 +540,7 @@
               <i class="fa-solid fa-file"></i>
               <div class="text-mentions">
                 <span class="politic-title">Politiques juridiques de Togethere</span>
-                <p class="politic-text">Consultez les <a href="https://pure-sante.info/cgu/">Conditions d'utilisation du service</a> et la <a href="https://pure-sante.info/notre-politique-de-confidentialite/">Politique de confidentialité</a> de Togethere.</p>
+                <p class="politic-text">Consultez les <a href="https://pure-sante.info/cgu/">Conditions d'utilisation du service</a> et la <a href="https://pure-sante.info/notre-politique-de-confidentialite/">Politique de confidentialité</a> de Togethere. </p>
               </div>
             </div>
             <div class="payment-conditions">
@@ -477,7 +548,7 @@
               <div class="payment-condition-text">
                 <span class="payment-condition-title">Conditions de paiement</span>
                 <!-- *************************************A MODIFIER **************************************************** -->
-                <p class="text-payment-condition">Tous les paiements sont traités en toute sécurité par Palyance. Consultez les <a href="/">conditions de service</a> et la <a href="/">politique de confidentialité</a> de Palyance.</p>
+                <p class="text-payment-condition">Tous les paiements sont traités en toute sécurité par Palyance. Consultez les <a href="/">conditions de service</a> et la <a href="/">politique de confidentialité</a> de Palyance. </p>
               </div>
             </div>
           </div>
@@ -494,7 +565,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
-
-
-
