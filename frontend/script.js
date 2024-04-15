@@ -294,7 +294,7 @@ document.addEventListener("DOMContentLoaded", function() {
     radioBtn.addEventListener("change", function() {
         if (radioBtn.checked) {
             console.log("Le bouton radio est coché !");
-            currencyElement.textContent = "39,00 €";
+            currencyElement.textContent = "49,00 €";
             textElement.textContent = " par an";
         } else {
             console.log("Le bouton radio n'est pas coché !");
