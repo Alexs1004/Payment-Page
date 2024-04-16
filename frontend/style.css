@@ -736,9 +736,9 @@ body.dropdown-open {
     font-size: 14px;
 }
 
-.footer-conditions:hover {
+/* .footer-conditions:hover {
 
-}
+} */
 
 .palyance-sponsor {
     display: flex;
@@ -784,11 +784,17 @@ body.dropdown-open {
     margin-top: 0px;
     border: 1px solid hsla(0,0%, 10%, 0.1);
     border-radius: 0px 0px 6px 6px;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
+	width: calc(100% + 32px);
+	max-width: 112%;
+	display: flex;
     align-items: center;
     justify-content: space-around;
+	margin-bottom: 20px;
+}
+
+.recap-radio-fs {
+	width: calc(100% + 32px);
+
 }
 
 .text-upsell {
@@ -1201,6 +1207,7 @@ body.dropdown-open {
     display: flex;
     align-items: center;
     justify-content: center;
+	width: calc(100% + 32px);
 }
 
 /* Media Queries */
@@ -1283,4 +1290,3 @@ body.dropdown-open {
     box-shadow: 15px 0 30px 0 rgba(0,0,0,0.18)
 }
  */
-
