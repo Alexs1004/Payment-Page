@@ -22,14 +22,14 @@
             </div>
           </a>
         </div>
-        <div class="dropdown flex-nowrap dropdown-masked" id="dropdownParent" onclick="toggleDetails()">
+        <div class="dropdown flex-nowrap dropdown-masked" id="dropdownParent">
           <button class="btn dd-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <div class="info">
               <span class="details" id="detailsButton">Détails</span>
               <i class="fa-solid fa-angle-down nav-arrow" id="detailsIcon"></i>
             </div>
           </button>
-          <ul class="dropdown-menu dropdown-masked open">
+          <ul class="dropdown-menu open">
             <li>
               <div class="d-flex justify-content-around">
                 <div class="d-flex justify-content-center dd-content px-3">
@@ -62,7 +62,7 @@
                         <span>Sous-total</span>
                       </div>
                       <div>
-                        <span class="dropdown-currency">14,90 €</span>
+                        <span class="dropdown-currency" id="sub-total-currency">14,90 €</span>
                       </div>
                     </div>
                     <div id="promo-container">
@@ -228,7 +228,7 @@
                   </div>
                 </div>
                 <div class="ProductSummary-buttonsContainer">
-                  <button type="button" class="btn btn-light promo-btn mt-3" data-dropdown-target=".dropdown" type="button" aria-expanded="false">
+                  <button type="button" class="btn btn-light promo-btn mt-3" data-dropdown-target=".dropdown" type="button" aria-expanded="false" onclick="toggleDetails()">
                     <div class="btn-promo-content">
                       <span class="promocode-text">Ajouter un code promotionnel</span>
                       <i class="fa-solid fa-angle-down nav-arrow"></i>
