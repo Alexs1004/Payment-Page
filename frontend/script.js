@@ -251,6 +251,13 @@ const newPrices = {
     totalDue: "14,90"
   };
 
+//   window.onload = function(){
+//     var name = prompt("What's your name?");
+//     var lengthOfName = name.length
+
+//     document.getElementById('output').innerHTML = lengthOfName;
+// };
+
   var dropdown = document.querySelector(".dropdown");
   var detailsButton = document.getElementById("detailsButton");
   var detailsIcon = document.getElementById("detailsIcon");
@@ -606,17 +613,17 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Fonction pour fermer la dropdown lorsque l'utilisateur clique en dehors
-function closeDropdownOnClickOutside(event) {
-    // Vérifier si l'événement de clic a eu lieu en dehors de la dropdown
-    if (!dropdown.contains(event.target)) {
-        dropdown.classList.remove("open"); // Fermer la dropdown
-        detailsButton.textContent = "Détails"; // Changer le texte du bouton en "Détails"
-        detailsIcon.classList.remove('fa-angle-up'); // Changer l'icône en flèche vers le bas
-        detailsIcon.classList.add('fa-angle-down');
-        // Supprimer l'écouteur d'événement de clic en dehors de la dropdown
-        document.removeEventListener("click", closeDropdownOnClickOutside);
-    }
-}
+// function closeDropdownOnClickOutside(event) {
+//     // Vérifier si l'événement de clic a eu lieu en dehors de la dropdown
+//     if (!dropdown.contains(event.target)) {
+//         dropdown.classList.remove("open"); // Fermer la dropdown
+//         detailsButton.textContent = "Détails"; // Changer le texte du bouton en "Détails"
+//         detailsIcon.classList.remove('fa-angle-up'); // Changer l'icône en flèche vers le bas
+//         detailsIcon.classList.add('fa-angle-down');
+//         // Supprimer l'écouteur d'événement de clic en dehors de la dropdown
+//         document.removeEventListener("click", closeDropdownOnClickOutside);
+//     }
+// }
 
 // Ajouter un écouteur d'événement de clic sur le bouton promo-btn
 // var promoBtn = document.querySelector(".promo-btn");
@@ -646,16 +653,16 @@ function closeDropdownOnClickOutside(event) {
 function toggleDetails() {
     const bsDropdown = new bootstrap.Dropdown(dropdown);
     if (bsDropdown._element.classList.contains("show")) {
-        detailsButton.textContent = "Détails";
+        detailsButton.textContent = "Fermer";
         detailsIcon.classList.remove('fa-angle-up');
         detailsIcon.classList.add('fa-angle-down');
         bsDropdown.hide();
     } else {
-        detailsButton.textContent = "Fermer";
+        detailsButton.textContent = "Détails";
         detailsIcon.classList.remove('fa-angle-down');
         detailsIcon.classList.add('fa-angle-up');
         bsDropdown.show();
-        document.addEventListener("click", closeDropdownOnClickOutside);
+        // document.addEventListener("click", closeDropdownOnClickOutside);
     }
 }
 
@@ -1179,36 +1186,31 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+        const bsDropdown = new bootstrap.Dropdown(dropdown);
+        const dropdownBack = document.querySelector(".dropdownBack");
 
+        function toggleDetails() {
+        bsDropdown.show();
+    }
+    dropdown.addEventListener('show.bs.dropdown', event => {
+        detailsButton.textContent = "Fermer";
+        detailsIcon.classList.add('fa-angle-up');
+        detailsIcon.classList.remove('fa-angle-down');
+        dropdownBack.classList.remove('displayNone');
+      })
+      dropdown.addEventListener('hide.bs.dropdown', event => {
+        detailsButton.textContent = "Détails";
+        detailsIcon.classList.remove('fa-angle-up');
+        detailsIcon.classList.add('fa-angle-down');
+        dropdownBack.classList.add('displayNone');
+    })
 
-// // Récupérer le bouton promo-btn
-// const promoBtn = document.querySelector('.promo-btn');
+    function toggleClose() {
+        bsDropdown.hide();
+    }
 
-// // Récupérer le bouton detailsButton
-// const detailsButton = document.querySelector('#detailsButton');
-
-// // Ajouter un écouteur d'événement au parent de la liste déroulante (dropdownParent)
-// const dropdownParent = document.querySelector('#dropdownParent');
-
-// // Ajouter un écouteur d'événement au parent de la liste déroulante (dropdownParent)
-// dropdownParent.addEventListener('click', (event) => {
-//     // Vérifier si l'élément cliqué est le bouton promo-btn
-//     if (event.target === promoBtn) {
-//         // Simuler un clic sur le bouton detailsButton
-//         detailsButton.click();
-//     }
-// });
-
-
-// const bsDropdown = new bootstrap.Dropdown(dropdown);
-
-// function toggleDdropdown() {
-//     bsDropdown.toggle();
-// }
-
-
-// // Ajouter un écouteur d'événement pour le déclenchement du dropdown
-// dropdown.addEventListener('show.bs.dropdown', event => {
-//     // Code à exécuter lorsque le dropdown est sur le point de s'afficher
-//     console.log('Dropdown is about to be shown');
-// });
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            bsDropdown.hide();
+        }
+    });

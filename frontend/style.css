@@ -202,6 +202,8 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 .navbar {
     transition: border-bottom 0.3s ease; /* Transition douce pour la bordure */
     border-bottom: none; /* Par défaut, cache la bordure */
+    background-color: white;
+
 }
 
 .navbar-scrolled {
@@ -1305,3 +1307,16 @@ body.dropdown-open {
     box-shadow: 15px 0 30px 0 rgba(0,0,0,0.18)
 }
  */
+
+.displayNone {
+    display: none;
+}
+ .dropdownBack {
+    background-color: #0000004f;
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    bottom: 0;
+ }

@@ -9,6 +9,7 @@
   </head>
   <body>
     <div class="root"></div>
+    <div class="dropdownBack displayNone" onclick="toggleClose()"></div>
     <nav class="navbar navbar-expand-lg d-lg-none fixed-top">
       <div class="container-fluid flex-nowrap px-0">
         <div class="left_nav_items">
@@ -157,7 +158,7 @@
 				<div class="upsell-box upsell-box-fs py-3">
 				<div class="radio-btn-text d-flex align-items-center">
 					<div class="form-check form-switch radio-upsell">
-					<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+					<input class="form-check-input switch" type="checkbox" role="switch" id="flexSwitchCheckDefault">
 					<!-- <label class="form-check-label" for="flexSwitchCheckDefault"></label> -->
 					<!-- mettre radio -->
 					</div>
@@ -211,7 +212,7 @@
           <div id="product-page">
             <div class="product_page">
               <div>
-                <img src="../assets/images/hrb-revue.png" alt="RSB_pile-magazine" class="custom_image" onclick="toggleDetails()">
+                <img src="../assets/images/hrb-revue.png" alt="RSB_pile-magazine" class="custom_image">
               </div>
               <div class="product_description">
                 <span class="subscribe_text">Essayez la revue de l'Herboriste</span>
@@ -228,7 +229,7 @@
                   </div>
                 </div>
                 <div class="ProductSummary-buttonsContainer">
-                  <button type="button" class="btn btn-light promo-btn mt-3" data-dropdown-target=".dropdown" type="button" aria-expanded="false" onclick="toggleDetails()">
+                  <button type="button" class="btn btn-light promo-btn mt-3" type="button" onclick="toggleDetails()">
                     <div class="btn-promo-content">
                       <span class="promocode-text">Ajouter un code promotionnel</span>
                       <i class="fa-solid fa-angle-down nav-arrow"></i>
