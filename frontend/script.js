@@ -251,12 +251,20 @@ const newPrices = {
     totalDue: "14,90"
   };
 
-//   window.onload = function(){
-//     var name = prompt("What's your name?");
-//     var lengthOfName = name.length
+  window.onload = function(){
 
-//     document.getElementById('output').innerHTML = lengthOfName;
-// };
+
+    // const annualPrice = parseFloat(productAnnualPrice.replace(',', '.'));
+
+    // console.log(annualPrice);
+
+    // const result = parseFloat(newPrices.productPrice * 4 - newPrices.productAnnualPrice);
+
+
+    document.getElementById('currencyElement1').innerHTML = newPrices.productPrice;
+    // document.getElementById('economy').innerHTML = newPrices.productPrice;
+    // document.getElementById('economy').innerHTML = newPrices.productPrice * 4 - newPrices.productAnnualPrice;
+};
 
   var dropdown = document.querySelector(".dropdown");
   var detailsButton = document.getElementById("detailsButton");

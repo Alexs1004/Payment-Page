@@ -826,7 +826,6 @@ body.dropdown-open {
     background-color: #cbf4c9;
     border-radius: 4px;
     padding: 1px 6px;
-    display: inline-flex;
 }
 
 .price-upsell {
@@ -1182,7 +1181,7 @@ body.dropdown-open {
         padding: 10px 0px 0px 0px;
     }
 
-      #promo-text {
+      #promo-text, #promo-text-fs {
         color: #227CD7;
       }
 
