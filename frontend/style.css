@@ -134,6 +134,10 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     font-weight: 600;
 }
 
+#sub-total-currency {
+    font-size: 14px;
+}
+
 .remboursement-list {
     color: hsla(0, 0%, 10%, 0.5);
     font-size: 14px;
@@ -198,6 +202,8 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 .navbar {
     transition: border-bottom 0.3s ease; /* Transition douce pour la bordure */
     border-bottom: none; /* Par défaut, cache la bordure */
+    background-color: white;
+
 }
 
 .navbar-scrolled {
@@ -563,7 +569,7 @@ body.dropdown-open {
 }
 
 .palyance_btn {
-    width: 308px;
+    width: 100%;
     height: 44px;
     background-color: black;
     color: white;
@@ -598,9 +604,8 @@ body.dropdown-open {
 }
 
 .palyance-divbtn {
-    padding: 16px 24px;
-    padding-bottom: 0px;
-    margin-top: 20px;
+    padding: 0px 12px;
+    margin-top: 36px;
     display: flex;
     justify-content: center;
 }
@@ -754,9 +759,10 @@ body.dropdown-open {
 }
 
 #cg_checkbox {
-    width: 300px;
+    width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 0px 16px;
 }
 
 .in_dd_button {
@@ -1198,7 +1204,7 @@ body.dropdown-open {
         position: static;
     }
 
-    .dropdown.dropdown-masked.open > .dropdown-menu {
+    .dropdown.dropdown-masked .open.dropdown-menu {
         box-shadow: 0 100vh 0 100vh rgba(0,0,0,.5),0 5px 5px rgba(0,0,0,.5);
         border-width: 1px 0 0;
         border-radius: 0;
@@ -1301,3 +1307,16 @@ body.dropdown-open {
     box-shadow: 15px 0 30px 0 rgba(0,0,0,0.18)
 }
  */
+
+.displayNone {
+    display: none;
+}
+ .dropdownBack {
+    background-color: #0000004f;
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    bottom: 0;
+ }
