@@ -7,6 +7,11 @@ const newPrices = {
   totalDue: "14,90"
 };
 
+var dropdown = document.querySelector(".dropdown");
+var detailsButton = document.getElementById("detailsButton");
+var detailsIcon = document.getElementById("detailsIcon");
+
+
 const countries = [
 	"Afrique du Sud",
 	"Algérie",
@@ -258,54 +263,113 @@ function addOption(selectElement, optionText) {
 }
 
 // Ajouter les options au premier dropdown
-const dropdown = document.getElementById("paysDropdown");
+const dropdownPays = document.getElementById("paysDropdown");
 countries.forEach(country => {
-    addOption(dropdown, country);
+    addOption(dropdownPays, country);
 });
 
-// Dupliquer les options pour le deuxième dropdown
-const dropdown2 = document.getElementById("paysDropdown2");
+// Dupliquer les options pour le deuxième dropdownPays
+const dropdownPays2 = document.getElementById("paysDropdown2");
 countries.forEach(country => {
-    addOption(dropdown2, country);
+    addOption(dropdownPays2, country);
 });
 
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const radioBtn = document.getElementById("flexSwitchCheckDefault");
+
+//     radioBtn.addEventListener("change", function() {
+//         if (radioBtn.checked) {
+//             console.log("Le bouton radio est coché !");
+//         } else {
+//             console.log("Le bouton radio n'est pas coché !");
+//         }
+//     });
+// });
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const radioBtn = document.getElementById("flexSwitchCheckDefault");
+//     const currencyElement = document.querySelector(".currency");
+//     const textElement = document.querySelector(".byMonth-text");
+
+//     // Stockez les valeurs par défaut
+//     const defaultCurrencyValue = currencyElement.textContent;
+//     const defaultTextValue = textElement.textContent;
+
+//     radioBtn.addEventListener("change", function() {
+//         if (radioBtn.checked) {
+//             console.log("Le bouton radio est coché !");
+//             currencyElement.textContent = "49,00 €";
+//             textElement.textContent = " par an";
+//         } else {
+//             console.log("Le bouton radio n'est pas coché !");
+//             // Restaurez les valeurs par défaut
+//             currencyElement.textContent = defaultCurrencyValue;
+//             textElement.textContent = defaultTextValue;
+//         }
+//     });
+// });
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const radioBtn = document.getElementById("flexSwitchCheckDefault");
+//     const currencyElement1 = document.querySelector("#currencyElement1");
+//     const currencyElement2 = document.querySelector("#currencyElement2");
+//     const textElement1 = document.querySelector("#textElement1");
+//     const textElement2 = document.querySelector("#textElement2");
+
+//     // Stockez les valeurs par défaut
+//     const defaultCurrencyValue1 = currencyElement1.textContent;
+//     const defaultCurrencyValue2 = currencyElement2.textContent;
+//     const defaultTextValue1 = textElement1.textContent;
+//     const defaultTextValue2 = textElement2.textContent;
+
+//     radioBtn.addEventListener("change", function() {
+//         if (radioBtn.checked) {
+//             console.log("Le bouton radio est coché !");
+//             currencyElement1.textContent = "49,00 €";
+//             currencyElement2.textContent = "49,00 €";
+//             textElement1.textContent = " par an";
+//             textElement2.textContent = " par an";
+//         } else {
+//             console.log("Le bouton radio n'est pas coché !");
+//             // Restaurez les valeurs par défaut
+//             currencyElement1.textContent = defaultCurrencyValue1;
+//             currencyElement2.textContent = defaultCurrencyValue2;
+//             textElement1.textContent = defaultTextValue1;
+//             textElement2.textContent = defaultTextValue2;
+//         }
+//     });
+// });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const radioBtn = document.getElementById("flexSwitchCheckDefault");
-
-    radioBtn.addEventListener("change", function() {
-        if (radioBtn.checked) {
-            console.log("Le bouton radio est coché !");
-        } else {
-            console.log("Le bouton radio n'est pas coché !");
-        }
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const radioBtn = document.getElementById("flexSwitchCheckDefault");
-    const currencyElement = document.querySelector(".currency");
-    const textElement = document.querySelector(".byMonth-text");
+    const dynamicElements = document.querySelectorAll(".currency, .byMonth-text");
 
     // Stockez les valeurs par défaut
-    const defaultCurrencyValue = currencyElement.textContent;
-    const defaultTextValue = textElement.textContent;
+    const defaultValues = [];
+    dynamicElements.forEach(element => {
+        defaultValues.push(element.textContent);
+    });
 
+    const radioBtn = document.getElementById("flexSwitchCheckDefault");
     radioBtn.addEventListener("change", function() {
         if (radioBtn.checked) {
             console.log("Le bouton radio est coché !");
-            currencyElement.textContent = "49,00 €";
-            textElement.textContent = " par an";
+            dynamicElements.forEach(element => {
+                if (element.classList.contains("currency")) {
+                    element.textContent = "49,00 €";
+                } else if (element.classList.contains("byMonth-text")) {
+                    element.textContent = " par an";
+                }
+            });
         } else {
             console.log("Le bouton radio n'est pas coché !");
             // Restaurez les valeurs par défaut
-            currencyElement.textContent = defaultCurrencyValue;
-            textElement.textContent = defaultTextValue;
+            dynamicElements.forEach((element, index) => {
+                element.textContent = defaultValues[index];
+            });
         }
     });
 });
-
-
 
 
 // document.addEventListener("DOMContentLoaded", function() {
@@ -543,10 +607,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Fonction pour fermer la dropdown lorsque l'utilisateur clique en dehors
 function closeDropdownOnClickOutside(event) {
-    var dropdown = document.querySelector(".dropdown");
-    var detailsButton = document.getElementById("detailsButton");
-    var detailsIcon = document.getElementById("detailsIcon");
-
     // Vérifier si l'événement de clic a eu lieu en dehors de la dropdown
     if (!dropdown.contains(event.target)) {
         dropdown.classList.remove("open"); // Fermer la dropdown
@@ -558,12 +618,16 @@ function closeDropdownOnClickOutside(event) {
     }
 }
 
+// Ajouter un écouteur d'événement de clic sur le bouton promo-btn
+// var promoBtn = document.querySelector(".promo-btn");
+// promoBtn.addEventListener("click", function() {
+//     console.log("hello");
+//     // var detailsButton = document.getElementById("detailsButton");
+//     detailsButton.click(); // Déclencher le clic sur le bouton detailsButton
+// });
+
 // Fonction pour basculer l'état de la dropdown
 function toggleDetails() {
-    var detailsButton = document.getElementById("detailsButton");
-    var detailsIcon = document.getElementById("detailsIcon");
-    var dropdown = document.querySelector(".dropdown");
-
     if (dropdown.classList.contains("open")) {
         detailsButton.textContent = "Détails";
         detailsIcon.classList.remove('fa-angle-up');
@@ -574,14 +638,15 @@ function toggleDetails() {
         detailsIcon.classList.remove('fa-angle-down');
         detailsIcon.classList.add('fa-angle-up');
         dropdown.classList.add("open");
-        // Ajouter un écouteur d'événement de clic pour fermer la dropdown lorsque l'utilisateur clique en dehors
         document.addEventListener("click", closeDropdownOnClickOutside);
     }
 }
 
+
+
+
 // Fonction pour vérifier si la dropdown est ouverte
 function isDropdownOpen() {
-    var dropdown = document.querySelector(".dropdown");
     return dropdown.classList.contains("show");
 }
 
@@ -594,23 +659,23 @@ if (isDropdownOpen()) {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-	// Sélectionne l'icône et le message d'erreur
-	var emailIcon = document.getElementById('emailIcon');
-	var errorFeedback = document.querySelector('.is-invalid~.invalid-feedback');
+// document.addEventListener("DOMContentLoaded", function() {
+// 	// Sélectionne l'icône et le message d'erreur
+// 	var emailIcon = document.getElementById('emailIcon');
+// 	var errorFeedback = document.querySelector('.is-invalid~.invalid-feedback');
 
-	// Vérifie si le message d'erreur est visible et ajuste la classe de l'icône en conséquence
-	function adjustIconPosition() {
-	  if (window.getComputedStyle(errorFeedback).display === 'block') {
-		emailIcon.classList.add('email-icon-shifted');
-	  } else {
-		emailIcon.classList.remove('email-icon-shifted');
-	  }
-	}
+// 	// Vérifie si le message d'erreur est visible et ajuste la classe de l'icône en conséquence
+// 	function adjustIconPosition() {
+// 	  if (window.getComputedStyle(errorFeedback).display === 'block') {
+// 		emailIcon.classList.add('email-icon-shifted');
+// 	  } else {
+// 		emailIcon.classList.remove('email-icon-shifted');
+// 	  }
+// 	}
 
-	// Appel initial pour ajuster la position de l'icône au chargement de la page
-	adjustIconPosition();
-  });
+// 	// Appel initial pour ajuster la position de l'icône au chargement de la page
+// 	adjustIconPosition();
+//   });
 
 
 // **********************CUSTOM VALIDATION***************************
@@ -633,85 +698,85 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const firstNameInput = document.getElementById("validationCustom12");
-    const lastNameInput = document.getElementById("validationCustom31");
-    function validateNameInput(inputElement) {
-        const name = inputElement.value.trim();
-        const nameRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
+// document.addEventListener("DOMContentLoaded", function() {
+//     const firstNameInput = document.getElementById("validationCustom12");
+//     const lastNameInput = document.getElementById("validationCustom31");
+//     function validateNameInput(inputElement) {
+//         const name = inputElement.value.trim();
+//         const nameRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
 
-        if (!nameRegex.test(name)) {
-            inputElement.classList.add("is-invalid");
-        } else {
-            inputElement.classList.remove("is-invalid");
-            inputElement.classList.add("is-valid");
-        }
-    }
+//         if (!nameRegex.test(name)) {
+//             inputElement.classList.add("is-invalid");
+//         } else {
+//             inputElement.classList.remove("is-invalid");
+//             inputElement.classList.add("is-valid");
+//         }
+//     }
 
-    lastNameInput.addEventListener("blur", function() {
-        validateNameInput(lastNameInput);
-    });
+//     lastNameInput.addEventListener("blur", function() {
+//         validateNameInput(lastNameInput);
+//     });
 
-	firstNameInput.addEventListener("blur", function() {
-        validateNameInput(firstNameInput);
-    });
-});
+// 	firstNameInput.addEventListener("blur", function() {
+//         validateNameInput(firstNameInput);
+//     });
+// });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const firstNameInput2 = document.getElementById("validationCustom06");
-    const lastNameInput2 = document.getElementById("validationCustom07");
-    function validateNameInput(inputElement) {
-        const name = inputElement.value.trim();
-        const nameRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
+// document.addEventListener("DOMContentLoaded", function() {
+//     const firstNameInput2 = document.getElementById("validationCustom06");
+//     const lastNameInput2 = document.getElementById("validationCustom07");
+//     function validateNameInput(inputElement) {
+//         const name = inputElement.value.trim();
+//         const nameRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
 
-        if (!nameRegex.test(name)) {
-            inputElement.classList.add("is-invalid");
-        } else {
-            inputElement.classList.remove("is-invalid");
-            inputElement.classList.add("is-valid");
-        }
-    }
+//         if (!nameRegex.test(name)) {
+//             inputElement.classList.add("is-invalid");
+//         } else {
+//             inputElement.classList.remove("is-invalid");
+//             inputElement.classList.add("is-valid");
+//         }
+//     }
 
 
 
-    lastNameInput2.addEventListener("blur", function() {
-        validateNameInput(lastNameInput2);
-    });
+//     lastNameInput2.addEventListener("blur", function() {
+//         validateNameInput(lastNameInput2);
+//     });
 
-	firstNameInput2.addEventListener("blur", function() {
-        validateNameInput(firstNameInput2);
-    });
-});
+// 	firstNameInput2.addEventListener("blur", function() {
+//         validateNameInput(firstNameInput2);
+//     });
+// });
 
-const titulaireDuCompteInput = document.getElementById("validationCustomUsername");
+// const titulaireDuCompteInput = document.getElementById("validationCustomUsername");
 
-titulaireDuCompteInput.addEventListener("blur", function() {
-    const titulaireDuCompte = titulaireDuCompteInput.value.trim();
-    const titulaireDuCompteRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
+// titulaireDuCompteInput.addEventListener("blur", function() {
+//     const titulaireDuCompte = titulaireDuCompteInput.value.trim();
+//     const titulaireDuCompteRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
 
-    if (!titulaireDuCompteRegex.test(titulaireDuCompte)) {
-        titulaireDuCompteInput.classList.add("is-invalid");
-    } else {
-        titulaireDuCompteInput.classList.remove("is-invalid");
-        titulaireDuCompteInput.classList.add("is-valid");
-    }
-});
+//     if (!titulaireDuCompteRegex.test(titulaireDuCompte)) {
+//         titulaireDuCompteInput.classList.add("is-invalid");
+//     } else {
+//         titulaireDuCompteInput.classList.remove("is-invalid");
+//         titulaireDuCompteInput.classList.add("is-valid");
+//     }
+// });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const cardHolderInput = document.getElementById("validationCustomCardHolder");
+// document.addEventListener("DOMContentLoaded", function() {
+//     const cardHolderInput = document.getElementById("validationCustomCardHolder");
 
-    cardHolderInput.addEventListener("blur", function() {
-        const cardHolder = cardHolderInput.value.trim();
-        const cardHolderRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
+//     cardHolderInput.addEventListener("blur", function() {
+//         const cardHolder = cardHolderInput.value.trim();
+//         const cardHolderRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
 
-        if (!cardHolderRegex.test(cardHolder)) {
-            cardHolderInput.classList.add("is-invalid");
-        } else {
-            cardHolderInput.classList.remove("is-invalid");
-            cardHolderInput.classList.add("is-valid");
-        }
-    });
-});
+//         if (!cardHolderRegex.test(cardHolder)) {
+//             cardHolderInput.classList.add("is-invalid");
+//         } else {
+//             cardHolderInput.classList.remove("is-invalid");
+//             cardHolderInput.classList.add("is-valid");
+//         }
+//     });
+// });
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -849,7 +914,6 @@ document.getElementById("toggleAdresseManuelle").addEventListener("click", funct
 
 document.addEventListener('DOMContentLoaded', function() {
     const promoBtn = document.querySelector('.promo-btn');
-    const dropdown = document.querySelector('.dropdown');
 
     promoBtn.addEventListener('click', function(event) {
         // Empêcher le rechargement de la page
@@ -1028,6 +1092,39 @@ document.addEventListener('DOMContentLoaded', function() {
     boutonToggle2.addEventListener('click', toggleAdresseManuelle2);
 });
 
+// $(document).on('click', function (e) {
+//     $target = $(e.target);
+//     $('.dropdown.show').each((i, el) => {
+//         if(
+//             !$($target).closest('[data-dropdown-target="#'+$(el).attr('id')+'"]').length &&
+//             $('[data-dropdown-target="#'+$(el).attr('id')+'"]').length !== 0 &&
+//             $target !== $(el) &&
+//             !$($target).closest(el).length
+//         ) {
+//             $(el).dropdown('hide');
+//         }
+//     });
+// });
+
+document.addEventListener('click', function(e) {
+    var target = e.target;
+    var dropdowns = document.querySelectorAll('.dropdown.show');
+
+    dropdowns.forEach(function(el) {
+        var dropdownToggle = el.querySelector('[data-bs-toggle="dropdown"]');
+        var dropdownTarget = dropdownToggle.getAttribute('data-dropdown-target');
+        var closestDropdownTarget = target.closest(dropdownTarget);
+
+        if (!closestDropdownTarget && dropdownTarget && target !== dropdownToggle && !el.contains(target)) {
+            var bsDropdownInstance = bootstrap.Dropdown.getInstance(dropdownToggle);
+            if (bsDropdownInstance) {
+                bsDropdownInstance.hide();
+            }
+        }
+    });
+});
+
+
 //BON CODE POUR MODAL
 document.addEventListener("DOMContentLoaded", function() {
     // Récupérer les boutons et les blocs
@@ -1064,3 +1161,23 @@ document.addEventListener("DOMContentLoaded", function() {
       remboursementsModalBlock.classList.add("d-none");
     });
   });
+
+
+
+// // Récupérer le bouton promo-btn
+// const promoBtn = document.querySelector('.promo-btn');
+
+// // Récupérer le bouton detailsButton
+// const detailsButton = document.querySelector('#detailsButton');
+
+// // Ajouter un écouteur d'événement au parent de la liste déroulante (dropdownParent)
+// const dropdownParent = document.querySelector('#dropdownParent');
+
+// // Ajouter un écouteur d'événement au parent de la liste déroulante (dropdownParent)
+// dropdownParent.addEventListener('click', (event) => {
+//     // Vérifier si l'élément cliqué est le bouton promo-btn
+//     if (event.target === promoBtn) {
+//         // Simuler un clic sur le bouton detailsButton
+//         detailsButton.click();
+//     }
+// });

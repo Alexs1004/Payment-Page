@@ -262,6 +262,10 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     margin: 1em;
 }
 
+#arrow_left-fs {
+    margin: 1em 1em 1em 0em;
+}
+
 .info {
 	text-decoration: underline dotted;
 }
@@ -287,6 +291,10 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 .freeDays-text{
     font-size: 28px;
     font-weight: 600;
+}
+
+#freeDays-text-id {
+    font-size: 36px;
 }
 
 .info,
@@ -793,8 +801,8 @@ body.dropdown-open {
 }
 
 .recap-radio-fs {
-	width: calc(100% + 32px);
-
+	/* width: calc(100% + 32px); */
+    width: 100%;
 }
 
 .text-upsell {
@@ -1152,6 +1160,8 @@ body.dropdown-open {
     .dd-tva {
         display: flex;
         justify-content: space-between;
+        font-size: 14px;
+        color: hsla(0, 0%, 10%, 0.5);
     }
 
     .under-btn-text {
@@ -1195,8 +1205,9 @@ body.dropdown-open {
     }
 
 .product_description_fs {
-    margin-top: 32px;
-    margin-bottom: 16px;
+    margin-top: 20px;
+    margin-bottom: 24px;
+    margin-left: 32px;
 }
 
 .order-recap-fs {
