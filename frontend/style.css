@@ -433,10 +433,10 @@ body.dropdown-open {
 }
 
 .qte-btn, .promo-btn {
-    width: 100%;
+	padding: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 0px 12px;    white-space: nowrap;
+    white-space: nowrap;
 }
 
 .ProductSummary-buttonsContainer {
@@ -760,7 +760,7 @@ body.dropdown-open {
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 0px 12px;
+    padding: 0px 16px;
 }
 
 .in_dd_button {
