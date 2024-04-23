@@ -570,7 +570,7 @@ body.dropdown-open {
 .palyance_btn {
     width: 100%;
     height: 44px;
-    background-color: black;
+    background-color: #17A2B8;
     color: white;
 }
 
@@ -584,7 +584,7 @@ body.dropdown-open {
 
 
 .palyance_btn:hover {
-    background-color: black;
+    background-color: #17A2B8;
     color: white;
     cursor: pointer !important;
 }
@@ -783,6 +783,7 @@ body.dropdown-open {
     position: absolute;
     left: 15px;
     top: 14px;
+    z-index: 5;
 }
 
 .upsell-box {
@@ -1299,6 +1300,7 @@ body.dropdown-open {
         -ms-transform-origin: right;
         transform-origin: right;
         width: 50%;
+        pointer-events: none;
     }
 
 

@@ -733,6 +733,27 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const phoneInput = document.getElementById("validationCustom21");
+
+    phoneInput.addEventListener("blur", function() {
+        const phoneNumber = phoneInput.value.trim();
+        const phoneRegex = /^0[1-9]([ .-]?[0-9]{2}){4}$/;
+
+        if (!phoneRegex.test(phoneNumber)) {
+            // Si le numéro de téléphone n'est pas valide, afficher un message d'erreur
+            phoneInput.classList.add("is-invalid");
+            document.getElementById("phoneError").style.display = "block";
+        } else {
+            // Si le numéro de téléphone est valide, retirer la classe d'invalidité
+            phoneInput.classList.remove("is-invalid");
+            phoneInput.classList.add("is-valid");
+            document.getElementById("phoneError").style.display = "none";
+        }
+    });
+});
+
+
 // document.addEventListener("DOMContentLoaded", function() {
 //     const firstNameInput = document.getElementById("validationCustom12");
 //     const lastNameInput = document.getElementById("validationCustom31");
