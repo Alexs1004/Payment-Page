@@ -1240,7 +1240,8 @@ body.dropdown-open {
 
 @media (min-width: 401px) {
     .pay_btn {
-        width: 400px;
+        /* width: 400px; */
+        width: 100%;
     }
 }
 
