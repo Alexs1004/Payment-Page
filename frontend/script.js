@@ -1127,38 +1127,6 @@ document.addEventListener('DOMContentLoaded', function() {
     boutonToggle2.addEventListener('click', toggleAdresseManuelle2);
 });
 
-// $(document).on('click', function (e) {
-//     $target = $(e.target);
-//     $('.dropdown.show').each((i, el) => {
-//         if(
-//             !$($target).closest('[data-dropdown-target="#'+$(el).attr('id')+'"]').length &&
-//             $('[data-dropdown-target="#'+$(el).attr('id')+'"]').length !== 0 &&
-//             $target !== $(el) &&
-//             !$($target).closest(el).length
-//         ) {
-//             $(el).dropdown('hide');
-//         }
-//     });
-// });
-
-// document.addEventListener('click', function(e) {
-//     var target = e.target;
-//     var dropdowns = document.querySelectorAll('.dropdown.show');
-
-//     dropdowns.forEach(function(el) {
-//         var dropdownToggle = el.querySelector('[data-bs-toggle="dropdown"]');
-//         var dropdownTarget = dropdownToggle.getAttribute('data-dropdown-target');
-//         var closestDropdownTarget = target.closest(dropdownTarget);
-
-//         if (!closestDropdownTarget && dropdownTarget && target !== dropdownToggle && !el.contains(target)) {
-//             var bsDropdownInstance = bootstrap.Dropdown.getInstance(dropdownToggle);
-//             if (bsDropdownInstance) {
-//                 bsDropdownInstance.hide();
-//             }
-//         }
-//     });
-// });
-
 
 //BON CODE POUR MODAL
 document.addEventListener("DOMContentLoaded", function() {

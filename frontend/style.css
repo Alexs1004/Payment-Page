@@ -779,11 +779,14 @@ body.dropdown-open {
     font-weight: 500;
 }
 
+#phoneIcon {
+    position: absolute;
+    left: 15px;
+    top: 14px;
+}
 
 .upsell-box {
-    /* margin: 0 auto; */
-    max-width: 380px;
-    width: 308px;
+    width: 100%;
     /* background-color: hsla(0,0%,10%,0.05); */
     background-color: #f8f9fa;
     /* border-color: #c6c7c8; */
@@ -1119,6 +1122,7 @@ body.dropdown-open {
     .modal-modify-btn {
         padding: 3px 7rem;
         background-color: var(--main-color);
+        width: 100%;
     }
 
     .modal-modify-btn:hover {
