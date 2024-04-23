@@ -472,10 +472,9 @@ body.dropdown-open {
 }
 
 .modal_img {
-    width: 32px;
+    width: 56px;
     height: auto;
-    margin-right: 20px;
-
+    margin-right: 6px;
 }
 
 .input-group-prepend {
