@@ -245,7 +245,7 @@ const countries = [
 const newPrices = {
     productName: "La revue de l'herboriste",
     productPrice: "14,90",
-    productAnnualPrice: "39,90",
+    productAnnualPrice: "49,00",
     productDescription: "Abonnement trimestriel à La revue de l'Herboriste au format électronique",
     subTotal: "14,90",
     totalDue: "14,90"
@@ -262,6 +262,8 @@ const newPrices = {
 
 
     document.getElementById('currencyElement1').innerHTML = newPrices.productPrice;
+    document.getElementById('upsell-currency-fs').innerHTML = newPrices.productAnnualPrice;
+    document.getElementById('upsell-currency').innerHTML = newPrices.productAnnualPrice;
     // document.getElementById('economy').innerHTML = newPrices.productPrice;
     // document.getElementById('economy').innerHTML = newPrices.productPrice * 4 - newPrices.productAnnualPrice;
 };
@@ -366,8 +368,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     const radioBtn = document.getElementById("flexSwitchCheckDefault");
+    const radioBtn2 = document.getElementById("flexSwitchCheckDefault2");
     radioBtn.addEventListener("change", function() {
-        if (radioBtn.checked) {
+        if (radioBtn.checked || radioBtn2.checked) {
             console.log("Le bouton radio est coché !");
             dynamicElements.forEach(element => {
                 if (element.classList.contains("currency")) {
