@@ -681,7 +681,7 @@ body.dropdown-open {
     border-bottom: none;
 }
 
-.adress-field, .adress-field2 {
+#adress-field, #adress-field2 {
     border-radius: 0px 0px 6px 6px;
 }
 
