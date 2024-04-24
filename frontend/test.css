@@ -1,0 +1,808 @@
+#DEPENDENT_CONTENT::HRB_favicon#
+<script>
+    (function(h, o, t, j, a, r) {
+        h.hj = h.hj || function() {
+            (h.hj.q = h.hj.q || []).push(arguments)
+        };
+        h._hjSettings = {
+            hjid: 1527079,
+            hjsv: 6
+        };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>
+<script>
+    (function(i, s, o, g, r, a, m) {
+        i[r] = i[r] || [], i["abtiming"] = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, "script", "//try.abtasty.com/dbf7833547e1972736e85f48deb4a325.js", "_abtasty");
+</script>
+<link rel="stylesheet" href="https://static2.pure-sante.info/bdc/v1.0/css/god/style.css" />
+<style>
+    /* --- début custom --- */
+    .page-onepageorderpage {
+        max-width: 1200px;
+    }
+
+    .container {
+        border: 2px solid #1E5F83;
+    }
+
+    .headerBloc {
+        border-bottom: none;
+        padding: 0px;
+        background: #1E5F83;
+    }
+
+    .headerBloc img {
+        display: inline;
+        max-width: 550px;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0px;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+        border-bottom: 2px solid black;
+        padding-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    a {
+        cursor: pointer !important;
+    }
+
+    .cadre-noir {
+        margin: 20px auto;
+        padding: 15px;
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+
+    .cadre-primary {
+        margin: 20px auto;
+        padding: 15px;
+        border: 2px solid #1E5F83;
+        border-radius: 15px;
+    }
+
+    .cadre-primary ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cadre-primary ul li {
+        width: 45%;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 20px;
+    }
+
+    .cadre-primary ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .cadre-primary ul li p {
+        margin-bottom: 0;
+    }
+
+    .cadre-primary h4 {
+        color: #1E5F83;
+        font-weight: bold;
+        font-size: 18px
+    }
+
+    .securityBox {
+        background-color: #fff7e7;
+        border-radius: 5px;
+        padding-top: 10px;
+        position: relative;
+    }
+
+    .securityBox .leCadenas {
+        max-width: 55px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        border: 1px solid #ffd422;
+        border-radius: 50%;
+        padding: 8px;
+        background-color: #fffdfb;
+    }
+
+    p.list-tick {
+        position: relative;
+    }
+
+    p.list-tick img {
+        position: absolute;
+        left: -25px;
+        width: 20px;
+        -webkit-filter: hue-rotate(240deg);
+        filter: hue-rotate(240deg);
+    }
+
+    /* Style Accordéons */
+    .accordion {
+        border-bottom: 1px solid #dfdfdf;
+        position: relative;
+    }
+
+    .accordion .card-header {
+        background-color: #d0e5f7;
+        cursor: pointer;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+
+    .accordion .card-header.collapsed {
+        background-color: initial;
+    }
+
+    .accordion .card-header.collapsed:hover {
+        background-color: #ededed;
+    }
+
+    .accordion .card-body {
+        border-top: 1px solid rgb(223, 223, 223);
+        background-color: rgb(251, 251, 251);
+    }
+
+    .btn.btnEnSaPl {
+        margin: 0 auto;
+        display: block;
+        padding: 5px 15px;
+        background-color: #ebebeb;
+        border: initial;
+        color: black;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+
+    .btn.btnEnSaPl:hover {
+        background-color: #d2d2d2;
+    }
+
+    /* Fin Style Accordéons */
+    /* Choices style */
+    .rsbChoice {
+        background-color: #f1f1f1;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+        padding: 10px 15px;
+        cursor: pointer;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+
+    .rsbChoice:hover {
+        border: 1px solid #2dcc56;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        background-color: white;
+    }
+
+    .img-surbrillance {
+        border: 2px solid #2dcc56 !important;
+        -webkit-transform: scale(1.01);
+        transform: scale(1.01);
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3) !important;
+        background-color: #e5ffe5 !important;
+    }
+
+    .rsbChoice .choiceTitle {
+        font-size: 32px;
+        background-color: #9c9c9c;
+        color: white;
+        line-height: initial;
+        font-weight: bold;
+        margin: -10px -15px 0;
+        padding: 4px 10px 10px;
+        border-radius: 3px;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+
+    .rsbChoice.img-surbrillance .choiceTitle {
+        background-color: #1E5F83;
+        color: white;
+    }
+
+    .rsbChoice img {
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        filter: saturate(30%);
+    }
+
+    .rsbChoice:hover img,
+    .rsbChoice.img-surbrillance img {
+        filter: saturate(100%);
+    }
+
+    .rsbChoice .choiceDescription {
+        margin: 15px auto;
+        font-size: 16px;
+        text-align: left;
+        padding: 20px 20px;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+    }
+
+    .rsbChoice .choiceDescription p {
+        margin-bottom: 5px;
+    }
+
+    .rsbChoice .choiceDescription strong.yay {
+        color: #1E5F83;
+    }
+
+    .rsbChoice .choicePrice {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 0;
+        color: #1E5F83;
+    }
+
+    .rsbChoice .choicePrice small {
+        display: block;
+        margin-top: -9px;
+        font-size: 18px;
+    }
+
+    .rsbChoice .choiceSubPrice {
+        font-size: 14px;
+        color: #8b9299;
+    }
+
+    .rsbChoice button {
+        padding: 7px 30px;
+        margin-bottom: 25px;
+        font-weight: bold;
+        font-size: 22px;
+        text-transform: uppercase;
+        color: white;
+        background: #e19333;
+        border-radius: 5px;
+        border: initial;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+
+    .rsbChoices .rsbChoice:hover button,
+    .rsbChoices .rsbChoice.img-surbrillance button {
+        background: #1E5F83;
+    }
+
+    /* Fin Choices style */
+    .rsbPayment {
+        background-color: white;
+        border: 1px solid black;
+        font-size: 20px;
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+
+    .rsbPayment:hover,
+    .rsbPayment.active {
+        background-color: #deffee;
+        border: 1px solid #1E5F83;
+    }
+
+    #paymentCC img {
+        height: 43px;
+        width: auto;
+    }
+
+    .effort-dcs01 ul#items-choices li.blocLi.elu,
+    .effort-dcs01 ul#items-choices li.blocLi.surbrillance,
+    .effort-dcs01 ul#items-choices li.blocLi:hover,
+    .effort-dcs01 ul.bdcnext-items-choices li.blocLi.elu,
+    .effort-dcs01 ul.bdcnext-items-choices li.blocLi.surbrillance,
+    .effort-dcs01 ul.bdcnext-items-choices li.blocLi:hover {
+        background-color: initial;
+        color: initial;
+    }
+
+    .primary-text,
+    .primary-link {
+        color: #1E5F83 !important;
+    }
+
+    .green-text {
+        color: #95c123;
+    }
+
+    .red-text {
+        color: #e91a1a;
+    }
+
+    .container img {
+        border-radius: 5px;
+    }
+
+    .img-max-120 {
+        max-width: 120px;
+    }
+
+    .img-max-150 {
+        max-width: 150px;
+    }
+
+    .img-max-200 {
+        max-width: 200px;
+    }
+
+    .img-max-250 {
+        max-width: 250px;
+    }
+
+    .img-max-300 {
+        max-width: 300px;
+    }
+
+    .img-max-400 {
+        max-width: 400px;
+    }
+
+    .background-yellow {
+        background-color: #fffff5;
+        font-size: 16px;
+    }
+
+    .primary-border {
+        border-left: 10px solid #1E5F83;
+        border-right: 10px solid #1E5F83;
+        border-top: 3px solid #1E5F83;
+        border-bottom: 3px solid #1E5F83;
+        border-radius: 5px;
+    }
+
+    .sceau-garantie {
+        max-width: 130px;
+    }
+
+    .vanguard-choices-form .vanguard-payment-method-selection {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .vanguard-contact-information .form-group {
+        margin-bottom: 0.2rem;
+    }
+
+    #step-2 .vanguard-contact-information .vanguard-contact-form-label {
+        font-size: 80%;
+    }
+
+    .anchors {
+        position: absolute;
+        top: -40px;
+    }
+
+    .form-check.form-check-inline {
+        margin-right: 0;
+        padding: 10px 10px 80px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .form-check.form-check-inline.selected,
+    .form-check.form-check-inline:hover,
+    .form-check.form-check-inline:focus {
+        background-color: rgba(0, 255, 0, 0.1);
+        border-color: #1E5F83;
+    }
+
+    .form-check.form-check-inline:nth-child(1) {
+        margin-right: 1rem;
+        margin-left: 0.6rem;
+    }
+
+    .displayNone {
+        display: none !important;
+    }
+
+    #vanguard-payment-method-radio-sepa,
+    #vanguard-payment-method-radio-cc {
+        position: relative;
+    }
+
+    #vanguard-payment-method-radio-sepa+label:after {
+        content: " ";
+        position: absolute;
+        left: 7px;
+        top: 50px;
+        height: 50px;
+        background-position: 50%;
+        background-size: 120px;
+        background-repeat: no-repeat;
+        width: 120px;
+        background-image: url(https://cdn-common.pubfac.io/vanguard/paiement_sepa.png);
+    }
+
+    #vanguard-payment-method-radio-bank-card+label:after {
+        content: " ";
+        position: absolute;
+        left: 10px;
+        top: 51px;
+        height: 50px;
+        background-position: 50%;
+        background-size: 120px;
+        background-repeat: no-repeat;
+        width: 120px;
+        background-image: url(https://cdn-common.pubfac.io/vanguard/paiement_cb.png);
+    }
+
+    li.vanguard-custom-choice {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 15px;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    li.vanguard-custom-choice.selected,
+    li.vanguard-custom-choice:hover,
+    li.vanguard-custom-choice:focus {
+        background-color: rgba(0, 255, 0, 0.1);
+        border-color: #1E5F83;
+    }
+
+    .vanguard-shipping-form .col-sm-12 .form-group,
+    .vanguard-billing-form .col-sm-12 .form-group {
+        display: inline-block;
+        width: 49%;
+        margin: 0 0 5px 0;
+        padding: 0 15px;
+    }
+
+    .vanguard-shipping-fees {
+        display: none;
+    }
+
+    .securityBox .module-block-cheque,
+    .securityBox .module-block-recapitulative {
+        background-color: #fdfdfd;
+    }
+
+    .securityBox .module-block-cheque {
+        margin-top: 40px;
+    }
+
+    #exitpopup .modal-dialog {
+        max-width: 750px !important;
+    }
+
+    #exitpopup .modal-content {
+        border-color: #1E5F83;
+    }
+
+    #exitpopup h2 {
+        font-size: 2em;
+    }
+
+    #exitpopup #exit-popup-button {
+        background-color: #1E5F83;
+    }
+
+    /* Style Alert */
+    .vanguard-payment-form .alert.alert-warning {
+        font-size: 20px;
+        border: 2px solid #ffbaba;
+        background-color: #ffe8e8;
+        color: #404040;
+        margin-top: 20px;
+    }
+
+    /* bug responsive champ "condition generales de vente" */
+    body .vanguard-contact-information .vanguard-optins-container .vanguard-cgu,
+    body .vanguard-contact-information .vanguard-optins-container .vanguard-display-shipping {
+        width: 100%;
+    }
+
+    body .vanguard-contact-information .vanguard-optins-container .vanguard-cgu label,
+    body .vanguard-contact-information .vanguard-optins-container .vanguard-display-shipping label {
+        max-width: 100%;
+    }
+
+    /* fin bug responsive */
+    #box-flottant {
+        position: fixed;
+        left: 2vw;
+        top: 5%;
+        background: white;
+        padding: 15px;
+        max-width: 260px;
+        min-width: 140px;
+        width: 12vw;
+        border: 1px solid #1E5F83;
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 0px rgba(39, 0, 255, 0);
+        -webkit-animation: 30s linear 10s infinite lookhere;
+        animation: 30s linear 10s infinite lookhere;
+    }
+
+    /* Animation Attire Attention */
+    @keyframes lookhere {
+        0% {
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 0px rgba(39, 0, 255, 0);
+        }
+
+        1.7% {
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 5px 5px rgba(39, 0, 255, 0.4)
+        }
+
+        3.4% {
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 0px rgba(39, 0, 255, 0);
+        }
+
+        5.1% {
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 5px 5px rgba(39, 0, 255, 0.4)
+        }
+
+        6.8% {
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 0px rgba(39, 0, 255, 0);
+        }
+
+        8.5% {
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 5px 5px rgba(39, 0, 255, 0.4)
+        }
+
+        10% {
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 0px rgba(39, 0, 255, 0);
+        }
+    }
+
+    /* END Animation Attire Attention */
+    .bottom-arrow {
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        border: solid black;
+        border-width: 0 5px 5px 0;
+        border-radius: 5px;
+        border-color: #1E5F83;
+        display: inline-block;
+        padding: 15px;
+        -webkit-transform: rotate(45deg) translateY(0px) translateX(0px);
+        transform: rotate(45deg) translateY(0px) translateX(0px);
+        transition: all 0.5s;
+        -webkit-animation: 10s cubic-bezier(0.15, 0.37, 0.33, 0.99) 5s infinite showbottom;
+        animation: 10s cubic-bezier(0.15, 0.37, 0.33, 0.99) 5s infinite showbottom;
+    }
+
+    .bottom-arrow.right {
+        right: -9%;
+    }
+
+    .bottom-arrow.left {
+        left: -9%;
+    }
+
+    /* Animation Show Bottom */
+    @keyframes showbottom {
+        0% {
+            opacity: 1;
+            transform: rotate(45deg) translateY(0px) translateX(0px);
+        }
+
+        5% {
+            opacity: 0;
+            transform: rotate(45deg) translateY(20px) translateX(20px);
+        }
+
+        6% {
+            opacity: 0;
+            transform: rotate(45deg) translateY(-20px) translateX(-20px);
+        }
+
+        11% {
+            opacity: 1;
+            transform: rotate(45deg) translateY(0px) translateX(0px);
+        }
+
+        13% {
+            opacity: 1;
+            transform: rotate(45deg) translateY(0px) translateX(0px);
+        }
+
+        18% {
+            opacity: 0;
+            transform: rotate(45deg) translateY(20px) translateX(20px);
+        }
+
+        19% {
+            opacity: 0;
+            transform: rotate(45deg) translateY(-20px) translateX(-20px);
+        }
+
+        24% {
+            opacity: 1;
+            transform: rotate(45deg) translateY(0px) translateX(0px);
+        }
+    }
+
+    /* END Animation Show Bottom */
+    /* --- RESPONSIVE --- */
+    @media screen and (max-width: 1199px) {
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+        }
+
+        .cadre-vert ul li {
+            width: 48%;
+            margin-right: 5px;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        .cadre-vert ul li {
+            width: 100%;
+            margin-right: 0px;
+        }
+
+        .form-check.form-check-inline:nth-child(1) {
+            margin-right: 0;
+            margin-left: 0;
+            margin-bottom: 10px;
+        }
+
+        .bottom-arrow.left {
+            left: -11%;
+        }
+
+        .bottom-arrow.right {
+            right: -11%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        h1 {
+            font-size: 1.3rem;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        header.header-container {
+            display: none;
+        }
+
+        .left-col-container {
+            padding-right: 15px;
+        }
+
+        p.list-tick img {
+            left: 18px;
+        }
+
+        .rsbChoice .choiceDescription {
+            padding: 0px 5px;
+        }
+
+        .securityBox .leCadenas {
+            max-width: 55px;
+        }
+
+        .vanguard-shipping-form .col-sm-12 .form-group,
+        .vanguard-billing-form .col-sm-12 .form-group {
+            display: block;
+            width: 100%;
+        }
+    }
+</style>
+<style>
+    .vanguard-billing-form label::before {
+        content: "" !important;
+    }
+
+    .vanguard-billing-form label::before,
+    .vanguard-shipping-form label::before,
+    .form-check-label::before {
+        content: "" !important;
+    }
+
+    label[for="billingGender"],
+    label[for="billingGender"]+.pt-1,
+    label[for="billingPhoneNumber"],
+    input#billingPhoneNumber,
+    label[for="billingStreet1"],
+    input#billingStreet1,
+    label[for="billingStreet2"],
+    input#billingStreet2,
+    label[for="billingStreet4"],
+    input#billingStreet4 {
+        display: none !important;
+    }
+</style>
+<script>
+    document.addEventListener("vanguard-ready", function() {
+        $(function() {
+            /* fonction pour detecter clic sur img et sélectionner choix */
+            var stockChoice = "";
+            $('body').on('click', '.rsbChoice', function(e) {
+                var choiceNumber = $(this).attr('data-choice');
+                stockChoice = choiceNumber;
+                $('#items-choices li').removeClass('surbrillance');
+                $('#items-choices li:nth-child(' + choiceNumber + ')').trigger('click');
+                $('#items-choices li:nth-child(' + choiceNumber + ')').addClass('surbrillance');
+                // --- Ajout class sur les images cliquées ---
+                $('.rsbChoice').removeClass('img-surbrillance');
+                $('.rsbChoice button').html('Sélectionner');
+                $(this).addClass('img-surbrillance');
+                $(this).find("button").html('Sélectionné');
+            });
+
+            /* cache les parents des champs inutiles (coordonnées sur le BDC) */
+            $('label[for="billingGender"]').parent().addClass("displayNone");
+            $('label[for="billingPhoneNumber"]').parent().addClass("displayNone");
+            $('label[for="billingStreet1"]').parent().addClass("displayNone");
+            $('label[for="billingStreet2"]').parent().addClass("displayNone");
+            $('label[for="billingStreet4"]').parent().addClass("displayNone");
+
+            /* fonction de smooth scroll sur l'étape 2 lors du deuxième clique sur le même choice */
+            $('body').on('click', '.img-surbrillance, .bottom-arrow', function(e) {
+                $('html, body').animate({
+                    scrollTop: $("#anchor-step2").offset().top
+                }, 3000);
+            });
+        });
+    });
+</script>
+<script type="text/javascript">
+    document.addEventListener("vanguard-ready", function() {
+        $(document).ready(function() {
+            /* MODULE EXITPOPUP */
+            // variable laissant 30s avant de permettre les ExitPopUps, et plus tard aussi permettant de laisser 1min avant le ré-affichage de la popup pour ne pas trop spammer
+            let exitPopUpEnabled = false;
+            setTimeout(function() {
+                exitPopUpEnabled = true;
+            }, 30000);
+            $(document).mouseleave(function() {
+                if (exitPopUpEnabled && !$("body").hasClass("modal-open") && !$('input').is(':focus')) {
+                    // Show the exit popup by leaving the window
+                    $('#exitpopup').modal();
+                    exitPopUpEnabled = false;
+                }
+            });
+            // On attend que l'exitpopup soit fermée avant de lancer le chrono pour permettre la réouverture de ce dernier.
+            $('#exitpopup').on('hide.bs.modal', function(e) {
+                console.log("Modal fermée !")
+                setTimeout(function() {
+                    exitPopUpEnabled = true;
+                }, 60000);
+            })
+            /* END MODULE EXITPOPUP */
+        });
+    });
+</script>
