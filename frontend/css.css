@@ -1,0 +1,2104 @@
+#DEPENDENT_CONTENT::Variables_des_choix_PST#
+
+<style>
+    /* Start Custom Fonts CSS */
+    @import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+    /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap'); */
+    /* End Custom Fonts CSS */
+
+    .form-group-gender,
+    .row.form-group>label[for=billingPhoneNumber],
+    .row.form-group>label[for=billingStreet1],
+    .row.form-group>label[for=billingStreet2],
+    .row.form-group>label[for=billingStreet4] {
+        display: none !important;
+    }
+
+    #billingPhoneNumber,
+    #billingStreet1,
+    #billingStreet2,
+    #billingStreet4 {
+        display: none;
+    }
+
+    #billingCountry {
+        margin-bottom: 15px;
+    }
+
+    .nomarginbot {
+        margin-bottom: 0 !important;
+    }
+
+    input[type=text],
+    input[type=email] {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .vanguard-billing-form .col-sm-12 .form-group {
+        position: relative;
+        width: 100%;
+        padding: 0 15px;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .vanguard-billing-form .col-sm-12 .form-group.divhalf {
+        width: 50%;
+        float: left;
+    }
+
+    @media screen and (max-width: 480px) {
+        .vanguard-billing-form .col-sm-12 .form-group.divhalf {
+            width: 100%;
+            float: none;
+        }
+    }
+</style>
+
+<style>
+    /*****BASE STYLE*****/
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .large-10 {
+        width: 95%;
+
+    }
+
+    .large-9 {
+        width: 95%;
+    }
+
+    .large-8 {
+        width: 75%;
+    }
+
+    .large-7 {
+        width: 65%;
+    }
+
+    .large-6 {
+        width: 55%;
+    }
+
+    .large-5 {
+        width: 45%;
+    }
+
+    .large-4 {
+        width: 45%;
+    }
+
+    .large-3 {
+        width: 25%;
+    }
+
+    .medium-centered {
+        float: none;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .displayNone {
+        display: none;
+    }
+
+    .invisible {
+        visibility: hidden;
+    }
+
+    .box-shadow {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .centerimg {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .breakword {
+        word-break: break-all;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Aboreto', cursive, Palanquin, sans-serif;
+        font-weight: 400;
+    }
+
+    /*****HEADER*****/
+    #header {
+        width: 100%;
+        padding: 10px 20px 10px 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: #a8ce81;
+    }
+
+    #header img {
+        max-width: 300px;
+        display: block;
+        margin: auto;
+    }
+
+    /*****CONTENT*****/
+    #content {
+        padding: 50px 0px 30px 0px;
+        width: 90;
+    }
+
+    #frontbloc h1 {
+        font-size: 60px;
+        color: #565654;
+    }
+
+    #frontbloc h2 {
+        text-align: Center;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+
+
+    /*****OFFER-SELECT*****/
+
+    .subscription-card {
+        border-radius: 5px;
+    }
+
+    .card-description-bcl {
+        padding-top: 15px !important;
+    }
+
+    .card-description-nbcl {
+        padding-top: 15px !important;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .card-header {
+        background-color: #e5b73b;
+        color: white;
+        font-weight: 800;
+        padding: 0.5em;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .subscription-card button,
+    .buttontotop {
+        display: block;
+        min-width: 150px;
+        margin: 20px auto;
+        background: #ff8542;
+        color: white;
+        font-size: 1em;
+        padding: 1em;
+        border-radius: 4px;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        appearance: none;
+        -webkit-appearance: none;
+        border: 4px solid #d96c30;
+        -webkit-transition: all ease 0.5s;
+        transition: all ease 0.5s;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .subscription-card button:hover {
+        background: #a55900;
+        color: white;
+        border: 4px solid #565654;
+        font-weight: 700;
+    }
+
+    .subscription-card a {
+        color: white;
+    }
+
+    .subscription-card .selected p {
+        display: none;
+    }
+
+    .selected p:after {
+        content: "✔" !important;
+        font-size: 2rem !important;
+    }
+
+    @-webkit-keyframes disappear {
+        0% {
+            opacity: 1;
+        }
+
+        20% {
+            color: #fff;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes disappear {
+        0% {
+            opacity: 1;
+        }
+
+        20% {
+            color: #fff;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes appear {
+        0% {
+            opacity: 0;
+        }
+
+        70% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes appear {
+        0% {
+            opacity: 0;
+        }
+
+        70% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+    .subscription-card img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0
+    }
+
+    .subscription-card .selected {
+        background-color: #15af15 !important;
+        border-color: #0f830f !important;
+        /*animation*/
+        -webkit-animation: extend 0.3s ease-in-out;
+        -ms-animation: extend 0.3s ease-in-out;
+        animation: extend 0.3s ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        /* Chrome, Safari, Opera */
+        animation-fill-mode: forwards border: none !important;
+    }
+
+    .subscription-card .selected>span {
+        /*animation*/
+        -webkit-animation: disappear 0.3s ease-in-out;
+        -ms-animation: disappear 0.3s ease-in-out;
+        animation: disappear 0.3s ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        /* Chrome, Safari, Opera */
+        animation-fill-mode: forwards
+    }
+
+
+
+    .subscription-card .selected>img {
+        /*animation*/
+        -webkit-animation: appear 0.3s ease-in-out;
+        -ms-animation: appear 0.3s ease-in-out;
+        animation: appear 0.3s ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        /* Chrome, Safari, Opera */
+        animation-fill-mode: forwards
+    }
+
+    .subscription-card h2 {
+        text-align: center;
+        font-size: 19px;
+    }
+
+    .info-subscription {
+        text-align: center;
+    }
+
+    .subscription-card .price {
+        color: #565654;
+        font-size: 44px;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+
+    .subscription-card .total {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .perbox {
+        font-size: 20px;
+    }
+
+    .subscription-card .price-crossed {
+        font-size: 30px;
+        text-align: center;
+        font-weight: 400;
+        text-decoration: line-through;
+        color: grey;
+    }
+
+    .subscription-card .fdp {
+        color: grey;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    #quantity-select {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    @keyframes blinker {
+
+        0%,
+        70%,
+        80%,
+        90%,
+        100% {
+            opacity: 1;
+        }
+
+        75%,
+        85%,
+        95% {
+            opacity: 0;
+        }
+    }
+
+    .quantity-card-header {
+        color: white;
+        background-color: red;
+        width: 80%;
+        animation: blinker 10s linear infinite;
+        padding: 5px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        position: absolute;
+        display: block;
+        top: -34px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .quantity-button {
+        border: 4px solid #565654;
+        text-align: center;
+        border-radius: 5px;
+        color: #565654;
+        cursor: pointer;
+        padding: 10px;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .quantity-button:hover {
+        background-color: #ffdbc8;
+    }
+
+    .quantity-button p {
+        font-size: 1.5rem;
+        margin-bottom: 0px;
+    }
+
+    .quantity-button.on {
+        background-color: #565654;
+        color: white;
+    }
+
+
+
+
+    /*****OFFER-DISPLAY*****/
+    #offer-display-text {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .visuel {
+        max-width: 500px;
+        margin-top: 50px;
+        border-radius: 25px;
+    }
+
+    .benefits {
+        margin-left: 20px;
+        margin-top: 30px;
+    }
+
+    .benefits ul li {
+        list-style: none;
+        font-size: 1.1rem;
+        margin-bottom: 1em;
+        line-height: 1.1em;
+        text-align: left;
+        font-weight: 400;
+    }
+
+    .benefits ul li:before {
+        display: inline-block;
+        font-family: 'rasch-font';
+        font-style: normal;
+        font-feature-settings: normal;
+        font-variant: normal !important;
+        speak: none;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: auto;
+        text-transform: none;
+        content: "✔";
+        font-size: 2rem;
+        left: 30px;
+        margin-top: 4px;
+        margin-right: 15px;
+        position: absolute;
+        color: #AAD483;
+    }
+
+    /*****FORM*****/
+    #form {
+        margin-top: 32px;
+    }
+
+    #form h2 {
+        text-align: Center;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .form_info .newsletterAuto {
+        font-style: italic;
+        font-size: 0.8rem;
+        margin-top: 10px;
+    }
+
+    .form_info p {
+        text-align: center;
+    }
+
+    .form_info .politique a {
+        text-decoration: underline;
+    }
+
+    .vanguard-contact-information .vanguard-contact-form-label {
+        position: absolute;
+        margin-top: -10px !important;
+        margin-left: 15px !important;
+        background-color: white !important;
+        width: fit-content !important;
+        font-weight: 400 !important;
+        font-size: 0.8rem !important;
+        color: #979797;
+    }
+
+    .form-fields .form-group {
+        margin-bottom: 28px;
+    }
+
+    .form-fields .col-sm-12 {
+        display: block;
+        margin-left: -15px;
+        margin-right: -15px;
+        padding: 0;
+    }
+
+    .form-fields .col-sm-12:before,
+    .form-fields .col-sm-12:after {
+        display: table;
+        content: "";
+        clear: both;
+    }
+
+    .form-fields .form-group {
+        width: 50%;
+        float: left;
+        padding: 0 15px;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .form-check {
+        width: 100% !important;
+    }
+
+    .vanguard-form-error {
+        margin-left: 15px !important;
+        font-size: 80% !important;
+    }
+
+    .module-block-recapitulative h4 {
+        display: none;
+        font-weight: 700 !important;
+        text-align: center;
+    }
+
+    .recap .module-block-recapitulative h4 {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .module-block-recapitulative {
+        background-color: #ffffff !important;
+        box-shadow: 0px 3px 6px #00000029;
+    }
+
+    /*****REINSURANCE*****/
+    #reinsurance {
+        margin-top: 20px;
+        background-color: #565654;
+        color: white;
+        padding: 30px;
+    }
+
+    #reinsurance li {
+        font-size: 25px;
+    }
+
+    .max-1200 {
+        max-width: 1200px;
+        display: block;
+        margin: auto;
+    }
+
+    @media screen and (max-width: 991px) {
+        #frontbloc h1 {
+            font-size: 40px;
+        }
+    }
+
+
+    @media screen and (max-width: 767px) {
+        #frontbloc h1 {
+            font-size: 30px;
+        }
+
+        #recommended {
+            visibility: hidden;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .row {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .large-8 {
+            width: 95%;
+        }
+
+        #reinsurance h4 {
+            text-align: Center;
+        }
+
+    }
+
+    #reinsurance ul.bullets li:before {
+        display: inline-block !important;
+        font-family: 'rasch-font' !important;
+        font-style: normal !important;
+        font-feature-settings: normal !important;
+        font-variant: normal !important;
+        speak: none !important;
+        -moz-osx-font-smoothing: grayscale !important;
+        -webkit-font-smoothing: antialiased !important;
+        text-rendering: auto !important;
+        text-transform: none !important;
+        content: "✔" !important;
+        font-size: 2rem !important;
+        left: 0 !important;
+        margin-top: 4px !important;
+        margin-right: 15px !important;
+        position: absolute;
+    }
+
+    #reinsurance ul.bullets li {
+        list-style: none !important;
+        font-size: 1.1rem !important;
+        margin-bottom: 1em !important;
+        line-height: 1.1em !important;
+        text-align: left !important;
+        font-weight: 400 !important;
+    }
+
+    #reinsurance ul.bullets-2 li {
+        font-size: 1.1rem !important;
+    }
+</style>
+
+<style>
+    a {
+        cursor: pointer !important;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        line-height: 1.5 !important;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 40px !important;
+    }
+
+    h2:after {
+        display: block;
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100px;
+        left: 50%;
+        margin: 15px auto 0 -50px;
+        background-color: white;
+    }
+
+    .img-max-300 {
+        max-width: 300px;
+    }
+
+    .img-max-350 {
+        max-width: 350px;
+    }
+
+    .img-max-450 {
+        max-width: 450px;
+    }
+
+    .myContent {
+        max-width: 1300px;
+        width: 92%;
+        margin: auto;
+        padding: 30px 0;
+        z-index: 4;
+    }
+
+    .myContent.ingredients {
+        padding: 30px;
+    }
+
+    .myContentDark {
+        background-color: #565654;
+        color: white;
+        padding: 15px 0;
+        margin: 30px auto;
+    }
+
+    .myContentDark h2 {
+        color: white;
+    }
+
+    .myContentDark h2:after {
+        background-color: #f5b82e;
+    }
+
+    .aboAdvantages {
+        text-align: center;
+    }
+
+    .advantages img {
+        display: block;
+        max-width: 150px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    /* Style Accordéons */
+    .accordion {
+        border-bottom: 1px solid #dfdfdf;
+        position: relative;
+    }
+
+    .accordion .card-header {
+        color: #585858;
+        background-color: #d0e5f7;
+        cursor: pointer;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+
+    .accordion .card-header.collapsed {
+        background-color: initial;
+    }
+
+    .accordion .card-header.collapsed:hover {
+        background-color: #ededed;
+    }
+
+    .accordion .card-body {
+        border-top: 1px solid rgb(223, 223, 223);
+        background-color: rgb(251, 251, 251);
+    }
+
+    .btn.btnEnSaPl {
+        margin: 0 auto;
+        display: block;
+        padding: 5px 15px;
+        background-color: #ebebeb;
+        border: initial;
+        color: black;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+
+    .btn.btnEnSaPl:hover {
+        background-color: #d2d2d2;
+    }
+
+    /* Fin Style Accordéons */
+    .vanguard-payment-method-switch-sepa,
+    .vanguard-payment-method-switch-bank-card {
+        cursor: pointer;
+    }
+
+    .form-fields .form-group:last-child {
+        margin-bottom: 0;
+    }
+
+    #billingCountry option[value="ISR"],
+    #billingCountry option[value="FXX"],
+    #billingCountry option[value="USA"],
+    #billingCountry option[value="AFG"],
+    #billingCountry option[value="ALB"],
+    #billingCountry option[value="AGO"],
+    #billingCountry option[value="IRQ"],
+    #billingCountry option[value="PRK"],
+    #billingCountry option[value="CHE"],
+    #billingCountry option[value="SYR"] {
+        display: none !important;
+    }
+
+    .primary-text {
+        color: #565654;
+    }
+
+    .buttontotop {
+        width: auto;
+    }
+
+    #exitpopup .modal-dialog {
+        max-width: 750px !important;
+    }
+
+    #exitpopup .modal-content {
+        border-color: #565654;
+    }
+
+    #exitpopup h2 {
+        font-size: 2em;
+    }
+
+    #exitpopup #exit-popup-button {
+        background-color: #565654;
+        margin: 0 auto;
+        color: #fff;
+        border: none;
+        padding: 5px 15px;
+        cursor: pointer;
+    }
+
+    .info_premium_cta {
+        border: 1px solid black;
+        border-radius: 50%;
+        padding: 0px 7px;
+        cursor: pointer;
+    }
+
+    .info_premium_content {
+        display: none;
+        position: absolute;
+        z-index: 111;
+        background-color: #FFFFFF;
+        padding: 10px 10px 0;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        font-size: 0.8rem;
+    }
+
+    .info_premium_content:after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 0;
+        height: 0;
+        border-bottom: solid 10px #ffff;
+        border-left: solid 10px transparent;
+        border-right: solid 10px transparent;
+    }
+
+    /****************************************************** CIN_STYLE ********************************************/
+        {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        overflow-x: hidden;
+        color: #002A3A;
+    }
+
+    .fs-1 {
+        font-size: calc(1.375rem + 1.5vw) !important
+    }
+
+    .fs-2 {
+        font-size: calc(1.325rem + .9vw) !important
+    }
+
+    .fs-3 {
+        font-size: calc(1.3rem + .6vw) !important
+    }
+
+    .fs-4 {
+        font-size: calc(1.275rem + .3vw) !important
+    }
+
+    .fs-5 {
+        font-size: 1.1rem !important
+    }
+
+    .fs-6 {
+        font-size: 1rem !important
+    }
+
+    .mw-100 {
+        max-width: 100%;
+    }
+
+    .mw-90 {
+        max-width: 90%;
+    }
+
+    .mw-80 {
+        max-width: 80%;
+    }
+
+    .mw-70 {
+        max-width: 70%;
+    }
+
+    .mw-60 {
+        max-width: 60%;
+    }
+
+    .mw-50 {
+        max-width: 50%;
+    }
+
+    .mw-40 {
+        max-width: 40%;
+    }
+
+    .mw-30 {
+        max-width: 30%;
+    }
+
+    .mw-20 {
+        max-width: 20%;
+    }
+
+    .mw-10 {
+        max-width: 10%;
+    }
+
+    .primary-color {
+        color: var(--primary-color);
+    }
+
+    .secondary-color {
+        color: var(--secondary-color);
+    }
+
+    .green {
+        color: #97D700;
+    }
+
+    .dark_blue {
+        color: #002A3A;
+    }
+
+    .red {
+        color: #BA0C2F;
+    }
+
+    .orange {
+        color: #ED8B00;
+    }
+
+    .purple {
+        color: #5C068C;
+    }
+
+    .blue {
+        color: #00A6D6;
+    }
+
+    .cyan {
+        color: #5CB8B2;
+    }
+
+    .pink {
+        color: #F04E98;
+    }
+
+    .bg-orange {
+        background-color: #ED8B00;
+    }
+
+    .bg-orange-light {
+        background-color: rgb(237 139 0 / 10%);
+    }
+
+    .coral {
+        color: #FFCD00;
+    }
+
+    .drop-shadow {
+        filter: drop-shadow(5px 4px 2px #ccc);
+    }
+
+    .pop {
+        cursor: zoom-in;
+    }
+
+    .livraison {
+        font-size: 12px !important;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 100;
+    }
+
+    h2 {
+        color: var(--primary-color);
+    }
+
+    a {
+        color: var(--primary-color);
+    }
+
+    a:hover {
+        color: #002A3A;
+    }
+
+    button:focus,
+    button:focus-visible {
+        outline: unset;
+    }
+
+    .btn-outline-primary {
+        color: var(--secondary-color);
+        border-color: var(--secondary-color);
+        background-color: #ffffff;
+        border: 2px solid;
+    }
+
+    .btn-outline-primary:hover,
+    .btn-outline-primary:not(:disabled):not(.disabled):active {
+        color: #ffffff;
+        border-color: var(--secondary-color);
+        background-color: var(--secondary-color);
+        border: 2px solid;
+    }
+
+    /* EFFET CLIGNOTANT */
+    .blinking {
+        animation: animate 2s linear infinite;
+    }
+
+    @keyframes animate {
+        0% {
+            opacity: 0.2;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0.2;
+        }
+    }
+
+    /* EFFET PULSE */
+    .pulsing-button {
+        cursor: pointer;
+        box-shadow: 0 0 0 0 rgba(237, 139, 0, 1);
+        transform: scale(1);
+        animation: pulse 2s infinite;
+    }
+
+    .pulsing-button:hover {
+        background: #ffb54d;
+        color: #FFF;
+        animation: none;
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(237, 139, 0, 0.7);
+        }
+
+        70% {
+            box-shadow: 0 0 0 20px rgba(237, 139, 0, 0);
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba(237, 139, 0, 0);
+        }
+    }
+
+    /*******************************
+* NAV BAR
+*******************************/
+
+    .shadow-bar {
+        box-shadow: 0 15px 10px -15px rgb(0 0 0 / 10%);
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+        background-color: #ffffff;
+        border: none;
+        color: var(--primary-color) !important;
+        font-weight: 700;
+    }
+
+    #pageTop,
+    #a-propos-container,
+    #avis-container,
+    #a-propos-cellinnov,
+    #contactContainer {
+        top: -60px;
+    }
+
+    /*******************************
+* CAROUSEL
+*******************************/
+
+    #carouselWithImageIndicators .carousel-inner {
+        max-width: 200px;
+    }
+
+    #carouselWithImageIndicators .carousel-indicators {
+        position: absolute;
+        right: unset !important;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        z-index: 1 !important;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        margin-right: unset !important;
+        margin-left: unset !important;
+    }
+
+    #carouselWithImageIndicators .carousel-indicators li {
+        border: 2px solid var(--primary-color);
+        background-color: #fff;
+        height: 30px;
+        width: 30px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        opacity: 0.5;
+    }
+
+    #carouselWithImageIndicators .carousel-indicators .active {
+        opacity: 1;
+    }
+
+    /*******************************
+* OFFRE
+*******************************/
+
+    #offer-container .choice-button-container button,
+    #offer-container .choice-button-container a {
+        color: #FFF;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 3px;
+        border: none;
+        padding: 1rem 2.75rem;
+        border-radius: 50px;
+        background: linear-gradient(90deg, rgb(100% 70.98% 30.196%) 0%, rgb(98.757% 68.081% 24.881%) 6.25%, rgb(97.67% 65.544% 20.229%) 12.5%, rgb(96.727% 63.344% 16.196%) 18.75%, rgb(95.919% 61.458% 12.739%) 25%, rgb(95.235% 59.862% 9.812%) 31.25%, rgb(94.665% 58.531% 7.372%) 37.5%, rgb(94.197% 57.441% 5.374%) 43.75%, rgb(93.824% 56.569% 3.775%) 50%, rgb(93.532% 55.889% 2.529%) 56.25%, rgb(93.313% 55.378% 1.592%) 62.5%, rgb(93.157% 55.012% 0.922%) 68.75%, rgb(93.051% 54.767% 0.472%) 75%, rgb(92.988% 54.618% 0.199%) 81.25%, rgb(92.955% 54.542% 0.059%) 87.5%, rgb(92.943% 54.514% 0.007%) 93.75%, rgb(92.941% 54.51% 0%) 100%);
+    }
+
+    #offer-container .choice-button-container button:hover,
+    #offer-container .choice-button-container a:hover {
+        background: #ffb54d;
+    }
+
+    .old_price {
+        font-size: 0.8rem;
+    }
+
+    .custom-radio .custom-control-input:checked~.custom-control-label::after {
+        background-image: none
+    }
+
+    .custom-radio .custom-control-input:checked~.custom-control-label::before {
+        box-shadow: inset 0 0 0 2px #fff
+    }
+
+    .custom-control .custom-control-label::before {
+        left: 1em;
+        top: 1em;
+        border-color: #484848
+    }
+
+    .custom-control-input:checked~.custom-control-label::before {
+        color: #fff;
+        border-color: var(--primary-color);
+        background-color: var(--primary-color)
+    }
+
+    .custom-control-input:checked~.custom-control-label {
+        border-color: var(--primary-color) !important;
+        border-width: 2px !important;
+    }
+
+    .custom-control .custom-control-label:hover {
+        border-color: var(--secondary-color) !important;
+    }
+
+    .badge-primary {
+        background-color: #ED8B00;
+    }
+
+    .badge-success {
+        /* color: #002A3A!important; */
+        background-color: var(--primary-color) !important;
+        top: -15%;
+        left: -4px;
+    }
+
+    .badge {
+        white-space: break-spaces !important;
+    }
+
+    .fixed-bottom {
+        z-index: 9 !important;
+    }
+
+
+    /*******************************
+* INGREDIENT
+*******************************/
+
+    .border-ingredient {
+        border: 4px solid var(--primary-color);
+    }
+
+    #ingredients-container .ingredients-list-images .active img {
+        opacity: 1;
+    }
+
+    #ingredients-container .ingredients-list-images img {
+        max-width: 100px;
+        opacity: .3;
+    }
+
+    #ingredients-container .ingredients-list-images img:hover {
+        cursor: pointer;
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    #ingredients-container #pills-tab a:hover {
+        text-decoration: none;
+    }
+
+    /*******************************
+* ACCORDION
+*******************************/
+
+    .accordion>.card>.card-header {
+        border: unset;
+        padding-left: unset;
+        background-color: unset;
+        padding: 1rem;
+    }
+
+    .accordion>.card>.card-header h2 button {
+        font-size: 1.1rem !important;
+    }
+
+    .accordion .card-body {
+        margin-right: 1.25rem;
+    }
+
+    .accordionChevron::before {
+        content: '+';
+        position: absolute;
+        top: 38px;
+        right: 2rem;
+        transform: translateY(-50%);
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .accordionChevron[aria-expanded='true']::before {
+        content: '-';
+        color: #fff;
+        top: 36px;
+    }
+
+    .accordion>.card {
+        border-style: solid;
+        border-width: 1px 0px;
+        border-radius: unset;
+    }
+
+    .accordion>.card:first-of-type {
+        border: unset;
+    }
+
+    .accordion>.card>.card-header .btn[aria-expanded=true] {
+        background: var(--primary-color);
+        color: #FFFFFF;
+    }
+
+    .accordion>.card>.card-header .btn:hover {
+        background: var(--primary-color);
+        color: #FFFFFF;
+    }
+
+    .btn:focus,
+    .btn.focus {
+        outline: unset !important;
+        box-shadow: unset !important;
+    }
+
+    /*******************************
+* Picto
+*******************************/
+
+    .picto {
+        background: rgb(237 139 0 / 10%);
+    }
+
+    /*******************************
+* FOOTER
+*******************************/
+    footer {
+        background-color: #002A3A;
+        color: #FFF;
+        position: relative;
+        z-index: 1031;
+    }
+
+    footer h5 {
+        margin-bottom: 1.5rem;
+        font-size: 600 !important;
+    }
+
+    footer ul li {
+        margin-bottom: 0.6rem;
+    }
+
+    footer a {
+        text-decoration: none;
+        font-style: normal;
+        color: #FFFFFF;
+    }
+
+    footer a:hover {
+        color: #fff;
+    }
+
+    footer .delivery {
+        max-width: 170px;
+    }
+
+    .footer-copyright {
+        font-size: 80%;
+    }
+
+    svg:hover path#pageUp_circle {
+        fill: var(--primary-color);
+        transition: all ease 0.3s;
+    }
+
+    svg path#pageUp_chevron {
+        fill: var(--primary-color);
+    }
+
+    svg:hover path#pageUp_chevron {
+        fill: #FFFFFF;
+        transition: all ease 0.3s;
+    }
+
+    footer .creditCard {
+        max-width: 250px;
+    }
+
+    /*footer palyance*/
+
+    footer .palyance-logo-container {
+        background-color: #FFF;
+        max-width: 42px;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    footer .palyance-logo-container img {
+        padding: 2px;
+    }
+
+
+    /*******************************
+* MODALS
+*******************************/
+
+    .modal-content {
+        border: unset;
+    }
+
+    .modal-header {
+        border-bottom: unset;
+    }
+
+    .modal-body {
+        padding: 1.5rem;
+    }
+
+    .modal-footer {
+        border-top: unset;
+    }
+
+    .modal_call {
+        text-decoration: none;
+        font-style: normal;
+    }
+
+    .close {
+        opacity: unset;
+    }
+
+    /*modal footer palyance */
+
+    #palyance-info .modal-body {
+        word-break: break-word;
+    }
+
+    #palyance-info h5 {
+        color: #00599D;
+        text-transform: uppercase;
+        font-weight: normal;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    #palyance-info img {
+        max-width: 150px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    /*******************************
+* PANIER
+*******************************/
+
+    /* #panier h2 {
+    font-size: 1.6rem;
+} */
+
+    #panier button.close {
+        z-index: 10;
+    }
+
+    #panier .border {
+        border-radius: 4px;
+    }
+
+    #panier .alert-warning {
+        font-size: smaller;
+        margin: 1rem;
+    }
+
+    #panier button.close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    #panier .numbers {
+        background-color: var(--primary-color);
+        color: white;
+        border: 1px solid var(--primary-color);
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    .btn-link {
+        color: var(--secondary-color);
+    }
+
+    .btn-link:hover {
+        color: var(--secondary-color) !important;
+    }
+
+    /* Ã©vite l'effet au clic de fermeture */
+    .modal.modal-static .modal-dialog {
+        -webkit-transform: none !important;
+        transform: none !important;
+    }
+
+    .modal.fade.right:not(.show) .modal-dialog {
+        -webkit-transform: translate3d(50%, 0, 0);
+        transform: translate3d(50%, 0, 0)
+    }
+
+    .modal .modal-dialog.modal-right {
+        right: 0;
+        z-index: 1000;
+    }
+
+    .modal-full-height {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 100% !important;
+        margin: 0;
+    }
+
+    .modal-right {
+        max-width: 100%;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        background: #fff;
+    }
+
+    .modal-right .modal-content {
+        border-radius: unset;
+        height: max-content !important;
+    }
+
+    /* BUTTON UPSELL PANIER */
+    .btn-ups-panier {
+        top: 0;
+        left: 0;
+        transition: all .15s linear 0s;
+        position: relative;
+        display: inline-block;
+        padding: 0.75rem 1.25rem 0.95rem;
+        background-color: #fff;
+        border-radius: 4px;
+        color: #002A3A;
+        font-weight: 600;
+        box-shadow: 5px 5px 0 rgb(237 139 0 / 30%);
+        text-decoration: none;
+        border-width: 2px;
+        border-color: #ED8B00;
+        border-style: solid;
+        cursor: pointer;
+    }
+
+    .btn-ups-panier:hover {
+        top: 5px;
+        left: 4px;
+        box-shadow: 0 0 0 rgb(237 139 0 / 30%);
+        background-color: #fff;
+        border-color: #ED8B00;
+        color: #002A3A;
+        text-decoration: none;
+    }
+
+    .border-tertiary {
+        border-color: var(--primary-color) !important;
+    }
+
+    #ups_panier {
+        max-width: 500px;
+    }
+
+    /*******************************
+* FORM
+*******************************/
+    .form-check {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .form-check-input {
+        margin-top: .4rem;
+    }
+
+    .form-check .form-check-input[type=checkbox] {
+        border-radius: .25em;
+        height: 15px;
+        width: 15px;
+        top: -4px;
+    }
+
+    .form-group {
+        position: relative;
+    }
+
+    .form-fields .vanguard-contact-form-label {
+        font-weight: 400 !important;
+        position: absolute;
+        top: -16px;
+        left: 20px;
+        padding: 0 5px;
+        font-size: 0.9rem !important;
+        background-color: #ffffff;
+        width: auto !important;
+    }
+
+    .vanguard-optins-container {
+        font-size: 0.8rem;
+    }
+
+    .vanguard-form-title {
+        border-bottom: unset !important;
+        padding-left: 20px !important;
+    }
+
+    .vanguard-billing-form .form-check {
+        margin-left: unset;
+        margin-top: 0.5rem;
+    }
+
+    .vanguard-billing-form .form-control {
+        height: 40px !important;
+    }
+
+    .vanguard-shipping-form .col-sm-12 .form-group,
+    .vanguard-billing-form .col-sm-12 .form-group {
+        display: block;
+        width: 50%;
+        float: left;
+        margin: 0 0 25px 0;
+        padding: 0 15px;
+    }
+
+    .vanguard-shipping-form .col-sm-12,
+    .vanguard-billing-form .col-sm-12 {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    .vanguard-shipping-form .col-sm-12:after,
+    .vanguard-billing-form .col-sm-12:after {
+        display: table;
+        content: '';
+        clear: both;
+    }
+
+    @media screen and (max-width: 640px) {
+
+        .vanguard-shipping-form .col-sm-12 .form-group,
+        .vanguard-billing-form .col-sm-12 .form-group {
+            width: 100%;
+        }
+    }
+
+    /*******************************
+* RECAP DE PAIEMENT
+*******************************/
+    #panier .module-block-recapitulative {
+        border: unset !important;
+        background-color: unset !important;
+        padding: 0px 20px !important;
+        margin-top: unset !important;
+    }
+
+    #panier .module-block-offer-choice-name div span.text-muted {
+        display: none;
+    }
+
+    #panier .module-block-offer-choice-name {
+        margin-bottom: 10px;
+    }
+
+    #panier .module-block-offer-choice-name div:nth-child(1) {
+        display: none;
+    }
+
+    #panier .module-block-offer-choice-name div:nth-child(2) {
+        max-width: 100%;
+        flex: 100%;
+    }
+
+    #panier .module-block-recapitulative h4 {
+        display: none;
+    }
+
+    #panier .module-block-payment-at-order-time {
+        display: none;
+    }
+
+    #panier .module-block-offer-long-description {
+        margin-bottom: 1.5rem !important;
+    }
+
+    #panier .module-block-offer-long-description div:nth-child(1) {
+        display: none;
+    }
+
+    #panier .module-block-offer-long-description div:nth-child(2) {
+        max-width: 100%;
+        flex: 100%;
+    }
+
+
+    #panier .module-block-offer-price .text-right,
+    .module-block-offer-total .text-right,
+    .module-block-offer-delivery .text-right,
+    .module-block-offer-choice-payment-method .text-right {
+        text-align: unset !important;
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+
+    .module-block-recapitulative .module-block-recapitulative-max-width {
+        max-width: unset !important;
+    }
+
+    .vanguard-payment-method-switch .vanguard-payment-method-switch-bank-card {
+        line-height: 50px !important;
+        text-align: center !important;
+    }
+
+    .vanguard-payment-method-switch {
+        border-radius: 50px !important;
+        max-width: 300px !important;
+        margin: auto !important;
+        height: 50px !important;
+    }
+
+    .vanguard-payment-method-switch .vanguard-payment-method-switch-indicator {
+        border-radius: 50px !important;
+    }
+
+    .vanguard-payment-iframe-container {
+        margin-top: unset !important;
+    }
+
+    .vanguard-shipping-fees {
+        color: #4169E1 !important;
+        margin-top: unset !important;
+        font-weight: 600 !important;
+        text-align: unset !important;
+        font-size: 0.9rem !important;
+    }
+
+    option[value="ASM"],
+    option[value="GUM"],
+    option[value="ISR"],
+    option[value="MNP"],
+    option[value="PRI"],
+    option[value="VIR"],
+    option[value="UMI"],
+    option[value="FXX"],
+    option[value="USA"],
+    option[value="AFG"],
+    option[value="ALB"],
+    option[value="AGO"],
+    option[value="IRQ"],
+    option[value="PRK"],
+    option[value="CHE"],
+    option[value="SYR"],
+    option[value="GHA"],
+    option[value="GBR"] {
+        display: none !important;
+    }
+
+
+    /*******************************
+* MEDIA QUERIES
+*******************************/
+    @media only screen and (min-width:375px) {
+        .container {
+            max-width: 540px
+        }
+
+        #carouselWithImageIndicators .carousel-inner {
+            max-width: 265px;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .fs-5 {
+            font-size: 1rem !important;
+        }
+    }
+
+    @media only screen and (min-width:425px) {
+        #carouselWithImageIndicators .carousel-inner {
+            max-width: 300px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .mw-90,
+        .mw-80,
+        .mw-70,
+        .mw-60,
+        .mw-50,
+        .mw-40,
+        .mw-30,
+        .mw-20,
+        .mw-10 {
+            max-width: 100%;
+        }
+    }
+
+    @media only screen and (max-width:767px) {
+        #ingredients-container .ingredients-list-images img {
+            opacity: 1;
+        }
+
+        .nav-justified>.nav-link,
+        .nav-justified .nav-item {
+            flex-basis: auto !important;
+        }
+
+    }
+
+    @media only screen and (min-width:768px) {
+        .container {
+            max-width: 720px
+        }
+
+        #carouselWithImageIndicators .carousel-inner {
+            max-width: 350px;
+        }
+    }
+
+    @media only screen and (max-width:768px) {
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+        }
+
+        #pageTop,
+        #a-propos-container,
+        #avis-container,
+        #a-propos-cellinnov,
+        #contactContainer {
+            top: -216px;
+        }
+    }
+
+    @media only screen and (min-width:992px) {
+        .container {
+            max-width: 960px
+        }
+    }
+
+    @media only screen and (min-width:1200px) {
+        .fs-1 {
+            font-size: 2.5rem !important
+        }
+
+        .fs-2 {
+            font-size: 2rem !important
+        }
+
+        .fs-3 {
+            font-size: 1.75rem !important
+        }
+
+        .fs-4 {
+            font-size: 1.5rem !important
+        }
+    }
+
+    @media only screen and (min-width:1260px) {
+        .container {
+            max-width: 1200px
+        }
+
+        #carouselWithImageIndicators .carousel-inner {
+            max-width: 400px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('vanguard-ready', function(e) {
+        $(".info_premium_cta, .info_premium_content").mouseover(function() {
+            $(".info_premium_content").show();
+        });
+
+        $(".info_premium_cta, .info_premium_content").mouseleave(function() {
+            $(".info_premium_content").hide();
+        });
+    }, false);
+</script>
+
+<script>
+    document.addEventListener('vanguard-ready', function(e) {
+        $("#billingFirstName").parent().addClass('divhalf');
+        $("#billingLastName").parent().addClass('divhalf');
+
+        $("#billingPhoneNumber").parent().css('margin-bottom', '0');
+        $("#billingStreet1").parent().css('margin-bottom', '0');
+        $("#billingStreet2").parent().css('margin-bottom', '0');
+        $("#billingStreet4").parent().css('margin-bottom', '0');
+    }, false);
+</script>
+
+<script type="text/javascript">
+    document.addEventListener('vanguard-choices-form-ready', function() {
+        var var_bcl = "bcl";
+        var nb_boites_selected = 6;
+        $("body").on('click', '.quantity-button', function() {
+            console.log(this.id);
+            // on cherche le data-bcl attribute du parent avec la classe "subscription-card" du bouton cliqué dans le bloc 1B, 3B ou 6B
+            var_bcl = $("#subscription-type-" + nb_boites_selected + "B .choix.on").closest(".subscription-card").data('bcl');
+            $(".quantity-button").removeClass("on");
+            $(this).addClass('on');
+            if (this.id == "1B") {
+                nb_boites_selected = 1
+                $("#recommended").removeClass("invisible");
+            } else if (this.id == "3B") {
+                nb_boites_selected = 3
+                $("#recommended").removeClass("invisible");
+            } else if (this.id == "6B") {
+                nb_boites_selected = 6
+                $("#recommended").addClass("invisible");
+            }
+            console.log("nombre de boites: " + nb_boites_selected);
+            $("#" + var_bcl + "-card-subscription-" + nb_boites_selected + "B .choix").trigger('click');
+            $(".subscription-type").addClass("displayNone");
+            $("#subscription-type-" + nb_boites_selected + "B").removeClass("displayNone");
+            if (nb_boites_selected > 1) {
+                $('.visuel').attr('src', 'https://cdn.elsanta-sante.info/uploads/ELSSMTX/MTX-Pilluliers-' + nb_boites_selected + '.png');
+            } else {
+                $('.visuel').attr('src', 'https://cdn.elsanta-sante.info/uploads/ELSSMTX/MTX-Pillulier-' + nb_boites_selected + '.png');
+            }
+        });
+    });
+</script>
+
+<script>
+    //Se déclenche au chargement de la page
+    document.addEventListener('vanguard-ready', function(e) {
+        //Nombre de choix présents sur le bdc
+        nbChoix = Object.keys(tableauchoix).length;
+        console.log("Choix en cours: " + tableauchoix_id[choix_en_Cours()].stackLetter);
+
+        //Mets le choix par défaut en surbrillance
+        switchFormat(tableauchoix_id[choix_en_Cours()].stackLetter);
+        //Remplit la partie avantages
+
+        $("body").on('click', '.choix', function() {
+            $(".choix").removeClass("selected");
+            $(this).addClass('selected');
+            var choice_to_click = choiceToSelect(this.id);
+            switchFormat(this.id);
+            console.log("Choix: " + choice_to_click);
+            $('#vanguard-choice-' + choice_to_click).trigger('click');
+            //var quantity = choice.quantity
+            //$('#prix').text(tableauchoix_id[choix_en_Cours()].price);
+        });
+        // var element = document.querySelector("#post-container");
+        // smooth scroll to element and align it at the bottom
+        // element.scrollIntoView({ behavior: 'smooth', block: 'end'});
+
+        //Fonction smooth scroll sur les coordonnées si on clique 2 fois sur un choix
+        $('body').on('click', '.choix.selected, .buttontotop', function(e) {
+            console.log("click !");
+            $('html, body').animate({
+                scrollTop: $("#form").offset().top
+            }, 0);
+        });
+
+    }, false);
+
+    //Fonctions customs
+    function choix_en_Cours() {
+        return parseInt($('input[type=radio][name=vanguard-choices]:checked').attr('id').split('-').pop());
+    }
+
+    //Fonction avec en param la stackletter qui doit être en id sur le bouton, et renvoie l'id du choix à sélectionner
+    function choiceToSelect(choix) {
+        var MoyenDePaiement = $('input[type=radio][name=vanguard-payment-method-radio]:checked').val();
+        var res = null;
+        $.each(tableauchoix, function(index, value) {
+            if (tableauchoix[index].stackLetter == choix && tableauchoix[index].paymentMethod == MoyenDePaiement) {
+                res = tableauchoix[index].id;
+                return false;
+            }
+        });
+        return res;
+    }
+    //Fonction qui affiche visuellement le bon choix
+    function switchFormat(choix_f) {
+        $('.choix').removeClass("on");
+        $('#' + choix_f).addClass('on');
+    }
+    //Fonction qui va peupler les bonnes valeurs dans la partie choix
+</script>
+
+<script type="text/javascript">
+    document.addEventListener("vanguard-ready", function() {
+        $(document).ready(function() {
+            /* MODULE EXITPOPUP */
+            // variable laissant 30s avant de permettre les ExitPopUps, et plus tard aussi permettant de laisser 1min avant le ré-affichage de la popup pour ne pas trop spammer
+            let exitPopUpEnabled = false;
+            setTimeout(function() {
+                exitPopUpEnabled = true;
+            }, 30000);
+            $(document).mouseleave(function() {
+                if (exitPopUpEnabled && !$("body").hasClass("modal-open") && !$('input').is(':focus')) {
+                    // Show the exit popup by leaving the window
+                    $('#exitpopup').modal();
+                    exitPopUpEnabled = false;
+                }
+            });
+            // On attend que l'exitpopup soit fermée avant de lancer le chrono pour permettre la réouverture de ce dernier.
+            $('#exitpopup').on('hide.bs.modal', function(e) {
+                console.log("Modal fermée !")
+                setTimeout(function() {
+                    exitPopUpEnabled = true;
+                }, 60000);
+            })
+            /* END MODULE EXITPOPUP */
+        });
+    });
+</script>
+<title>Complexe Cérébral</title>
+
+<link rel="icon" type="image/svg+xml" href="https://cdn.cellinnov.com/images/logo/Logo_mini_sante.svg" />
+
+<script>
+    //Logo
+    var logoCin = 'https://cdn.cellinnov.com/images/logo/logo_sante.svg'
+    //Product type
+    var typeProduct_singular = 'boîte';
+    var typeProduct_plurial = typeProduct_singular + 's';
+    //Renew price
+    var renewPrice_1 = '';
+    var renewPrice_2 = 'Puis 129.60€ ';
+    var renewPrice_3 = 'Puis 239.40€ ';
+    //Economy product
+    var economy_A = '';
+    var economy_B = '63.30€';
+    var economy_C = '139.80€';
+    var economy_D = '';
+    var economy_E = '49.90€';
+    var economy_F = '99.80€';
+    //Old price
+    var oldPrice_A = '';
+    var oldPrice_B = '<s>149.70€</s>';
+    var oldPrice_C = '<s>299.40€</s>';
+    var oldPrice_D = '';
+    var oldPrice_E = '<s>149.70€</s>';
+    var oldPrice_F = '<s>299.40€</s>';
+    //Box price
+    let fieldBoxPrice_A = false;
+    let fieldBoxPrice_B = true;
+    let fieldBoxPrice_C = true;
+    let fieldBoxPrice_D = false;
+    let fieldBoxPrice_E = true;
+    let fieldBoxPrice_F = true;
+    // Button UPS Panier
+    var text_ups_A = 'les frais de port';
+    var text_ups_B = '13€';
+    var text_ups_C = '40€';
+    //Img general
+    var link_Image = 'https://cdn.cellinnov.info/uploads/CIN/images/produits/BRN/BRN_color.png';
+    // Create array for carousel images
+    var featuredImage = [
+        'https://cdn.cellinnov.info/uploads/CIN/images/produits/BRN/BRN_2plus1.gif',
+        'https://cdn.cellinnov.info/uploads/CIN/images/produits/BRN/BRN_4plus2.gif',
+        'https://cdn.cellinnov.info/uploads/CIN/images/produits/BRN/BRN_1.png',
+    ]
+</script>
+
+<style>
+    :root {
+        --primary-color: #BA0C2F;
+        --secondary-color: #002A3A;
+    }
+</style>
+
+<!-- <link rel="stylesheet" href="https://bdc.cellinnov.com/common/CSS/cinfr_bdc_neo.css"> -->
+
+<!-- Global JS -->
+<script src="https://bdc.cellinnov.com/common/JS/cinfr_bdc_neo.js"></script>
+
+<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- End TrustBox script -->
+
+<!-- Avis-Vérifiés -->
+<script charset="utf-8" src="https://cl.avis-verifies.com/fr/cache/f/6/7/f67da593-0a81-aef4-2dc9-938caa042c20/AWS/PRODUCT_API/tag.min.js"></script>
+
+<!-- FontAwesome 5 -->
+<script src="https://kit.fontawesome.com/e51344c838.js" crossorigin="anonymous"></script>
+
+<!--Bootstrap Icons-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<!--Lucky Orange Analytics-->
+<script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=15a8d9dc"></script>
