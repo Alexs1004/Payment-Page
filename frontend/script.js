@@ -440,52 +440,13 @@ document.addEventListener("DOMContentLoaded", function() {
 // });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    var politiqueModal = new bootstrap.Modal(document.getElementById('politiqueModal'), {
-        backdrop: 'static',
-        keyboard: true
-    });
-
-    var politiqueBtn = document.getElementById('politiqueBtn');
-    var mentionsLegalesBtn = document.getElementById('mentionsLegalesBtn');
-    var remboursementBtn = document.getElementById('remboursementBtn');
-    var contactBtn = document.getElementById('contactBtn');
-
-    politiqueBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-        politiqueModal.show();
-        document.querySelector('#politiqueModal .modal-remboursement').focus();
-    });
-
-    mentionsLegalesBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-        politiqueModal.show();
-        document.querySelector('#politiqueModal .modal-mentions-légales').focus();
-    });
-
-    remboursementBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-        politiqueModal.show();
-        document.querySelector('#politiqueModal .modal-remboursement').focus();
-    });
-
-    contactBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-        politiqueModal.show();
-        document.querySelector('#politiqueModal .modal-contact').focus();
-    });
-});
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', function() {
     var qteBtn = document.querySelector('.qte-btn');
     qteBtn.addEventListener('click', function() {
         var qteModal = new bootstrap.Modal(document.getElementById('qteModal'), {
-            backdrop: 'static',
-            keyboard: false
+            keyboard: true
         });
         qteModal.show();
     });
@@ -496,8 +457,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const inDdButton = document.querySelector('.in_dd_button');
     inDdButton.addEventListener('click', function() {
         const qteModal = new bootstrap.Modal(document.getElementById('qteModal'), {
-            backdrop: 'static',
-            keyboard: false
+            keyboard: true
         });
         qteModal.show();
     });
@@ -1052,7 +1012,13 @@ function transformToInput(event) {
     var promoContainer = document.getElementById("promo-container");
     promoContainer.innerHTML = '';
     promoContainer.appendChild(inputGroup);
+
+    // Mettre le focus sur l'input après un court délai
+    setTimeout(function() {
+        inputElement.focus();
+    }, 0);
 }
+
 
 
   function showApplyButton() {
@@ -1181,6 +1147,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //BON CODE POUR MODAL
+document.addEventListener('DOMContentLoaded', function() {
+    var politiqueModal = new bootstrap.Modal(document.getElementById('politiqueModal'), {
+        keyboard: true
+    });
+
+    var politiqueBtn = document.getElementById('politiqueBtn');
+    var mentionsLegalesBtn = document.getElementById('mentionsLegalesBtn');
+    var remboursementBtn = document.getElementById('remboursementBtn');
+    var contactBtn = document.getElementById('contactBtn');
+
+    politiqueBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        politiqueModal.show();
+        document.querySelector('#politiqueModal .modal-remboursement').focus();
+    });
+
+    mentionsLegalesBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        politiqueModal.show();
+        document.querySelector('#politiqueModal .modal-mentions-légales').focus();
+    });
+
+    remboursementBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        politiqueModal.show();
+        document.querySelector('#politiqueModal .modal-remboursement').focus();
+    });
+
+    contactBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        politiqueModal.show();
+        document.querySelector('#politiqueModal .modal-contact').focus();
+    });
+});
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     // Récupérer les boutons et les blocs
     var modalMentionsLegalesBtn = document.querySelector(".modal-mentions-légales");
