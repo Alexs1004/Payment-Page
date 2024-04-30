@@ -1147,7 +1147,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //BON CODE POUR MODAL
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
     var politiqueModal = new bootstrap.Modal(document.getElementById('politiqueModal'), {
         keyboard: true
     });
@@ -1157,38 +1157,45 @@ document.addEventListener('DOMContentLoaded', function() {
     var remboursementBtn = document.getElementById('remboursementBtn');
     var contactBtn = document.getElementById('contactBtn');
 
-    politiqueBtn.addEventListener('click', function(event) {
+    // Fonction pour gérer les clics sur les boutons
+    function handleButtonClick(event, targetBlock) {
         event.preventDefault();
         politiqueModal.show();
+        targetBlock.classList.remove("d-none");
         document.querySelector('#politiqueModal .modal-remboursement').focus();
+    }
+
+    // Associer la même fonction à tous les boutons
+    politiqueBtn.addEventListener('click', function(event) {
+        handleButtonClick(event, document.querySelector('#politiqueModal .modal-remboursement'));
+        var modalRemboursementBtn = document.querySelector(".modal-remboursement");
+        modalRemboursementBtn.click(); // Simuler le clic sur modal-remboursement
+        modalRemboursementBtn.focus(); // Mettre le focus sur modal-remboursement
     });
 
+
     mentionsLegalesBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-        politiqueModal.show();
-        document.querySelector('#politiqueModal .modal-mentions-légales').focus();
+        handleButtonClick(event, document.querySelector('#politiqueModal .modal-mentions-légales'));
+        var modalMentionsLegalesBtn = document.querySelector(".modal-mentions-légales");
+        modalMentionsLegalesBtn.click(); // Simuler le clic sur modal-mentions-légales
+        modalMentionsLegalesBtn.focus(); // Mettre le focus sur modal-mentions-légales
     });
 
     remboursementBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-        politiqueModal.show();
-        document.querySelector('#politiqueModal .modal-remboursement').focus();
+        handleButtonClick(event, document.querySelector('#politiqueModal .modal-remboursement'));
+        var modalRemboursementBtn = document.querySelector(".modal-remboursement");
+        modalRemboursementBtn.click(); // Simuler le clic sur modal-remboursement
+        modalRemboursementBtn.focus(); // Mettre le focus sur modal-remboursement
     });
 
     contactBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-        politiqueModal.show();
-        document.querySelector('#politiqueModal .modal-contact').focus();
+        handleButtonClick(event, document.querySelector('#politiqueModal .modal-contact'));
+        var modalContactBtn = document.querySelector(".modal-contact");
+        modalContactBtn.click(); // Simuler le clic sur modal-contact
+        modalContactBtn.focus(); // Mettre le focus sur modal-contact
     });
-});
 
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Récupérer les boutons et les blocs
+    // Récupérer les boutons et les blocs de la modal
     var modalMentionsLegalesBtn = document.querySelector(".modal-mentions-légales");
     var modalRemboursementBtn = document.querySelector(".modal-remboursement");
     var modalContactBtn = document.querySelector(".modal-contact");
@@ -1197,31 +1204,32 @@ document.addEventListener("DOMContentLoaded", function() {
     var remboursementsModalBlock = document.querySelector(".remboursements-modal");
     var contactModalBlock = document.querySelector(".contact-modal");
 
-    // Ajouter des écouteurs d'événements pour les clics sur les boutons
+    // Ajouter des écouteurs d'événements pour les clics sur les boutons de la modal
     modalMentionsLegalesBtn.addEventListener("click", function() {
-      // Afficher le bloc modal-body-mentions
-      modalMentionsBlock.classList.remove("d-none");
-      // Cacher les autres blocs
-      remboursementsModalBlock.classList.add("d-none");
-      contactModalBlock.classList.add("d-none");
+        // Afficher le bloc modal-body-mentions
+        modalMentionsBlock.classList.remove("d-none");
+        // Cacher les autres blocs
+        remboursementsModalBlock.classList.add("d-none");
+        contactModalBlock.classList.add("d-none");
     });
 
     modalRemboursementBtn.addEventListener("click", function() {
-      // Afficher le bloc remboursements-modal
-      remboursementsModalBlock.classList.remove("d-none");
-      // Cacher les autres blocs
-      modalMentionsBlock.classList.add("d-none");
-      contactModalBlock.classList.add("d-none");
+        // Afficher le bloc remboursements-modal
+        remboursementsModalBlock.classList.remove("d-none");
+        // Cacher les autres blocs
+        modalMentionsBlock.classList.add("d-none");
+        contactModalBlock.classList.add("d-none");
     });
 
     modalContactBtn.addEventListener("click", function() {
-      // Afficher le bloc contact-modal
-      contactModalBlock.classList.remove("d-none");
-      // Cacher les autres blocs
-      modalMentionsBlock.classList.add("d-none");
-      remboursementsModalBlock.classList.add("d-none");
+        // Afficher le bloc contact-modal
+        contactModalBlock.classList.remove("d-none");
+        // Cacher les autres blocs
+        modalMentionsBlock.classList.add("d-none");
+        remboursementsModalBlock.classList.add("d-none");
     });
-  });
+});
+
 
         const bsDropdown = new bootstrap.Dropdown(dropdown);
         const dropdownBack = document.querySelector(".dropdownBack");
