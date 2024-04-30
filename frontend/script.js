@@ -661,8 +661,36 @@ document.addEventListener("DOMContentLoaded", function() {
 // }
 
 
+// function toggleDetails() {
+//       var promoTextDiv = document.getElementById("promo-text");
+//     var clickEvent = new Event("click");
+//     promoTextDiv.dispatchEvent(clickEvent);
+//     const bsDropdown = new bootstrap.Dropdown(dropdown);
+//     if (bsDropdown._element.classList.contains("show")) {
+//         detailsButton.textContent = "Fermer";
+//         detailsIcon.classList.remove('fa-angle-up');
+//         detailsIcon.classList.add('fa-angle-down');
+//         bsDropdown.hide();
+//     } else {
+//         detailsButton.textContent = "Détails";
+//         detailsIcon.classList.remove('fa-angle-down');
+//         detailsIcon.classList.add('fa-angle-up');
+//         bsDropdown.show();
+//         // document.addEventListener("click", closeDropdownOnClickOutside);
+//     }
+// }
+
 function toggleDetails() {
+    // Appeler la fonction transformToInput() avec un événement simulé pour le div promo-text
+    var promoTextDiv = document.getElementById("promo-text");
+    var clickEvent = new Event("click");
+    promoTextDiv.dispatchEvent(clickEvent);
+
+    // Ensuite, gérer l'affichage du dropdown et mettre à jour le texte et l'icône du bouton
     const bsDropdown = new bootstrap.Dropdown(dropdown);
+    const detailsButton = document.querySelector(".promo-btn .promocode-text");
+    const detailsIcon = document.querySelector(".promo-btn .nav-arrow");
+
     if (bsDropdown._element.classList.contains("show")) {
         detailsButton.textContent = "Fermer";
         detailsIcon.classList.remove('fa-angle-up');
@@ -673,7 +701,6 @@ function toggleDetails() {
         detailsIcon.classList.remove('fa-angle-down');
         detailsIcon.classList.add('fa-angle-up');
         bsDropdown.show();
-        // document.addEventListener("click", closeDropdownOnClickOutside);
     }
 }
 
@@ -999,7 +1026,10 @@ document.addEventListener('DOMContentLoaded', function() {
 //     });
 // });
 
-function transformToInput() {
+function transformToInput(event) {
+    // Empêcher la propagation de l'événement de clic
+    event.stopPropagation();
+
     // Créer un div avec les classes Bootstrap nécessaires
     var inputGroup = document.createElement("div");
     inputGroup.classList.add("input-group", "mb-3");
@@ -1022,7 +1052,8 @@ function transformToInput() {
     var promoContainer = document.getElementById("promo-container");
     promoContainer.innerHTML = '';
     promoContainer.appendChild(inputGroup);
-  }
+}
+
 
   function showApplyButton() {
     var inputElement = document.querySelector("#promo-container input");
@@ -1190,8 +1221,15 @@ document.addEventListener("DOMContentLoaded", function() {
         const dropdownBack = document.querySelector(".dropdownBack");
 
         function toggleDetails() {
-        bsDropdown.show();
-    }
+            // Appeler la fonction transformToInput avec un événement factice
+            var promoTextDiv = document.getElementById("promo-text");
+            var fakeClickEvent = new Event("click");
+            transformToInput(fakeClickEvent);
+
+            // Ensuite, afficher la dropdown
+            bsDropdown.show();
+        }
+
     dropdown.addEventListener('show.bs.dropdown', event => {
         detailsButton.textContent = "Fermer";
         detailsIcon.classList.add('fa-angle-up');
