@@ -702,6 +702,8 @@ function toggleDetails() {
 
 // **********************CUSTOM VALIDATION***************************
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const emailInput = document.getElementById("validationCustom01");
 
