@@ -588,6 +588,10 @@ body.dropdown-open {
     border: 1px solid hsla(0, 0%, 0%, 0.5) ;
 } */
 
+/* .promo-input-groupe {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+} */
 
 .palyance_btn:hover {
     background-color: #17A2B8;
@@ -1151,7 +1155,7 @@ body.dropdown-open {
         color: rgb(25, 37, 82);
         font-size: 14px;
         font-weight: 500;
-        left: 227px;
+        left: 172px;
         top: 23px;
         white-space: nowrap;
         z-index: 100;

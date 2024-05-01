@@ -1085,11 +1085,15 @@ function transformToInput(event) {
     setTimeout(function() {
         inputElement.focus();
     }, 0);
+
+    // Appliquer les coins arrondis uniquement aux côtés supérieurs
+    inputElement.style.borderBottomRightRadius = "6px";
+    inputElement.style.borderTopRightRadius = "6px";
 }
 
 
 
-  function showApplyButton() {
+function showApplyButton() {
     var inputElement = document.querySelector("#promo-container input");
 
     // Créer le bouton "Appliquer"
@@ -1101,16 +1105,31 @@ function transformToInput(event) {
 
     // Ajouter un événement de clic au bouton "Appliquer" pour le retirer
     applyButton.addEventListener("click", function(event) {
-      event.preventDefault(); // Empêcher le rechargement de la page
-      applyButton.remove();
+        event.preventDefault(); // Empêcher le rechargement de la page
+        applyButton.remove();
     });
 
     // Ajouter le bouton "Appliquer" à l'input
     inputElement.parentNode.appendChild(applyButton);
 
+    // Cacher le bouton si le champ est vide
+    if (inputElement.value.trim() === "") {
+        applyButton.style.display = "none";
+    }
+
+    // Ajouter un écouteur d'événement pour vérifier si le champ est vide à chaque saisie
+    inputElement.addEventListener("input", function() {
+        if (inputElement.value.trim() === "") {
+            applyButton.style.display = "none";
+        } else {
+            applyButton.style.display = "block";
+        }
+    });
+
     // Retirer l'événement de saisie de l'input pour éviter de créer plusieurs boutons
     inputElement.removeEventListener("input", showApplyButton);
 }
+
 
 
 
