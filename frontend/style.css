@@ -655,6 +655,7 @@ body.dropdown-open {
 #validationCustom32, #validationCustom67, #validationCustom69{
     border-radius: 0px 0px 6px 0px;
     border-left: none;
+    /* margin-left: -1px; */
 }
 
 #validationCustom11, #validationCustom66, #validationCustom68 {
@@ -699,9 +700,10 @@ body.dropdown-open {
     border-radius: 0px 0px 6px 6px;
 }
 
+
 #validationCustom21 {
     border-radius: 0px 0px 6px 6px;
-    border-top: none;
+    margin-top: -1px;
 }
 
 .text-adress-btn, .text-cash-back-btn {
@@ -863,8 +865,8 @@ body.dropdown-open {
 }
 
 #validationCustom02 {
-    border-bottom: none;
     border-radius: 6px 6px 0px 0px;
+    margin-bottom: -1px;
 }
 
 /* Supprimer le margin-top des colonnes .col-6 */
@@ -1192,6 +1194,11 @@ body.dropdown-open {
         color: hsla(0, 0%, 10%, 0.7);
     }
 
+    .footer-fs {
+        position: absolute;
+        bottom: -493px;
+    }
+
     #promo-container {
         cursor: pointer;
         background-color: transparent;
@@ -1318,7 +1325,22 @@ body.dropdown-open {
         pointer-events: none;
     }
 
+    .footer-sm {
+        display: none;
+    }
 
+    .palyance-divbtn {
+        padding: 0px 12px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cash-back-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
 }
 
