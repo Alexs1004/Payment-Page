@@ -599,6 +599,10 @@ body.dropdown-open {
     cursor: pointer !important;
 }
 
+.product-name-dd {
+    margin-right: 10px;
+}
+
 .palyance-btn:focus,
 .palyance-btn:active {
     background-color: black !important;
