@@ -831,6 +831,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     const additionalInput = document.getElementById("validationCustom02");
     const ibanInput = document.getElementById("validationCustomIban");
+    const errorMessage = document.getElementById("errorMessage"); // Ajout de l'élément du message d'erreur
 
     additionalInput.addEventListener("blur", function() {
         validateInput(additionalInput);
@@ -846,16 +847,43 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (!regex.test(value)) {
             inputElement.classList.add("is-invalid");
+            errorMessage.style.display = "block"; // Afficher le message d'erreur
         } else {
             inputElement.classList.remove("is-invalid");
             inputElement.classList.add("is-valid");
+            errorMessage.style.display = "none"; // Masquer le message d'erreur s'il est valide
+        }
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cardInput = document.getElementById("validationCustom02"); // Input de la carte
+    const cardErrorMessage = document.getElementById("cardErrorMessage"); // Message d'erreur pour la carte
+
+    cardInput.addEventListener("blur", function() {
+        validateCardInput(cardInput);
+    });
+
+    function validateCardInput(inputElement) {
+        const value = inputElement.value.trim();
+        const regex = /^[A-Z]{2}\d{2}\s*(\d{4}\s*){4}(\d{4}\s*)?$/;
+
+        if (!regex.test(value)) {
+            inputElement.classList.add("is-invalid");
+            cardErrorMessage.style.display = "block"; // Afficher le message d'erreur
+        } else {
+            inputElement.classList.remove("is-invalid");
+            inputElement.classList.add("is-valid");
+            cardErrorMessage.style.display = "none"; // Masquer le message d'erreur s'il est valide
         }
     }
 });
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
     const expirationInput = document.getElementById("validationCustom11");
+    const cardDateErrorMessage = document.getElementById("cardDateErrorMessage");
 
     expirationInput.addEventListener("input", function(event) {
         let value = expirationInput.value.trim();
@@ -887,32 +915,48 @@ document.addEventListener("DOMContentLoaded", function() {
         const currentYear = today.getFullYear() % 100;
         const currentMonth = today.getMonth() + 1;
 
+        // Validation supplémentaire pour les deux premiers caractères
+        const month = parseInt(value.slice(0, 2));
+        if (month < 1 || month > 12) {
+            inputElement.classList.add("is-invalid");
+            cardDateErrorMessage.textContent = "Le mois d'expiration de votre carte doit être compris entre 01 et 12.";
+            cardDateErrorMessage.style.display = "block"; // Afficher le message d'erreur
+            return; // Arrêter la validation si le mois n'est pas valide
+        }
+
         if (!regexExpiration.test(value)) {
             inputElement.classList.add("is-invalid");
+            cardDateErrorMessage.textContent = "La date d'expiration de votre carte est incomplète.";
+            cardDateErrorMessage.style.display = "block"; // Afficher le message d'erreur
         } else {
             const [expMonth, expYear] = value.split('/');
             const expiryDate = new Date(2000 + parseInt(expYear), parseInt(expMonth) - 1);
 
-            if (expiryDate < today || (parseInt(expYear) === currentYear && parseInt(expMonth) < currentMonth)) {
+            if (expiryDate < today) {
                 inputElement.classList.add("is-invalid");
+                cardDateErrorMessage.textContent = "L'année d'expiration de votre carte est définie dans le passé.";
+                cardDateErrorMessage.style.display = "block"; // Afficher le message d'erreur
             } else {
                 inputElement.classList.remove("is-invalid");
                 inputElement.classList.add("is-valid");
+                cardDateErrorMessage.style.display = "none"; // Masquer le message d'erreur
             }
         }
     }
 
     // Valider la date d'expiration lorsque le champ perd le focus
     expirationInput.addEventListener("blur", function() {
-        const value = expirationInput.value.trim();
         validateExpiration(expirationInput);
     });
 });
 
 
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const cvcInput = document.getElementById("validationCustom32");
+    const cvcErrorMessage = document.getElementById("cardCVCErrorMessage");
 
     cvcInput.addEventListener("input", function(event) {
         let value = cvcInput.value.trim();
@@ -938,18 +982,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (!regexCVC.test(value)) {
             inputElement.classList.add("is-invalid");
+            cvcErrorMessage.textContent = "Le code de sécurité de votre carte est incomplet.";
+            cvcErrorMessage.style.display = "block"; // Afficher le message d'erreur
         } else {
             inputElement.classList.remove("is-invalid");
             inputElement.classList.add("is-valid");
+            cvcErrorMessage.style.display = "none"; // Masquer le message d'erreur
         }
     }
 
     // Valider le CVC lorsque le champ perd le focus
     cvcInput.addEventListener("blur", function() {
-        const value = cvcInput.value.trim();
         validateCVC(cvcInput);
     });
 });
+
 
 document.getElementById("toggleAdresseManuelle").addEventListener("click", function() {
     var adresseManuelleDiv = document.getElementById("adresseManuelle");
