@@ -797,19 +797,19 @@ document.addEventListener("DOMContentLoaded", function() {
 //     });
 // });
 
-// const titulaireDuCompteInput = document.getElementById("validationCustomUsername");
+const titulaireDuCompteInput = document.getElementById("validationCustomUsername");
 
-// titulaireDuCompteInput.addEventListener("blur", function() {
-//     const titulaireDuCompte = titulaireDuCompteInput.value.trim();
-//     const titulaireDuCompteRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
+titulaireDuCompteInput.addEventListener("blur", function() {
+    const titulaireDuCompte = titulaireDuCompteInput.value.trim();
+    const titulaireDuCompteRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
 
-//     if (!titulaireDuCompteRegex.test(titulaireDuCompte)) {
-//         titulaireDuCompteInput.classList.add("is-invalid");
-//     } else {
-//         titulaireDuCompteInput.classList.remove("is-invalid");
-//         titulaireDuCompteInput.classList.add("is-valid");
-//     }
-// });
+    if (!titulaireDuCompteRegex.test(titulaireDuCompte)) {
+        titulaireDuCompteInput.classList.add("is-invalid");
+    } else {
+        titulaireDuCompteInput.classList.remove("is-invalid");
+        titulaireDuCompteInput.classList.add("is-valid");
+    }
+});
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     const cardHolderInput = document.getElementById("validationCustomCardHolder");
