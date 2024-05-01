@@ -950,6 +950,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const sepaButton = document.querySelector(".sepa-btn");
+    const cardErrorMessage = document.getElementById("cardErrorMessage");
+    const cardDateErrorMessage = document.getElementById("cardDateErrorMessage");
+    const cardCVCErrorMessage = document.getElementById("cardCVCErrorMessage");
+
+    sepaButton.addEventListener("click", function() {
+        // Rendre les messages d'erreur invisibles en modifiant leur style CSS
+        cardErrorMessage.style.display = "none";
+        cardDateErrorMessage.style.display = "none";
+        cardCVCErrorMessage.style.display = "none";
+    });
+});
+
+
 
 
 
