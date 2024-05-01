@@ -706,6 +706,7 @@ function toggleDetails() {
 
 document.addEventListener("DOMContentLoaded", function() {
     const emailInput = document.getElementById("validationCustom01");
+    const emailError = document.getElementById("emailError");
 
     emailInput.addEventListener("blur", function() {
         const email = emailInput.value.trim();
@@ -714,13 +715,16 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!emailRegex.test(email)) {
             // Si l'email n'est pas valide, afficher un message d'erreur
             emailInput.classList.add("is-invalid");
+            emailError.style.display = "block"; // Afficher le message d'erreur
         } else {
-            // Si l'email est valide, retirer la classe d'invalidité
+            // Si l'email est valide, retirer la classe d'invalidité et cacher le message d'erreur
             emailInput.classList.remove("is-invalid");
             emailInput.classList.add("is-valid");
+            emailError.style.display = "none"; // Cacher le message d'erreur
         }
     });
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const phoneInput = document.getElementById("validationCustom21");
