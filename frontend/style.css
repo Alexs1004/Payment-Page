@@ -618,7 +618,6 @@ body.dropdown-open {
 
 .palyance-divbtn {
     padding: 0px 12px;
-    margin-top: 36px;
     display: flex;
     justify-content: center;
 }
@@ -1161,8 +1160,7 @@ body.dropdown-open {
         color: rgb(25, 37, 82);
         font-size: 14px;
         font-weight: 500;
-        left: 172px;
-        top: 23px;
+        top: 6px;
         white-space: nowrap;
         z-index: 100;
       }
@@ -1208,6 +1206,10 @@ body.dropdown-open {
 
       #promo-text, #promo-text-fs {
         color: #227CD7;
+      }
+
+      .input-group>.form-control, .input-group>.form-floating, .input-group>.form-select {
+        padding-right: 39px;
       }
 
 

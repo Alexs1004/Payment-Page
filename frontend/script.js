@@ -640,29 +640,29 @@ document.addEventListener("DOMContentLoaded", function() {
 //     }
 // }
 
-function toggleDetails() {
-    // Appeler la fonction transformToInput() avec un événement simulé pour le div promo-text
-    var promoTextDiv = document.getElementById("promo-text");
-    var clickEvent = new Event("click");
-    promoTextDiv.dispatchEvent(clickEvent);
+// function toggleDetails() {
+//     // Appeler la fonction transformToInput() avec un événement simulé pour le div promo-text
+//     var promoTextDiv = document.getElementById("promo-text");
+//     var clickEvent = new Event("click");
+//     promoTextDiv.dispatchEvent(clickEvent);
 
-    // Ensuite, gérer l'affichage du dropdown et mettre à jour le texte et l'icône du bouton
-    const bsDropdown = new bootstrap.Dropdown(dropdown);
-    const detailsButton = document.querySelector(".promo-btn .promocode-text");
-    const detailsIcon = document.querySelector(".promo-btn .nav-arrow");
+//     // Ensuite, gérer l'affichage du dropdown et mettre à jour le texte et l'icône du bouton
+//     const bsDropdown = new bootstrap.Dropdown(dropdown);
+//     const detailsButton = document.querySelector(".promo-btn .promocode-text");
+//     const detailsIcon = document.querySelector(".promo-btn .nav-arrow");
 
-    if (bsDropdown._element.classList.contains("show")) {
-        detailsButton.textContent = "Fermer";
-        detailsIcon.classList.remove('fa-angle-up');
-        detailsIcon.classList.add('fa-angle-down');
-        bsDropdown.hide();
-    } else {
-        detailsButton.textContent = "Détails";
-        detailsIcon.classList.remove('fa-angle-down');
-        detailsIcon.classList.add('fa-angle-up');
-        bsDropdown.show();
-    }
-}
+//     if (bsDropdown._element.classList.contains("show")) {
+//         detailsButton.textContent = "Fermer";
+//         detailsIcon.classList.remove('fa-angle-up');
+//         detailsIcon.classList.add('fa-angle-down');
+//         bsDropdown.hide();
+//     } else {
+//         detailsButton.textContent = "Détails";
+//         detailsIcon.classList.remove('fa-angle-down');
+//         detailsIcon.classList.add('fa-angle-up');
+//         bsDropdown.show();
+//     }
+// }
 
 
 
@@ -1100,7 +1100,7 @@ function showApplyButton() {
     var applyButton = document.createElement("button");
     applyButton.textContent = "Appliquer";
     applyButton.setAttribute("type", "button");
-    applyButton.classList.add("btn", "btn-outline-secondary", "position-absolute", "end-0", "translate-middle", "y-50", "z-1");
+    applyButton.classList.add("btn", "btn-outline-secondary", "position-absolute", "end-0", "y-50", "z-1");
     applyButton.setAttribute("id", "button-addon2");
 
     // Ajouter un événement de clic au bouton "Appliquer" pour le retirer
@@ -1354,82 +1354,86 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    let autocomplete;
-let address1Field;
-let address2Field;
-let postalField;
+    // ****************************************AUTOCOMPLETE"***************************************
 
-function initAutocomplete() {
-  address1Field = document.querySelector("#ship-address");
-  address2Field = document.querySelector("#address2");
-  postalField = document.querySelector("#postcode");
-  // Create the autocomplete object, restricting the search predictions to
-  // addresses in the US and Canada.
-  autocomplete = new google.maps.places.Autocomplete(address1Field, {
-    componentRestrictions: { country: ["us", "ca"] },
-    fields: ["address_components", "geometry"],
-    types: ["address"],
-  });
-  address1Field.focus();
-  // When the user selects an address from the drop-down, populate the
-  // address fields in the form.
-  autocomplete.addListener("place_changed", fillInAddress);
-}
 
-function fillInAddress() {
-  // Get the place details from the autocomplete object.
-  const place = autocomplete.getPlace();
-  let address1 = "";
-  let postcode = "";
+//     let autocomplete;
+// let address1Field;
+// let address2Field;
+// let postalField;
 
-  // Get each component of the address from the place details,
-  // and then fill-in the corresponding field on the form.
-  // place.address_components are google.maps.GeocoderAddressComponent objects
-  // which are documented at http://goo.gle/3l5i5Mr
-  for (const component of place.address_components) {
-    // @ts-ignore remove once typings fixed
-    const componentType = component.types[0];
 
-    switch (componentType) {
-      case "street_number": {
-        address1 = `${component.long_name} ${address1}`;
-        break;
-      }
+// function initAutocomplete() {
+//   address1Field = document.querySelector("#ship-address");
+//   address2Field = document.querySelector("#address2");
+//   postalField = document.querySelector("#postcode");
+//   // Create the autocomplete object, restricting the search predictions to
+//   // addresses in the US and Canada.
+//   autocomplete = new google.maps.places.Autocomplete(address1Field, {
+//     componentRestrictions: { country: ["us", "ca"] },
+//     fields: ["address_components", "geometry"],
+//     types: ["address"],
+//   });
+//   address1Field.focus();
+//   // When the user selects an address from the drop-down, populate the
+//   // address fields in the form.
+//   autocomplete.addListener("place_changed", fillInAddress);
+// }
 
-      case "route": {
-        address1 += component.short_name;
-        break;
-      }
+// function fillInAddress() {
+//   // Get the place details from the autocomplete object.
+//   const place = autocomplete.getPlace();
+//   let address1 = "";
+//   let postcode = "";
 
-      case "postal_code": {
-        postcode = `${component.long_name}${postcode}`;
-        break;
-      }
+//   // Get each component of the address from the place details,
+//   // and then fill-in the corresponding field on the form.
+//   // place.address_components are google.maps.GeocoderAddressComponent objects
+//   // which are documented at http://goo.gle/3l5i5Mr
+//   for (const component of place.address_components) {
+//     // @ts-ignore remove once typings fixed
+//     const componentType = component.types[0];
 
-      case "postal_code_suffix": {
-        postcode = `${postcode}-${component.long_name}`;
-        break;
-      }
-      case "locality":
-        document.querySelector("#locality").value = component.long_name;
-        break;
-      case "administrative_area_level_1": {
-        document.querySelector("#state").value = component.short_name;
-        break;
-      }
-      case "country":
-        document.querySelector("#country").value = component.long_name;
-        break;
-    }
-  }
+//     switch (componentType) {
+//       case "street_number": {
+//         address1 = `${component.long_name} ${address1}`;
+//         break;
+//       }
 
-  address1Field.value = address1;
-  postalField.value = postcode;
-  // After filling the form with address components from the Autocomplete
-  // prediction, set cursor focus on the second address line to encourage
-  // entry of subpremise information such as apartment, unit, or floor number.
-  address2Field.focus();
-}
+//       case "route": {
+//         address1 += component.short_name;
+//         break;
+//       }
 
-window.initAutocomplete = initAutocomplete;
+//       case "postal_code": {
+//         postcode = `${component.long_name}${postcode}`;
+//         break;
+//       }
+
+//       case "postal_code_suffix": {
+//         postcode = `${postcode}-${component.long_name}`;
+//         break;
+//       }
+//       case "locality":
+//         document.querySelector("#locality").value = component.long_name;
+//         break;
+//       case "administrative_area_level_1": {
+//         document.querySelector("#state").value = component.short_name;
+//         break;
+//       }
+//       case "country":
+//         document.querySelector("#country").value = component.long_name;
+//         break;
+//     }
+//   }
+
+//   address1Field.value = address1;
+//   postalField.value = postcode;
+//   // After filling the form with address components from the Autocomplete
+//   // prediction, set cursor focus on the second address line to encourage
+//   // entry of subpremise information such as apartment, unit, or floor number.
+//   address2Field.focus();
+// }
+
+// window.initAutocomplete = initAutocomplete;
 
