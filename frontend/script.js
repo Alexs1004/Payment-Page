@@ -923,50 +923,13 @@ document.addEventListener("DOMContentLoaded", function() {
         keyboard: true
     });
 
-    var politiqueBtn = document.getElementById('politiqueBtn');
-    var mentionsLegalesBtn = document.getElementById('mentionsLegalesBtn');
-    var remboursementBtn = document.getElementById('remboursementBtn');
-    var contactBtn = document.getElementById('contactBtn');
-
-    // Fonction pour gérer les clics sur les boutons
-    function handleButtonClick(event, targetBlock) {
-        event.preventDefault();
-        politiqueModal.show();
-        targetBlock.classList.remove("d-none");
-        document.querySelector('#politiqueModal .modal-remboursement').focus();
-    }
-
-    // Associer la même fonction à tous les boutons
-    politiqueBtn.addEventListener('click', function(event) {
-        handleButtonClick(event, document.querySelector('#politiqueModal .modal-remboursement'));
-        var modalRemboursementBtn = document.querySelector(".modal-remboursement");
-        modalRemboursementBtn.click(); // Simuler le clic sur modal-remboursement
-        modalRemboursementBtn.focus(); // Mettre le focus sur modal-remboursement
-    });
-
-
-    mentionsLegalesBtn.addEventListener('click', function(event) {
-        handleButtonClick(event, document.querySelector('#politiqueModal .modal-mentions-légales'));
-        var modalMentionsLegalesBtn = document.querySelector(".modal-mentions-légales");
-        modalMentionsLegalesBtn.click(); // Simuler le clic sur modal-mentions-légales
-        modalMentionsLegalesBtn.focus(); // Mettre le focus sur modal-mentions-légales
-    });
-
-    remboursementBtn.addEventListener('click', function(event) {
-        handleButtonClick(event, document.querySelector('#politiqueModal .modal-remboursement'));
-        var modalRemboursementBtn = document.querySelector(".modal-remboursement");
-        modalRemboursementBtn.click(); // Simuler le clic sur modal-remboursement
-        modalRemboursementBtn.focus(); // Mettre le focus sur modal-remboursement
-    });
-
-    contactBtn.addEventListener('click', function(event) {
-        handleButtonClick(event, document.querySelector('#politiqueModal .modal-contact'));
-        var modalContactBtn = document.querySelector(".modal-contact");
-        modalContactBtn.click(); // Simuler le clic sur modal-contact
-        modalContactBtn.focus(); // Mettre le focus sur modal-contact
-    });
-
+    // var politiqueBtn = document.getElementById('politiqueBtn');
+    // var mentionsLegalesBtn = document.getElementById('mentionsLegalesBtn');
+    // var remboursementBtn = document.getElementById('remboursementBtn');
+    // var contactBtn = document.getElementById('contactBtn');
     // Récupérer les boutons et les blocs de la modal
+    var openModals = document.querySelectorAll(".open-modal");
+
     var modalMentionsLegalesBtn = document.querySelector(".modal-mentions-légales");
     var modalRemboursementBtn = document.querySelector(".modal-remboursement");
     var modalContactBtn = document.querySelector(".modal-contact");
@@ -974,6 +937,21 @@ document.addEventListener("DOMContentLoaded", function() {
     var modalMentionsBlock = document.querySelector(".modal-body-mentions");
     var remboursementsModalBlock = document.querySelector(".remboursements-modal");
     var contactModalBlock = document.querySelector(".contact-modal");
+
+    openModals.forEach(function(openModal) {
+    openModal.addEventListener('click', function(event) {
+        event.preventDefault();
+        console.log("1111");
+        var dataPolitique = this.getAttribute("data-politique");
+        console.log(this);
+        console.log(dataPolitique);
+        politiqueModal.show();
+        // document.querySelector('#politiqueModal .modal-'+dataPolitique).classList.remove("d-none");
+        var clicOnModal = document.querySelector(".modal-"+dataPolitique);
+        clicOnModal.click(); // Simuler le clic sur modal-remboursement
+        clicOnModal.focus(); // Mettre le focus sur modal-remboursement
+    });
+});
 
     // Ajouter des écouteurs d'événements pour les clics sur les boutons de la modal
     modalMentionsLegalesBtn.addEventListener("click", function() {
