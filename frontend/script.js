@@ -292,72 +292,6 @@ countries.forEach(country => {
 });
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const radioBtn = document.getElementById("flexSwitchCheckDefault");
-
-//     radioBtn.addEventListener("change", function() {
-//         if (radioBtn.checked) {
-//             console.log("Le bouton radio est coché !");
-//         } else {
-//             console.log("Le bouton radio n'est pas coché !");
-//         }
-//     });
-// });
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const radioBtn = document.getElementById("flexSwitchCheckDefault");
-//     const currencyElement = document.querySelector(".currency");
-//     const textElement = document.querySelector(".byMonth-text");
-
-//     // Stockez les valeurs par défaut
-//     const defaultCurrencyValue = currencyElement.textContent;
-//     const defaultTextValue = textElement.textContent;
-
-//     radioBtn.addEventListener("change", function() {
-//         if (radioBtn.checked) {
-//             console.log("Le bouton radio est coché !");
-//             currencyElement.textContent = "49,00 €";
-//             textElement.textContent = " par an";
-//         } else {
-//             console.log("Le bouton radio n'est pas coché !");
-//             // Restaurez les valeurs par défaut
-//             currencyElement.textContent = defaultCurrencyValue;
-//             textElement.textContent = defaultTextValue;
-//         }
-//     });
-// });
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const radioBtn = document.getElementById("flexSwitchCheckDefault");
-//     const currencyElement1 = document.querySelector("#currencyElement1");
-//     const currencyElement2 = document.querySelector("#currencyElement2");
-//     const textElement1 = document.querySelector("#textElement1");
-//     const textElement2 = document.querySelector("#textElement2");
-
-//     // Stockez les valeurs par défaut
-//     const defaultCurrencyValue1 = currencyElement1.textContent;
-//     const defaultCurrencyValue2 = currencyElement2.textContent;
-//     const defaultTextValue1 = textElement1.textContent;
-//     const defaultTextValue2 = textElement2.textContent;
-
-//     radioBtn.addEventListener("change", function() {
-//         if (radioBtn.checked) {
-//             console.log("Le bouton radio est coché !");
-//             currencyElement1.textContent = "49,00 €";
-//             currencyElement2.textContent = "49,00 €";
-//             textElement1.textContent = " par an";
-//             textElement2.textContent = " par an";
-//         } else {
-//             console.log("Le bouton radio n'est pas coché !");
-//             // Restaurez les valeurs par défaut
-//             currencyElement1.textContent = defaultCurrencyValue1;
-//             currencyElement2.textContent = defaultCurrencyValue2;
-//             textElement1.textContent = defaultTextValue1;
-//             textElement2.textContent = defaultTextValue2;
-//         }
-//     });
-// });
-
 document.addEventListener("DOMContentLoaded", function() {
     const dynamicElements = document.querySelectorAll(".currency, .byMonth-text");
 
@@ -388,58 +322,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const fieldsToCopy = [
-//         { sourceId: "autocomplete", targetId: "autocomplete2" },
-//         { sourceId: "validationCustom31", targetId: "validationCustom06" },
-//         { sourceId: "validationCustom12", targetId: "validationCustom07" },
-//         // { sourceId: "validationCustom10", targetId: "validationCustom08" }
-//     ];
-
-//     fieldsToCopy.forEach(field => {
-//         const sourceInput = document.getElementById(field.sourceId);
-//         const targetInput = document.getElementById(field.targetId);
-
-//         sourceInput.addEventListener("input", function() {
-//             targetInput.value = sourceInput.value;
-//         });
-//     });
-// });
-
-/*Ce script check si la case est cochée et si c'est le cas copie les eléments dans le shipping form */
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const checkbox = document.getElementById("invalidCheck_checked");
-
-//     const fieldsToCopy = [
-//         { sourceId: "autocomplete", targetId: "autocomplete2" },
-//         { sourceId: "validationCustom31", targetId: "validationCustom06" },
-//         { sourceId: "validationCustom12", targetId: "validationCustom07" },
-//         { sourceId: "validationCustom10", targetId: "validationCustom08" }
-//     ];
-
-//     checkbox.addEventListener("change", function() {
-//         if (checkbox.checked) {
-//             fieldsToCopy.forEach(field => {
-//                 const sourceInput = document.getElementById(field.sourceId);
-//                 const targetInput = document.getElementById(field.targetId);
-
-//                 sourceInput.addEventListener("input", function() {
-//                     targetInput.value = sourceInput.value;
-//                 });
-//             });
-//         } else {
-//             fieldsToCopy.forEach(field => {
-//                 const sourceInput = document.getElementById(field.sourceId);
-//                 sourceInput.value = ""; // Efface la valeur du champ source si la case n'est pas cochée
-//             });
-//         }
-//     });
-// });
-
-
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -583,121 +465,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 });
 
-// Fonction pour fermer la dropdown lorsque l'utilisateur clique en dehors
-// function closeDropdownOnClickOutside(event) {
-//     // Vérifier si l'événement de clic a eu lieu en dehors de la dropdown
-//     if (!dropdown.contains(event.target)) {
-//         dropdown.classList.remove("open"); // Fermer la dropdown
-//         detailsButton.textContent = "Détails"; // Changer le texte du bouton en "Détails"
-//         detailsIcon.classList.remove('fa-angle-up'); // Changer l'icône en flèche vers le bas
-//         detailsIcon.classList.add('fa-angle-down');
-//         // Supprimer l'écouteur d'événement de clic en dehors de la dropdown
-//         document.removeEventListener("click", closeDropdownOnClickOutside);
-//     }
-// }
-
-// Ajouter un écouteur d'événement de clic sur le bouton promo-btn
-// var promoBtn = document.querySelector(".promo-btn");
-// promoBtn.addEventListener("click", function() {
-//     console.log("hello");
-//     // var detailsButton = document.getElementById("detailsButton");
-//     detailsButton.click(); // Déclencher le clic sur le bouton detailsButton
-// });
-
-// Fonction pour basculer l'état de la dropdown
-// function toggleDetails() {
-//     if (dropdown.classList.contains("open")) {
-//         detailsButton.textContent = "Détails";
-//         detailsIcon.classList.remove('fa-angle-up');
-//         detailsIcon.classList.add('fa-angle-down');
-//         dropdown.classList.remove("open");
-//     } else {
-//         detailsButton.textContent = "Fermer";
-//         detailsIcon.classList.remove('fa-angle-down');
-//         detailsIcon.classList.add('fa-angle-up');
-//         dropdown.classList.add("open");
-//         document.addEventListener("click", closeDropdownOnClickOutside);
-//     }
-// }
-
-
-// function toggleDetails() {
-//       var promoTextDiv = document.getElementById("promo-text");
-//     var clickEvent = new Event("click");
-//     promoTextDiv.dispatchEvent(clickEvent);
-//     const bsDropdown = new bootstrap.Dropdown(dropdown);
-//     if (bsDropdown._element.classList.contains("show")) {
-//         detailsButton.textContent = "Fermer";
-//         detailsIcon.classList.remove('fa-angle-up');
-//         detailsIcon.classList.add('fa-angle-down');
-//         bsDropdown.hide();
-//     } else {
-//         detailsButton.textContent = "Détails";
-//         detailsIcon.classList.remove('fa-angle-down');
-//         detailsIcon.classList.add('fa-angle-up');
-//         bsDropdown.show();
-//         // document.addEventListener("click", closeDropdownOnClickOutside);
-//     }
-// }
-
-// function toggleDetails() {
-//     // Appeler la fonction transformToInput() avec un événement simulé pour le div promo-text
-//     var promoTextDiv = document.getElementById("promo-text");
-//     var clickEvent = new Event("click");
-//     promoTextDiv.dispatchEvent(clickEvent);
-
-//     // Ensuite, gérer l'affichage du dropdown et mettre à jour le texte et l'icône du bouton
-//     const bsDropdown = new bootstrap.Dropdown(dropdown);
-//     const detailsButton = document.querySelector(".promo-btn .promocode-text");
-//     const detailsIcon = document.querySelector(".promo-btn .nav-arrow");
-
-//     if (bsDropdown._element.classList.contains("show")) {
-//         detailsButton.textContent = "Fermer";
-//         detailsIcon.classList.remove('fa-angle-up');
-//         detailsIcon.classList.add('fa-angle-down');
-//         bsDropdown.hide();
-//     } else {
-//         detailsButton.textContent = "Détails";
-//         detailsIcon.classList.remove('fa-angle-down');
-//         detailsIcon.classList.add('fa-angle-up');
-//         bsDropdown.show();
-//     }
-// }
-
-
-
-
-// Fonction pour vérifier si la dropdown est ouverte
-// function isDropdownOpen() {
-//     return dropdown.classList.contains("show");
-// }
-
-// // Exemple d'utilisation
-// if (isDropdownOpen()) {
-//     console.log("La dropdown est ouverte");
-// } else {
-//     console.log("La dropdown est fermée");
-// }
-
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-// 	// Sélectionne l'icône et le message d'erreur
-// 	var emailIcon = document.getElementById('emailIcon');
-// 	var errorFeedback = document.querySelector('.is-invalid~.invalid-feedback');
-
-// 	// Vérifie si le message d'erreur est visible et ajuste la classe de l'icône en conséquence
-// 	function adjustIconPosition() {
-// 	  if (window.getComputedStyle(errorFeedback).display === 'block') {
-// 		emailIcon.classList.add('email-icon-shifted');
-// 	  } else {
-// 		emailIcon.classList.remove('email-icon-shifted');
-// 	  }
-// 	}
-
-// 	// Appel initial pour ajuster la position de l'icône au chargement de la page
-// 	adjustIconPosition();
-//   });
 
 
 // **********************CUSTOM VALIDATION***************************
@@ -746,57 +513,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const firstNameInput = document.getElementById("validationCustom12");
-//     const lastNameInput = document.getElementById("validationCustom31");
-//     function validateNameInput(inputElement) {
-//         const name = inputElement.value.trim();
-//         const nameRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
-
-//         if (!nameRegex.test(name)) {
-//             inputElement.classList.add("is-invalid");
-//         } else {
-//             inputElement.classList.remove("is-invalid");
-//             inputElement.classList.add("is-valid");
-//         }
-//     }
-
-//     lastNameInput.addEventListener("blur", function() {
-//         validateNameInput(lastNameInput);
-//     });
-
-// 	firstNameInput.addEventListener("blur", function() {
-//         validateNameInput(firstNameInput);
-//     });
-// });
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const firstNameInput2 = document.getElementById("validationCustom06");
-//     const lastNameInput2 = document.getElementById("validationCustom07");
-//     function validateNameInput(inputElement) {
-//         const name = inputElement.value.trim();
-//         const nameRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
-
-//         if (!nameRegex.test(name)) {
-//             inputElement.classList.add("is-invalid");
-//         } else {
-//             inputElement.classList.remove("is-invalid");
-//             inputElement.classList.add("is-valid");
-//         }
-//     }
-
-
-
-//     lastNameInput2.addEventListener("blur", function() {
-//         validateNameInput(lastNameInput2);
-//     });
-
-// 	firstNameInput2.addEventListener("blur", function() {
-//         validateNameInput(firstNameInput2);
-//     });
-// });
-
 const titulaireDuCompteInput = document.getElementById("validationCustomUsername");
 
 titulaireDuCompteInput.addEventListener("blur", function() {
@@ -810,22 +526,6 @@ titulaireDuCompteInput.addEventListener("blur", function() {
         titulaireDuCompteInput.classList.add("is-valid");
     }
 });
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const cardHolderInput = document.getElementById("validationCustomCardHolder");
-
-//     cardHolderInput.addEventListener("blur", function() {
-//         const cardHolder = cardHolderInput.value.trim();
-//         const cardHolderRegex = /^[a-zA-ZÀ-ÿ\s-]{1,}$/;
-
-//         if (!cardHolderRegex.test(cardHolder)) {
-//             cardHolderInput.classList.add("is-invalid");
-//         } else {
-//             cardHolderInput.classList.remove("is-invalid");
-//             cardHolderInput.classList.add("is-valid");
-//         }
-//     });
-// });
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -1037,22 +737,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(dropdown);
 });
 
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const promoBtn = document.querySelector('.promo-btn');
-//     const dropdown = document.querySelector('.dropdown');
-
-//     promoBtn.addEventListener('click', function(event) {
-//         // Empêcher le rechargement de la page
-//         event.preventDefault();
-
-//         // Ouvrir la dropdown
-//         dropdown.classList.add('open');
-
-//         // Afficher le champ de saisie du code promotionnel
-//         transformToInput();
-//     });
-// });
 
 function transformToInput(event) {
     // Empêcher la propagation de l'événement de clic
