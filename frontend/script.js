@@ -953,6 +953,39 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+$(".openModal").onClick
+    // Associer la même fonction à tous les boutons
+    // politiqueBtn.addEventListener('click', function(event) {
+    //     console.log("1111");
+    //     handleButtonClick(event, document.querySelector('#politiqueModal .modal-remboursement'));
+    //     modalRemboursementBtn.click(); // Simuler le clic sur modal-remboursement
+    //     modalRemboursementBtn.focus(); // Mettre le focus sur modal-remboursement
+    // });
+
+
+    // mentionsLegalesBtn.addEventListener('click', function(event) {
+    //     console.log("222");
+    //     handleButtonClick(event, document.querySelector('#politiqueModal .modal-mentions-légales'));
+    //     modalMentionsLegalesBtn.click(); // Simuler le clic sur modal-mentions-légales
+    //     modalMentionsLegalesBtn.focus(); // Mettre le focus sur modal-mentions-légales
+    // });
+
+    // remboursementBtn.addEventListener('click', function(event) {
+    //     console.log("333");
+    //     handleButtonClick(event, document.querySelector('#politiqueModal .modal-remboursement'));
+    //     modalRemboursementBtn.click(); // Simuler le clic sur modal-remboursement
+    //     modalRemboursementBtn.focus(); // Mettre le focus sur modal-remboursement
+    // });
+
+    // contactBtn.addEventListener('click', function(event) {
+    //     console.log("444");
+    //     handleButtonClick(event, document.querySelector('#politiqueModal .modal-contact'));
+    //     modalContactBtn.click(); // Simuler le clic sur modal-contact
+    //     modalContactBtn.focus(); // Mettre le focus sur modal-contact
+    // });
+
+
+
     // Ajouter des écouteurs d'événements pour les clics sur les boutons de la modal
     modalMentionsLegalesBtn.addEventListener("click", function() {
         // Afficher le bloc modal-body-mentions

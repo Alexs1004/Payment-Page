@@ -1197,6 +1197,10 @@ body.dropdown-open {
         bottom: 0px;
     }
 
+    .footer-sm {
+        margin-top: 65px;
+    }
+
     #promo-container {
         cursor: pointer;
         background-color: transparent;
