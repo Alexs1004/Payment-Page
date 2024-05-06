@@ -254,18 +254,18 @@ const newPrices = {
   window.onload = function(){
 
 
-    // const annualPrice = parseFloat(productAnnualPrice.replace(',', '.'));
+    
 
-    // console.log(annualPrice);
+    
 
-    // const result = parseFloat(newPrices.productPrice * 4 - newPrices.productAnnualPrice);
+    
 
 
     document.getElementById('currencyElement1').innerHTML = newPrices.productPrice;
     document.getElementById('upsell-currency-fs').innerHTML = newPrices.productAnnualPrice;
     document.getElementById('upsell-currency').innerHTML = newPrices.productAnnualPrice;
-    // document.getElementById('economy').innerHTML = newPrices.productPrice;
-    // document.getElementById('economy').innerHTML = newPrices.productPrice * 4 - newPrices.productAnnualPrice;
+    
+    
 };
 
   var dropdown = document.querySelector(".dropdown");
@@ -279,13 +279,13 @@ function addOption(selectElement, optionText) {
     selectElement.add(option);
 }
 
-// Ajouter les options au premier dropdown
+
 const dropdownPays = document.getElementById("paysDropdown");
 countries.forEach(country => {
     addOption(dropdownPays, country);
 });
 
-// Dupliquer les options pour le deuxième dropdownPays
+
 const dropdownPays2 = document.getElementById("paysDropdown2");
 countries.forEach(country => {
     addOption(dropdownPays2, country);
@@ -295,7 +295,7 @@ countries.forEach(country => {
 document.addEventListener("DOMContentLoaded", function() {
     const dynamicElements = document.querySelectorAll(".currency, .byMonth-text");
 
-    // Stockez les valeurs par défaut
+    
     const defaultValues = [];
     dynamicElements.forEach(element => {
         defaultValues.push(element.textContent);
@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         } else {
             console.log("Le bouton radio n'est pas coché !");
-            // Restaurez les valeurs par défaut
+            
             dynamicElements.forEach((element, index) => {
                 element.textContent = defaultValues[index];
             });
@@ -422,14 +422,14 @@ document.addEventListener("DOMContentLoaded", function() {
     modifyButton.addEventListener("click", function() {
 		const inputValue = parseDecimal(document.getElementById("input-modal").value);
 
-		// Mise à jour des prix pour toutes les occurrences de .currency et .dropdown-currency
+		
 		document.querySelectorAll(".currency, .dropdown-currency").forEach(currencyElement => {
 			let originalValue = parseDecimal(currencyElement.getAttribute("data-original-value"));
-			let updatedValue = (originalValue * inputValue).toFixed(2); // Formater avec deux décimales
-			currencyElement.textContent = updatedValue.replace('.', ',') + " €"; // Remplacer le point par une virgule
+			let updatedValue = (originalValue * inputValue).toFixed(2); 
+			currencyElement.textContent = updatedValue.replace('.', ',') + " €"; 
 		});
 
-		// Mise à jour du texte pour toutes les occurrences de .qte-btn-page et .qte-btn_text
+		
 		document.querySelectorAll(".qte-btn-page, .qte-btn_text").forEach(btnElement => {
 			btnElement.textContent = "Qté " + inputValue.toString().replace('.', ',');
 		});
@@ -440,7 +440,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
-    // Réinitialiser les prix lorsque la quantité est réinitialisée à 1
+    
     document.getElementById("input-modal").addEventListener("input", function() {
         const inputValue = parseDecimal(this.value);
         if (inputValue === 1) {
@@ -451,15 +451,15 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Stocker les valeurs de prix initiales dans les attributs data-original-value
+    
     document.querySelectorAll(".currency, .dropdown-currency").forEach(currencyElement => {
         let originalValue = parseDecimal(currencyElement.textContent.replace(' €', ''));
         currencyElement.setAttribute("data-original-value", originalValue);
     });
 
-    // Fonction pour convertir une chaîne en décimal tout en conservant la virgule comme séparateur décimal
+    
 	function parseDecimal(value) {
-		// Remplacer les virgules par des points pour que parseFloat puisse fonctionner correctement
+		
 		return parseFloat(value.replace(',', '.'));
 
 	}
@@ -467,7 +467,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// **********************CUSTOM VALIDATION***************************
+
 
 
 
@@ -480,14 +480,14 @@ document.addEventListener("DOMContentLoaded", function() {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!emailRegex.test(email)) {
-            // Si l'email n'est pas valide, afficher un message d'erreur
+            
             emailInput.classList.add("is-invalid");
-            emailError.style.display = "block"; // Afficher le message d'erreur
+            emailError.style.display = "block"; 
         } else {
-            // Si l'email est valide, retirer la classe d'invalidité et cacher le message d'erreur
+            
             emailInput.classList.remove("is-invalid");
             emailInput.classList.add("is-valid");
-            emailError.style.display = "none"; // Cacher le message d'erreur
+            emailError.style.display = "none"; 
         }
     });
 });
@@ -501,11 +501,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const phoneRegex = /^0[1-9]([ .-]?[0-9]{2}){4}$/;
 
         if (!phoneRegex.test(phoneNumber)) {
-            // Si le numéro de téléphone n'est pas valide, afficher un message d'erreur
+            
             phoneInput.classList.add("is-invalid");
             document.getElementById("phoneError").style.display = "block";
         } else {
-            // Si le numéro de téléphone est valide, retirer la classe d'invalidité
+            
             phoneInput.classList.remove("is-invalid");
             phoneInput.classList.add("is-valid");
             document.getElementById("phoneError").style.display = "none";
@@ -531,7 +531,7 @@ titulaireDuCompteInput.addEventListener("blur", function() {
 document.addEventListener("DOMContentLoaded", function() {
     const additionalInput = document.getElementById("validationCustom02");
     const ibanInput = document.getElementById("validationCustomIban");
-    const errorMessage = document.getElementById("errorMessage"); // Ajout de l'élément du message d'erreur
+    const errorMessage = document.getElementById("errorMessage"); 
 
     additionalInput.addEventListener("blur", function() {
         validateInput(additionalInput);
@@ -547,18 +547,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (!regex.test(value)) {
             inputElement.classList.add("is-invalid");
-            errorMessage.style.display = "block"; // Afficher le message d'erreur
+            errorMessage.style.display = "block"; 
         } else {
             inputElement.classList.remove("is-invalid");
             inputElement.classList.add("is-valid");
-            errorMessage.style.display = "none"; // Masquer le message d'erreur s'il est valide
+            errorMessage.style.display = "none"; 
         }
     }
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const cardInput = document.getElementById("validationCustom02"); // Input de la carte
-    const cardErrorMessage = document.getElementById("cardErrorMessage"); // Message d'erreur pour la carte
+    const cardInput = document.getElementById("validationCustom02"); 
+    const cardErrorMessage = document.getElementById("cardErrorMessage"); 
 
     cardInput.addEventListener("blur", function() {
         validateCardInput(cardInput);
@@ -570,11 +570,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (!regex.test(value)) {
             inputElement.classList.add("is-invalid");
-            cardErrorMessage.style.display = "block"; // Afficher le message d'erreur
+            cardErrorMessage.style.display = "block"; 
         } else {
             inputElement.classList.remove("is-invalid");
             inputElement.classList.add("is-valid");
-            cardErrorMessage.style.display = "none"; // Masquer le message d'erreur s'il est valide
+            cardErrorMessage.style.display = "none"; 
         }
     }
 });
@@ -588,26 +588,26 @@ document.addEventListener("DOMContentLoaded", function() {
     expirationInput.addEventListener("input", function(event) {
         let value = expirationInput.value.trim();
 
-        // Supprimer tous les caractères non numériques
+        
         value = value.replace(/\D/g, '');
 
-        // Limiter la longueur de la valeur à 4 caractères
+        
         if (value.length > 4) {
             value = value.slice(0, 4);
         }
 
-        // Insérer le slash automatiquement après les deux premiers caractères
+        
         if (value.length > 2) {
             value = value.slice(0, 2) + '/' + value.slice(2);
         }
 
         expirationInput.value = value;
 
-        // Valider la date d'expiration
+        
         validateExpiration(expirationInput);
     });
 
-    // Fonction de validation de la date d'expiration
+    
     function validateExpiration(inputElement) {
         const value = inputElement.value.trim();
         const regexExpiration = /^(0[1-9]|1[0-2])\/\d{2}$/;
@@ -615,19 +615,19 @@ document.addEventListener("DOMContentLoaded", function() {
         const currentYear = today.getFullYear() % 100;
         const currentMonth = today.getMonth() + 1;
 
-        // Validation supplémentaire pour les deux premiers caractères
+        
         const month = parseInt(value.slice(0, 2));
         if (month < 1 || month > 12) {
             inputElement.classList.add("is-invalid");
             cardDateErrorMessage.textContent = "Le mois d'expiration de votre carte doit être compris entre 01 et 12.";
-            cardDateErrorMessage.style.display = "block"; // Afficher le message d'erreur
-            return; // Arrêter la validation si le mois n'est pas valide
+            cardDateErrorMessage.style.display = "block"; 
+            return; 
         }
 
         if (!regexExpiration.test(value)) {
             inputElement.classList.add("is-invalid");
             cardDateErrorMessage.textContent = "La date d'expiration de votre carte est incomplète.";
-            cardDateErrorMessage.style.display = "block"; // Afficher le message d'erreur
+            cardDateErrorMessage.style.display = "block"; 
         } else {
             const [expMonth, expYear] = value.split('/');
             const expiryDate = new Date(2000 + parseInt(expYear), parseInt(expMonth) - 1);
@@ -635,16 +635,16 @@ document.addEventListener("DOMContentLoaded", function() {
             if (expiryDate < today) {
                 inputElement.classList.add("is-invalid");
                 cardDateErrorMessage.textContent = "L'année d'expiration de votre carte est définie dans le passé.";
-                cardDateErrorMessage.style.display = "block"; // Afficher le message d'erreur
+                cardDateErrorMessage.style.display = "block"; 
             } else {
                 inputElement.classList.remove("is-invalid");
                 inputElement.classList.add("is-valid");
-                cardDateErrorMessage.style.display = "none"; // Masquer le message d'erreur
+                cardDateErrorMessage.style.display = "none"; 
             }
         }
     }
 
-    // Valider la date d'expiration lorsque le champ perd le focus
+    
     expirationInput.addEventListener("blur", function() {
         validateExpiration(expirationInput);
     });
@@ -657,7 +657,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const cardCVCErrorMessage = document.getElementById("cardCVCErrorMessage");
 
     sepaButton.addEventListener("click", function() {
-        // Rendre les messages d'erreur invisibles en modifiant leur style CSS
+        
         cardErrorMessage.style.display = "none";
         cardDateErrorMessage.style.display = "none";
         cardCVCErrorMessage.style.display = "none";
@@ -676,21 +676,21 @@ document.addEventListener("DOMContentLoaded", function() {
     cvcInput.addEventListener("input", function(event) {
         let value = cvcInput.value.trim();
 
-        // Supprimer tous les caractères non numériques
+        
         value = value.replace(/\D/g, '');
 
-        // Limiter la longueur de la valeur à 4 caractères
+        
         if (value.length > 4) {
             value = value.slice(0, 4);
         }
 
         cvcInput.value = value;
 
-        // Valider le CVC si la longueur de la valeur est égale à 3 ou 4
+        
         validateCVC(cvcInput);
     });
 
-    // Fonction de validation du CVC
+    
     function validateCVC(inputElement) {
         const value = inputElement.value.trim();
         const regexCVC = /^\d{3,4}$/;
@@ -698,15 +698,15 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!regexCVC.test(value)) {
             inputElement.classList.add("is-invalid");
             cvcErrorMessage.textContent = "Le code de sécurité de votre carte est incomplet.";
-            cvcErrorMessage.style.display = "block"; // Afficher le message d'erreur
+            cvcErrorMessage.style.display = "block"; 
         } else {
             inputElement.classList.remove("is-invalid");
             inputElement.classList.add("is-valid");
-            cvcErrorMessage.style.display = "none"; // Masquer le message d'erreur
+            cvcErrorMessage.style.display = "none"; 
         }
     }
 
-    // Valider le CVC lorsque le champ perd le focus
+    
     cvcInput.addEventListener("blur", function() {
         validateCVC(cvcInput);
     });
@@ -727,10 +727,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const promoBtn = document.querySelector('.promo-btn');
 
     promoBtn.addEventListener('click', function(event) {
-        // Empêcher le rechargement de la page
+        
         event.preventDefault();
 
-        // Ouvrir la dropdown
+        
         dropdown.classList.toggle('open');
     });
     console.log(promoBtn);
@@ -739,14 +739,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function transformToInput(event) {
-    // Empêcher la propagation de l'événement de clic
+    
     event.stopPropagation();
 
-    // Créer un div avec les classes Bootstrap nécessaires
+    
     var inputGroup = document.createElement("div");
     inputGroup.classList.add("input-group", "mb-3");
 
-    // Créer l'input avec les attributs nécessaires
+    
     var inputElement = document.createElement("input");
     inputElement.setAttribute("type", "text");
     inputElement.classList.add("form-control");
@@ -754,23 +754,23 @@ function transformToInput(event) {
     inputElement.setAttribute("aria-label", "Recipient's username");
     inputElement.setAttribute("aria-describedby", "button-addon2");
 
-    // Ajouter un événement de saisie à l'input pour afficher le bouton "Appliquer"
+    
     inputElement.addEventListener("input", showApplyButton);
 
-    // Ajouter l'input au div de groupe d'entrée
+    
     inputGroup.appendChild(inputElement);
 
-    // Remplacer le texte par le div de groupe d'entrée
+    
     var promoContainer = document.getElementById("promo-container");
     promoContainer.innerHTML = '';
     promoContainer.appendChild(inputGroup);
 
-    // Mettre le focus sur l'input après un court délai
+    
     setTimeout(function() {
         inputElement.focus();
     }, 0);
 
-    // Appliquer les coins arrondis uniquement aux côtés supérieurs
+    
     inputElement.style.borderBottomRightRadius = "6px";
     inputElement.style.borderTopRightRadius = "6px";
 }
@@ -780,28 +780,28 @@ function transformToInput(event) {
 function showApplyButton() {
     var inputElement = document.querySelector("#promo-container input");
 
-    // Créer le bouton "Appliquer"
+    
     var applyButton = document.createElement("button");
     applyButton.textContent = "Appliquer";
     applyButton.setAttribute("type", "button");
     applyButton.classList.add("btn", "btn-outline-secondary", "position-absolute", "end-0", "y-50", "z-1");
     applyButton.setAttribute("id", "button-addon2");
 
-    // Ajouter un événement de clic au bouton "Appliquer" pour le retirer
+    
     applyButton.addEventListener("click", function(event) {
-        event.preventDefault(); // Empêcher le rechargement de la page
+        event.preventDefault(); 
         applyButton.remove();
     });
 
-    // Ajouter le bouton "Appliquer" à l'input
+    
     inputElement.parentNode.appendChild(applyButton);
 
-    // Cacher le bouton si le champ est vide
+    
     if (inputElement.value.trim() === "") {
         applyButton.style.display = "none";
     }
 
-    // Ajouter un écouteur d'événement pour vérifier si le champ est vide à chaque saisie
+    
     inputElement.addEventListener("input", function() {
         if (inputElement.value.trim() === "") {
             applyButton.style.display = "none";
@@ -810,7 +810,7 @@ function showApplyButton() {
         }
     });
 
-    // Retirer l'événement de saisie de l'input pour éviter de créer plusieurs boutons
+    
     inputElement.removeEventListener("input", showApplyButton);
 }
 
@@ -824,7 +824,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const sepaBlocks = document.querySelectorAll('.sepaBlock');
 
     function afficherSEPA(event) {
-        event.preventDefault(); // Empêcher le comportement par défaut du bouton
+        event.preventDefault(); 
         sepaBtn.classList.add('active');
         cardBtn.classList.remove('active');
         creditCardBlocks.forEach(block => block.style.display = 'none');
@@ -832,7 +832,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function afficherCarte(event) {
-        event.preventDefault(); // Empêcher le comportement par défaut du bouton
+        event.preventDefault(); 
         cardBtn.classList.add('active');
         sepaBtn.classList.remove('active');
         creditCardBlocks.forEach(block => block.style.display = 'block');
@@ -844,29 +844,29 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 document.addEventListener('DOMContentLoaded', function() {
-// Sélection du bouton et du conteneur des champs
+
 var boutonToggle = document.getElementById('toggleAdresseManuelle');
 var boutonToggle2 = document.getElementById('toggleAdresseManuelle2');
 var conteneurChamps = document.getElementById('conteneurChamps');
 var conteneurChamps2 = document.getElementById('conteneurChamps2');
 
-// Fonction pour ajouter des champs d'adresse
+
 function toggleAdresseManuelle(event) {
-    // Empêcher le comportement par défaut du clic sur le bouton
+    
     event.preventDefault();
 
-    // Afficher ou masquer le conteneur des champs d'adresse
+    
     conteneurChamps.style.display = conteneurChamps.style.display === 'none' ? 'block' : 'none';
     conteneurChamps2.style.display = conteneurChamps2.style.display === 'none' ? 'block' : 'none';
 }
 
-// Écouteur d'événement sur le clic du bouton
+
 boutonToggle.addEventListener('click', toggleAdresseManuelle);
 boutonToggle.addEventListener('click', toggleAdresseManuelle2);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Sélection du bouton et du conteneur des champs
+    
     var boutonToggle = document.getElementById('toggleAdresseManuelle');
     var boutonToggle2 = document.getElementById('toggleAdresseManuelle2');
     var conteneurChamps = document.getElementById('conteneurChamps');
@@ -880,54 +880,54 @@ document.addEventListener('DOMContentLoaded', function() {
     var ville = document.getElementById('ville');
     var ville2 = document.getElementById('ville2');
 
-    // Fonction pour afficher les champs d'adresse et masquer le bouton
+    
     function toggleAdresseManuelle(event) {
-        // Empêcher le comportement par défaut du clic sur le bouton
+        
         event.preventDefault();
 
-        // Afficher les conteneurs des champs d'adresse
+        
         adressField.classList.add('d-none');
         codePostale.classList.remove('d-none');
         ville.classList.remove('d-none');
         conteneurChamps.style.display = 'block';
         conteneurChamps2.style.display = 'block';
 
-        // Masquer le bouton
+        
         boutonToggle.style.display = 'none';
     }
 
     function toggleAdresseManuelle2(event) {
-        // Empêcher le comportement par défaut du clic sur le bouton
+        
         event.preventDefault();
 
-        // Afficher les conteneurs des champs d'adresse
+        
         adressField2.classList.add('d-none');
         codePostale2.style.display = 'block';
         ville2.style.display = 'block';
         conteneurChamps3.style.display = 'block';
         conteneurChamps4.style.display = 'block';
 
-        // Masquer le bouton
+        
         boutonToggle2.style.display = 'none';
     }
 
-    // Écouteur d'événement sur le clic du bouton
+    
     boutonToggle.addEventListener('click', toggleAdresseManuelle);
     boutonToggle2.addEventListener('click', toggleAdresseManuelle2);
 });
 
 
-//BON CODE POUR MODAL
+
 document.addEventListener("DOMContentLoaded", function() {
     var politiqueModal = new bootstrap.Modal(document.getElementById('politiqueModal'), {
         keyboard: true
     });
 
-    // var politiqueBtn = document.getElementById('politiqueBtn');
-    // var mentionsLegalesBtn = document.getElementById('mentionsLegalesBtn');
-    // var remboursementBtn = document.getElementById('remboursementBtn');
-    // var contactBtn = document.getElementById('contactBtn');
-    // Récupérer les boutons et les blocs de la modal
+    
+    
+    
+    
+    
     var openModals = document.querySelectorAll(".open-modal");
 
     var modalMentionsLegalesBtn = document.querySelector(".modal-mentions-légales");
@@ -946,67 +946,35 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(this);
         console.log(dataPolitique);
         politiqueModal.show();
-        // document.querySelector('#politiqueModal .modal-'+dataPolitique).classList.remove("d-none");
+        
         var clicOnModal = document.querySelector(".modal-"+dataPolitique);
-        clicOnModal.click(); // Simuler le clic sur modal-remboursement
-        clicOnModal.focus(); // Mettre le focus sur modal-remboursement
+        clicOnModal.click(); 
+        clicOnModal.focus(); 
     });
 });
 
-$(".openModal").onClick
-    // Associer la même fonction à tous les boutons
-    // politiqueBtn.addEventListener('click', function(event) {
-    //     console.log("1111");
-    //     handleButtonClick(event, document.querySelector('#politiqueModal .modal-remboursement'));
-    //     modalRemboursementBtn.click(); // Simuler le clic sur modal-remboursement
-    //     modalRemboursementBtn.focus(); // Mettre le focus sur modal-remboursement
-    // });
 
-
-    // mentionsLegalesBtn.addEventListener('click', function(event) {
-    //     console.log("222");
-    //     handleButtonClick(event, document.querySelector('#politiqueModal .modal-mentions-légales'));
-    //     modalMentionsLegalesBtn.click(); // Simuler le clic sur modal-mentions-légales
-    //     modalMentionsLegalesBtn.focus(); // Mettre le focus sur modal-mentions-légales
-    // });
-
-    // remboursementBtn.addEventListener('click', function(event) {
-    //     console.log("333");
-    //     handleButtonClick(event, document.querySelector('#politiqueModal .modal-remboursement'));
-    //     modalRemboursementBtn.click(); // Simuler le clic sur modal-remboursement
-    //     modalRemboursementBtn.focus(); // Mettre le focus sur modal-remboursement
-    // });
-
-    // contactBtn.addEventListener('click', function(event) {
-    //     console.log("444");
-    //     handleButtonClick(event, document.querySelector('#politiqueModal .modal-contact'));
-    //     modalContactBtn.click(); // Simuler le clic sur modal-contact
-    //     modalContactBtn.focus(); // Mettre le focus sur modal-contact
-    // });
-
-
-
-    // Ajouter des écouteurs d'événements pour les clics sur les boutons de la modal
+    
     modalMentionsLegalesBtn.addEventListener("click", function() {
-        // Afficher le bloc modal-body-mentions
+        
         modalMentionsBlock.classList.remove("d-none");
-        // Cacher les autres blocs
+        
         remboursementsModalBlock.classList.add("d-none");
         contactModalBlock.classList.add("d-none");
     });
 
     modalRemboursementBtn.addEventListener("click", function() {
-        // Afficher le bloc remboursements-modal
+        
         remboursementsModalBlock.classList.remove("d-none");
-        // Cacher les autres blocs
+        
         modalMentionsBlock.classList.add("d-none");
         contactModalBlock.classList.add("d-none");
     });
 
     modalContactBtn.addEventListener("click", function() {
-        // Afficher le bloc contact-modal
+        
         contactModalBlock.classList.remove("d-none");
-        // Cacher les autres blocs
+        
         modalMentionsBlock.classList.add("d-none");
         remboursementsModalBlock.classList.add("d-none");
     });
@@ -1017,12 +985,12 @@ $(".openModal").onClick
         const dropdownBack = document.querySelector(".dropdownBack");
 
         function toggleDetails() {
-            // Appeler la fonction transformToInput avec un événement factice
+            
             var promoTextDiv = document.getElementById("promo-text");
             var fakeClickEvent = new Event("click");
             transformToInput(fakeClickEvent);
 
-            // Ensuite, afficher la dropdown
+            
             bsDropdown.show();
         }
 
@@ -1049,86 +1017,86 @@ $(".openModal").onClick
         }
     });
 
-    // ****************************************AUTOCOMPLETE"***************************************
+    
 
 
-//     let autocomplete;
-// let address1Field;
-// let address2Field;
-// let postalField;
 
 
-// function initAutocomplete() {
-//   address1Field = document.querySelector("#ship-address");
-//   address2Field = document.querySelector("#address2");
-//   postalField = document.querySelector("#postcode");
-//   // Create the autocomplete object, restricting the search predictions to
-//   // addresses in the US and Canada.
-//   autocomplete = new google.maps.places.Autocomplete(address1Field, {
-//     componentRestrictions: { country: ["us", "ca"] },
-//     fields: ["address_components", "geometry"],
-//     types: ["address"],
-//   });
-//   address1Field.focus();
-//   // When the user selects an address from the drop-down, populate the
-//   // address fields in the form.
-//   autocomplete.addListener("place_changed", fillInAddress);
-// }
 
-// function fillInAddress() {
-//   // Get the place details from the autocomplete object.
-//   const place = autocomplete.getPlace();
-//   let address1 = "";
-//   let postcode = "";
 
-//   // Get each component of the address from the place details,
-//   // and then fill-in the corresponding field on the form.
-//   // place.address_components are google.maps.GeocoderAddressComponent objects
-//   // which are documented at http://goo.gle/3l5i5Mr
-//   for (const component of place.address_components) {
-//     // @ts-ignore remove once typings fixed
-//     const componentType = component.types[0];
 
-//     switch (componentType) {
-//       case "street_number": {
-//         address1 = `${component.long_name} ${address1}`;
-//         break;
-//       }
 
-//       case "route": {
-//         address1 += component.short_name;
-//         break;
-//       }
 
-//       case "postal_code": {
-//         postcode = `${component.long_name}${postcode}`;
-//         break;
-//       }
 
-//       case "postal_code_suffix": {
-//         postcode = `${postcode}-${component.long_name}`;
-//         break;
-//       }
-//       case "locality":
-//         document.querySelector("#locality").value = component.long_name;
-//         break;
-//       case "administrative_area_level_1": {
-//         document.querySelector("#state").value = component.short_name;
-//         break;
-//       }
-//       case "country":
-//         document.querySelector("#country").value = component.long_name;
-//         break;
-//     }
-//   }
 
-//   address1Field.value = address1;
-//   postalField.value = postcode;
-//   // After filling the form with address components from the Autocomplete
-//   // prediction, set cursor focus on the second address line to encourage
-//   // entry of subpremise information such as apartment, unit, or floor number.
-//   address2Field.focus();
-// }
 
-// window.initAutocomplete = initAutocomplete;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
