@@ -253,19 +253,11 @@ const newPrices = {
 
   window.onload = function(){
 
-
-    
-
-    
-
-    
-
-
     document.getElementById('currencyElement1').innerHTML = newPrices.productPrice;
     document.getElementById('upsell-currency-fs').innerHTML = newPrices.productAnnualPrice;
     document.getElementById('upsell-currency').innerHTML = newPrices.productAnnualPrice;
-    
-    
+
+
 };
 
   var dropdown = document.querySelector(".dropdown");
@@ -295,7 +287,7 @@ countries.forEach(country => {
 document.addEventListener("DOMContentLoaded", function() {
     const dynamicElements = document.querySelectorAll(".currency, .byMonth-text");
 
-    
+
     const defaultValues = [];
     dynamicElements.forEach(element => {
         defaultValues.push(element.textContent);
@@ -315,7 +307,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         } else {
             console.log("Le bouton radio n'est pas coché !");
-            
+
             dynamicElements.forEach((element, index) => {
                 element.textContent = defaultValues[index];
             });
@@ -422,14 +414,14 @@ document.addEventListener("DOMContentLoaded", function() {
     modifyButton.addEventListener("click", function() {
 		const inputValue = parseDecimal(document.getElementById("input-modal").value);
 
-		
+
 		document.querySelectorAll(".currency, .dropdown-currency").forEach(currencyElement => {
 			let originalValue = parseDecimal(currencyElement.getAttribute("data-original-value"));
-			let updatedValue = (originalValue * inputValue).toFixed(2); 
-			currencyElement.textContent = updatedValue.replace('.', ',') + " €"; 
+			let updatedValue = (originalValue * inputValue).toFixed(2);
+			currencyElement.textContent = updatedValue.replace('.', ',') + " €";
 		});
 
-		
+
 		document.querySelectorAll(".qte-btn-page, .qte-btn_text").forEach(btnElement => {
 			btnElement.textContent = "Qté " + inputValue.toString().replace('.', ',');
 		});
@@ -440,7 +432,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
-    
+
     document.getElementById("input-modal").addEventListener("input", function() {
         const inputValue = parseDecimal(this.value);
         if (inputValue === 1) {
@@ -451,15 +443,15 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    
+
     document.querySelectorAll(".currency, .dropdown-currency").forEach(currencyElement => {
         let originalValue = parseDecimal(currencyElement.textContent.replace(' €', ''));
         currencyElement.setAttribute("data-original-value", originalValue);
     });
 
-    
+
 	function parseDecimal(value) {
-		
+
 		return parseFloat(value.replace(',', '.'));
 
 	}
@@ -480,14 +472,14 @@ document.addEventListener("DOMContentLoaded", function() {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!emailRegex.test(email)) {
-            
+
             emailInput.classList.add("is-invalid");
-            emailError.style.display = "block"; 
+            emailError.style.display = "block";
         } else {
-            
+
             emailInput.classList.remove("is-invalid");
             emailInput.classList.add("is-valid");
-            emailError.style.display = "none"; 
+            emailError.style.display = "none";
         }
     });
 });
@@ -501,11 +493,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const phoneRegex = /^0[1-9]([ .-]?[0-9]{2}){4}$/;
 
         if (!phoneRegex.test(phoneNumber)) {
-            
+
             phoneInput.classList.add("is-invalid");
             document.getElementById("phoneError").style.display = "block";
         } else {
-            
+
             phoneInput.classList.remove("is-invalid");
             phoneInput.classList.add("is-valid");
             document.getElementById("phoneError").style.display = "none";
@@ -531,7 +523,7 @@ titulaireDuCompteInput.addEventListener("blur", function() {
 document.addEventListener("DOMContentLoaded", function() {
     const additionalInput = document.getElementById("validationCustom02");
     const ibanInput = document.getElementById("validationCustomIban");
-    const errorMessage = document.getElementById("errorMessage"); 
+    const errorMessage = document.getElementById("errorMessage");
 
     additionalInput.addEventListener("blur", function() {
         validateInput(additionalInput);
@@ -547,18 +539,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (!regex.test(value)) {
             inputElement.classList.add("is-invalid");
-            errorMessage.style.display = "block"; 
+            errorMessage.style.display = "block";
         } else {
             inputElement.classList.remove("is-invalid");
             inputElement.classList.add("is-valid");
-            errorMessage.style.display = "none"; 
+            errorMessage.style.display = "none";
         }
     }
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const cardInput = document.getElementById("validationCustom02"); 
-    const cardErrorMessage = document.getElementById("cardErrorMessage"); 
+    const cardInput = document.getElementById("validationCustom02");
+    const cardErrorMessage = document.getElementById("cardErrorMessage");
 
     cardInput.addEventListener("blur", function() {
         validateCardInput(cardInput);
@@ -570,11 +562,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (!regex.test(value)) {
             inputElement.classList.add("is-invalid");
-            cardErrorMessage.style.display = "block"; 
+            cardErrorMessage.style.display = "block";
         } else {
             inputElement.classList.remove("is-invalid");
             inputElement.classList.add("is-valid");
-            cardErrorMessage.style.display = "none"; 
+            cardErrorMessage.style.display = "none";
         }
     }
 });
@@ -588,26 +580,26 @@ document.addEventListener("DOMContentLoaded", function() {
     expirationInput.addEventListener("input", function(event) {
         let value = expirationInput.value.trim();
 
-        
+
         value = value.replace(/\D/g, '');
 
-        
+
         if (value.length > 4) {
             value = value.slice(0, 4);
         }
 
-        
+
         if (value.length > 2) {
             value = value.slice(0, 2) + '/' + value.slice(2);
         }
 
         expirationInput.value = value;
 
-        
+
         validateExpiration(expirationInput);
     });
 
-    
+
     function validateExpiration(inputElement) {
         const value = inputElement.value.trim();
         const regexExpiration = /^(0[1-9]|1[0-2])\/\d{2}$/;
@@ -615,19 +607,19 @@ document.addEventListener("DOMContentLoaded", function() {
         const currentYear = today.getFullYear() % 100;
         const currentMonth = today.getMonth() + 1;
 
-        
+
         const month = parseInt(value.slice(0, 2));
         if (month < 1 || month > 12) {
             inputElement.classList.add("is-invalid");
             cardDateErrorMessage.textContent = "Le mois d'expiration de votre carte doit être compris entre 01 et 12.";
-            cardDateErrorMessage.style.display = "block"; 
-            return; 
+            cardDateErrorMessage.style.display = "block";
+            return;
         }
 
         if (!regexExpiration.test(value)) {
             inputElement.classList.add("is-invalid");
             cardDateErrorMessage.textContent = "La date d'expiration de votre carte est incomplète.";
-            cardDateErrorMessage.style.display = "block"; 
+            cardDateErrorMessage.style.display = "block";
         } else {
             const [expMonth, expYear] = value.split('/');
             const expiryDate = new Date(2000 + parseInt(expYear), parseInt(expMonth) - 1);
@@ -635,16 +627,16 @@ document.addEventListener("DOMContentLoaded", function() {
             if (expiryDate < today) {
                 inputElement.classList.add("is-invalid");
                 cardDateErrorMessage.textContent = "L'année d'expiration de votre carte est définie dans le passé.";
-                cardDateErrorMessage.style.display = "block"; 
+                cardDateErrorMessage.style.display = "block";
             } else {
                 inputElement.classList.remove("is-invalid");
                 inputElement.classList.add("is-valid");
-                cardDateErrorMessage.style.display = "none"; 
+                cardDateErrorMessage.style.display = "none";
             }
         }
     }
 
-    
+
     expirationInput.addEventListener("blur", function() {
         validateExpiration(expirationInput);
     });
@@ -657,7 +649,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const cardCVCErrorMessage = document.getElementById("cardCVCErrorMessage");
 
     sepaButton.addEventListener("click", function() {
-        
+
         cardErrorMessage.style.display = "none";
         cardDateErrorMessage.style.display = "none";
         cardCVCErrorMessage.style.display = "none";
@@ -676,21 +668,21 @@ document.addEventListener("DOMContentLoaded", function() {
     cvcInput.addEventListener("input", function(event) {
         let value = cvcInput.value.trim();
 
-        
+
         value = value.replace(/\D/g, '');
 
-        
+
         if (value.length > 4) {
             value = value.slice(0, 4);
         }
 
         cvcInput.value = value;
 
-        
+
         validateCVC(cvcInput);
     });
 
-    
+
     function validateCVC(inputElement) {
         const value = inputElement.value.trim();
         const regexCVC = /^\d{3,4}$/;
@@ -698,15 +690,15 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!regexCVC.test(value)) {
             inputElement.classList.add("is-invalid");
             cvcErrorMessage.textContent = "Le code de sécurité de votre carte est incomplet.";
-            cvcErrorMessage.style.display = "block"; 
+            cvcErrorMessage.style.display = "block";
         } else {
             inputElement.classList.remove("is-invalid");
             inputElement.classList.add("is-valid");
-            cvcErrorMessage.style.display = "none"; 
+            cvcErrorMessage.style.display = "none";
         }
     }
 
-    
+
     cvcInput.addEventListener("blur", function() {
         validateCVC(cvcInput);
     });
@@ -727,10 +719,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const promoBtn = document.querySelector('.promo-btn');
 
     promoBtn.addEventListener('click', function(event) {
-        
+
         event.preventDefault();
 
-        
+
         dropdown.classList.toggle('open');
     });
     console.log(promoBtn);
@@ -739,14 +731,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function transformToInput(event) {
-    
+
     event.stopPropagation();
 
-    
+
     var inputGroup = document.createElement("div");
     inputGroup.classList.add("input-group", "mb-3");
 
-    
+
     var inputElement = document.createElement("input");
     inputElement.setAttribute("type", "text");
     inputElement.classList.add("form-control");
@@ -754,23 +746,23 @@ function transformToInput(event) {
     inputElement.setAttribute("aria-label", "Recipient's username");
     inputElement.setAttribute("aria-describedby", "button-addon2");
 
-    
+
     inputElement.addEventListener("input", showApplyButton);
 
-    
+
     inputGroup.appendChild(inputElement);
 
-    
+
     var promoContainer = document.getElementById("promo-container");
     promoContainer.innerHTML = '';
     promoContainer.appendChild(inputGroup);
 
-    
+
     setTimeout(function() {
         inputElement.focus();
     }, 0);
 
-    
+
     inputElement.style.borderBottomRightRadius = "6px";
     inputElement.style.borderTopRightRadius = "6px";
 }
@@ -780,28 +772,28 @@ function transformToInput(event) {
 function showApplyButton() {
     var inputElement = document.querySelector("#promo-container input");
 
-    
+
     var applyButton = document.createElement("button");
     applyButton.textContent = "Appliquer";
     applyButton.setAttribute("type", "button");
     applyButton.classList.add("btn", "btn-outline-secondary", "position-absolute", "end-0", "y-50", "z-1");
     applyButton.setAttribute("id", "button-addon2");
 
-    
+
     applyButton.addEventListener("click", function(event) {
-        event.preventDefault(); 
+        event.preventDefault();
         applyButton.remove();
     });
 
-    
+
     inputElement.parentNode.appendChild(applyButton);
 
-    
+
     if (inputElement.value.trim() === "") {
         applyButton.style.display = "none";
     }
 
-    
+
     inputElement.addEventListener("input", function() {
         if (inputElement.value.trim() === "") {
             applyButton.style.display = "none";
@@ -810,7 +802,7 @@ function showApplyButton() {
         }
     });
 
-    
+
     inputElement.removeEventListener("input", showApplyButton);
 }
 
@@ -824,7 +816,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const sepaBlocks = document.querySelectorAll('.sepaBlock');
 
     function afficherSEPA(event) {
-        event.preventDefault(); 
+        event.preventDefault();
         sepaBtn.classList.add('active');
         cardBtn.classList.remove('active');
         creditCardBlocks.forEach(block => block.style.display = 'none');
@@ -832,7 +824,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function afficherCarte(event) {
-        event.preventDefault(); 
+        event.preventDefault();
         cardBtn.classList.add('active');
         sepaBtn.classList.remove('active');
         creditCardBlocks.forEach(block => block.style.display = 'block');
@@ -852,10 +844,10 @@ var conteneurChamps2 = document.getElementById('conteneurChamps2');
 
 
 function toggleAdresseManuelle(event) {
-    
+
     event.preventDefault();
 
-    
+
     conteneurChamps.style.display = conteneurChamps.style.display === 'none' ? 'block' : 'none';
     conteneurChamps2.style.display = conteneurChamps2.style.display === 'none' ? 'block' : 'none';
 }
@@ -866,7 +858,7 @@ boutonToggle.addEventListener('click', toggleAdresseManuelle2);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    
+
     var boutonToggle = document.getElementById('toggleAdresseManuelle');
     var boutonToggle2 = document.getElementById('toggleAdresseManuelle2');
     var conteneurChamps = document.getElementById('conteneurChamps');
@@ -880,38 +872,38 @@ document.addEventListener('DOMContentLoaded', function() {
     var ville = document.getElementById('ville');
     var ville2 = document.getElementById('ville2');
 
-    
+
     function toggleAdresseManuelle(event) {
-        
+
         event.preventDefault();
 
-        
+
         adressField.classList.add('d-none');
         codePostale.classList.remove('d-none');
         ville.classList.remove('d-none');
         conteneurChamps.style.display = 'block';
         conteneurChamps2.style.display = 'block';
 
-        
+
         boutonToggle.style.display = 'none';
     }
 
     function toggleAdresseManuelle2(event) {
-        
+
         event.preventDefault();
 
-        
+
         adressField2.classList.add('d-none');
         codePostale2.style.display = 'block';
         ville2.style.display = 'block';
         conteneurChamps3.style.display = 'block';
         conteneurChamps4.style.display = 'block';
 
-        
+
         boutonToggle2.style.display = 'none';
     }
 
-    
+
     boutonToggle.addEventListener('click', toggleAdresseManuelle);
     boutonToggle2.addEventListener('click', toggleAdresseManuelle2);
 });
@@ -923,11 +915,11 @@ document.addEventListener("DOMContentLoaded", function() {
         keyboard: true
     });
 
-    
-    
-    
-    
-    
+
+
+
+
+
     var openModals = document.querySelectorAll(".open-modal");
 
     var modalMentionsLegalesBtn = document.querySelector(".modal-mentions-légales");
@@ -946,35 +938,35 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(this);
         console.log(dataPolitique);
         politiqueModal.show();
-        
+
         var clicOnModal = document.querySelector(".modal-"+dataPolitique);
-        clicOnModal.click(); 
-        clicOnModal.focus(); 
+        clicOnModal.click();
+        clicOnModal.focus();
     });
 });
 
 
-    
+
     modalMentionsLegalesBtn.addEventListener("click", function() {
-        
+
         modalMentionsBlock.classList.remove("d-none");
-        
+
         remboursementsModalBlock.classList.add("d-none");
         contactModalBlock.classList.add("d-none");
     });
 
     modalRemboursementBtn.addEventListener("click", function() {
-        
+
         remboursementsModalBlock.classList.remove("d-none");
-        
+
         modalMentionsBlock.classList.add("d-none");
         contactModalBlock.classList.add("d-none");
     });
 
     modalContactBtn.addEventListener("click", function() {
-        
+
         contactModalBlock.classList.remove("d-none");
-        
+
         modalMentionsBlock.classList.add("d-none");
         remboursementsModalBlock.classList.add("d-none");
     });
@@ -985,12 +977,12 @@ document.addEventListener("DOMContentLoaded", function() {
         const dropdownBack = document.querySelector(".dropdownBack");
 
         function toggleDetails() {
-            
+
             var promoTextDiv = document.getElementById("promo-text");
             var fakeClickEvent = new Event("click");
             transformToInput(fakeClickEvent);
 
-            
+
             bsDropdown.show();
         }
 
@@ -1017,7 +1009,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    
+
 
 
 

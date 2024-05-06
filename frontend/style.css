@@ -2,8 +2,7 @@
 	--main-color: #244D61;
 	--hover-color1: #98AAB3;
 	--hover-color2: hsl(0, 0%, 55%);
-	/* --font-family:  */
-    --dd_textcolor: #A4A4A4;
+	    --dd_textcolor: #A4A4A4;
     --button-plus-minus: rgba(0,0,0,0.03);
     --black-text-color: color: hsla(0, 0%, 10%, 0.9);
 }
@@ -30,7 +29,6 @@ body form label{
     color: black;
 }
 
-/* Appliquer la classe uniquement lorsque le bouton radio n'est pas sélectionné et qu'il est survolé */
 input[type="radio"]:not(:checked) ~ .sepa-radio-btn:hover {
     color: var(--main-color);
     border-color: var(--main-color);
@@ -46,31 +44,6 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     border-color: var(--main-color);
 }
 
-/* .input-group {
-    position: relative;
-}
-
-.input-group .input-icon {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 100;
-}
-
-.invalid-feedback {
-    position: absolute;
-    top: calc(100% + 5px);
-    left: 0;
-    font-size: 16px;
-    color: red;
-} */
-
-
-
-/* .input-group input[type="number"][value="1"] + .input-group-button .input-number-decrement i {
-    color: hsla(0, 0%, 10%, 0.6);
-} */
 
 .value-one #input-nb-decrement i {
     color: hsla(0, 0%, 10%, 0.6);
@@ -167,10 +140,8 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     border-radius: 6px;
     box-shadow: 0 0 0 1px #e0e0e0;
     color: hsla(0, 0%, 10%, 0.7);
-    /* color: hsla(0, 0%, 10%, 0.9); */
-    font-size: 12px;
+        font-size: 12px;
     padding: 10px 12px 8px 12px;
-/* ------------------------------------- */
     display: flex;
     flex-direction: column-reverse;
     font-weight: 500;
@@ -191,25 +162,14 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     overflow: auto;
 }
 
-/* .minus-btn {
-    border-radius: 20px;
-    border-color: rgba(0,0,0,0.03);
-    background-color: rgba(0,0,0,0.03);
-    padding: 8px;
-    position: relative;
-} */
-
 .navbar {
-    transition: border-bottom 0.3s ease; /* Transition douce pour la bordure */
-    border-bottom: none; /* Par défaut, cache la bordure */
-    background-color: white;
+    transition: border-bottom 0.3s ease;     border-bottom: none;     background-color: white;
 
 }
 
 .navbar-scrolled {
     background-color: white;
-    border-bottom: 1px solid #ddd; /* Affiche la bordure lorsque scrolled */
-}
+    border-bottom: 1px solid #ddd; }
 
 .dropdown:hover {
 	border: none;
@@ -221,8 +181,7 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
 .logo_prst {
     display: inline-block;
     color: var(--hover-color2);
-    vertical-align: middle; /* Alignement vertical au centre */
-}
+    vertical-align: middle; }
 
 .logo_prst img {
     display: block;
@@ -259,10 +218,6 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     color: black;
 }
 
-
-/* .navbar-brand {
-    color: black;
-} */
 
 .arrow_left {
     margin: 1em;
@@ -312,18 +267,10 @@ input[type="radio"]:checked ~ .cc-radio-btn:hover {
     font-size: 14px;
     font-weight: 500;
 }
-/*
-.Text--truncate {
-} */
 
 .info {
     font-size: 20px;
 }
-/*
-#palyance-logo {
-    width: 50px;
-    height: auto;
-} */
 
 .nav-arrow {
 	margin-left: 8px;
@@ -345,8 +292,7 @@ body.dropdown-open {
 
 
 .dropdown-menu {
-    /* box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important; */
-    margin-top: 0px !important;
+        margin-top: 0px !important;
     width: 100% !important;
 	border: none;
 }
@@ -371,14 +317,6 @@ body.dropdown-open {
     justify-content: center;
 }
 
-/* .custom_image {
-    width: 120px;
-    height: auto;
-    margin-bottom: 1em;
-    margin-top: 70px;
-    border-radius: 10px;
-} */
-
 .custom_image {
     width: 240px;
     height: auto;
@@ -394,8 +332,7 @@ body.dropdown-open {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    /* margin: 1em; */
-}
+    }
 
 .product_description {
     display: flex;
@@ -559,8 +496,7 @@ body.dropdown-open {
 }
 
 .email-icon-shifted {
-    top: 25px; /* Ajustez cette valeur selon votre besoin */
-}
+    top: 25px; }
 
 
 .form-control-icon {
@@ -579,19 +515,6 @@ body.dropdown-open {
     max-height: 234px;
     height: 234px;
 }
-
-/* .palyance_btn {
-    width: 308px;
-    height: 44px;
-    background-color: white;
-    color: black;
-    border: 1px solid hsla(0, 0%, 0%, 0.5) ;
-} */
-
-/* .promo-input-groupe {
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-} */
 
 .palyance_btn:hover {
     background-color: #17A2B8;
@@ -654,37 +577,11 @@ body.dropdown-open {
 #validationCustom32, #validationCustom67, #validationCustom69{
     border-radius: 0px 0px 6px 0px;
     border-left: none;
-    /* margin-left: -1px; */
-}
+    }
 
 #validationCustom11, #validationCustom66, #validationCustom68 {
     border-radius: 0px 0px 0px 6px;
 }
-
-
-/* #validationCustom01,
-#validationCustom11,
-#validationCustom10 {
-    border-radius: 6px;
-}
-
-
-
-#validationCustom02,
-#validationCustom06,
-#validationCustom07,
-#validationCustom08,
-#validationCustom10,
-#validationCustom11,
-#validationCustom31,
-#validationCustom32,
-#validationCustom12,
-#validationCustomIban,
-#validationCustomCardHolder,
-#paysDropdown,
-#validationCustomUsername {
-    padding-left: 13px;
-} */
 
 #validationCustom01 {
     border-radius: 6px 6px 0px 0px;
@@ -763,10 +660,6 @@ body.dropdown-open {
     font-size: 14px;
 }
 
-/* .footer-conditions:hover {
-
-} */
-
 .palyance-sponsor {
     display: flex;
     align-items: flex-end;
@@ -803,10 +696,8 @@ body.dropdown-open {
 
 .upsell-box {
     width: 100%;
-    /* background-color: hsla(0,0%,10%,0.05); */
-    background-color: #f8f9fa;
-    /* border-color: #c6c7c8; */
-    border-radius: calc(6px - 1px);
+        background-color: #f8f9fa;
+        border-radius: calc(6px - 1px);
     margin-top: 16px;
     padding: 12px 16px;
     max-height: 781px;
@@ -825,17 +716,13 @@ body.dropdown-open {
 }
 
 .recap-radio-fs {
-	/* width: calc(100% + 32px); */
-    width: 100%;
+	    width: 100%;
 }
 
 .text-upsell {
     margin-right: 10px;
     font-size: 12px;
-    /* box-sizing: border-box; */
-    color: rgb(94, 94, 94);
-    /* display: inline-block;
-    vertical-align: middle; */
+        color: rgb(94, 94, 94);
 }
 
 .green-text {
@@ -850,14 +737,8 @@ body.dropdown-open {
     color: rgb(94, 94, 94);
     font-size: 12px;
     white-space: nowrap;
-    /* align-self: center; */
-    /* text-align: end; */
-}
+        }
 
-/* .form-switch .form-check-input {
-    background-position: right center;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
-} */
 
 #flexSwitchCheckDefault[type="radio"]:checked {
     background-color: #24b47e;
@@ -868,7 +749,6 @@ body.dropdown-open {
     margin-bottom: -1px;
 }
 
-/* Supprimer le margin-top des colonnes .col-6 */
 .col-6 {
     margin-top: 0 !important;
 }
@@ -884,21 +764,6 @@ body.dropdown-open {
 #flexSwitchCheckDefault {
     width: 26px;
 }
-
-/* .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-  }
-
-  .overlay.active {
-    display: block;
-  } */
 
   .main-content.gris-out {
     filter: grayscale(100%);
@@ -1040,8 +905,7 @@ body.dropdown-open {
   .input-number-group .input-number {
     width: 80px;
     padding: 0 12px;
-    /* vertical-align: top; */
-    text-align: center;
+        text-align: center;
     outline: none;
     display: block;
     margin: 0;
@@ -1166,10 +1030,7 @@ body.dropdown-open {
       }
 
       .input-group #button-addon2:hover {
-        /* Définissez ici les propriétés que vous souhaitez supprimer lors du survol */
-        background-color: transparent; /* Par exemple, rend le fond transparent */
-        color: rgb(25, 37, 82); /* Garde la couleur du texte par défaut */
-        border: none;
+                background-color: transparent;         color: rgb(25, 37, 82);         border: none;
       }
 
     .dd-content {
@@ -1217,19 +1078,6 @@ body.dropdown-open {
       }
 
 
-/*
-    .dropdown.dropdown-masked {
-        position: static;
-
-        &.open > .dropdown-menu {
-          background: #ccc;
-          box-shadow: 0 100vh 0 100vh rgba(0,0,0,.5),0 5px 5px rgba(0,0,0,.5);
-          border-width: 1px 0 0;
-          border-radius: 0;
-          margin-left: -1px;
-        }
-      } */
-
       .dropdown.dropdown-masked {
         position: static;
     }
@@ -1257,7 +1105,6 @@ body.dropdown-open {
 	width: calc(100% + 32px);
 }
 
-/* Media Queries */
 
 @media (max-width: 400px) {
     .pay_btn {
@@ -1267,8 +1114,7 @@ body.dropdown-open {
 
 @media (min-width: 401px) {
     .pay_btn {
-        /* width: 400px; */
-        width: 100%;
+                width: 100%;
     }
 }
 
@@ -1302,10 +1148,6 @@ body.dropdown-open {
 
 @media (min-width: 992px) {
 
-    /* .body { */
-        /* display: flex; */
-        /* justify-content: center; */
-    /* } */
 
     .container {
         padding: 0px;
@@ -1316,9 +1158,6 @@ body.dropdown-open {
     .container::before {
         content: "";
         box-shadow: 15px 0 30px 0 rgba(0,0,0,0.18);
-        /* -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-        background: var(--checkout-white); */
         content: " ";
         height: 100%;
         position: fixed;
@@ -1349,11 +1188,6 @@ body.dropdown-open {
     }
 
 }
-
-/* :root {
-    box-shadow: 15px 0 30px 0 rgba(0,0,0,0.18)
-}
- */
 
 .displayNone {
     display: none;
