@@ -46,6 +46,7 @@
                         <span class="dd-free-days">30 jours gratuits</span>
                         <!-- <span class="dropdown-currency">14,90 €</span> -->
                       </div>
+
                     </div>
                     <div class="mb-3">
                       <span class="dd_small_text">Abonnement trimestriel à la revue</span>
@@ -99,7 +100,7 @@
     <!-- <div class="overlay"></div> -->
     <div class="container">
       <div class="row justify-content-between">
-        <div class="col-lg-5 left-part-fs">
+        <div class="col-lg-5 left-part-fs position-relative">
           <div class="left_nav_items">
             <a class="navbar-brand" href="#">
               <div class="arrow_left" id="arrow_left-fs">
@@ -204,16 +205,15 @@
 					</div>
 				  </div>
 			  </div>
-        <div class="footer footer-fs">
+        <div class="footer footer-fs mb-2">
           <span class="palyance-sponsor">Propulsé par <span class="palyance-text">Palyance</span>
           </span>
           <div class="footer-conditions">
-            <button class="mentions-légales" id="mentionsLegalesBtn">Mentions légales</button>
-            <button class="remboursement" id="remboursementBtn">Remboursements</button>
-            <button class="contact" id="contactBtn">Contact</button>
+            <button class="open-modal mentions-légales" data-politique="mentions-légales" >Mentions légales</button>
+            <button class="open-modal remboursement" data-politique="remboursement" >Remboursements</button>
+            <button class="open-modal contact" data-politique="contact" >Contact</button>
           </div>
         </div>
-
 		  </div>
         </div>
         <div class="col-lg-5 px-0">
@@ -472,25 +472,25 @@
               <span>Si vous n'annulez pas votre essai, un montant de <span>14,90 €</span> vous sera facturé tous les trois mois à compter du 25 avril 2024. </span>
             </div>
             <div class="cash-back-btn mt-2">
-              <button class="text-cash-back-btn" id="politiqueBtn">
+              <button class="open-modal text-cash-back-btn" data-politique="remboursement" id="politiqueBtn">
                 <i class="fa-solid fa-rotate-left"></i>
                 <span>Admissible à un remboursement</span>
               </button>
             </div>
-            <div class="footer mt-3 footer-sm">
+            <div class="footer footer-sm">
               <span class="palyance-sponsor">Propulsé par <span class="palyance-text">Palyance</span>
               </span>
               <div class="footer-conditions">
-                <button class="mentions-légales" id="mentionsLegalesBtn">Mentions légales</button>
-                <button class="remboursement" id="remboursementBtn">Remboursements</button>
-                <button class="contact" id="contactBtn">Contact</button>
+                <button class="open-modal mentions-légales" data-politique="mentions-légales" id="">Mentions légales</button>
+                <button class="open-modal remboursement" data-politique="remboursement" id="">Remboursements</button>
+                <button class="open-modal contact" data-politique="contact" id="">Contact</button>
               </div>
             </div>
           </form>
         </div>
       </div>
     </div>
-    <!-- Modal -->
+    <!-- *Modal* -->
     <div class="modal fade" id="qteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
         <div class="modal-content">

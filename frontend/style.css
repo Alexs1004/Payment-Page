@@ -1194,7 +1194,11 @@ body.dropdown-open {
 
     .footer-fs {
         position: absolute;
-        bottom: -493px;
+        bottom: 0px;
+    }
+
+    .footer-sm {
+        margin-top: 65px;
     }
 
     #promo-container {
